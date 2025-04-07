@@ -4057,10 +4057,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_sequent__TOP__0(VPvuTop___024root* vl
     vlSelf->PvuTop__DOT___GEN_81 = ((IData)(vlSelf->PvuTop__DOT___GEN_51) 
                                     | ((7U == (IData)(vlSelf->io_op)) 
                                        | ((8U == (IData)(vlSelf->io_op)) 
-                                          | ((0xaU 
-                                              != (IData)(vlSelf->io_op)) 
-                                             | (9U 
-                                                == (IData)(vlSelf->io_op))))));
+                                          | (9U == (IData)(vlSelf->io_op)))));
     vlSelf->PvuTop__DOT___GEN_101 = ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha15d0789__0) 
                                      | (IData)(vlSelf->PvuTop__DOT___GEN_51));
     vlSelf->PvuTop__DOT___GEN_102 = ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h792c5c44__0) 

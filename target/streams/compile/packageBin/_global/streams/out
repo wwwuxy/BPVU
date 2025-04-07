@@ -14,8 +14,8 @@
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/Mul$$anon$1.class
 [debug] 	pvu/Radix4BoothMultiplier$$anon$1.class
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/Radix4BoothMultiplier$$anon$1.class
-[debug] 	pvu/PositToInt.class
-[debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/PositToInt.class
+[debug] 	pvu/PositQuantizeToInt8$$anon$1.class
+[debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/PositQuantizeToInt8$$anon$1.class
 [debug] 	pvu/FracNorm$$anon$1.class
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/FracNorm$$anon$1.class
 [debug] 	pvu/PositLess.class
@@ -62,6 +62,8 @@
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/PositEncode.class
 [debug] 	pvu/FloatEncode$$anon$1.class
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/FloatEncode$$anon$1.class
+[debug] 	pvu/PositQuantizeToInt8$.class
+[debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/PositQuantizeToInt8$.class
 [debug] 	pvu/PositConvert$$anon$1.class
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/PositConvert$$anon$1.class
 [debug] 	pvu/PositEncode_DotProduct.class
@@ -82,6 +84,8 @@
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/FractionAlignment_AddSub.class
 [debug] 	pvu/PositDecode$$anon$1.class
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/PositDecode$$anon$1.class
+[debug] 	pvu/PositQuantizeToInt8.class
+[debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/PositQuantizeToInt8.class
 [debug] 	pvu/DotProduct$$anon$1.class
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/DotProduct$$anon$1.class
 [debug] 	pvu/IntReciprocal.class
@@ -114,8 +118,6 @@
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/Compressor4to2.class
 [debug] 	pvu/LZC$$anon$1.class
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/LZC$$anon$1.class
-[debug] 	pvu/PositToInt$$anon$1.class
-[debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/PositToInt$$anon$1.class
 [debug] 	pvu/Elaborate$delayedInit$body.class
 [debug] 	  /home/wuxy/BPVU/target/scala-2.13/classes/pvu/Elaborate$delayedInit$body.class
 [debug] 	pvu/PositEncode_DotProduct$$anon$1.class

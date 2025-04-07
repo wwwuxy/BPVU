@@ -9,7 +9,7 @@
     7 --> Float和Posit相互转换
     8 --> 大小比较（Greater），输出较大值
     9 --> 大小比较（Less），输出较小值
-    10 --> Posit转Int（TranInt），将PIR转为整数
+    10 --> Posit量化至Int8（QuantizeInt8），将PIR量化为Int8整数
 
    Float格式由float_mode控制:
    0 --> FP4  (1位符号, 1位指数, 2位尾数)
@@ -739,22 +739,27 @@
          io.posit_o(i) := less.io.posit_o(i)
        }
      }
-   }.elsewhen(io.op === 10.U) {  // TranInt - Posit转Int
-     val tranInt = Module(new PositToInt(
+   }.elsewhen(io.op === 10.U) {  // QuantizeInt8 - Posit量化至Int8
+     val quantizeInt8 = Module(new PositQuantizeToInt8(
        MAX_POSIT_WIDTH,
        MAX_VECTOR_SIZE,
        MAX_ALIGN_WIDTH,
-       ES,
-       INT_WIDTH
+       ES
      ))
      
      // 输入PIR格式的posit数据
-     tranInt.io.pir_sign_i := pir_sign
-     tranInt.io.pir_exp_i  := pir_exp
-     tranInt.io.pir_frac_i := pir_frac
+     quantizeInt8.io.pir_sign_i := pir_sign
+     quantizeInt8.io.pir_exp_i  := pir_exp
+     quantizeInt8.io.pir_frac_i := pir_frac
+     quantizeInt8.io.reset_window := false.B  // 默认不重置窗口
      
-     // 获取转换结果
-     io.int_o := tranInt.io.int_o
+     // 将量化结果转换为INT_WIDTH宽度输出
+     for (i <- 0 until MAX_VECTOR_SIZE) {
+       when(valid_range(i)) {
+         // 将Int8结果符号扩展到INT_WIDTH
+         io.int_o(i) := quantizeInt8.io.int8_o(i).pad(INT_WIDTH)
+       }
+     }
    }
 
    //***********************//
@@ -1006,7 +1011,7 @@
      // 已在前面处理
    }.elsewhen(io.op === 9.U) {  // Less - 比较并输出较小值
      // 已在前面处理
-   }.elsewhen(io.op === 10.U) {  // TranInt - Posit转Int
+   }.elsewhen(io.op === 10.U) {  // QuantizeInt8 - Posit量化至Int8
      // 已在前面处理
    }.otherwise{
      // 算术操作（加、减、乘、除）

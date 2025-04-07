@@ -5507,6 +5507,8 @@ void VPvuTop___024root___eval_triggers__act(VPvuTop___024root* vlSelf) {
                                                       vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder____PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[4U]))));
     vlSelf->__VactTriggered.at(0x66U) = (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__sel_nodes 
                                          != vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder____PVT__lzcModule_3__DOT__gen_lzc__DOT__sel_nodes);
+    vlSelf->__VactTriggered.at(0x67U) = ((IData)(vlSelf->clock) 
+                                         & (~ (IData)(vlSelf->__Vtrigrprev__TOP__clock)));
     vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes 
         = vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
     vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
@@ -6489,6 +6491,7 @@ void VPvuTop___024root___eval_triggers__act(VPvuTop___024root* vlSelf) {
         = vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[3U];
     vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder____PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[4U] 
         = vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[4U];
+    vlSelf->__Vtrigrprev__TOP__clock = vlSelf->clock;
     if (VL_UNLIKELY((1U & (~ (IData)(vlSelf->__VactDidInit))))) {
         vlSelf->__VactDidInit = 1U;
         vlSelf->__VactTriggered.at(0U) = 1U;
