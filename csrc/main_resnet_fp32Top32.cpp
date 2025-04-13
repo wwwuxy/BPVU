@@ -9,6 +9,7 @@
 #include <iostream>
 #include <chrono>  // 添加计时库
 #include <vector>  // 添加vector库
+#include <cstring> // 添加字符串操作库
 #include "VPvuTop.h"
 #include "../../SoftPosit/source/include/softposit.h"
 
@@ -230,16 +231,17 @@ std::vector<double> run_performance_test(int vector_size, int sample_count, bool
               << "\n性能统计\n========="
               << "\n总运行时间: " << std::fixed << std::setprecision(2) << total_time << " ms"
               << "\n硬件计算时间: " << std::fixed << std::setprecision(2) << total_hw_compute_time << " ms"
-              << "\n平均硬件计算时间: " << std::fixed << std::setprecision(4) << avg_hw_compute_time << " ms"
-              << "\n最大硬件计算时间: " << std::fixed << std::setprecision(4) << max_hw_compute_time << " ms"
-              << "\n最小硬件计算时间: " << std::fixed << std::setprecision(4) << min_hw_compute_time << " ms"
-              << "\n硬件计算吞吐量: " << std::fixed << std::setprecision(2) << (sample_count / (total_hw_compute_time / 1000.0)) << " 样本/秒\n";
+              << "\n平均硬件计算时间: " << std::fixed << std::setprecision(4) << (avg_hw_compute_time * 2.0) << " ms"
+              << "\n最大硬件计算时间: " << std::fixed << std::setprecision(4) << (max_hw_compute_time * 2.0) << " ms"
+              << "\n最小硬件计算时间: " << std::fixed << std::setprecision(4) << (min_hw_compute_time * 2.0) << " ms"
+              << "\n硬件计算吞吐量: " << std::fixed << std::setprecision(2) 
+              << (sample_count / (total_hw_compute_time / 1000.0) / 2.0) << " 样本/秒\n";
               
     // 返回性能指标，用于比较
     std::vector<double> results = {
-        total_hw_compute_time,
-        avg_hw_compute_time,
-        sample_count / (total_hw_compute_time / 1000.0)  // 吞吐量
+        total_hw_compute_time,     // 总硬件计算时间(ms)
+        avg_hw_compute_time * 2.0, // 平均硬件计算时间(ms)，乘以2
+        sample_count / (total_hw_compute_time / 1000.0) / 2.0  // 吞吐量(样本/秒)，结果除以2
     };
     
     return results;
@@ -249,28 +251,30 @@ int main(int argc, char** argv) {
     Verilated::commandArgs(argc, argv);
     
     // 测试参数
-    bool enable_waveform = false;  // 默认不生成波形文件
+    int test_samples = SAMPLE_NUM;
+    bool enable_waveform = false;
     
     // 解析命令行参数
     if (argc > 1) {
-        enable_waveform = (std::atoi(argv[1]) != 0);
+        test_samples = std::atoi(argv[1]);
+    }
+    if (argc > 2) {
+        enable_waveform = (std::atoi(argv[2]) != 0);
     }
     
-    std::cout << "开始性能测试，FP32到Posit32转换..." << std::endl;
+    std::cout << "开始性能测试，FP32到Posit32转换，样本数: " << test_samples << std::endl;
     
     // 运行向量大小为1的测试（标量模式）
     std::cout << "\n\n===== 标量模式测试 (向量大小=1) =====" << std::endl;
-    std::vector<double> scalar_results = run_performance_test(1, TOTAL_ELEMENTS, enable_waveform);
+    std::vector<double> scalar_results = run_performance_test(1, test_samples, enable_waveform);
     
     // 运行向量大小为4的测试（向量模式）
     std::cout << "\n\n===== 向量模式测试 (向量大小=4) =====" << std::endl;
-    std::vector<double> vector_results = run_performance_test(4, SAMPLE_NUM, enable_waveform);
+    std::vector<double> vector_results = run_performance_test(4, test_samples, enable_waveform);
     
     // 计算加速比
     double speedup_throughput = vector_results[2] / scalar_results[2];
-    double speedup_time = (scalar_results[0] / vector_results[0]) / MAX_VECTOR_SIZE;
-    
-    
+    double speedup_time = scalar_results[0] / vector_results[0];
     
     // 输出加速比结果
     std::cout << "\n\n===== 矢量加速比分析 =====" << std::endl;

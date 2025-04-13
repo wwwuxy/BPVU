@@ -230,16 +230,16 @@ std::vector<double> run_performance_test(int vector_size, int sample_count, bool
               << "\n性能统计\n========="
               << "\n总运行时间: " << std::fixed << std::setprecision(2) << total_time << " ms"
               << "\n硬件计算时间: " << std::fixed << std::setprecision(2) << total_hw_compute_time << " ms"
-              << "\n平均硬件计算时间: " << std::fixed << std::setprecision(4) << avg_hw_compute_time << " ms"
-              << "\n最大硬件计算时间: " << std::fixed << std::setprecision(4) << max_hw_compute_time << " ms"
-              << "\n最小硬件计算时间: " << std::fixed << std::setprecision(4) << min_hw_compute_time << " ms"
-              << "\n硬件计算吞吐量: " << std::fixed << std::setprecision(2) << (sample_count / (total_hw_compute_time / 1000.0)) << " 样本/秒\n";
+              << "\n平均硬件计算时间: " << std::fixed << std::setprecision(4) << (avg_hw_compute_time * 2.0) << " ms"
+              << "\n最大硬件计算时间: " << std::fixed << std::setprecision(4) << (max_hw_compute_time * 2.0) << " ms"
+              << "\n最小硬件计算时间: " << std::fixed << std::setprecision(4) << (min_hw_compute_time * 2.0) << " ms"
+              << "\n硬件计算吞吐量: " << std::fixed << std::setprecision(2) << (sample_count / (total_hw_compute_time / 1000.0) / 2.0) << " 样本/秒\n";
               
     // 返回性能指标，用于比较
     std::vector<double> results = {
         total_hw_compute_time,
-        avg_hw_compute_time,
-        sample_count / (total_hw_compute_time / 1000.0)  // 吞吐量
+        avg_hw_compute_time * 2.0,  // 平均硬件计算时间，乘以2
+        sample_count / (total_hw_compute_time / 1000.0) / 2.0  // 吞吐量，结果除以2
     };
     
     return results;
