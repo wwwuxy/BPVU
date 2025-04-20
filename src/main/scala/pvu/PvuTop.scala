@@ -454,27 +454,129 @@
      pir_exp_dot  := dotproduct.io.pir_exp_o
      pir_frac_dot := dotproduct.io.pir_frac_o
    }.elsewhen(io.op === 6.U){  //PositConvert
-     // 定义静态值用于模块实例化
-     val dst_posit_width_int = MAX_POSIT_WIDTH
-     val dst_es_int = ES
+     // 创建多个目标位宽的PositConvert实例，然后根据实际宽度选择
+     // 这里我们选择几个典型的位宽：8, 16, 32, 64
+     val convert8 = Module(new PositConvert(MAX_POSIT_WIDTH, 8, ES, ES, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH))
+     val convert16 = Module(new PositConvert(MAX_POSIT_WIDTH, 16, ES, ES, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH)) 
+     val convert24 = Module(new PositConvert(MAX_POSIT_WIDTH, 24, ES, ES, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH))
+     val convert32 = Module(new PositConvert(MAX_POSIT_WIDTH, 32, ES, ES, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH))
+     val convert40 = Module(new PositConvert(MAX_POSIT_WIDTH, 40, ES, ES, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH))
+     val convert48 = Module(new PositConvert(MAX_POSIT_WIDTH, 48, ES, ES, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH))
+     val convert56 = Module(new PositConvert(MAX_POSIT_WIDTH, 56, ES, ES, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH))
+     val convert64 = Module(new PositConvert(MAX_POSIT_WIDTH, 64, ES, ES, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH))
      
-     val convert = Module(new PositConvert(
-       MAX_POSIT_WIDTH,
-       dst_posit_width_int,
-       ES,
-       dst_es_int,
-       MAX_VECTOR_SIZE,
-       MAX_ALIGN_WIDTH
-     ))
+     // 调试输出
+     // printf("OP6: ACTUAL_DST_POSIT_WIDTH=%d, valid_vector_size=%d\n", ACTUAL_DST_POSIT_WIDTH, valid_vector_size)
      
-     // 仅对操作数1进行精度转换
-     convert.io.pir_sign1_i := pir_sign
-     convert.io.pir_exp1_i  := pir_exp
-     convert.io.pir_frac1_i := pir_frac
+     // 为所有转换器提供默认输入
+     for(i <- 0 until MAX_VECTOR_SIZE) {
+       // 设置默认值
+       convert8.io.pir_sign1_i(i) := 0.U
+       convert8.io.pir_exp1_i(i) := 0.S
+       convert8.io.pir_frac1_i(i) := 0.U
+       
+       convert16.io.pir_sign1_i(i) := 0.U
+       convert16.io.pir_exp1_i(i) := 0.S
+       convert16.io.pir_frac1_i(i) := 0.U
+       
+       convert24.io.pir_sign1_i(i) := 0.U
+       convert24.io.pir_exp1_i(i) := 0.S
+       convert24.io.pir_frac1_i(i) := 0.U
+       
+       convert32.io.pir_sign1_i(i) := 0.U
+       convert32.io.pir_exp1_i(i) := 0.S
+       convert32.io.pir_frac1_i(i) := 0.U
+       
+       convert40.io.pir_sign1_i(i) := 0.U
+       convert40.io.pir_exp1_i(i) := 0.S
+       convert40.io.pir_frac1_i(i) := 0.U
+       
+       convert48.io.pir_sign1_i(i) := 0.U
+       convert48.io.pir_exp1_i(i) := 0.S
+       convert48.io.pir_frac1_i(i) := 0.U
+       
+       convert56.io.pir_sign1_i(i) := 0.U
+       convert56.io.pir_exp1_i(i) := 0.S
+       convert56.io.pir_frac1_i(i) := 0.U
+       
+       convert64.io.pir_sign1_i(i) := 0.U
+       convert64.io.pir_exp1_i(i) := 0.S
+       convert64.io.pir_frac1_i(i) := 0.U
+       
+       // 只处理有效范围内的数据
+       when(valid_range(i)) {
+         // 为所有转换器提供相同的输入数据
+         convert8.io.pir_sign1_i(i) := pir_sign(i)
+         convert8.io.pir_exp1_i(i) := pir_exp(i)
+         convert8.io.pir_frac1_i(i) := pir_frac(i)
+         
+         convert16.io.pir_sign1_i(i) := pir_sign(i)
+         convert16.io.pir_exp1_i(i) := pir_exp(i)
+         convert16.io.pir_frac1_i(i) := pir_frac(i)
+         
+         convert24.io.pir_sign1_i(i) := pir_sign(i)
+         convert24.io.pir_exp1_i(i) := pir_exp(i)
+         convert24.io.pir_frac1_i(i) := pir_frac(i)
+         
+         convert32.io.pir_sign1_i(i) := pir_sign(i)
+         convert32.io.pir_exp1_i(i) := pir_exp(i)
+         convert32.io.pir_frac1_i(i) := pir_frac(i)
+         
+         convert40.io.pir_sign1_i(i) := pir_sign(i)
+         convert40.io.pir_exp1_i(i) := pir_exp(i)
+         convert40.io.pir_frac1_i(i) := pir_frac(i)
+         
+         convert48.io.pir_sign1_i(i) := pir_sign(i)
+         convert48.io.pir_exp1_i(i) := pir_exp(i)
+         convert48.io.pir_frac1_i(i) := pir_frac(i)
+         
+         convert56.io.pir_sign1_i(i) := pir_sign(i)
+         convert56.io.pir_exp1_i(i) := pir_exp(i)
+         convert56.io.pir_frac1_i(i) := pir_frac(i)
+         
+         convert64.io.pir_sign1_i(i) := pir_sign(i)
+         convert64.io.pir_exp1_i(i) := pir_exp(i)
+         convert64.io.pir_frac1_i(i) := pir_frac(i)
+         
+         // 调试输出
+         // printf("Input[%d]: pir_sign=%d, pir_exp=%d, pir_frac=0x%x\n", 
+         //        i.U, pir_sign(i), pir_exp(i), pir_frac(i))
+       }
+     }
      
-     pir_sign_convert := convert.io.pir_sign_o
-     pir_exp_convert  := convert.io.pir_exp_o
-     pir_frac_convert := convert.io.pir_frac_o
+     // 更精细地根据目标位宽选择合适的转换器输出
+     for(i <- 0 until MAX_VECTOR_SIZE) {
+       when(valid_range(i)) {
+         when(ACTUAL_DST_POSIT_WIDTH <= 8.U) {
+           // 8位及以下，使用convert8的结果
+           io.posit_o(i) := convert8.io.posit_o(i)
+         }.elsewhen(ACTUAL_DST_POSIT_WIDTH <= 16.U) {
+           // 9-16位，使用convert16的结果
+           io.posit_o(i) := convert16.io.posit_o(i)
+         }.elsewhen(ACTUAL_DST_POSIT_WIDTH <= 24.U) {
+           // 17-24位，使用convert24的结果
+           io.posit_o(i) := convert24.io.posit_o(i)
+         }.elsewhen(ACTUAL_DST_POSIT_WIDTH <= 32.U) {
+           // 25-32位，使用convert32的结果 
+           io.posit_o(i) := convert32.io.posit_o(i)
+         }.elsewhen(ACTUAL_DST_POSIT_WIDTH <= 40.U) {
+           // 33-40位，使用convert40的结果
+           io.posit_o(i) := convert40.io.posit_o(i)
+         }.elsewhen(ACTUAL_DST_POSIT_WIDTH <= 48.U) {
+           // 41-48位，使用convert48的结果
+           io.posit_o(i) := convert48.io.posit_o(i)
+         }.elsewhen(ACTUAL_DST_POSIT_WIDTH <= 56.U) {
+           // 49-56位，使用convert56的结果
+           io.posit_o(i) := convert56.io.posit_o(i)
+         }.otherwise {
+           // 57位及以上，使用convert64的结果
+           io.posit_o(i) := convert64.io.posit_o(i)
+         }
+         
+         // 调试输出
+         // printf("Output[%d]: posit_o=0x%x\n", i.U, io.posit_o(i))
+       }
+     }
    }.elsewhen(io.op === 7.U){  // Float和Posit相互转换
      // 根据float_mode动态选择浮点数格式
      val float2posit_out = Wire(Vec(MAX_VECTOR_SIZE, UInt(MAX_POSIT_WIDTH.W)))
@@ -559,7 +661,7 @@
            MAX_VECTOR_SIZE
          ))
          posit2float_fp8.io.posit_in := io.posit_i1
-         posit2float_out             := posit2float_fp8.io.float_out
+         posit2float_out              := posit2float_fp8.io.float_out
        }
        
        is(2.U) { // FP16
@@ -939,23 +1041,54 @@
      dot_converter.io.pir_exp1_i(0)  := dot_decoder.io.Exp(0)
      dot_converter.io.pir_frac1_i(0) := dot_decoder.io.Frac(0)
      
-     // 3. 编码为目标精度
-     val dot_encoder = Module(new PositEncode(MAX_POSIT_WIDTH, 1, ES))
-     dot_encoder.io.pir_sign(0) := dot_converter.io.pir_sign_o(0)
-     dot_encoder.io.pir_exp(0)  := dot_converter.io.pir_exp_o(0)
-     dot_encoder.io.pir_frac(0) := dot_converter.io.pir_frac_o(0)
+     // 3. 解码转换后的结果
+     val dot_converted_decoder = Module(new PositDecode(MAX_POSIT_WIDTH, 1, ES))
+     dot_converted_decoder.io.posit(0) := dot_converter.io.posit_o(0)
      
-     // 如果目标宽度大于源宽度，需要扩展
-     // 如果目标宽度小于源宽度，需要截断
+     // 4. 编码为目标精度
+     val dot_encoder = Module(new PositEncode(MAX_POSIT_WIDTH, 1, ES))
+     dot_encoder.io.pir_sign(0) := dot_converted_decoder.io.Sign(0)
+     dot_encoder.io.pir_exp(0)  := dot_converted_decoder.io.Exp(0)
+     dot_encoder.io.pir_frac(0) := dot_converted_decoder.io.Frac(0)
+     
+     // 更精确的位宽调整和对齐
      when(ACTUAL_DST_POSIT_WIDTH > MAX_POSIT_WIDTH.U) {
-       // 如果目标位宽超过最大位宽，截断
+       // 目标位宽超过最大支持位宽，截断到最大位宽
        posit_result := dot_encoder.io.posit(0)(MAX_POSIT_WIDTH-1, 0)
      }.elsewhen(ACTUAL_DST_POSIT_WIDTH < MAX_POSIT_WIDTH.U) {
-       // 否则，在运行时调整位宽
-       // 计算有效位数和截断位
-       val valid_bits = ACTUAL_DST_POSIT_WIDTH - 1.U
-       posit_result := (dot_encoder.io.posit(0) >> (MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH)) << (MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH)
+       // 采用更精确的位宽调整方式，避免精度损失
+       
+       // 1. 首先获取原始posit的符号位
+       val sign_bit = dot_encoder.io.posit(0)(MAX_POSIT_WIDTH-1)
+       
+       // 2. 获取右移的位数
+       val shift_amount = MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH
+       
+       // 3. 执行舍入
+       val mask = ((1.U << shift_amount) - 1.U) // 创建掩码来检查低位
+       val original_posit = dot_encoder.io.posit(0)
+       val truncated_bits = original_posit & mask // 被截断的低位
+       val round_bit = (truncated_bits >> (shift_amount - 1.U))(0) // 被截断部分的最高位（舍入位）
+       
+       // 计算粘滞位 - 检查舍入位之后的所有位是否有1
+       val sticky_mask = (1.U << (shift_amount - 1.U)) - 1.U
+       val sticky_bit = (truncated_bits & sticky_mask).orR
+       
+       // 获取guard_bit和lsb_bit
+       val guard_bit = false.B // 在右移截断的情况下没有保护位
+       val lsb_bit = ((original_posit >> shift_amount) & 1.U) === 1.U // 结果的最低位
+       
+       // 使用与PositConvert.scala一致的舍入逻辑
+       val round_up = round_bit & (sticky_bit | guard_bit | lsb_bit)
+       
+       // 右移并根据需要进位
+       val shifted = original_posit >> shift_amount
+       val rounded = Mux(round_up, shifted + 1.U, shifted)
+       
+       // 左移回去以将高位清零
+       posit_result := rounded << (MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH)
      }.otherwise {
+       // 目标位宽等于最大支持位宽，直接使用
        posit_result := dot_encoder.io.posit(0)
      }
      
@@ -983,30 +1116,10 @@
        io.posit_dot_o := 0.U(MAX_POSIT_WIDTH.W)
        io.float_dot_o := float_result
      }
-     
    }.elsewhen(io.op === 6.U){
-     // 精度转换操作
-     val convert_encoder = Module(new PositEncode(MAX_POSIT_WIDTH, MAX_VECTOR_SIZE, ES))
-     convert_encoder.io.pir_sign := pir_sign_convert
-     convert_encoder.io.pir_exp  := pir_exp_convert
-     convert_encoder.io.pir_frac := pir_frac_convert
-     
-     // 直接输出转换后的结果，但需要处理可能的宽度不匹配
-     for(i <- 0 until MAX_VECTOR_SIZE) {
-       when(ACTUAL_DST_POSIT_WIDTH > MAX_POSIT_WIDTH.U) {
-         // 目标位宽超过最大位宽，截断
-         io.posit_o(i) := convert_encoder.io.posit(i)(MAX_POSIT_WIDTH-1, 0)
-       }.elsewhen(ACTUAL_DST_POSIT_WIDTH < MAX_POSIT_WIDTH.U) {
-         // 否则，在运行时调整位宽
-         // 计算有效位数和截断位
-         val valid_bits = ACTUAL_DST_POSIT_WIDTH - 1.U
-         io.posit_o(i) := (convert_encoder.io.posit(i) >> (MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH)) << (MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH)
-       }.otherwise {
-         io.posit_o(i) := convert_encoder.io.posit(i)
-       }
-     }
-   }.elsewhen(io.op === 7.U){
-     // Float和Posit转换操作的输出已在上面处理
+      //已在前面处理
+   }.elsewhen(io.op === 7.U) {  // Float和Posit相互转换
+     // 已在前面处理
    }.elsewhen(io.op === 8.U) {  // Greater - 比较并输出较大值
      // 已在前面处理
    }.elsewhen(io.op === 9.U) {  // Less - 比较并输出较小值
@@ -1076,6 +1189,10 @@
          }
        }
        
+       // 解码转换后的结果
+       val result_converted_decoder = Module(new PositDecode(MAX_POSIT_WIDTH, MAX_VECTOR_SIZE, ES))
+       result_converted_decoder.io.posit := result_converter.io.posit_o
+       
        // 2. 编码为目标精度
        val result_encoder = Module(new PositEncode(
          MAX_POSIT_WIDTH, 
@@ -1093,9 +1210,9 @@
        // 只处理有效范围内的结果
        for(i <- 0 until MAX_VECTOR_SIZE) {
          when(valid_range(i)) {
-           result_encoder.io.pir_sign(i) := result_converter.io.pir_sign_o(i)
-           result_encoder.io.pir_exp(i)  := result_converter.io.pir_exp_o(i)
-           result_encoder.io.pir_frac(i) := result_converter.io.pir_frac_o(i)
+           result_encoder.io.pir_sign(i) := result_converted_decoder.io.Sign(i)
+           result_encoder.io.pir_exp(i)  := result_converted_decoder.io.Exp(i)
+           result_encoder.io.pir_frac(i) := result_converted_decoder.io.Frac(i)
            
            // 特殊处理40000000/40000000的情况
            when(io.op === 4.U && 
@@ -1109,7 +1226,33 @@
              // 否则，在运行时调整位宽
              // 计算有效位数和截断位
              val valid_bits = ACTUAL_DST_POSIT_WIDTH - 1.U
-             posit_results(i) := (result_encoder.io.posit(i) >> (MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH)) << (MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH)
+             
+             // 获取右移的位数
+             val shift_amount = MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH
+             
+             // 执行舍入
+             val mask = ((1.U << shift_amount) - 1.U) // 创建掩码来检查低位
+             val original_posit = result_encoder.io.posit(i)
+             val truncated_bits = original_posit & mask // 被截断的低位
+             val round_bit = (truncated_bits >> (shift_amount - 1.U))(0) // 被截断部分的最高位（舍入位）
+             
+             // 计算粘滞位 - 检查舍入位之后的所有位是否有1
+             val sticky_mask = (1.U << (shift_amount - 1.U)) - 1.U
+             val sticky_bit = (truncated_bits & sticky_mask).orR
+             
+             // 获取guard_bit和lsb_bit
+             val guard_bit = false.B // 在右移截断的情况下没有保护位
+             val lsb_bit = ((original_posit >> shift_amount) & 1.U) === 1.U // 结果的最低位
+             
+             // 使用与PositConvert.scala一致的舍入逻辑
+             val round_up = round_bit & (sticky_bit | guard_bit | lsb_bit)
+             
+             // 右移并根据需要进位
+             val shifted = original_posit >> shift_amount
+             val rounded = Mux(round_up, shifted + 1.U, shifted)
+             
+             // 左移回去以将高位清零
+             posit_results(i) := rounded << (MAX_POSIT_WIDTH.U - ACTUAL_DST_POSIT_WIDTH)
            }.otherwise {
              posit_results(i) := result_encoder.io.posit(i)
            }

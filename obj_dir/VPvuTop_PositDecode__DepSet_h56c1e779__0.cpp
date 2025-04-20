@@ -2973,10 +2973,10 @@ VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__decode1__13
                            >> 0xcU);
 }
 
-VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__1(VPvuTop_PositDecode* vlSelf) {
+VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__2(VPvuTop_PositDecode* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__1\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__2\n"); );
     // Init
     IData/*30:0*/ __PVT__barrel_shifter_3__DOT___temp_results_3_T_2;
     __PVT__barrel_shifter_3__DOT___temp_results_3_T_2 = 0;
@@ -3475,10 +3475,10 @@ VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float
                             << 1U) : __PVT__barrel_shifter_3__DOT___temp_results_0_T_2));
 }
 
-VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__3(VPvuTop_PositDecode* vlSelf) {
+VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__4(VPvuTop_PositDecode* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__3\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__4\n"); );
     // Init
     IData/*30:0*/ __PVT__barrel_shifter_2__DOT___temp_results_3_T_2;
     __PVT__barrel_shifter_2__DOT___temp_results_3_T_2 = 0;
@@ -3977,10 +3977,10 @@ VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float
                             << 1U) : __PVT__barrel_shifter_2__DOT___temp_results_0_T_2));
 }
 
-VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__5(VPvuTop_PositDecode* vlSelf) {
+VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__6(VPvuTop_PositDecode* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__5\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__6\n"); );
     // Init
     IData/*30:0*/ __PVT__barrel_shifter_1__DOT___temp_results_3_T_2;
     __PVT__barrel_shifter_1__DOT___temp_results_3_T_2 = 0;
@@ -4479,10 +4479,10 @@ VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float
                             << 1U) : __PVT__barrel_shifter_1__DOT___temp_results_0_T_2));
 }
 
-VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__7(VPvuTop_PositDecode* vlSelf) {
+VL_INLINE_OPT void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__8(VPvuTop_PositDecode* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__7\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__8\n"); );
     // Init
     IData/*30:0*/ __PVT__barrel_shifter__DOT___temp_results_3_T_2;
     __PVT__barrel_shifter__DOT___temp_results_3_T_2 = 0;

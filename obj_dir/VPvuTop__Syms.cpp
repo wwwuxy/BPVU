@@ -91,6 +91,7 @@ VPvuTop__Syms::VPvuTop__Syms(VerilatedContext* contextp, const char* namep, VPvu
     , TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder{this, Verilated::catName(namep, "PvuTop.posit2float_fp4.positDecoder")}
     , TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder{this, Verilated::catName(namep, "PvuTop.posit2float_fp64.positDecoder")}
     , TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder{this, Verilated::catName(namep, "PvuTop.posit2float_fp8.positDecoder")}
+    , TOP__PvuTop__DOT__result_converted_decoder{this, Verilated::catName(namep, "PvuTop.result_converted_decoder")}
 {
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
@@ -167,6 +168,7 @@ VPvuTop__Syms::VPvuTop__Syms(VerilatedContext* contextp, const char* namep, VPvu
     TOP.__PVT__PvuTop__DOT__posit2float_fp4__DOT__positDecoder = &TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder;
     TOP.__PVT__PvuTop__DOT__posit2float_fp64__DOT__positDecoder = &TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder;
     TOP.__PVT__PvuTop__DOT__posit2float_fp8__DOT__positDecoder = &TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder;
+    TOP.__PVT__PvuTop__DOT__result_converted_decoder = &TOP__PvuTop__DOT__result_converted_decoder;
     // Setup each module's pointer back to symbol table (for public functions)
     TOP.__Vconfigure(true);
     TOP__PvuTop__DOT__decode1.__Vconfigure(true);
@@ -240,4 +242,5 @@ VPvuTop__Syms::VPvuTop__Syms(VerilatedContext* contextp, const char* namep, VPvu
     TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vconfigure(false);
     TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vconfigure(false);
     TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vconfigure(false);
+    TOP__PvuTop__DOT__result_converted_decoder.__Vconfigure(false);
 }

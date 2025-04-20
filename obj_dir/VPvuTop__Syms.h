@@ -103,6 +103,7 @@ class VPvuTop__Syms final : public VerilatedSyms {
     VPvuTop_PositDecode            TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder;
     VPvuTop_PositDecode            TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder;
     VPvuTop_PositDecode            TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder;
+    VPvuTop_PositDecode            TOP__PvuTop__DOT__result_converted_decoder;
 
     // CONSTRUCTORS
     VPvuTop__Syms(VerilatedContext* contextp, const char* namep, VPvuTop* modelp);

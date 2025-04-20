@@ -1,23 +1,25 @@
-[error] /home/wuxy/BPVU/src/main/scala/pvu/Div.scala:97:74: overloaded method - with alternatives:
-[error]   (x: Double)Double <and>
-[error]   (x: Float)Float <and>
-[error]   (x: Long)Long <and>
-[error]   (x: Int)Int <and>
-[error]   (x: Char)Int <and>
-[error]   (x: Short)Int <and>
-[error]   (x: Byte)Int
-[error]  cannot be applied to (chisel3.Width)
-[error]       io.pir_frac_o(i) := Cat(io.pir_frac1_i(i), 0.U(MUL_WIDTH-FRAC_WIDTH-1.W)) << shift_amount
-[error]                                                                          ^
-[error] /home/wuxy/BPVU/src/main/scala/pvu/Div.scala:100:73: overloaded method - with alternatives:
-[error]   (x: Double)Double <and>
-[error]   (x: Float)Float <and>
-[error]   (x: Long)Long <and>
-[error]   (x: Int)Int <and>
-[error]   (x: Char)Int <and>
-[error]   (x: Short)Int <and>
-[error]   (x: Byte)Int
-[error]  cannot be applied to (chisel3.Width)
-[error]       io.pir_frac_o(i) := Cat(rounded_quotient, 0.U(MUL_WIDTH-FRAC_WIDTH-1.W))
-[error]                                                                         ^
-[error] two errors found
+[error] /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala:1046:53: value pir_sign_o is not a member of chisel3.Bundle{val pir_sign1_i: chisel3.Vec[chisel3.UInt]; val pir_exp1_i: chisel3.Vec[chisel3.SInt]; val pir_frac1_i: chisel3.Vec[chisel3.UInt]; val posit_o: chisel3.Vec[chisel3.UInt]}
+[error] did you mean pir_sign1_i?
+[error]      dot_encoder.io.pir_sign(0) := dot_converter.io.pir_sign_o(0)
+[error]                                                     ^
+[error] /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala:1047:53: value pir_exp_o is not a member of chisel3.Bundle{val pir_sign1_i: chisel3.Vec[chisel3.UInt]; val pir_exp1_i: chisel3.Vec[chisel3.SInt]; val pir_frac1_i: chisel3.Vec[chisel3.UInt]; val posit_o: chisel3.Vec[chisel3.UInt]}
+[error] did you mean pir_exp1_i?
+[error]      dot_encoder.io.pir_exp(0)  := dot_converter.io.pir_exp_o(0)
+[error]                                                     ^
+[error] /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala:1048:53: value pir_frac_o is not a member of chisel3.Bundle{val pir_sign1_i: chisel3.Vec[chisel3.UInt]; val pir_exp1_i: chisel3.Vec[chisel3.SInt]; val pir_frac1_i: chisel3.Vec[chisel3.UInt]; val posit_o: chisel3.Vec[chisel3.UInt]}
+[error] did you mean pir_frac1_i?
+[error]      dot_encoder.io.pir_frac(0) := dot_converter.io.pir_frac_o(0)
+[error]                                                     ^
+[error] /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala:1276:65: value pir_sign_o is not a member of chisel3.Bundle{val pir_sign1_i: chisel3.Vec[chisel3.UInt]; val pir_exp1_i: chisel3.Vec[chisel3.SInt]; val pir_frac1_i: chisel3.Vec[chisel3.UInt]; val posit_o: chisel3.Vec[chisel3.UInt]}
+[error] did you mean pir_sign1_i?
+[error]            result_encoder.io.pir_sign(i) := result_converter.io.pir_sign_o(i)
+[error]                                                                 ^
+[error] /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala:1277:65: value pir_exp_o is not a member of chisel3.Bundle{val pir_sign1_i: chisel3.Vec[chisel3.UInt]; val pir_exp1_i: chisel3.Vec[chisel3.SInt]; val pir_frac1_i: chisel3.Vec[chisel3.UInt]; val posit_o: chisel3.Vec[chisel3.UInt]}
+[error] did you mean pir_exp1_i?
+[error]            result_encoder.io.pir_exp(i)  := result_converter.io.pir_exp_o(i)
+[error]                                                                 ^
+[error] /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala:1278:65: value pir_frac_o is not a member of chisel3.Bundle{val pir_sign1_i: chisel3.Vec[chisel3.UInt]; val pir_exp1_i: chisel3.Vec[chisel3.SInt]; val pir_frac1_i: chisel3.Vec[chisel3.UInt]; val posit_o: chisel3.Vec[chisel3.UInt]}
+[error] did you mean pir_frac1_i?
+[error]            result_encoder.io.pir_frac(i) := result_converter.io.pir_frac_o(i)
+[error]                                                                 ^
+[error] 6 errors found

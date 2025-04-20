@@ -45,19 +45,23 @@ class PositConvert(
     val pir_exp1_i  = Input(Vec(VECTOR_SIZE, SInt(src_exp_width.W)))
     val pir_frac1_i = Input(Vec(VECTOR_SIZE, UInt((src_frac_width + 1).W)))
     
-    // 输出 - 修改输出尾数位宽
-    val pir_sign_o = Output(Vec(VECTOR_SIZE, UInt(1.W)))
-    val pir_exp_o  = Output(Vec(VECTOR_SIZE, SInt(dst_exp_width.W)))
-    val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt((dst_frac_width + 1).W)))
+    // 直接输出Posit编码结果，而不是PIR格式
+    val posit_o = Output(Vec(VECTOR_SIZE, UInt(DST_WIDTH.W)))
   })
 
   // 处理指数和尾数的转换
-  for (i <- 0 until VECTOR_SIZE) {
-    // 提供默认赋值，确保所有信号在所有路径下都有值
-    io.pir_sign_o(i) := 0.U
-    io.pir_exp_o(i)  := 0.S
-    io.pir_frac_o(i) := 0.U
+  val pir_sign_converted = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
+  val pir_exp_converted  = Wire(Vec(VECTOR_SIZE, SInt(dst_exp_width.W)))
+  val pir_frac_converted = Wire(Vec(VECTOR_SIZE, UInt((dst_frac_width + 1).W)))
 
+  // 初始化中间变量
+  for (i <- 0 until VECTOR_SIZE) {
+    pir_sign_converted(i) := 0.U
+    pir_exp_converted(i)  := 0.S
+    pir_frac_converted(i) := 0.U
+  }
+
+  for (i <- 0 until VECTOR_SIZE) {
     // 检查是否为特殊值（0或无穷大）
     val is_zero    = io.pir_frac1_i(i) === 0.U
     val is_special = is_zero   // 在posit格式中，0就是特殊值，可以根据需要扩展其他特殊值
@@ -66,13 +70,13 @@ class PositConvert(
       // 处理特殊值
       when(is_zero) {
         // 对于0，保持符号位不变，指数和尾数都为0
-        io.pir_sign_o(i) := io.pir_sign1_i(i)
-        io.pir_exp_o(i)  := 0.S
-        io.pir_frac_o(i) := 0.U
+        pir_sign_converted(i) := io.pir_sign1_i(i)
+        pir_exp_converted(i)  := 0.S
+        pir_frac_converted(i) := 0.U
       }
     }.otherwise {
       // 1. 符号位直接传递
-      io.pir_sign_o(i) := io.pir_sign1_i(i)
+      pir_sign_converted(i) := io.pir_sign1_i(i)
 
       // 2. 指数转换
       // 根据ES的差异调整指数值，避免使用负数UInt
@@ -94,73 +98,125 @@ class PositConvert(
       // 添加指数范围检查，确保不会溢出
       when(adjusted_exp > dst_exp_max.S) {
         // 指数上溢，饱和到最大值
-        io.pir_exp_o(i) := dst_exp_max.S
+        pir_exp_converted(i) := dst_exp_max.S
       }.elsewhen(adjusted_exp < dst_exp_min.S) {
         // 指数下溢，饱和到最小值
-        io.pir_exp_o(i) := dst_exp_min.S
+        pir_exp_converted(i) := dst_exp_min.S
       }.otherwise {
         // 正常范围内，使用调整后的指数
-        io.pir_exp_o(i) := adjusted_exp
+        pir_exp_converted(i) := adjusted_exp
       }
 
       // 3. 尾数转换
-      val frac_result = Wire(UInt((dst_frac_width + 1).W))
-      frac_result := 0.U  // 默认值
+      // 为目标尾数创建一个临时变量，避免组合循环
+      val temp_frac_result = Wire(UInt((dst_frac_width + 1).W))
+      temp_frac_result := 0.U  // 默认值
       
       if (dst_frac_width == src_frac_width) {
         // 目标精度与源精度相同，直接使用源尾数
-        frac_result := io.pir_frac1_i(i)
+        temp_frac_result := io.pir_frac1_i(i)
       } else if (dst_frac_width > src_frac_width) {
         // 目标精度更高，补0
         val extension_width = dst_frac_width - src_frac_width
-        frac_result := Cat(io.pir_frac1_i(i), 0.U(extension_width.W))
+        temp_frac_result := Cat(io.pir_frac1_i(i), 0.U(extension_width.W))
       } else {
         // 目标精度更低，需要舍入
         val round_pos     = src_frac_width - dst_frac_width
         val frac_to_round = io.pir_frac1_i(i)
         
-        // 安全获取舍入位
-        val round_bit = Wire(Bool())
-        round_bit := Mux(round_pos.U < frac_to_round.getWidth.U,
-                         frac_to_round(round_pos), 
-                         false.B)
+        // 调试输出
+        // printf("src_frac_width=%d, dst_frac_width=%d, round_pos=%d, frac_to_round=0x%x\n", 
+        //        src_frac_width.U, dst_frac_width.U, round_pos.U, frac_to_round)
         
-        // 安全获取粘滞位(sticky bit)
-        val sticky_bits = Wire(UInt(src_frac_width.W))
-        sticky_bits := 0.U
-        when (round_pos.U > 0.U) {
-          for (j <- 0 until src_frac_width) {
-            when (j.U < round_pos.U) {
-              sticky_bits(j) := frac_to_round(j)
+        // 安全获取舍入位 - 使用Mux确保在运行时安全获取舍入位
+        val round_bit = Mux(round_pos.U < frac_to_round.getWidth.U, 
+                           frac_to_round(round_pos), 
+                           false.B)
+        
+        // 重新实现粘滞位计算，增强安全性
+        val sticky_bit = Wire(Bool())
+        
+        when(round_pos.U === 0.U) {
+          sticky_bit := false.B
+        }.otherwise {
+          // 使用更安全的方式，使用局部变量，避免变量名冲突
+          val sticky_tmp = Wire(Vec(src_frac_width, Bool()))
+          for (j <- 0 until src_frac_width) {  // 使用j而不是i作为循环索引
+            when(j.U < round_pos.U && j.U < frac_to_round.getWidth.U) {
+              sticky_tmp(j) := frac_to_round(j)
+            }.otherwise {
+              sticky_tmp(j) := false.B
             }
           }
+          sticky_bit := sticky_tmp.asUInt.orR
         }
-        val sticky_bit = sticky_bits.orR
         
-        // 安全获取保护位(guard bit)
-        val guard_bit = Wire(Bool())
-        guard_bit := Mux((round_pos + 1).U < frac_to_round.getWidth.U,
-                         frac_to_round(round_pos + 1),
-                         false.B)
+        // 获取保护位 - 使用Mux确保在运行时安全获取保护位
+        val guard_pos = round_pos + 1
+        val guard_bit = Mux(guard_pos.U < frac_to_round.getWidth.U,
+                           frac_to_round(guard_pos),
+                           false.B)
         
-        // 使用RNE(Round to Nearest Even)规则
-        val round_up = round_bit & (sticky_bit | guard_bit)
+        // 用于舍入的lsb判断 - 使用Mux确保在运行时安全获取lsb位
+        val lsb_pos = dst_frac_width
+        val lsb_bit = Mux(lsb_pos.U < frac_to_round.getWidth.U,
+                          frac_to_round(lsb_pos),
+                          false.B)
         
-        // 安全的右移和舍入
+        // 根据IEEE 754风格的舍入规则，决定是否向上舍入
+        val round_up = round_bit & (sticky_bit | guard_bit | lsb_bit)
+        
+        // 调试输出
+        // printf("round_bit=%d, sticky_bit=%d, guard_bit=%d, lsb_bit=%d, round_up=%d\n", 
+        //        round_bit, sticky_bit, guard_bit, lsb_bit, round_up)
+        
+        // 执行舍入操作
         val shifted_frac = frac_to_round >> round_pos.U
         val rounded_frac = Mux(round_up, shifted_frac + 1.U, shifted_frac)
         
-        // 确保结果不超过目标宽度
-        for (j <- 0 to dst_frac_width) {
-          when (j.U < rounded_frac.getWidth.U) {
-            frac_result(j) := rounded_frac(j)
-          }.otherwise {
-            frac_result(j) := 0.U
-          }
+        // 截取需要的位数，确保不会越界
+        val truncated_result = if (dst_frac_width >= 0) {
+          // 安全地获取截断后的结果
+          val mask = (1.U << (dst_frac_width + 1).U) - 1.U
+          rounded_frac & mask
+        } else {
+          0.U((dst_frac_width + 1).W)
         }
+        
+        // 调试输出
+        // printf("shifted_frac=0x%x, rounded_frac=0x%x, truncated_result=0x%x\n", 
+        //        shifted_frac, rounded_frac, truncated_result)
+        
+        temp_frac_result := truncated_result
       }
       
-      io.pir_frac_o(i) := frac_result
+      // 确保当输入不为0时，输出至少保留一个有效位
+      val final_result = Mux(io.pir_frac1_i(i) =/= 0.U && temp_frac_result === 0.U,
+                          1.U((dst_frac_width + 1).W),
+                          temp_frac_result)
+      
+      // 保存转换后的结果
+      pir_frac_converted(i) := final_result
     }
+  }
+
+  // 内部实例化PositEncode模块，直接生成Posit编码格式
+  val posit_encoder = Module(new PositEncode(DST_WIDTH, VECTOR_SIZE, DST_ES))
+  
+  // 设置默认值
+  for (i <- 0 until VECTOR_SIZE) {
+    posit_encoder.io.pir_sign(i) := 0.U
+    posit_encoder.io.pir_exp(i)  := 0.S
+    posit_encoder.io.pir_frac(i) := 0.U
+  }
+  
+  // 连接转换后的PIR数据到编码器
+  for (i <- 0 until VECTOR_SIZE) {
+    posit_encoder.io.pir_sign(i) := pir_sign_converted(i)
+    posit_encoder.io.pir_exp(i)  := pir_exp_converted(i)
+    posit_encoder.io.pir_frac(i) := pir_frac_converted(i)
+    
+    // 直接输出编码后的Posit结果
+    io.posit_o(i) := posit_encoder.io.posit(i)
   }
 } 

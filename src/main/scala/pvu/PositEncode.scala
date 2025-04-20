@@ -92,7 +92,9 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) exten
 
    val round_bit         = round_bits(i)(MAX_SHIFT - 1)
    val sticky_bit        = round_bits(i)(MAX_SHIFT - 2, 0).orR
-   val round_value       = round_bit & (sticky_bit | value_before_round(i)(0))
+   val guard_bit         = false.B // 在这种情况下没有保护位
+   val lsb_bit           = value_before_round(i)(0)
+   val round_value       = round_bit & (sticky_bit | guard_bit | lsb_bit)
    value_after_round(i) := value_before_round(i) + round_value
   }
 
@@ -107,18 +109,31 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) exten
     val isOne = (io.pir_sign(i) === 0.U) && (io.pir_exp(i) === 0.S) && 
                 (io.pir_frac(i)(FRAC_WIDTH) === 1.U) && (io.pir_frac(i)(FRAC_WIDTH-1, 0) === 0.U)
     
-    result      := Mux(io.pir_sign(i) === 1.U, Cat(1.U, ~value_after_round(i) + 1.U), Cat(0.U, value_after_round(i)))
+    // 检测0条件：尾数完全为0
+    val isZero = io.pir_frac(i) === 0.U
+    
+    // 计算结果，变形数或负数
+    result := Mux(io.pir_sign(i) === 1.U, Cat(1.U, ~value_after_round(i) + 1.U), Cat(0.U, value_after_round(i)))
+    
+    // 调试输出
+    // printf("PositEncode[%d]: sign=%d, exp=%d, frac=0x%x, frac_hide=%d, isNaR=%d, isOne=%d, isZero=%d\n",
+    //        i.U, io.pir_sign(i), io.pir_exp(i), io.pir_frac(i), frac_hide(i), isNaR, isOne, isZero)
+    // printf("PositEncode[%d]: result=0x%x\n", i.U, result)
     
     // 特殊情况处理：
     // 1. 检测到NaR时，输出80000000
     // 2. 检测到1.0时，直接输出40000000
-    // 3. 否则，根据frac_hide决定输出result或0
+    // 3. 检测到完全为0的尾数，输出0
+    // 4. 否则，直接输出计算后的result
     when(isNaR) {
-      io.posit(i) := (BigInt(1) << (POSIT_WIDTH-1)).U
+      io.posit(i) := (BigInt(1) << (POSIT_WIDTH-1)).U  // 80000000
     }.elsewhen(isOne) {
       io.posit(i) := (BigInt(1) << (POSIT_WIDTH-2)).U  // 40000000
+    }.elsewhen(isZero) {
+      io.posit(i) := 0.U                               // 00000000
     }.otherwise {
-      io.posit(i) := Mux(frac_hide(i) === 1.U, result, 0.U)
+      // 不再根据frac_hide判断，只要不是特殊值，就输出result
+      io.posit(i) := result
     }
   }
 }

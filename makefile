@@ -7,7 +7,7 @@ CONFIG_H = config.h
 # SoftPosit库相关设置
 SOFTPOSIT_DIR = /home/wuxy/SoftPosit
 SOFTPOSIT_INCLUDE = -I$(SOFTPOSIT_DIR)/source/include
-SOFTPOSIT_LIB = $(SOFTPOSIT_DIR)/build/lib/libsoftposit.a
+SOFTPOSIT_LIB = $(SOFTPOSIT_DIR)/build/Linux-x86_64-GCC/softposit.a
 
 # verilator flags
 VERILATOR_FLAGS += -Wall --cc --trace --exe --build --top-module $(TOPNAME)
@@ -51,12 +51,11 @@ verilog:
 
 run:${CSRCS} ${VSRCS}
 	verilator ${VERILATOR_FLAGS} ${CSRCS} ${VSRCS}
-	@echo "链接SoftPosit库..."
-	# 不再需要链接SoftPosit库，已直接在代码中实现必要函数
+	@echo "使用内部实现而不链接SoftPosit库..."
 	./obj_dir/VPvuTop
 
 wave:
-	gtkwave pvu_top_wave.vcd
+	gtkwave waveform.vcd
 
 git:
 	@if [ -n "$$(find . -name "*.vcd" 2>/dev/null)" ]; then \

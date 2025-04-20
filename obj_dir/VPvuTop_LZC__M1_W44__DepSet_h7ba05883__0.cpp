@@ -11,974 +11,6 @@ VL_INLINE_OPT void VPvuTop_LZC__M1_W44___ico_comb__TOP__PvuTop__DOT__frac_norm_m
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            VPvuTop_LZC__M1_W44___ico_comb__TOP__PvuTop__DOT__frac_norm_mul__DOT__lzcMod__1\n"); );
     // Init
-    VlWide<3>/*95:0*/ __Vtemp_h7d6cf92d__0;
-    VlWide<3>/*95:0*/ __Vtemp_h3b02f6a5__0;
-    VlWide<3>/*95:0*/ __Vtemp_hdd3faaf7__0;
-    VlWide<3>/*95:0*/ __Vtemp_hf82f8539__0;
-    VlWide<3>/*95:0*/ __Vtemp_h65315a8d__0;
-    // Body
-    __Vtemp_h7d6cf92d__0[0U] = (IData)((((QData)((IData)(
-                                                         (0U 
-                                                          != 
-                                                          (3U 
-                                                           & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U])))) 
-                                         << 0x3fU) 
-                                        | (((QData)((IData)(
-                                                            (0U 
-                                                             != 
-                                                             (0x60000000U 
-                                                              & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                            << 0x3eU) 
-                                           | (((QData)((IData)(
-                                                               (0U 
-                                                                != 
-                                                                (0x18000000U 
-                                                                 & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                               << 0x3dU) 
-                                              | (((QData)((IData)(
-                                                                  (0U 
-                                                                   != 
-                                                                   (0x6000000U 
-                                                                    & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                  << 0x3cU) 
-                                                 | (((QData)((IData)(
-                                                                     (0U 
-                                                                      != 
-                                                                      (0x1800000U 
-                                                                       & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                     << 0x3bU) 
-                                                    | (((QData)((IData)(
-                                                                        (0U 
-                                                                         != 
-                                                                         (0x600000U 
-                                                                          & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                        << 0x3aU) 
-                                                       | (((QData)((IData)(
-                                                                           (0U 
-                                                                            != 
-                                                                            (0x180000U 
-                                                                             & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                           << 0x39U) 
-                                                          | (((QData)((IData)(
-                                                                              (0U 
-                                                                               != 
-                                                                               (0x60000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                              << 0x38U) 
-                                                             | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                 << 0x37U) 
-                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                    << 0x36U) 
-                                                                   | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                       << 0x35U) 
-                                                                      | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                          << 0x34U) 
-                                                                         | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                             << 0x33U) 
-                                                                            | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                                << 0x32U) 
-                                                                               | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                                << 0x31U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (6U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                                << 0x30U) 
-                                                                                | (((QData)((IData)(
-                                                                                (1U 
-                                                                                & ((vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] 
-                                                                                >> 0x1fU) 
-                                                                                | vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                                << 0x2fU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2eU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2dU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2cU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2bU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2aU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x29U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x28U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x27U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x26U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x25U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x24U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x23U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x22U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x21U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (6U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x20U) 
-                                                                                | (QData)((IData)(
-                                                                                ((0x80000000U 
-                                                                                & ((0x80000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]) 
-                                                                                | (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] 
-                                                                                << 0x1fU))) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1eU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1dU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1cU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1bU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1aU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x19U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x18U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x17U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x16U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x15U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x14U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x13U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x12U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x11U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (6U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x10U) 
-                                                                                | ((0x8000U 
-                                                                                & ((0x8000U 
-                                                                                & (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U] 
-                                                                                >> 0x10U)) 
-                                                                                | (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U] 
-                                                                                << 0xfU))) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xeU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xdU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xcU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xbU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xaU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 9U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 8U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 7U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 6U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 5U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 4U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 3U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 2U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 1U) 
-                                                                                | (IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (6U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U])))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
-    __Vtemp_h7d6cf92d__0[1U] = (IData)(((((QData)((IData)(
-                                                          (0U 
-                                                           != 
-                                                           (3U 
-                                                            & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U])))) 
-                                          << 0x3fU) 
-                                         | (((QData)((IData)(
-                                                             (0U 
-                                                              != 
-                                                              (0x60000000U 
-                                                               & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                             << 0x3eU) 
-                                            | (((QData)((IData)(
-                                                                (0U 
-                                                                 != 
-                                                                 (0x18000000U 
-                                                                  & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                << 0x3dU) 
-                                               | (((QData)((IData)(
-                                                                   (0U 
-                                                                    != 
-                                                                    (0x6000000U 
-                                                                     & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                   << 0x3cU) 
-                                                  | (((QData)((IData)(
-                                                                      (0U 
-                                                                       != 
-                                                                       (0x1800000U 
-                                                                        & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                      << 0x3bU) 
-                                                     | (((QData)((IData)(
-                                                                         (0U 
-                                                                          != 
-                                                                          (0x600000U 
-                                                                           & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                         << 0x3aU) 
-                                                        | (((QData)((IData)(
-                                                                            (0U 
-                                                                             != 
-                                                                             (0x180000U 
-                                                                              & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                            << 0x39U) 
-                                                           | (((QData)((IData)(
-                                                                               (0U 
-                                                                                != 
-                                                                                (0x60000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                               << 0x38U) 
-                                                              | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                  << 0x37U) 
-                                                                 | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                     << 0x36U) 
-                                                                    | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                        << 0x35U) 
-                                                                       | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                           << 0x34U) 
-                                                                          | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                              << 0x33U) 
-                                                                             | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                                << 0x32U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                                << 0x31U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (6U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                                << 0x30U) 
-                                                                                | (((QData)((IData)(
-                                                                                (1U 
-                                                                                & ((vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] 
-                                                                                >> 0x1fU) 
-                                                                                | vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
-                                                                                << 0x2fU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2eU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2dU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2cU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2bU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x2aU) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x29U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x28U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x27U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x26U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x25U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x24U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x23U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x22U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x21U) 
-                                                                                | (((QData)((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (6U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
-                                                                                << 0x20U) 
-                                                                                | (QData)((IData)(
-                                                                                ((0x80000000U 
-                                                                                & ((0x80000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]) 
-                                                                                | (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] 
-                                                                                << 0x1fU))) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1eU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1dU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1cU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1bU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x1aU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x19U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x18U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x17U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x16U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x15U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x14U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x13U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x12U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x11U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (6U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
-                                                                                << 0x10U) 
-                                                                                | ((0x8000U 
-                                                                                & ((0x8000U 
-                                                                                & (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U] 
-                                                                                >> 0x10U)) 
-                                                                                | (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U] 
-                                                                                << 0xfU))) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xeU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xdU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xcU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xbU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 0xaU) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 9U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 8U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 7U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x6000U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 6U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x1800U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 5U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x600U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 4U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x180U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 3U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x60U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 2U) 
-                                                                                | (((IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (0x18U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
-                                                                                << 1U) 
-                                                                                | (IData)(
-                                                                                (0U 
-                                                                                != 
-                                                                                (6U 
-                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U])))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) 
-                                        >> 0x20U));
-    __Vtemp_h3b02f6a5__0[2U] = (((IData)((0U != (0xc000U 
-                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                 << 6U) | (((IData)(
-                                                    (0U 
-                                                     != 
-                                                     (0x3000U 
-                                                      & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                            << 5U) 
-                                           | (((IData)(
-                                                       (0U 
-                                                        != 
-                                                        (0xc00U 
-                                                         & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                               << 4U) 
-                                              | (((IData)(
-                                                          (0U 
-                                                           != 
-                                                           (0x300U 
-                                                            & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                  << 3U) 
-                                                 | (((IData)(
-                                                             (0U 
-                                                              != 
-                                                              (0xc0U 
-                                                               & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                     << 2U) 
-                                                    | (((IData)(
-                                                                (0U 
-                                                                 != 
-                                                                 (0x30U 
-                                                                  & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                        << 1U) 
-                                                       | (IData)(
-                                                                 (0U 
-                                                                  != 
-                                                                  (0xcU 
-                                                                   & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U])))))))));
-    __Vtemp_hdd3faaf7__0[2U] = (((IData)((0U != (0x30000000U 
-                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                 << 0xdU) | (((IData)(
-                                                      (0U 
-                                                       != 
-                                                       (0xc000000U 
-                                                        & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                              << 0xcU) 
-                                             | (((IData)(
-                                                         (0U 
-                                                          != 
-                                                          (0x3000000U 
-                                                           & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                 << 0xbU) 
-                                                | (((IData)(
-                                                            (0U 
-                                                             != 
-                                                             (0xc00000U 
-                                                              & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                    << 0xaU) 
-                                                   | (((IData)(
-                                                               (0U 
-                                                                != 
-                                                                (0x300000U 
-                                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                       << 9U) 
-                                                      | (((IData)(
-                                                                  (0U 
-                                                                   != 
-                                                                   (0xc0000U 
-                                                                    & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                          << 8U) 
-                                                         | (((IData)(
-                                                                     (0U 
-                                                                      != 
-                                                                      (0x30000U 
-                                                                       & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                             << 7U) 
-                                                            | __Vtemp_h3b02f6a5__0[2U])))))));
-    __Vtemp_hf82f8539__0[2U] = (((IData)((0U != (0xc00U 
-                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                 << 0x14U) | (((IData)(
-                                                       (0U 
-                                                        != 
-                                                        (0x300U 
-                                                         & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                               << 0x13U) 
-                                              | (((IData)(
-                                                          (0U 
-                                                           != 
-                                                           (0xc0U 
-                                                            & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                  << 0x12U) 
-                                                 | (((IData)(
-                                                             (0U 
-                                                              != 
-                                                              (0x30U 
-                                                               & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                     << 0x11U) 
-                                                    | (((IData)(
-                                                                (0U 
-                                                                 != 
-                                                                 (0xcU 
-                                                                  & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                        << 0x10U) 
-                                                       | (((IData)(
-                                                                   (0U 
-                                                                    != 
-                                                                    (3U 
-                                                                     & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                           << 0xfU) 
-                                                          | (((IData)(
-                                                                      (0U 
-                                                                       != 
-                                                                       (0xc0000000U 
-                                                                        & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
-                                                              << 0xeU) 
-                                                             | __Vtemp_hdd3faaf7__0[2U])))))));
-    __Vtemp_h65315a8d__0[2U] = (((IData)((0U != (0x3000000U 
-                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                 << 0x1bU) | (((IData)(
-                                                       (0U 
-                                                        != 
-                                                        (0xc00000U 
-                                                         & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                               << 0x1aU) 
-                                              | (((IData)(
-                                                          (0U 
-                                                           != 
-                                                           (0x300000U 
-                                                            & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                  << 0x19U) 
-                                                 | (((IData)(
-                                                             (0U 
-                                                              != 
-                                                              (0xc0000U 
-                                                               & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                     << 0x18U) 
-                                                    | (((IData)(
-                                                                (0U 
-                                                                 != 
-                                                                 (0x30000U 
-                                                                  & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                        << 0x17U) 
-                                                       | (((IData)(
-                                                                   (0U 
-                                                                    != 
-                                                                    (0xc000U 
-                                                                     & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                           << 0x16U) 
-                                                          | (((IData)(
-                                                                      (0U 
-                                                                       != 
-                                                                       (0x3000U 
-                                                                        & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                              << 0x15U) 
-                                                             | __Vtemp_hf82f8539__0[2U])))))));
-    vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U] = __Vtemp_h7d6cf92d__0[0U];
-    vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U] = __Vtemp_h7d6cf92d__0[1U];
-    vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] = (((IData)(
-                                                           (0U 
-                                                            != 
-                                                            (3U 
-                                                             & vlSelf->__PVT__gen_lzc__DOT__in_tmp[2U]))) 
-                                                   << 0x1fU) 
-                                                  | (((IData)(
-                                                              (0U 
-                                                               != 
-                                                               (0xc0000000U 
-                                                                & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                      << 0x1eU) 
-                                                     | (((IData)(
-                                                                 (0U 
-                                                                  != 
-                                                                  (0x30000000U 
-                                                                   & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                         << 0x1dU) 
-                                                        | (((IData)(
-                                                                    (0U 
-                                                                     != 
-                                                                     (0xc000000U 
-                                                                      & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
-                                                            << 0x1cU) 
-                                                           | __Vtemp_h65315a8d__0[2U]))));
-    vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U] = ((0x80000000U 
-                                                   & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U]) 
-                                                  | (IData)(
-                                                            (0U 
-                                                             != 
-                                                             (0xcU 
-                                                              & vlSelf->__PVT__gen_lzc__DOT__in_tmp[2U]))));
-}
-
-VL_INLINE_OPT void VPvuTop_LZC__M1_W44___ico_comb__TOP__PvuTop__DOT__frac_norm_mul__DOT__lzcMod__2(VPvuTop_LZC__M1_W44* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
-    VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+            VPvuTop_LZC__M1_W44___ico_comb__TOP__PvuTop__DOT__frac_norm_mul__DOT__lzcMod__2\n"); );
-    // Init
     VlWide<28>/*895:0*/ __Vtemp_h46762311__0;
     VlWide<3>/*95:0*/ __Vtemp_h5fa7ae5b__0;
     VlWide<3>/*95:0*/ __Vtemp_h30a53444__0;
@@ -2272,4 +1304,972 @@ VL_INLINE_OPT void VPvuTop_LZC__M1_W44___ico_comb__TOP__PvuTop__DOT__frac_norm_m
     vlSelf->__PVT__gen_lzc__DOT__index_nodes[0x1aU] = 0U;
     vlSelf->__PVT__gen_lzc__DOT__index_nodes[0x1bU] 
         = (0xfe000000U & vlSelf->__PVT__gen_lzc__DOT__index_nodes[0x1bU]);
+}
+
+VL_INLINE_OPT void VPvuTop_LZC__M1_W44___ico_comb__TOP__PvuTop__DOT__frac_norm_mul__DOT__lzcMod__2(VPvuTop_LZC__M1_W44* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+            VPvuTop_LZC__M1_W44___ico_comb__TOP__PvuTop__DOT__frac_norm_mul__DOT__lzcMod__2\n"); );
+    // Init
+    VlWide<3>/*95:0*/ __Vtemp_h7d6cf92d__0;
+    VlWide<3>/*95:0*/ __Vtemp_h3b02f6a5__0;
+    VlWide<3>/*95:0*/ __Vtemp_hdd3faaf7__0;
+    VlWide<3>/*95:0*/ __Vtemp_hf82f8539__0;
+    VlWide<3>/*95:0*/ __Vtemp_h65315a8d__0;
+    // Body
+    __Vtemp_h7d6cf92d__0[0U] = (IData)((((QData)((IData)(
+                                                         (0U 
+                                                          != 
+                                                          (3U 
+                                                           & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U])))) 
+                                         << 0x3fU) 
+                                        | (((QData)((IData)(
+                                                            (0U 
+                                                             != 
+                                                             (0x60000000U 
+                                                              & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                            << 0x3eU) 
+                                           | (((QData)((IData)(
+                                                               (0U 
+                                                                != 
+                                                                (0x18000000U 
+                                                                 & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                               << 0x3dU) 
+                                              | (((QData)((IData)(
+                                                                  (0U 
+                                                                   != 
+                                                                   (0x6000000U 
+                                                                    & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                  << 0x3cU) 
+                                                 | (((QData)((IData)(
+                                                                     (0U 
+                                                                      != 
+                                                                      (0x1800000U 
+                                                                       & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                     << 0x3bU) 
+                                                    | (((QData)((IData)(
+                                                                        (0U 
+                                                                         != 
+                                                                         (0x600000U 
+                                                                          & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                        << 0x3aU) 
+                                                       | (((QData)((IData)(
+                                                                           (0U 
+                                                                            != 
+                                                                            (0x180000U 
+                                                                             & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                           << 0x39U) 
+                                                          | (((QData)((IData)(
+                                                                              (0U 
+                                                                               != 
+                                                                               (0x60000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                              << 0x38U) 
+                                                             | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                 << 0x37U) 
+                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                    << 0x36U) 
+                                                                   | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                       << 0x35U) 
+                                                                      | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                          << 0x34U) 
+                                                                         | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                             << 0x33U) 
+                                                                            | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                                << 0x32U) 
+                                                                               | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                                << 0x31U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (6U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                                << 0x30U) 
+                                                                                | (((QData)((IData)(
+                                                                                (1U 
+                                                                                & ((vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] 
+                                                                                >> 0x1fU) 
+                                                                                | vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                                << 0x2fU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2eU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2dU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2cU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2bU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2aU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x29U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x28U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x27U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x26U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x25U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x24U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x23U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x22U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x21U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (6U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x20U) 
+                                                                                | (QData)((IData)(
+                                                                                ((0x80000000U 
+                                                                                & ((0x80000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]) 
+                                                                                | (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] 
+                                                                                << 0x1fU))) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1eU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1dU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1cU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1bU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1aU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x19U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x18U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x17U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x16U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x15U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x14U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x13U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x12U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x11U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (6U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x10U) 
+                                                                                | ((0x8000U 
+                                                                                & ((0x8000U 
+                                                                                & (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U] 
+                                                                                >> 0x10U)) 
+                                                                                | (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U] 
+                                                                                << 0xfU))) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xeU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xdU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xcU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xbU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xaU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 9U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 8U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 7U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 6U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 5U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 4U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 3U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 2U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 1U) 
+                                                                                | (IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (6U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U])))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+    __Vtemp_h7d6cf92d__0[1U] = (IData)(((((QData)((IData)(
+                                                          (0U 
+                                                           != 
+                                                           (3U 
+                                                            & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U])))) 
+                                          << 0x3fU) 
+                                         | (((QData)((IData)(
+                                                             (0U 
+                                                              != 
+                                                              (0x60000000U 
+                                                               & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                             << 0x3eU) 
+                                            | (((QData)((IData)(
+                                                                (0U 
+                                                                 != 
+                                                                 (0x18000000U 
+                                                                  & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                << 0x3dU) 
+                                               | (((QData)((IData)(
+                                                                   (0U 
+                                                                    != 
+                                                                    (0x6000000U 
+                                                                     & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                   << 0x3cU) 
+                                                  | (((QData)((IData)(
+                                                                      (0U 
+                                                                       != 
+                                                                       (0x1800000U 
+                                                                        & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                      << 0x3bU) 
+                                                     | (((QData)((IData)(
+                                                                         (0U 
+                                                                          != 
+                                                                          (0x600000U 
+                                                                           & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                         << 0x3aU) 
+                                                        | (((QData)((IData)(
+                                                                            (0U 
+                                                                             != 
+                                                                             (0x180000U 
+                                                                              & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                            << 0x39U) 
+                                                           | (((QData)((IData)(
+                                                                               (0U 
+                                                                                != 
+                                                                                (0x60000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                               << 0x38U) 
+                                                              | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                  << 0x37U) 
+                                                                 | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                     << 0x36U) 
+                                                                    | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                        << 0x35U) 
+                                                                       | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                           << 0x34U) 
+                                                                          | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                              << 0x33U) 
+                                                                             | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                                << 0x32U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                                << 0x31U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (6U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                                << 0x30U) 
+                                                                                | (((QData)((IData)(
+                                                                                (1U 
+                                                                                & ((vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] 
+                                                                                >> 0x1fU) 
+                                                                                | vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U])))) 
+                                                                                << 0x2fU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2eU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2dU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2cU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2bU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x2aU) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x29U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x28U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x27U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x26U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x25U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x24U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x23U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x22U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x21U) 
+                                                                                | (((QData)((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (6U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U])))) 
+                                                                                << 0x20U) 
+                                                                                | (QData)((IData)(
+                                                                                ((0x80000000U 
+                                                                                & ((0x80000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]) 
+                                                                                | (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] 
+                                                                                << 0x1fU))) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1eU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1dU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1cU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1bU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x1aU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x19U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x18U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x17U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x16U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x15U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x14U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x13U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x12U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x11U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (6U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U]))) 
+                                                                                << 0x10U) 
+                                                                                | ((0x8000U 
+                                                                                & ((0x8000U 
+                                                                                & (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U] 
+                                                                                >> 0x10U)) 
+                                                                                | (vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U] 
+                                                                                << 0xfU))) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xeU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xdU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xcU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xbU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 0xaU) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 9U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 8U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 7U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x6000U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 6U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x1800U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 5U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x600U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 4U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x180U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 3U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x60U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 2U) 
+                                                                                | (((IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (0x18U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U]))) 
+                                                                                << 1U) 
+                                                                                | (IData)(
+                                                                                (0U 
+                                                                                != 
+                                                                                (6U 
+                                                                                & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U])))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) 
+                                        >> 0x20U));
+    __Vtemp_h3b02f6a5__0[2U] = (((IData)((0U != (0xc000U 
+                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                 << 6U) | (((IData)(
+                                                    (0U 
+                                                     != 
+                                                     (0x3000U 
+                                                      & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                            << 5U) 
+                                           | (((IData)(
+                                                       (0U 
+                                                        != 
+                                                        (0xc00U 
+                                                         & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                               << 4U) 
+                                              | (((IData)(
+                                                          (0U 
+                                                           != 
+                                                           (0x300U 
+                                                            & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                  << 3U) 
+                                                 | (((IData)(
+                                                             (0U 
+                                                              != 
+                                                              (0xc0U 
+                                                               & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                     << 2U) 
+                                                    | (((IData)(
+                                                                (0U 
+                                                                 != 
+                                                                 (0x30U 
+                                                                  & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                        << 1U) 
+                                                       | (IData)(
+                                                                 (0U 
+                                                                  != 
+                                                                  (0xcU 
+                                                                   & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U])))))))));
+    __Vtemp_hdd3faaf7__0[2U] = (((IData)((0U != (0x30000000U 
+                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                 << 0xdU) | (((IData)(
+                                                      (0U 
+                                                       != 
+                                                       (0xc000000U 
+                                                        & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                              << 0xcU) 
+                                             | (((IData)(
+                                                         (0U 
+                                                          != 
+                                                          (0x3000000U 
+                                                           & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                 << 0xbU) 
+                                                | (((IData)(
+                                                            (0U 
+                                                             != 
+                                                             (0xc00000U 
+                                                              & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                    << 0xaU) 
+                                                   | (((IData)(
+                                                               (0U 
+                                                                != 
+                                                                (0x300000U 
+                                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                       << 9U) 
+                                                      | (((IData)(
+                                                                  (0U 
+                                                                   != 
+                                                                   (0xc0000U 
+                                                                    & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                          << 8U) 
+                                                         | (((IData)(
+                                                                     (0U 
+                                                                      != 
+                                                                      (0x30000U 
+                                                                       & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                             << 7U) 
+                                                            | __Vtemp_h3b02f6a5__0[2U])))))));
+    __Vtemp_hf82f8539__0[2U] = (((IData)((0U != (0xc00U 
+                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                 << 0x14U) | (((IData)(
+                                                       (0U 
+                                                        != 
+                                                        (0x300U 
+                                                         & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                               << 0x13U) 
+                                              | (((IData)(
+                                                          (0U 
+                                                           != 
+                                                           (0xc0U 
+                                                            & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                  << 0x12U) 
+                                                 | (((IData)(
+                                                             (0U 
+                                                              != 
+                                                              (0x30U 
+                                                               & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                     << 0x11U) 
+                                                    | (((IData)(
+                                                                (0U 
+                                                                 != 
+                                                                 (0xcU 
+                                                                  & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                        << 0x10U) 
+                                                       | (((IData)(
+                                                                   (0U 
+                                                                    != 
+                                                                    (3U 
+                                                                     & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                           << 0xfU) 
+                                                          | (((IData)(
+                                                                      (0U 
+                                                                       != 
+                                                                       (0xc0000000U 
+                                                                        & vlSelf->__PVT__gen_lzc__DOT__in_tmp[0U]))) 
+                                                              << 0xeU) 
+                                                             | __Vtemp_hdd3faaf7__0[2U])))))));
+    __Vtemp_h65315a8d__0[2U] = (((IData)((0U != (0x3000000U 
+                                                 & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                 << 0x1bU) | (((IData)(
+                                                       (0U 
+                                                        != 
+                                                        (0xc00000U 
+                                                         & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                               << 0x1aU) 
+                                              | (((IData)(
+                                                          (0U 
+                                                           != 
+                                                           (0x300000U 
+                                                            & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                  << 0x19U) 
+                                                 | (((IData)(
+                                                             (0U 
+                                                              != 
+                                                              (0xc0000U 
+                                                               & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                     << 0x18U) 
+                                                    | (((IData)(
+                                                                (0U 
+                                                                 != 
+                                                                 (0x30000U 
+                                                                  & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                        << 0x17U) 
+                                                       | (((IData)(
+                                                                   (0U 
+                                                                    != 
+                                                                    (0xc000U 
+                                                                     & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                           << 0x16U) 
+                                                          | (((IData)(
+                                                                      (0U 
+                                                                       != 
+                                                                       (0x3000U 
+                                                                        & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                              << 0x15U) 
+                                                             | __Vtemp_hf82f8539__0[2U])))))));
+    vlSelf->__PVT__gen_lzc__DOT__sel_nodes[0U] = __Vtemp_h7d6cf92d__0[0U];
+    vlSelf->__PVT__gen_lzc__DOT__sel_nodes[1U] = __Vtemp_h7d6cf92d__0[1U];
+    vlSelf->__PVT__gen_lzc__DOT__sel_nodes[2U] = (((IData)(
+                                                           (0U 
+                                                            != 
+                                                            (3U 
+                                                             & vlSelf->__PVT__gen_lzc__DOT__in_tmp[2U]))) 
+                                                   << 0x1fU) 
+                                                  | (((IData)(
+                                                              (0U 
+                                                               != 
+                                                               (0xc0000000U 
+                                                                & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                      << 0x1eU) 
+                                                     | (((IData)(
+                                                                 (0U 
+                                                                  != 
+                                                                  (0x30000000U 
+                                                                   & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                         << 0x1dU) 
+                                                        | (((IData)(
+                                                                    (0U 
+                                                                     != 
+                                                                     (0xc000000U 
+                                                                      & vlSelf->__PVT__gen_lzc__DOT__in_tmp[1U]))) 
+                                                            << 0x1cU) 
+                                                           | __Vtemp_h65315a8d__0[2U]))));
+    vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U] = ((0x80000000U 
+                                                   & vlSelf->__PVT__gen_lzc__DOT__sel_nodes[3U]) 
+                                                  | (IData)(
+                                                            (0U 
+                                                             != 
+                                                             (0xcU 
+                                                              & vlSelf->__PVT__gen_lzc__DOT__in_tmp[2U]))));
 }

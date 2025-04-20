@@ -75,6 +75,7 @@ class VPvuTop VL_NOT_FINAL : public VerilatedModel {
     // Otherwise the application code can consider these internals.
     VPvuTop_PositDecode* const __PVT__PvuTop__DOT__decode1;
     VPvuTop_PositDecode* const __PVT__PvuTop__DOT__decode2;
+    VPvuTop_PositDecode* const __PVT__PvuTop__DOT__result_converted_decoder;
     VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier;
     VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1;
     VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2;

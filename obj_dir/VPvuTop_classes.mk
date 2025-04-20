@@ -27,9 +27,11 @@ VM_CLASSES_FAST += \
 	VPvuTop___024root__DepSet_h08eac463__0 \
 	VPvuTop___024root__DepSet_h08eac463__1 \
 	VPvuTop___024root__DepSet_h08eac463__2 \
+	VPvuTop___024root__DepSet_h08eac463__3 \
 	VPvuTop___024root__DepSet_h6498118e__0 \
 	VPvuTop___024root__DepSet_h6498118e__1 \
 	VPvuTop___024root__DepSet_h6498118e__2 \
+	VPvuTop___024root__DepSet_h6498118e__3 \
 	VPvuTop_PositDecode__DepSet_h56c1e779__0 \
 	VPvuTop_PositDecode__DepSet_h2008ce25__0 \
 	VPvuTop_Radix4BoothMultiplier__DepSet_ha8b963b5__0 \
@@ -55,6 +57,7 @@ VM_CLASSES_SLOW += \
 	VPvuTop___024root__Slow \
 	VPvuTop___024root__DepSet_h08eac463__0__Slow \
 	VPvuTop___024root__DepSet_h6498118e__0__Slow \
+	VPvuTop___024root__DepSet_h6498118e__1__Slow \
 	VPvuTop_PositDecode__Slow \
 	VPvuTop_PositDecode__DepSet_h56c1e779__0__Slow \
 	VPvuTop_Radix4BoothMultiplier__Slow \
@@ -89,6 +92,7 @@ VM_SUPPORT_SLOW += \
 	VPvuTop__Trace__7__Slow \
 	VPvuTop__Trace__8__Slow \
 	VPvuTop__Trace__9__Slow \
+	VPvuTop__Trace__10__Slow \
 
 # Global classes, need linked once per executable, fast-path, compile with highest optimization
 VM_GLOBAL_FAST += \

@@ -1651,3 +1651,454 @@ Caused by: java.lang.StringIndexOutOfBoundsException: begin 40935, end 40952, le
 2025.04.13 12:09:32 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
 2025.04.13 12:09:32 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
 2025.04.13 12:09:32 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.13 20:07:45 INFO  Started: Metals version 1.5.2 in folders '/home/wuxy/BPVU' for client Visual Studio Code 1.99.0.
+2025.04.13 20:07:45 INFO  Attempting to connect to the build server...
+2025.04.13 20:07:45 INFO  Found a Bloop server running
+2025.04.13 20:07:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/wuxy/BPVU/.metals/bsp.trace.json or /home/wuxy/.cache/metals/bsp.trace.json
+2025.04.13 20:07:45 INFO  time: Connected to build server in 0.15s
+2025.04.13 20:07:45 INFO  Connected to Build server: Bloop v2.0.9
+2025.04.13 20:07:45 WARN  2.13.12 is no longer supported in the current Metals versions, using the last known supported version 1.4.2
+2025.04.13 20:07:48 INFO  time: indexed workspace in 3.03s
+2025.04.13 20:12:41 INFO  Shutting down server
+2025.04.13 20:12:41 INFO  shutting down Metals
+2025.04.13 20:12:41 INFO  Shut down connection with build server.
+2025.04.13 20:12:41 INFO  Exiting server
+2025.04.13 20:38:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.13 20:38:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.13 20:38:34 WARN  no build target for: /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala
+2025.04.13 20:38:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.13 20:38:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.13 20:38:36 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.13 20:38:41 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositQuantizeToInt8.scala. Using presentation compiler with project's scala-library version: 2.13.15
+4月 13, 2025 8:38:44 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+2025.04.13 20:38:44 INFO  Shutting down server
+2025.04.13 20:38:44 INFO  shutting down Metals
+2025.04.13 20:38:44 INFO  Shut down connection with build server.
+2025.04.13 20:38:44 INFO  Exiting server
+2025.04.19 19:32:54 INFO  Started: Metals version 1.5.2 in folders '/home/wuxy/BPVU' for client Visual Studio Code 1.99.3.
+2025.04.19 19:32:55 INFO  Attempting to connect to the build server...
+2025.04.19 19:32:55 INFO  Found a Bloop server running
+2025.04.19 19:32:55 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/wuxy/BPVU/.metals/bsp.trace.json or /home/wuxy/.cache/metals/bsp.trace.json
+2025.04.19 19:32:55 INFO  time: Connected to build server in 0.16s
+2025.04.19 19:32:55 INFO  Connected to Build server: Bloop v2.0.9
+2025.04.19 19:32:55 WARN  2.13.12 is no longer supported in the current Metals versions, using the last known supported version 1.4.2
+2025.04.19 19:32:57 INFO  time: indexed workspace in 2.35s
+2025.04.19 19:37:41 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:37:41 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:37:41 WARN  no build target for: /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala
+2025.04.19 19:37:44 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:37:55 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:33 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 19:38:38 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:04:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:04:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:04:35 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:08 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:08 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:09 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:22 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:05:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:06:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:06:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:06:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:07:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:07:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:07:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:07:47 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:07:47 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:07:47 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:11:05 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:11:05 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:11:05 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:00 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:00 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:00 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:45 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:12:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:13:00 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:13:00 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:13:00 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:13:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:13:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:13:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:15:07 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:15:07 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:15:07 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:15:35 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:15:35 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:15:35 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:23:46 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:23:46 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:23:46 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:24:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:24:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:24:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:25:13 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:25:13 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:25:13 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:25:58 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:25:58 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:25:58 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:51:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:51:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.19 20:51:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:08:19 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:08:19 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:10:45 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:10:45 WARN  no build target for: /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala
+2025.04.20 11:10:45 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:10:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:10:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:10:49 WARN  no build target for: /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala
+2025.04.20 11:10:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:10:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:10:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:11:10 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:11:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 11:11:13 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 12:33:26 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 12:33:26 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 12:33:26 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 12:35:00 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 12:35:56 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 12:46:41 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 13:10:08 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 13:12:44 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 13:13:07 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 13:36:00 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 13:36:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 13:36:32 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:37:11 WARN  no build target for: /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala
+2025.04.20 15:37:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:37:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:37:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:37:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:37:17 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:37:17 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:37:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:37:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:41:33 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:41:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:41:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:43:18 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:43:18 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:43:18 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:43:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:43:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:43:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:46:36 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PositEncode.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:57:15 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:57:15 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:57:15 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:58:28 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:58:28 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 15:58:28 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:04:26 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:04:26 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:04:26 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:04:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:04:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:11 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:39 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:47 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:05:47 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:01 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:01 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:01 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:01 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:01 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:01 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:03 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:03 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:03 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:04 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:07 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:07 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:07 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:09 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:09 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:10 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:26 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:26 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:44 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:44 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:47 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:54 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:54 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:06:55 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:02 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:02 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:02 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:02 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:03 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:12 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:13 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:13 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:13 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:13 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:15 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:15 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:15 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:16 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:18 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:18 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:18 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:18 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:19 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:19 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:18 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:21 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:21 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:20 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:22 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:22 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:22 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:22 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:23 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:24 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:24 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:25 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:25 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:24 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:27 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:28 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:28 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:28 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:28 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:28 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:30 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:30 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:30 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:30 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:29 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:30 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:31 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:31 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:30 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:32 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:34 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:35 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:35 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:36 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:36 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:36 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:36 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:36 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:36 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:37 WARN  no build target for: /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala
+2025.04.20 16:07:37 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:38 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:37 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:38 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:39 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:40 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:39 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:40 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:42 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:42 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:42 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:42 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:42 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:42 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:43 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:43 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+4月 20, 2025 4:07:43 下午 scala.meta.internal.metals.StdReporter $anonfun$create$1
+警告: empty definition using pc, found symbol in pc:  (full report at: /home/wuxy/BPVU/.metals/.reports/metals-full/2025-03-13/r_empty-definition_10-49-15-482.md)
+4月 20, 2025 4:07:43 下午 scala.meta.internal.metals.StdReporter $anonfun$create$1
+警告: scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: . (full report at: /home/wuxy/BPVU/.metals/.reports/metals/2025-04-20/r_invalid-symbol_16-07-43-440.md)
+2025.04.20 16:07:43 ERROR searching for `.` failed
+java.lang.RuntimeException: invalid symbol format
+.
+^
+	at scala.sys.package$.error(package.scala:27)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.fail(Scala.scala:162)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.readChar(Scala.scala:174)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.parseValue(Scala.scala:190)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.parseDescriptor(Scala.scala:209)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.entryPoint(Scala.scala:230)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser$.apply(Scala.scala:238)
+	at scala.meta.internal.semanticdb.Scala$ScalaSymbolOps$.owner$extension(Scala.scala:78)
+	at scala.meta.internal.mtags.Symbol.toplevel(Symbol.scala:50)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query0(SymbolIndexBucket.scala:200)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query(SymbolIndexBucket.scala:177)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.$anonfun$findSymbolDefinition$1(OnDemandSymbolIndex.scala:142)
+	at scala.collection.immutable.List.flatMap(List.scala:294)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.findSymbolDefinition(OnDemandSymbolIndex.scala:142)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definition(OnDemandSymbolIndex.scala:48)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.findInIndex$1(FallbackDefinitionProvider.scala:131)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$15(FallbackDefinitionProvider.scala:140)
+	at scala.collection.immutable.List.flatMap(List.scala:294)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$3(FallbackDefinitionProvider.scala:140)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$2(FallbackDefinitionProvider.scala:47)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$1(FallbackDefinitionProvider.scala:44)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.search(FallbackDefinitionProvider.scala:43)
+	at scala.meta.internal.metals.DefinitionProvider.fromFallback$1(DefinitionProvider.scala:126)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$definition$13(DefinitionProvider.scala:143)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$definition$15(DefinitionProvider.scala:150)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+4月 20, 2025 4:07:43 下午 scala.meta.internal.metals.StdReporter $anonfun$create$1
+警告: scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: # (full report at: /home/wuxy/BPVU/.metals/.reports/metals/2025-04-20/r_invalid-symbol_16-07-43-443.md)
+2025.04.20 16:07:43 ERROR searching for `#` failed
+java.lang.RuntimeException: invalid symbol format
+#
+^
+	at scala.sys.package$.error(package.scala:27)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.fail(Scala.scala:162)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.readChar(Scala.scala:174)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.parseValue(Scala.scala:190)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.parseDescriptor(Scala.scala:212)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.entryPoint(Scala.scala:230)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser$.apply(Scala.scala:238)
+	at scala.meta.internal.semanticdb.Scala$ScalaSymbolOps$.owner$extension(Scala.scala:78)
+	at scala.meta.internal.mtags.Symbol.toplevel(Symbol.scala:50)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query0(SymbolIndexBucket.scala:200)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query(SymbolIndexBucket.scala:177)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.$anonfun$findSymbolDefinition$1(OnDemandSymbolIndex.scala:142)
+	at scala.collection.immutable.List.flatMap(List.scala:294)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.findSymbolDefinition(OnDemandSymbolIndex.scala:142)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definition(OnDemandSymbolIndex.scala:48)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.findInIndex$1(FallbackDefinitionProvider.scala:131)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$15(FallbackDefinitionProvider.scala:140)
+	at scala.collection.immutable.List.flatMap(List.scala:294)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$3(FallbackDefinitionProvider.scala:140)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$2(FallbackDefinitionProvider.scala:47)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$1(FallbackDefinitionProvider.scala:44)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.search(FallbackDefinitionProvider.scala:43)
+	at scala.meta.internal.metals.DefinitionProvider.fromFallback$1(DefinitionProvider.scala:126)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$definition$13(DefinitionProvider.scala:143)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$definition$15(DefinitionProvider.scala:150)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+4月 20, 2025 4:07:43 下午 scala.meta.internal.metals.StdReporter $anonfun$create$1
+警告: scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: (). (full report at: /home/wuxy/BPVU/.metals/.reports/metals/2025-04-20/r_invalid-symbol_16-07-43-444.md)
+2025.04.20 16:07:43 ERROR searching for `().` failed
+java.lang.RuntimeException: invalid symbol format
+().
+^
+	at scala.sys.package$.error(package.scala:27)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.fail(Scala.scala:162)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.readChar(Scala.scala:174)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.parseValue(Scala.scala:190)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.parseDescriptor(Scala.scala:207)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.entryPoint(Scala.scala:230)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser$.apply(Scala.scala:238)
+	at scala.meta.internal.semanticdb.Scala$ScalaSymbolOps$.owner$extension(Scala.scala:78)
+	at scala.meta.internal.mtags.Symbol.toplevel(Symbol.scala:50)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query0(SymbolIndexBucket.scala:200)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query(SymbolIndexBucket.scala:177)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.$anonfun$findSymbolDefinition$1(OnDemandSymbolIndex.scala:142)
+	at scala.collection.immutable.List.flatMap(List.scala:294)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.findSymbolDefinition(OnDemandSymbolIndex.scala:142)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definition(OnDemandSymbolIndex.scala:48)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.findInIndex$1(FallbackDefinitionProvider.scala:131)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$15(FallbackDefinitionProvider.scala:140)
+	at scala.collection.immutable.List.flatMap(List.scala:294)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$3(FallbackDefinitionProvider.scala:140)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$2(FallbackDefinitionProvider.scala:47)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.$anonfun$search$1(FallbackDefinitionProvider.scala:44)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.FallbackDefinitionProvider.search(FallbackDefinitionProvider.scala:43)
+	at scala.meta.internal.metals.DefinitionProvider.fromFallback$1(DefinitionProvider.scala:126)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$definition$13(DefinitionProvider.scala:143)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$definition$15(DefinitionProvider.scala:150)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2025.04.20 16:07:43 WARN  Could not find 'elsewhen' using presentation compiler nor semanticdb. Trying to guess the definition using available information from local class context. 
+4月 20, 2025 4:07:43 下午 scala.meta.internal.metals.StdReporter $anonfun$create$1
+警告: empty definition using pc, found symbol in pc:  (full report at: /home/wuxy/BPVU/.metals/.reports/metals-full/2025-03-13/r_empty-definition_11-01-24-229.md)
+2025.04.20 16:07:43 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:43 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:43 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:43 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+4月 20, 2025 4:07:43 下午 scala.meta.internal.metals.StdReporter $anonfun$create$1
+警告: empty definition using pc, found symbol in pc:  (full report at: /home/wuxy/BPVU/.metals/.reports/metals-full/2025-03-13/r_empty-definition_10-49-15-482.md)
+2025.04.20 16:07:43 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:44 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:44 WARN  no build target for: /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala
+2025.04.20 16:07:43 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:44 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:44 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:49 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:51 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:52 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15
+2025.04.20 16:07:54 WARN  no build target for: /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala
+2025.04.20 16:07:54 INFO  no build target found for /home/wuxy/BPVU/src/main/scala/pvu/PvuTop.scala. Using presentation compiler with project's scala-library version: 2.13.15

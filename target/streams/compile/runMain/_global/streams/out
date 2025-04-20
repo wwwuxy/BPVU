@@ -1,66 +1,24 @@
-[error] circt.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.
-[error] ------------------------------------------------------------------------------
-[error] ExitCode:
-[error] 1
-[error] STDOUT:
-[error] 
-[error] STDERR:
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[0][0]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[0][1]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[1][0]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[1][1]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[2][0]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[2][1]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[3][0]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[3][1]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] 
-[error] ------------------------------------------------------------------------------
-[error] (Compile / runMain) circt.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.
-[error] ------------------------------------------------------------------------------
-[error] ExitCode:
-[error] 1
-[error] STDOUT:
-[error] 
-[error] STDERR:
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[0][0]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[0][1]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[1][0]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[1][1]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[2][0]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[2][1]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[3][0]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] src/main/scala/pvu/Div.scala:28:26: error: sink "posit_inputs[3][1]" not fully initialized in "Div"
-[error]   val posit_inputs = Wire(Vec(VECTOR_SIZE, Vec(2, UInt(POSIT_WIDTH.W))))
-[error]                          ^
-[error] 
-[error] ------------------------------------------------------------------------------
+[0m[[0m[31merror[0m] [0m[0mcirct.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
+[0m[[0m[31merror[0m] [0m[0m1[0m
+[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PositConvert.scala:18:7: error: detected combinational cycle in a FIRRTL module, sample path: PositConvert.{frac_result <- ... <- frac_result}[0m
+[0m[[0m[31merror[0m] [0m[0mclass PositConvert([0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) circt.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
+[0m[[0m[31merror[0m] [0m[0m1[0m
+[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PositConvert.scala:18:7: error: detected combinational cycle in a FIRRTL module, sample path: PositConvert.{frac_result <- ... <- frac_result}[0m
+[0m[[0m[31merror[0m] [0m[0mclass PositConvert([0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m

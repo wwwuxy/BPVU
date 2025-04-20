@@ -53,6 +53,7 @@ VPvuTop::VPvuTop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , io_float_dot_o{vlSymsp->TOP.io_float_dot_o}
     , __PVT__PvuTop__DOT__decode1{vlSymsp->TOP.__PVT__PvuTop__DOT__decode1}
     , __PVT__PvuTop__DOT__decode2{vlSymsp->TOP.__PVT__PvuTop__DOT__decode2}
+    , __PVT__PvuTop__DOT__result_converted_decoder{vlSymsp->TOP.__PVT__PvuTop__DOT__result_converted_decoder}
     , __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier{vlSymsp->TOP.__PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier}
     , __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1{vlSymsp->TOP.__PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1}
     , __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2{vlSymsp->TOP.__PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2}

@@ -131,6 +131,12 @@ menu "RESNET_TEST"
         help
             Enable Posit32 to Int32 truncation test.
 
+    config RESNET_CONVERT_P32
+        bool "resnet_convert_p32_test"
+
+        help
+            Enable Posit32 conversion test.
+
     endchoice
 endmenu
 
@@ -787,6 +793,12 @@ menu "REGNET_TEST"
 
         help
             Enable Posit32 to Int8 truncation test for RegNet.
+
+    config REGNET_CONVERT_P32
+        bool "regnet_convert_p32_test"
+
+        help
+            Enable RegNet conversion test.
 
     endchoice
 endmenu

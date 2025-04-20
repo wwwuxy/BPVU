@@ -92,6 +92,7 @@ VM_USER_CLASSES = \
 	main_mobilenet_sub_p32 \
 	main_mobilenet_truncate_p32 \
 	main_regnet_add_p32 \
+	main_regnet_convert_p32 \
 	main_regnet_div_p32 \
 	main_regnet_dot_p32 \
 	main_regnet_fp32Top32 \
@@ -258,6 +259,8 @@ main_mobilenet_sub_p32.o: /home/wuxy/BPVU/csrc/main_mobilenet_sub_p32.cpp
 main_mobilenet_truncate_p32.o: /home/wuxy/BPVU/csrc/main_mobilenet_truncate_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_regnet_add_p32.o: /home/wuxy/BPVU/csrc/main_regnet_add_p32.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_regnet_convert_p32.o: /home/wuxy/BPVU/csrc/main_regnet_convert_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_regnet_div_p32.o: /home/wuxy/BPVU/csrc/main_regnet_div_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
