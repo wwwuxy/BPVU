@@ -135,7 +135,7 @@ menu "RESNET_TEST"
         bool "resnet_convert_p32_test"
 
         help
-            Enable Posit32 conversion test.
+            Enable ResNet conversion test.
 
     endchoice
 endmenu
@@ -210,6 +210,12 @@ menu "VGG_TEST"
         help
             Enable Posit32 to Int8 truncation test for VGG.
 
+    config VGG_CONVERT_P32
+        bool "vgg_convert_p32_test"
+
+        help
+            Enable VGG conversion test.
+
     endchoice
 endmenu
 
@@ -282,6 +288,12 @@ menu "ALEXNET_TEST"
 
         help
             Enable Posit32 to Int8 truncation test for AlexNet.
+
+    config ALEXNET_CONVERT_P32
+        bool "alexnet_convert_p32_test"
+
+        help
+            Enable AlexNet conversion test.
 
     endchoice
 endmenu
@@ -356,6 +368,12 @@ menu "LENET_TEST"
         help
             Enable Posit32 to Int8 truncation test for LeNet.
 
+    config LENET_CONVERT_P32
+        bool "lenet_convert_p32_test"
+
+        help
+            Enable LeNet conversion test.
+
     endchoice
 endmenu
 
@@ -428,6 +446,12 @@ menu "MOBILENET_TEST"
 
         help
             Enable Posit32 to Int8 truncation test for MobileNet.
+
+    config MOBILENET_CONVERT_P32
+        bool "mobilenet_convert_p32_test"
+
+        help
+            Enable MobileNet conversion test.
 
     endchoice
 endmenu
@@ -502,6 +526,12 @@ menu "SQUEEZENET_TEST"
         help
             Enable Posit32 to Int8 truncation test for SqueezeNet.
 
+    config SQUEEZENET_CONVERT_P32
+        bool "squeezenet_convert_p32_test"
+
+        help
+            Enable SqueezeNet conversion test.
+
     endchoice
 endmenu
 
@@ -574,6 +604,12 @@ menu "CONVNEXT_TEST"
 
         help
             Enable Posit32 to Int8 truncation test for ConvNeXt.
+
+    config CONVNEXT_CONVERT_P32
+        bool "convnext_convert_p32_test"
+
+        help
+            Enable ConvNeXt conversion test.
 
     endchoice
 endmenu
@@ -648,6 +684,12 @@ menu "SHUFFLENETV2_TEST"
         help
             Enable Posit32 to Int8 truncation test for ShuffleNetV2.
 
+    config SHUFFLENETV2_CONVERT_P32
+        bool "shufflenetv2_convert_p32_test"
+
+        help
+            Enable ShuffleNetV2 conversion test.
+
     endchoice
 endmenu
 
@@ -720,6 +762,12 @@ menu "EFFICIENTNET_TEST"
 
         help
             Enable Posit32 to Int8 truncation test for EfficientNet.
+
+    config EFFICIENTNET_CONVERT_P32
+        bool "efficientnet_convert_p32_test"
+
+        help
+            Enable EfficientNet conversion test.
 
     endchoice
 endmenu
