@@ -36,6 +36,7 @@ class VPvuTop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&io_Outposit,0,0);
     VL_IN8(&io_float_mode,2,0);
     VL_IN8(&io_float_posit,0,0);
+    VL_IN8(&io_dst_float_mode,3,0);
     VL_IN8(&io_src_posit_width,5,0);
     VL_IN8(&io_vector_size,2,0);
     VL_IN8(&io_dst_posit_width,5,0);

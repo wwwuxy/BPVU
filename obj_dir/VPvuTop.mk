@@ -46,6 +46,7 @@ VM_USER_CLASSES = \
 	main_alexnet_div_p32 \
 	main_alexnet_dot_p32 \
 	main_alexnet_fp32Top32 \
+	main_alexnet_fp32_convert \
 	main_alexnet_greater_p32 \
 	main_alexnet_less_p32 \
 	main_alexnet_mul_p32 \
@@ -57,6 +58,7 @@ VM_USER_CLASSES = \
 	main_convnext_div_p32 \
 	main_convnext_dot_p32 \
 	main_convnext_fp32Top32 \
+	main_convnext_fp32_convert \
 	main_convnext_greater_p32 \
 	main_convnext_less_p32 \
 	main_convnext_mul_p32 \
@@ -68,6 +70,7 @@ VM_USER_CLASSES = \
 	main_efficientnet_div_p32 \
 	main_efficientnet_dot_p32 \
 	main_efficientnet_fp32Top32 \
+	main_efficientnet_fp32_convert \
 	main_efficientnet_greater_p32 \
 	main_efficientnet_less_p32 \
 	main_efficientnet_mul_p32 \
@@ -79,6 +82,7 @@ VM_USER_CLASSES = \
 	main_lenet_div_p32 \
 	main_lenet_dot_p32 \
 	main_lenet_fp32Top32 \
+	main_lenet_fp32_convert \
 	main_lenet_greater_p32 \
 	main_lenet_less_p32 \
 	main_lenet_mul_p32 \
@@ -90,6 +94,7 @@ VM_USER_CLASSES = \
 	main_mobilenet_div_p32 \
 	main_mobilenet_dot_p32 \
 	main_mobilenet_fp32Top32 \
+	main_mobilenet_fp32_convert \
 	main_mobilenet_greater_p32 \
 	main_mobilenet_less_p32 \
 	main_mobilenet_mul_p32 \
@@ -101,6 +106,7 @@ VM_USER_CLASSES = \
 	main_regnet_div_p32 \
 	main_regnet_dot_p32 \
 	main_regnet_fp32Top32 \
+	main_regnet_fp32_convert \
 	main_regnet_greater_p32 \
 	main_regnet_less_p32 \
 	main_regnet_mul_p32 \
@@ -112,6 +118,7 @@ VM_USER_CLASSES = \
 	main_resnet_div_p32 \
 	main_resnet_dot_p32 \
 	main_resnet_fp32Top32 \
+	main_resnet_fp32_convert \
 	main_resnet_greater_p32 \
 	main_resnet_less_p32 \
 	main_resnet_mul_p32 \
@@ -123,6 +130,7 @@ VM_USER_CLASSES = \
 	main_shufflenetv2_div_p32 \
 	main_shufflenetv2_dot_p32 \
 	main_shufflenetv2_fp32Top32 \
+	main_shufflenetv2_fp32_convert \
 	main_shufflenetv2_greater_p32 \
 	main_shufflenetv2_less_p32 \
 	main_shufflenetv2_mul_p32 \
@@ -135,6 +143,7 @@ VM_USER_CLASSES = \
 	main_squeezenet_div_p32 \
 	main_squeezenet_dot_p32 \
 	main_squeezenet_fp32Top32 \
+	main_squeezenet_fp32_convert \
 	main_squeezenet_greater_p32 \
 	main_squeezenet_less_p32 \
 	main_squeezenet_mul_p32 \
@@ -146,6 +155,7 @@ VM_USER_CLASSES = \
 	main_vgg_div_p32 \
 	main_vgg_dot_p32 \
 	main_vgg_fp32Top32 \
+	main_vgg_fp32_convert \
 	main_vgg_greater_p32 \
 	main_vgg_less_p32 \
 	main_vgg_mul_p32 \
@@ -177,6 +187,8 @@ main_alexnet_dot_p32.o: /home/wuxy/BPVU/csrc/main_alexnet_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_alexnet_fp32Top32.o: /home/wuxy/BPVU/csrc/main_alexnet_fp32Top32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_alexnet_fp32_convert.o: /home/wuxy/BPVU/csrc/main_alexnet_fp32_convert.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_alexnet_greater_p32.o: /home/wuxy/BPVU/csrc/main_alexnet_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_alexnet_less_p32.o: /home/wuxy/BPVU/csrc/main_alexnet_less_p32.cpp
@@ -198,6 +210,8 @@ main_convnext_div_p32.o: /home/wuxy/BPVU/csrc/main_convnext_div_p32.cpp
 main_convnext_dot_p32.o: /home/wuxy/BPVU/csrc/main_convnext_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_convnext_fp32Top32.o: /home/wuxy/BPVU/csrc/main_convnext_fp32Top32.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_convnext_fp32_convert.o: /home/wuxy/BPVU/csrc/main_convnext_fp32_convert.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_convnext_greater_p32.o: /home/wuxy/BPVU/csrc/main_convnext_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
@@ -221,6 +235,8 @@ main_efficientnet_dot_p32.o: /home/wuxy/BPVU/csrc/main_efficientnet_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_efficientnet_fp32Top32.o: /home/wuxy/BPVU/csrc/main_efficientnet_fp32Top32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_efficientnet_fp32_convert.o: /home/wuxy/BPVU/csrc/main_efficientnet_fp32_convert.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_efficientnet_greater_p32.o: /home/wuxy/BPVU/csrc/main_efficientnet_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_efficientnet_less_p32.o: /home/wuxy/BPVU/csrc/main_efficientnet_less_p32.cpp
@@ -242,6 +258,8 @@ main_lenet_div_p32.o: /home/wuxy/BPVU/csrc/main_lenet_div_p32.cpp
 main_lenet_dot_p32.o: /home/wuxy/BPVU/csrc/main_lenet_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_lenet_fp32Top32.o: /home/wuxy/BPVU/csrc/main_lenet_fp32Top32.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_lenet_fp32_convert.o: /home/wuxy/BPVU/csrc/main_lenet_fp32_convert.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_lenet_greater_p32.o: /home/wuxy/BPVU/csrc/main_lenet_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
@@ -265,6 +283,8 @@ main_mobilenet_dot_p32.o: /home/wuxy/BPVU/csrc/main_mobilenet_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_mobilenet_fp32Top32.o: /home/wuxy/BPVU/csrc/main_mobilenet_fp32Top32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_mobilenet_fp32_convert.o: /home/wuxy/BPVU/csrc/main_mobilenet_fp32_convert.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_mobilenet_greater_p32.o: /home/wuxy/BPVU/csrc/main_mobilenet_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_mobilenet_less_p32.o: /home/wuxy/BPVU/csrc/main_mobilenet_less_p32.cpp
@@ -286,6 +306,8 @@ main_regnet_div_p32.o: /home/wuxy/BPVU/csrc/main_regnet_div_p32.cpp
 main_regnet_dot_p32.o: /home/wuxy/BPVU/csrc/main_regnet_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_regnet_fp32Top32.o: /home/wuxy/BPVU/csrc/main_regnet_fp32Top32.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_regnet_fp32_convert.o: /home/wuxy/BPVU/csrc/main_regnet_fp32_convert.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_regnet_greater_p32.o: /home/wuxy/BPVU/csrc/main_regnet_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
@@ -309,6 +331,8 @@ main_resnet_dot_p32.o: /home/wuxy/BPVU/csrc/main_resnet_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_resnet_fp32Top32.o: /home/wuxy/BPVU/csrc/main_resnet_fp32Top32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_resnet_fp32_convert.o: /home/wuxy/BPVU/csrc/main_resnet_fp32_convert.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_resnet_greater_p32.o: /home/wuxy/BPVU/csrc/main_resnet_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_resnet_less_p32.o: /home/wuxy/BPVU/csrc/main_resnet_less_p32.cpp
@@ -330,6 +354,8 @@ main_shufflenetv2_div_p32.o: /home/wuxy/BPVU/csrc/main_shufflenetv2_div_p32.cpp
 main_shufflenetv2_dot_p32.o: /home/wuxy/BPVU/csrc/main_shufflenetv2_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_shufflenetv2_fp32Top32.o: /home/wuxy/BPVU/csrc/main_shufflenetv2_fp32Top32.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_shufflenetv2_fp32_convert.o: /home/wuxy/BPVU/csrc/main_shufflenetv2_fp32_convert.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_shufflenetv2_greater_p32.o: /home/wuxy/BPVU/csrc/main_shufflenetv2_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
@@ -355,6 +381,8 @@ main_squeezenet_dot_p32.o: /home/wuxy/BPVU/csrc/main_squeezenet_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_squeezenet_fp32Top32.o: /home/wuxy/BPVU/csrc/main_squeezenet_fp32Top32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_squeezenet_fp32_convert.o: /home/wuxy/BPVU/csrc/main_squeezenet_fp32_convert.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_squeezenet_greater_p32.o: /home/wuxy/BPVU/csrc/main_squeezenet_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_squeezenet_less_p32.o: /home/wuxy/BPVU/csrc/main_squeezenet_less_p32.cpp
@@ -376,6 +404,8 @@ main_vgg_div_p32.o: /home/wuxy/BPVU/csrc/main_vgg_div_p32.cpp
 main_vgg_dot_p32.o: /home/wuxy/BPVU/csrc/main_vgg_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_vgg_fp32Top32.o: /home/wuxy/BPVU/csrc/main_vgg_fp32Top32.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_vgg_fp32_convert.o: /home/wuxy/BPVU/csrc/main_vgg_fp32_convert.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main_vgg_greater_p32.o: /home/wuxy/BPVU/csrc/main_vgg_greater_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<

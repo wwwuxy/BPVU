@@ -137,6 +137,12 @@ menu "RESNET_TEST"
         help
             Enable ResNet conversion test.
 
+    config RESNET_FP32_PRECISION_TEST
+        bool "resnet_fp32_precision_test"
+
+        help
+            Enable ResNet FP32 precision test.
+
     endchoice
 endmenu
 
@@ -215,6 +221,12 @@ menu "VGG_TEST"
 
         help
             Enable VGG conversion test.
+
+    config VGG_FP32_PRECISION_TEST
+        bool "vgg_fp32_precision_test"
+
+        help
+            Enable VGG FP32 precision test.
 
     endchoice
 endmenu
@@ -295,6 +307,12 @@ menu "ALEXNET_TEST"
         help
             Enable AlexNet conversion test.
 
+    config ALEXNET_FP32_PRECISION_TEST
+        bool "alexnet_fp32_precision_test"
+
+        help
+            Enable AlexNet FP32 precision test.
+
     endchoice
 endmenu
 
@@ -373,6 +391,12 @@ menu "LENET_TEST"
 
         help
             Enable LeNet conversion test.
+
+    config LENET_FP32_PRECISION_TEST
+        bool "lenet_fp32_precision_test"
+
+        help
+            Enable LeNet FP32 precision test.
 
     endchoice
 endmenu
@@ -453,6 +477,12 @@ menu "MOBILENET_TEST"
         help
             Enable MobileNet conversion test.
 
+    config MOBILENET_FP32_PRECISION_TEST
+        bool "mobilenet_fp32_precision_test"
+
+        help
+            Enable MobileNet FP32 precision test.
+
     endchoice
 endmenu
 
@@ -531,6 +561,12 @@ menu "SQUEEZENET_TEST"
 
         help
             Enable SqueezeNet conversion test.
+
+    config SQUEEZENET_FP32_PRECISION_TEST
+        bool "squeezenet_fp32_precision_test"
+
+        help
+            Enable SqueezeNet FP32 precision test.
 
     endchoice
 endmenu
@@ -611,6 +647,12 @@ menu "CONVNEXT_TEST"
         help
             Enable ConvNeXt conversion test.
 
+    config CONVNEXT_FP32_PRECISION_TEST
+        bool "convnext_fp32_precision_test"
+
+        help
+            Enable ConvNeXt FP32 precision test.
+
     endchoice
 endmenu
 
@@ -689,6 +731,12 @@ menu "SHUFFLENETV2_TEST"
 
         help
             Enable ShuffleNetV2 conversion test.
+
+    config SHUFFLENETV2_FP32_PRECISION_TEST
+        bool "shufflenetv2_fp32_precision_test"
+
+        help
+            Enable ShuffleNetV2 FP32 precision test.
 
     endchoice
 endmenu
@@ -769,6 +817,12 @@ menu "EFFICIENTNET_TEST"
         help
             Enable EfficientNet conversion test.
 
+    config EFFICIENTNET_FP32_PRECISION_TEST
+        bool "efficientnet_fp32_precision_test"
+
+        help
+            Enable EfficientNet FP32 precision test.
+
     endchoice
 endmenu
 
@@ -847,6 +901,12 @@ menu "REGNET_TEST"
 
         help
             Enable RegNet conversion test.
+
+    config REGNET_FP32_PRECISION_TEST
+        bool "regnet_fp32_precision_test"
+
+        help
+            Enable RegNet FP32 precision test.
 
     endchoice
 endmenu

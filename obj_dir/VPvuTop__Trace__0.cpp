@@ -46,6 +46,54 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
     VlWide<4>/*127:0*/ __Vtemp_hf1043e3e__0;
     VlWide<3>/*95:0*/ __Vtemp_h64ce9859__0;
     VlWide<3>/*95:0*/ __Vtemp_hbad4c406__0;
+    VlWide<8>/*255:0*/ __Vtemp_h221ee5a3__0;
+    VlWide<8>/*255:0*/ __Vtemp_h937180bd__0;
+    VlWide<8>/*255:0*/ __Vtemp_hdace6f11__0;
+    VlWide<8>/*255:0*/ __Vtemp_h7cd83289__0;
+    VlWide<4>/*127:0*/ __Vtemp_h7f7d99cf__0;
+    VlWide<4>/*127:0*/ __Vtemp_h858e7022__0;
+    VlWide<6>/*191:0*/ __Vtemp_h069665a3__0;
+    VlWide<8>/*255:0*/ __Vtemp_h236ded5b__0;
+    VlWide<8>/*255:0*/ __Vtemp_h6e5f7285__0;
+    VlWide<8>/*255:0*/ __Vtemp_hd02609af__0;
+    VlWide<8>/*255:0*/ __Vtemp_hcf74a244__0;
+    VlWide<8>/*255:0*/ __Vtemp_h2fe7e68b__0;
+    VlWide<8>/*255:0*/ __Vtemp_h479ef0df__0;
+    VlWide<8>/*255:0*/ __Vtemp_hf6689d19__0;
+    VlWide<4>/*127:0*/ __Vtemp_h5f6240bd__0;
+    VlWide<4>/*127:0*/ __Vtemp_haca7471f__0;
+    VlWide<6>/*191:0*/ __Vtemp_h94514c01__0;
+    VlWide<8>/*255:0*/ __Vtemp_hf2f22d27__0;
+    VlWide<8>/*255:0*/ __Vtemp_hf2887d23__0;
+    VlWide<8>/*255:0*/ __Vtemp_h8c2726da__0;
+    VlWide<8>/*255:0*/ __Vtemp_hec274be6__0;
+    VlWide<8>/*255:0*/ __Vtemp_h60eb032f__0;
+    VlWide<8>/*255:0*/ __Vtemp_h25d372e0__0;
+    VlWide<8>/*255:0*/ __Vtemp_heb942c9a__0;
+    VlWide<4>/*127:0*/ __Vtemp_hfb7165d2__0;
+    VlWide<4>/*127:0*/ __Vtemp_h705fa604__0;
+    VlWide<6>/*191:0*/ __Vtemp_h29a89877__0;
+    VlWide<8>/*255:0*/ __Vtemp_hc9fc1a0c__0;
+    VlWide<8>/*255:0*/ __Vtemp_h9d62c4df__0;
+    VlWide<8>/*255:0*/ __Vtemp_hf78dbada__0;
+    VlWide<8>/*255:0*/ __Vtemp_hbaea1cc6__0;
+    VlWide<8>/*255:0*/ __Vtemp_hcd8480dd__0;
+    VlWide<8>/*255:0*/ __Vtemp_h789a3603__0;
+    VlWide<8>/*255:0*/ __Vtemp_hd6f5efb8__0;
+    VlWide<4>/*127:0*/ __Vtemp_h8ca573ac__0;
+    VlWide<4>/*127:0*/ __Vtemp_h11794d59__0;
+    VlWide<6>/*191:0*/ __Vtemp_hc996c197__0;
+    VlWide<8>/*255:0*/ __Vtemp_h622f89ff__0;
+    VlWide<8>/*255:0*/ __Vtemp_h1f870f82__0;
+    VlWide<8>/*255:0*/ __Vtemp_h2f3c53aa__0;
+    VlWide<8>/*255:0*/ __Vtemp_h5f593718__0;
+    VlWide<8>/*255:0*/ __Vtemp_h3bb0277d__0;
+    VlWide<8>/*255:0*/ __Vtemp_h3807057e__0;
+    VlWide<4>/*127:0*/ __Vtemp_hd335ae67__0;
+    VlWide<4>/*127:0*/ __Vtemp_he33b9022__0;
+    VlWide<6>/*191:0*/ __Vtemp_h85e552db__0;
+    VlWide<8>/*255:0*/ __Vtemp_hccc23c01__0;
+    VlWide<8>/*255:0*/ __Vtemp_hbd3288fd__0;
     VlWide<4>/*127:0*/ __Vtemp_haf81e697__0;
     VlWide<4>/*127:0*/ __Vtemp_ha2ff5b57__0;
     VlWide<6>/*191:0*/ __Vtemp_haf209345__0;
@@ -115,7 +163,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
         bufp->chgCData(oldp+0,(vlSelf->PvuTop__DOT__ACTUAL_VECTOR_SIZE),3);
         bufp->chgCData(oldp+1,(vlSelf->PvuTop__DOT__ACTUAL_DST_POSIT_WIDTH),6);
         bufp->chgCData(oldp+2,(vlSelf->PvuTop__DOT___GEN_40),4);
-        bufp->chgCData(oldp+3,(vlSelf->PvuTop__DOT___GEN_134),4);
+        bufp->chgCData(oldp+3,(vlSelf->PvuTop__DOT___GEN_172),4);
         bufp->chgCData(oldp+4,((((IData)(vlSelf->PvuTop__DOT__convert8__DOT__posit_encoder__DOT____VdfgTmp_h878add96__0) 
                                  << 3U) | (((IData)(vlSelf->PvuTop__DOT__convert8__DOT__posit_encoder__DOT____VdfgTmp_h878e0f03__0) 
                                             << 2U) 
@@ -612,119 +660,2995 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                              | (((IData)(vlSelf->PvuTop__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
                                                  << 1U) 
                                                 | (IData)(vlSelf->PvuTop__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
-        bufp->chgWData(oldp+200,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT____Vcellinp__positDecoder__io_posit),128);
-        bufp->chgCData(oldp+204,(vlSelf->PvuTop__DOT__greater__DOT__ACTUAL_DST_POSIT_WIDTH),6);
-        bufp->chgBit(oldp+205,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__isNaR));
-        bufp->chgBit(oldp+206,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__isNaR_1));
-        bufp->chgBit(oldp+207,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__isNaR_2));
-        bufp->chgBit(oldp+208,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__isNaR_3));
-        bufp->chgCData(oldp+209,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.io_Sign),4);
-        bufp->chgCData(oldp+210,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT____Vcellinp__floatEncoder__io_isNaN),4);
-        bufp->chgCData(oldp+211,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.io_Sign),4);
-        bufp->chgCData(oldp+212,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.io_Sign),4);
-        bufp->chgCData(oldp+213,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Sign),4);
-        bufp->chgCData(oldp+214,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
-        bufp->chgCData(oldp+215,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.io_Sign),4);
-        bufp->chgWData(oldp+216,(vlSelf->PvuTop__DOT____Vcellinp__decode1__io_posit),128);
-        bufp->chgCData(oldp+220,(vlSymsp->TOP__PvuTop__DOT__decode1.io_Sign),4);
-        bufp->chgCData(oldp+221,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__isNaR),4);
-        bufp->chgIData(oldp+222,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT___operand_0_T_6),31);
-        bufp->chgIData(oldp+223,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT___operand_1_T_6),31);
-        bufp->chgIData(oldp+224,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT___operand_2_T_6),31);
-        bufp->chgIData(oldp+225,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT___operand_3_T_6),31);
-        bufp->chgIData(oldp+226,(vlSymsp->TOP__PvuTop__DOT__decode1.__Vcellinp__lzcModule__in_i),31);
-        bufp->chgIData(oldp+227,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+228,(vlSymsp->TOP__PvuTop__DOT__decode1.__Vcellinp__lzcModule_1__in_i),31);
-        bufp->chgIData(oldp+229,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+230,(vlSymsp->TOP__PvuTop__DOT__decode1.__Vcellinp__lzcModule_2__in_i),31);
-        bufp->chgIData(oldp+231,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+232,(vlSymsp->TOP__PvuTop__DOT__decode1.__Vcellinp__lzcModule_3__in_i),31);
-        bufp->chgIData(oldp+233,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgWData(oldp+234,(vlSelf->PvuTop__DOT____Vcellinp__decode2__io_posit),128);
-        bufp->chgCData(oldp+238,(vlSymsp->TOP__PvuTop__DOT__decode2.io_Sign),4);
-        bufp->chgCData(oldp+239,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__isNaR),4);
-        bufp->chgIData(oldp+240,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT___operand_0_T_6),31);
-        bufp->chgIData(oldp+241,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT___operand_1_T_6),31);
-        bufp->chgIData(oldp+242,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT___operand_2_T_6),31);
-        bufp->chgIData(oldp+243,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT___operand_3_T_6),31);
-        bufp->chgIData(oldp+244,(vlSymsp->TOP__PvuTop__DOT__decode2.__Vcellinp__lzcModule__in_i),31);
-        bufp->chgIData(oldp+245,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+246,(vlSymsp->TOP__PvuTop__DOT__decode2.__Vcellinp__lzcModule_1__in_i),31);
-        bufp->chgIData(oldp+247,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+248,(vlSymsp->TOP__PvuTop__DOT__decode2.__Vcellinp__lzcModule_2__in_i),31);
-        bufp->chgIData(oldp+249,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+250,(vlSymsp->TOP__PvuTop__DOT__decode2.__Vcellinp__lzcModule_3__in_i),31);
-        bufp->chgIData(oldp+251,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgCData(oldp+252,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__isNaR),4);
-        bufp->chgIData(oldp+253,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___operand_0_T_6),31);
-        bufp->chgIData(oldp+254,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___operand_1_T_6),31);
-        bufp->chgIData(oldp+255,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___operand_2_T_6),31);
-        bufp->chgIData(oldp+256,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___operand_3_T_6),31);
-        bufp->chgIData(oldp+257,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
-        bufp->chgIData(oldp+258,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+259,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
-        bufp->chgIData(oldp+260,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+261,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
-        bufp->chgIData(oldp+262,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+263,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
-        bufp->chgIData(oldp+264,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgCData(oldp+265,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__isNaR),4);
-        bufp->chgIData(oldp+266,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___operand_0_T_6),31);
-        bufp->chgIData(oldp+267,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___operand_1_T_6),31);
-        bufp->chgIData(oldp+268,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___operand_2_T_6),31);
-        bufp->chgIData(oldp+269,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___operand_3_T_6),31);
-        bufp->chgIData(oldp+270,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
-        bufp->chgIData(oldp+271,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+272,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
-        bufp->chgIData(oldp+273,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+274,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
-        bufp->chgIData(oldp+275,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+276,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
-        bufp->chgIData(oldp+277,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgCData(oldp+278,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__isNaR),4);
-        bufp->chgIData(oldp+279,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___operand_0_T_6),31);
-        bufp->chgIData(oldp+280,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___operand_1_T_6),31);
-        bufp->chgIData(oldp+281,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___operand_2_T_6),31);
-        bufp->chgIData(oldp+282,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___operand_3_T_6),31);
-        bufp->chgIData(oldp+283,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
-        bufp->chgIData(oldp+284,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+285,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
-        bufp->chgIData(oldp+286,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+287,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
-        bufp->chgIData(oldp+288,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+289,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
-        bufp->chgIData(oldp+290,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgCData(oldp+291,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__isNaR),4);
-        bufp->chgIData(oldp+292,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___operand_0_T_6),31);
-        bufp->chgIData(oldp+293,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___operand_1_T_6),31);
-        bufp->chgIData(oldp+294,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___operand_2_T_6),31);
-        bufp->chgIData(oldp+295,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___operand_3_T_6),31);
-        bufp->chgIData(oldp+296,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
-        bufp->chgIData(oldp+297,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+298,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
-        bufp->chgIData(oldp+299,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+300,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
-        bufp->chgIData(oldp+301,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+302,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
-        bufp->chgIData(oldp+303,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgCData(oldp+304,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__isNaR),4);
-        bufp->chgIData(oldp+305,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___operand_0_T_6),31);
-        bufp->chgIData(oldp+306,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___operand_1_T_6),31);
-        bufp->chgIData(oldp+307,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___operand_2_T_6),31);
-        bufp->chgIData(oldp+308,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___operand_3_T_6),31);
-        bufp->chgIData(oldp+309,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
-        bufp->chgIData(oldp+310,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+311,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
-        bufp->chgIData(oldp+312,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+313,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
-        bufp->chgIData(oldp+314,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
-        bufp->chgIData(oldp+315,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
-        bufp->chgIData(oldp+316,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
+        __Vtemp_h221ee5a3__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h718833a3__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h221ee5a3__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h718833a3__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h221ee5a3__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h7430ddcb__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h221ee5a3__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h7430ddcb__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h221ee5a3__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_hfe73521f__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h221ee5a3__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_hfe73521f__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h221ee5a3__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h3bf9736d__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h221ee5a3__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h3bf9736d__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+200,(__Vtemp_h221ee5a3__0),256);
+        bufp->chgWData(oldp+208,(vlSelf->PvuTop__DOT____Vcellout__fp16_to_fp16__io_float_out),256);
+        bufp->chgBit(oldp+216,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_zero));
+        bufp->chgBit(oldp+217,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_inf));
+        bufp->chgBit(oldp+218,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_nan));
+        bufp->chgBit(oldp+219,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_denorm));
+        bufp->chgBit(oldp+220,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_zero_1));
+        bufp->chgBit(oldp+221,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_inf_1));
+        bufp->chgBit(oldp+222,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_nan_1));
+        bufp->chgBit(oldp+223,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_denorm_1));
+        bufp->chgBit(oldp+224,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_zero_2));
+        bufp->chgBit(oldp+225,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_inf_2));
+        bufp->chgBit(oldp+226,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_nan_2));
+        bufp->chgBit(oldp+227,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_denorm_2));
+        bufp->chgBit(oldp+228,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_zero_3));
+        bufp->chgBit(oldp+229,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_inf_3));
+        bufp->chgBit(oldp+230,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_nan_3));
+        bufp->chgBit(oldp+231,(vlSelf->PvuTop__DOT__fp16_to_fp16__DOT__is_denorm_3));
+        __Vtemp_h937180bd__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h6cf48288__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h937180bd__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h6cf48288__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h937180bd__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h691d6aee__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h937180bd__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h691d6aee__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h937180bd__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_hed17a2f2__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h937180bd__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_hed17a2f2__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h937180bd__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h4e12c496__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h937180bd__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h4e12c496__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+232,(__Vtemp_h937180bd__0),256);
+        bufp->chgWData(oldp+240,(vlSelf->PvuTop__DOT____Vcellout__fp16_to_fp32__io_float_out),256);
+        bufp->chgBit(oldp+248,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_zero));
+        bufp->chgBit(oldp+249,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_inf));
+        bufp->chgBit(oldp+250,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_nan));
+        bufp->chgBit(oldp+251,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_denorm));
+        bufp->chgBit(oldp+252,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_zero_1));
+        bufp->chgBit(oldp+253,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_inf_1));
+        bufp->chgBit(oldp+254,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_nan_1));
+        bufp->chgBit(oldp+255,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_denorm_1));
+        bufp->chgBit(oldp+256,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_zero_2));
+        bufp->chgBit(oldp+257,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_inf_2));
+        bufp->chgBit(oldp+258,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_nan_2));
+        bufp->chgBit(oldp+259,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_denorm_2));
+        bufp->chgBit(oldp+260,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_zero_3));
+        bufp->chgBit(oldp+261,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_inf_3));
+        bufp->chgBit(oldp+262,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_nan_3));
+        bufp->chgBit(oldp+263,(vlSelf->PvuTop__DOT__fp16_to_fp32__DOT__is_denorm_3));
+        __Vtemp_hdace6f11__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h4f15f30d__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hdace6f11__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h4f15f30d__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hdace6f11__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_hce921858__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hdace6f11__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_hce921858__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hdace6f11__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h4d09f386__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hdace6f11__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h4d09f386__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hdace6f11__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_hbf8a36c3__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hdace6f11__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_hbf8a36c3__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+264,(__Vtemp_hdace6f11__0),256);
+        bufp->chgWData(oldp+272,(vlSelf->PvuTop__DOT____Vcellout__fp16_to_fp4__io_float_out),256);
+        bufp->chgBit(oldp+280,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_zero));
+        bufp->chgBit(oldp+281,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_inf));
+        bufp->chgBit(oldp+282,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_nan));
+        bufp->chgBit(oldp+283,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_denorm));
+        bufp->chgBit(oldp+284,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_zero_1));
+        bufp->chgBit(oldp+285,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_inf_1));
+        bufp->chgBit(oldp+286,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_nan_1));
+        bufp->chgBit(oldp+287,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_denorm_1));
+        bufp->chgBit(oldp+288,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_zero_2));
+        bufp->chgBit(oldp+289,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_inf_2));
+        bufp->chgBit(oldp+290,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_nan_2));
+        bufp->chgBit(oldp+291,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_denorm_2));
+        bufp->chgBit(oldp+292,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_zero_3));
+        bufp->chgBit(oldp+293,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_inf_3));
+        bufp->chgBit(oldp+294,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_nan_3));
+        bufp->chgBit(oldp+295,(vlSelf->PvuTop__DOT__fp16_to_fp4__DOT__is_denorm_3));
+        __Vtemp_h7cd83289__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_heb4b6379__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h7cd83289__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_heb4b6379__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h7cd83289__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_heefc0a01__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h7cd83289__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_heefc0a01__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h7cd83289__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h77b682c1__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h7cd83289__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h77b682c1__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h7cd83289__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_hb5b424a7__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h7cd83289__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_hb5b424a7__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+296,(__Vtemp_h7cd83289__0),256);
+        __Vtemp_h7f7d99cf__0[0U] = (IData)((((QData)((IData)(
+                                                             ((~ (IData)(vlSelf->__VdfgTmp_heb4b6379__0)) 
+                                                              & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                 >> 0x3fU)))) 
+                                             << 0x3fU) 
+                                            | (((QData)((IData)(
+                                                                ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero)
+                                                                  ? 0U
+                                                                  : 
+                                                                 (((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf) 
+                                                                   | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan))
+                                                                   ? 0x7ffU
+                                                                   : 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm)
+                                                                       ? 
+                                                                      ((0xbU 
+                                                                        > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T))
+                                                                        ? 
+                                                                       ((IData)(0x3f1U) 
+                                                                        - (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T))
+                                                                        : 0U)
+                                                                       : 
+                                                                      (VL_GTS_III(11, 1U, 
+                                                                                (0x7ffU 
+                                                                                & ((IData)(0x3f0U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3003697c__0))))
+                                                                        ? 0U
+                                                                        : 
+                                                                       ((IData)(0x3f0U) 
+                                                                        + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3003697c__0))))))))) 
+                                                << 0x34U) 
+                                               | (((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero) 
+                                                   | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan)
+                                                    ? 0x8000000000000ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm)
+                                                     ? 
+                                                    ((0xbU 
+                                                      > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T))
+                                                      ? 
+                                                     ((QData)((IData)(
+                                                                      (0x3ffU 
+                                                                       & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h307a2d6d__0) 
+                                                                          << (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h0ca45434__0))))) 
+                                                      << 0x2aU)
+                                                      : 0ULL)
+                                                     : 
+                                                    (VL_GTS_III(11, 1U, 
+                                                                (0x7ffU 
+                                                                 & ((IData)(0x3f0U) 
+                                                                    + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3003697c__0))))
+                                                      ? 0ULL
+                                                      : 
+                                                     ((QData)((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h307a2d6d__0)) 
+                                                      << 0x2aU))))))));
+        __Vtemp_h7f7d99cf__0[1U] = (IData)(((((QData)((IData)(
+                                                              ((~ (IData)(vlSelf->__VdfgTmp_heb4b6379__0)) 
+                                                               & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                  >> 0x3fU)))) 
+                                              << 0x3fU) 
+                                             | (((QData)((IData)(
+                                                                 ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero)
+                                                                   ? 0U
+                                                                   : 
+                                                                  (((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf) 
+                                                                    | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan))
+                                                                    ? 0x7ffU
+                                                                    : 
+                                                                   (0x7ffU 
+                                                                    & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm)
+                                                                        ? 
+                                                                       ((0xbU 
+                                                                         > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T))
+                                                                         ? 
+                                                                        ((IData)(0x3f1U) 
+                                                                         - (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T))
+                                                                         : 0U)
+                                                                        : 
+                                                                       (VL_GTS_III(11, 1U, 
+                                                                                (0x7ffU 
+                                                                                & ((IData)(0x3f0U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3003697c__0))))
+                                                                         ? 0U
+                                                                         : 
+                                                                        ((IData)(0x3f0U) 
+                                                                         + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3003697c__0))))))))) 
+                                                 << 0x34U) 
+                                                | (((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero) 
+                                                    | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf))
+                                                    ? 0ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan)
+                                                     ? 0x8000000000000ULL
+                                                     : 
+                                                    ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm)
+                                                      ? 
+                                                     ((0xbU 
+                                                       > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T))
+                                                       ? 
+                                                      ((QData)((IData)(
+                                                                       (0x3ffU 
+                                                                        & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h307a2d6d__0) 
+                                                                           << (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h0ca45434__0))))) 
+                                                       << 0x2aU)
+                                                       : 0ULL)
+                                                      : 
+                                                     (VL_GTS_III(11, 1U, 
+                                                                 (0x7ffU 
+                                                                  & ((IData)(0x3f0U) 
+                                                                     + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3003697c__0))))
+                                                       ? 0ULL
+                                                       : 
+                                                      ((QData)((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h307a2d6d__0)) 
+                                                       << 0x2aU))))))) 
+                                            >> 0x20U));
+        __Vtemp_h858e7022__0[3U] = ((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_1)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_1) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_1))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_1)
+                                                       ? 
+                                                      ((0xbU 
+                                                        > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_1))
+                                                        ? 
+                                                       ((IData)(0x3f1U) 
+                                                        - (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_1))
+                                                        : 0U)
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x3f0U) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcd0a8df7__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x3f0U) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcd0a8df7__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_1) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_1))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_1)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_1)
+                                                              ? 
+                                                             ((0xbU 
+                                                               > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_1))
+                                                               ? 
+                                                              ((QData)((IData)(
+                                                                               (0x3ffU 
+                                                                                & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcd731fe2__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcc0bb240__0))))) 
+                                                               << 0x2aU)
+                                                               : 0ULL)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x3f0U) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcd0a8df7__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcd731fe2__0)) 
+                                                               << 0x2aU))))) 
+                                                          >> 0x20U)));
+        __Vtemp_h069665a3__0[5U] = ((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_2)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_2) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_2))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_2)
+                                                       ? 
+                                                      ((0xbU 
+                                                        > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_2))
+                                                        ? 
+                                                       ((IData)(0x3f1U) 
+                                                        - (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_2))
+                                                        : 0U)
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x3f0U) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h325d57ca__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x3f0U) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h325d57ca__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_2) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_2))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_2)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_2)
+                                                              ? 
+                                                             ((0xbU 
+                                                               > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_2))
+                                                               ? 
+                                                              ((QData)((IData)(
+                                                                               (0x3ffU 
+                                                                                & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3225bff7__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h48b7ba44__0))))) 
+                                                               << 0x2aU)
+                                                               : 0ULL)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x3f0U) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h325d57ca__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3225bff7__0)) 
+                                                               << 0x2aU))))) 
+                                                          >> 0x20U)));
+        __Vtemp_h236ded5b__0[7U] = ((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_3)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_3) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_3))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_3)
+                                                       ? 
+                                                      ((0xbU 
+                                                        > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_3))
+                                                        ? 
+                                                       ((IData)(0x3f1U) 
+                                                        - (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_3))
+                                                        : 0U)
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x3f0U) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3724ea5d__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x3f0U) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3724ea5d__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_3) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_3))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_3)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_3)
+                                                              ? 
+                                                             ((0xbU 
+                                                               > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_3))
+                                                               ? 
+                                                              ((QData)((IData)(
+                                                                               (0x3ffU 
+                                                                                & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h373ca88c__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hd502e49c__0))))) 
+                                                               << 0x2aU)
+                                                               : 0ULL)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x3f0U) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3724ea5d__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h373ca88c__0)) 
+                                                               << 0x2aU))))) 
+                                                          >> 0x20U)));
+        __Vtemp_h6e5f7285__0[0U] = __Vtemp_h7f7d99cf__0[0U];
+        __Vtemp_h6e5f7285__0[1U] = __Vtemp_h7f7d99cf__0[1U];
+        __Vtemp_h6e5f7285__0[2U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_1) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_1))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_1)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_1)
+                                                  ? 
+                                                 ((0xbU 
+                                                   > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_1))
+                                                   ? 
+                                                  ((QData)((IData)(
+                                                                   (0x3ffU 
+                                                                    & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcd731fe2__0) 
+                                                                       << (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcc0bb240__0))))) 
+                                                   << 0x2aU)
+                                                   : 0ULL)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3f0U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcd0a8df7__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hcd731fe2__0)) 
+                                                   << 0x2aU))))));
+        __Vtemp_h6e5f7285__0[3U] = ((((~ (IData)(vlSelf->__VdfgTmp_heefc0a01__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_h858e7022__0[3U]);
+        __Vtemp_h6e5f7285__0[4U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_2) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_2))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_2)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_2)
+                                                  ? 
+                                                 ((0xbU 
+                                                   > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_2))
+                                                   ? 
+                                                  ((QData)((IData)(
+                                                                   (0x3ffU 
+                                                                    & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3225bff7__0) 
+                                                                       << (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h48b7ba44__0))))) 
+                                                   << 0x2aU)
+                                                   : 0ULL)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3f0U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h325d57ca__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3225bff7__0)) 
+                                                   << 0x2aU))))));
+        __Vtemp_h6e5f7285__0[5U] = ((((~ (IData)(vlSelf->__VdfgTmp_h77b682c1__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_h069665a3__0[5U]);
+        __Vtemp_h6e5f7285__0[6U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_3) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_3))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_3)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_3)
+                                                  ? 
+                                                 ((0xbU 
+                                                   > (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT___shift_amount_T_3))
+                                                   ? 
+                                                  ((QData)((IData)(
+                                                                   (0x3ffU 
+                                                                    & ((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h373ca88c__0) 
+                                                                       << (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_hd502e49c__0))))) 
+                                                   << 0x2aU)
+                                                   : 0ULL)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3f0U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h3724ea5d__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT____VdfgTmp_h373ca88c__0)) 
+                                                   << 0x2aU))))));
+        __Vtemp_h6e5f7285__0[7U] = ((((~ (IData)(vlSelf->__VdfgTmp_hb5b424a7__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_h236ded5b__0[7U]);
+        bufp->chgWData(oldp+304,(__Vtemp_h6e5f7285__0),256);
+        bufp->chgBit(oldp+312,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero));
+        bufp->chgBit(oldp+313,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf));
+        bufp->chgBit(oldp+314,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan));
+        bufp->chgBit(oldp+315,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm));
+        bufp->chgBit(oldp+316,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_1));
+        bufp->chgBit(oldp+317,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_1));
+        bufp->chgBit(oldp+318,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_1));
+        bufp->chgBit(oldp+319,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_1));
+        bufp->chgBit(oldp+320,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_2));
+        bufp->chgBit(oldp+321,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_2));
+        bufp->chgBit(oldp+322,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_2));
+        bufp->chgBit(oldp+323,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_2));
+        bufp->chgBit(oldp+324,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_zero_3));
+        bufp->chgBit(oldp+325,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_inf_3));
+        bufp->chgBit(oldp+326,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_nan_3));
+        bufp->chgBit(oldp+327,(vlSelf->PvuTop__DOT__fp16_to_fp64__DOT__is_denorm_3));
+        __Vtemp_hd02609af__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h3687cf55__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hd02609af__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h3687cf55__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hd02609af__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h3328a655__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hd02609af__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h3328a655__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hd02609af__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_hbb6aee95__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hd02609af__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_hbb6aee95__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hd02609af__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h78e198f3__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hd02609af__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h78e198f3__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+328,(__Vtemp_hd02609af__0),256);
+        bufp->chgWData(oldp+336,(vlSelf->PvuTop__DOT____Vcellout__fp16_to_fp8__io_float_out),256);
+        bufp->chgBit(oldp+344,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_zero));
+        bufp->chgBit(oldp+345,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_inf));
+        bufp->chgBit(oldp+346,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_nan));
+        bufp->chgBit(oldp+347,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_denorm));
+        bufp->chgBit(oldp+348,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_zero_1));
+        bufp->chgBit(oldp+349,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_inf_1));
+        bufp->chgBit(oldp+350,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_nan_1));
+        bufp->chgBit(oldp+351,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_denorm_1));
+        bufp->chgBit(oldp+352,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_zero_2));
+        bufp->chgBit(oldp+353,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_inf_2));
+        bufp->chgBit(oldp+354,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_nan_2));
+        bufp->chgBit(oldp+355,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_denorm_2));
+        bufp->chgBit(oldp+356,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_zero_3));
+        bufp->chgBit(oldp+357,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_inf_3));
+        bufp->chgBit(oldp+358,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_nan_3));
+        bufp->chgBit(oldp+359,(vlSelf->PvuTop__DOT__fp16_to_fp8__DOT__is_denorm_3));
+        __Vtemp_hcf74a244__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h8433f87e__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hcf74a244__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h8433f87e__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hcf74a244__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_had4a64a8__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hcf74a244__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_had4a64a8__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hcf74a244__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h1cf459c3__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hcf74a244__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h1cf459c3__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hcf74a244__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h2903c068__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hcf74a244__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h2903c068__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+360,(__Vtemp_hcf74a244__0),256);
+        bufp->chgWData(oldp+368,(vlSelf->PvuTop__DOT____Vcellout__fp32_to_fp16__io_float_out),256);
+        bufp->chgBit(oldp+376,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_zero));
+        bufp->chgBit(oldp+377,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_inf));
+        bufp->chgBit(oldp+378,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_nan));
+        bufp->chgBit(oldp+379,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_denorm));
+        bufp->chgBit(oldp+380,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_zero_1));
+        bufp->chgBit(oldp+381,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_inf_1));
+        bufp->chgBit(oldp+382,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_nan_1));
+        bufp->chgBit(oldp+383,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_denorm_1));
+        bufp->chgBit(oldp+384,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_zero_2));
+        bufp->chgBit(oldp+385,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_inf_2));
+        bufp->chgBit(oldp+386,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_nan_2));
+        bufp->chgBit(oldp+387,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_denorm_2));
+        bufp->chgBit(oldp+388,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_zero_3));
+        bufp->chgBit(oldp+389,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_inf_3));
+        bufp->chgBit(oldp+390,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_nan_3));
+        bufp->chgBit(oldp+391,(vlSelf->PvuTop__DOT__fp32_to_fp16__DOT__is_denorm_3));
+        __Vtemp_h2fe7e68b__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h88cfa983__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h2fe7e68b__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h88cfa983__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h2fe7e68b__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_hb196db87__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h2fe7e68b__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_hb196db87__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h2fe7e68b__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h29d8e8a6__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h2fe7e68b__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h29d8e8a6__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h2fe7e68b__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h1c3f918d__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h2fe7e68b__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h1c3f918d__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+392,(__Vtemp_h2fe7e68b__0),256);
+        bufp->chgWData(oldp+400,(vlSelf->PvuTop__DOT____Vcellout__fp32_to_fp32__io_float_out),256);
+        bufp->chgBit(oldp+408,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_zero));
+        bufp->chgBit(oldp+409,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_inf));
+        bufp->chgBit(oldp+410,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_nan));
+        bufp->chgBit(oldp+411,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_denorm));
+        bufp->chgBit(oldp+412,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_zero_1));
+        bufp->chgBit(oldp+413,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_inf_1));
+        bufp->chgBit(oldp+414,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_nan_1));
+        bufp->chgBit(oldp+415,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_denorm_1));
+        bufp->chgBit(oldp+416,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_zero_2));
+        bufp->chgBit(oldp+417,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_inf_2));
+        bufp->chgBit(oldp+418,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_nan_2));
+        bufp->chgBit(oldp+419,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_denorm_2));
+        bufp->chgBit(oldp+420,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_zero_3));
+        bufp->chgBit(oldp+421,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_inf_3));
+        bufp->chgBit(oldp+422,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_nan_3));
+        bufp->chgBit(oldp+423,(vlSelf->PvuTop__DOT__fp32_to_fp32__DOT__is_denorm_3));
+        __Vtemp_h479ef0df__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h5950be64__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h479ef0df__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h5950be64__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h479ef0df__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_hcf968c0b__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h479ef0df__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_hcf968c0b__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h479ef0df__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_habcc48f9__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h479ef0df__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_habcc48f9__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h479ef0df__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h38be50b6__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h479ef0df__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h38be50b6__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+424,(__Vtemp_h479ef0df__0),256);
+        bufp->chgWData(oldp+432,(vlSelf->PvuTop__DOT____Vcellout__fp32_to_fp4__io_float_out),256);
+        bufp->chgBit(oldp+440,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_zero));
+        bufp->chgBit(oldp+441,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_inf));
+        bufp->chgBit(oldp+442,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_nan));
+        bufp->chgBit(oldp+443,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_denorm));
+        bufp->chgBit(oldp+444,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_zero_1));
+        bufp->chgBit(oldp+445,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_inf_1));
+        bufp->chgBit(oldp+446,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_nan_1));
+        bufp->chgBit(oldp+447,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_denorm_1));
+        bufp->chgBit(oldp+448,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_zero_2));
+        bufp->chgBit(oldp+449,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_inf_2));
+        bufp->chgBit(oldp+450,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_nan_2));
+        bufp->chgBit(oldp+451,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_denorm_2));
+        bufp->chgBit(oldp+452,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_zero_3));
+        bufp->chgBit(oldp+453,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_inf_3));
+        bufp->chgBit(oldp+454,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_nan_3));
+        bufp->chgBit(oldp+455,(vlSelf->PvuTop__DOT__fp32_to_fp4__DOT__is_denorm_3));
+        __Vtemp_hf6689d19__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h0e6e89b4__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hf6689d19__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h0e6e89b4__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hf6689d19__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h2b093bd6__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hf6689d19__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h2b093bd6__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hf6689d19__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_ha2370895__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hf6689d19__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_ha2370895__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hf6689d19__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h935eb1a2__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hf6689d19__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h935eb1a2__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+456,(__Vtemp_hf6689d19__0),256);
+        __Vtemp_h5f6240bd__0[0U] = (IData)((((QData)((IData)(
+                                                             ((~ (IData)(vlSelf->__VdfgTmp_h0e6e89b4__0)) 
+                                                              & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                 >> 0x3fU)))) 
+                                             << 0x3fU) 
+                                            | (((QData)((IData)(
+                                                                ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero)
+                                                                  ? 0U
+                                                                  : 
+                                                                 (((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf) 
+                                                                   | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan))
+                                                                   ? 0x7ffU
+                                                                   : 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm)
+                                                                       ? 
+                                                                      ((0xbU 
+                                                                        > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T))
+                                                                        ? 
+                                                                       ((IData)(0x381U) 
+                                                                        - (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T))
+                                                                        : 0U)
+                                                                       : 
+                                                                      (VL_GTS_III(11, 1U, 
+                                                                                (0x7ffU 
+                                                                                & ((IData)(0x380U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h305463f0__0))))
+                                                                        ? 0U
+                                                                        : 
+                                                                       ((IData)(0x380U) 
+                                                                        + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h305463f0__0))))))))) 
+                                                << 0x34U) 
+                                               | (((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero) 
+                                                   | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan)
+                                                    ? 0x8000000000000ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm)
+                                                     ? 
+                                                    ((0xbU 
+                                                      > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T))
+                                                      ? 
+                                                     ((QData)((IData)(
+                                                                      (0x7fffffU 
+                                                                       & (vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h33b87fea__0 
+                                                                          << (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_ha0b04a4c__0))))) 
+                                                      << 0x1dU)
+                                                      : 0ULL)
+                                                     : 
+                                                    (VL_GTS_III(11, 1U, 
+                                                                (0x7ffU 
+                                                                 & ((IData)(0x380U) 
+                                                                    + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h305463f0__0))))
+                                                      ? 0ULL
+                                                      : 
+                                                     ((QData)((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h33b87fea__0)) 
+                                                      << 0x1dU))))))));
+        __Vtemp_h5f6240bd__0[1U] = (IData)(((((QData)((IData)(
+                                                              ((~ (IData)(vlSelf->__VdfgTmp_h0e6e89b4__0)) 
+                                                               & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                  >> 0x3fU)))) 
+                                              << 0x3fU) 
+                                             | (((QData)((IData)(
+                                                                 ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero)
+                                                                   ? 0U
+                                                                   : 
+                                                                  (((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf) 
+                                                                    | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan))
+                                                                    ? 0x7ffU
+                                                                    : 
+                                                                   (0x7ffU 
+                                                                    & ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm)
+                                                                        ? 
+                                                                       ((0xbU 
+                                                                         > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T))
+                                                                         ? 
+                                                                        ((IData)(0x381U) 
+                                                                         - (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T))
+                                                                         : 0U)
+                                                                        : 
+                                                                       (VL_GTS_III(11, 1U, 
+                                                                                (0x7ffU 
+                                                                                & ((IData)(0x380U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h305463f0__0))))
+                                                                         ? 0U
+                                                                         : 
+                                                                        ((IData)(0x380U) 
+                                                                         + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h305463f0__0))))))))) 
+                                                 << 0x34U) 
+                                                | (((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero) 
+                                                    | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf))
+                                                    ? 0ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan)
+                                                     ? 0x8000000000000ULL
+                                                     : 
+                                                    ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm)
+                                                      ? 
+                                                     ((0xbU 
+                                                       > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T))
+                                                       ? 
+                                                      ((QData)((IData)(
+                                                                       (0x7fffffU 
+                                                                        & (vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h33b87fea__0 
+                                                                           << (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_ha0b04a4c__0))))) 
+                                                       << 0x1dU)
+                                                       : 0ULL)
+                                                      : 
+                                                     (VL_GTS_III(11, 1U, 
+                                                                 (0x7ffU 
+                                                                  & ((IData)(0x380U) 
+                                                                     + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h305463f0__0))))
+                                                       ? 0ULL
+                                                       : 
+                                                      ((QData)((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h33b87fea__0)) 
+                                                       << 0x1dU))))))) 
+                                            >> 0x20U));
+        __Vtemp_haca7471f__0[3U] = ((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_1)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_1) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_1))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_1)
+                                                       ? 
+                                                      ((0xbU 
+                                                        > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_1))
+                                                        ? 
+                                                       ((IData)(0x381U) 
+                                                        - (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_1))
+                                                        : 0U)
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x380U) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_hcd5b9145__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x380U) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_hcd5b9145__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_1) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_1))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_1)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_1)
+                                                              ? 
+                                                             ((0xbU 
+                                                               > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_1))
+                                                               ? 
+                                                              ((QData)((IData)(
+                                                                               (0x7fffffU 
+                                                                                & (vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_hccb15a67__0 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h3ff72f81__0))))) 
+                                                               << 0x1dU)
+                                                               : 0ULL)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x380U) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_hcd5b9145__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_hccb15a67__0)) 
+                                                               << 0x1dU))))) 
+                                                          >> 0x20U)));
+        __Vtemp_h94514c01__0[5U] = ((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_2)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_2) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_2))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_2)
+                                                       ? 
+                                                      ((0xbU 
+                                                        > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_2))
+                                                        ? 
+                                                       ((IData)(0x381U) 
+                                                        - (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_2))
+                                                        : 0U)
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x380U) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h320e1296__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x380U) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h320e1296__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_2) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_2))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_2)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_2)
+                                                              ? 
+                                                             ((0xbU 
+                                                               > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_2))
+                                                               ? 
+                                                              ((QData)((IData)(
+                                                                               (0x7fffffU 
+                                                                                & (vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h32659c74__0 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h5ab7d79f__0))))) 
+                                                               << 0x1dU)
+                                                               : 0ULL)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x380U) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h320e1296__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h32659c74__0)) 
+                                                               << 0x1dU))))) 
+                                                          >> 0x20U)));
+        __Vtemp_hf2f22d27__0[7U] = ((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_3)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_3) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_3))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_3)
+                                                       ? 
+                                                      ((0xbU 
+                                                        > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_3))
+                                                        ? 
+                                                       ((IData)(0x381U) 
+                                                        - (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_3))
+                                                        : 0U)
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x380U) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h371503e3__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x380U) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h371503e3__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_3) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_3))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_3)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_3)
+                                                              ? 
+                                                             ((0xbU 
+                                                               > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_3))
+                                                               ? 
+                                                              ((QData)((IData)(
+                                                                               (0x7fffffU 
+                                                                                & (vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h377d6809__0 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_he23e9279__0))))) 
+                                                               << 0x1dU)
+                                                               : 0ULL)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x380U) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h371503e3__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h377d6809__0)) 
+                                                               << 0x1dU))))) 
+                                                          >> 0x20U)));
+        __Vtemp_hf2887d23__0[0U] = __Vtemp_h5f6240bd__0[0U];
+        __Vtemp_hf2887d23__0[1U] = __Vtemp_h5f6240bd__0[1U];
+        __Vtemp_hf2887d23__0[2U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_1) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_1))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_1)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_1)
+                                                  ? 
+                                                 ((0xbU 
+                                                   > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_1))
+                                                   ? 
+                                                  ((QData)((IData)(
+                                                                   (0x7fffffU 
+                                                                    & (vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_hccb15a67__0 
+                                                                       << (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h3ff72f81__0))))) 
+                                                   << 0x1dU)
+                                                   : 0ULL)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x380U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_hcd5b9145__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_hccb15a67__0)) 
+                                                   << 0x1dU))))));
+        __Vtemp_hf2887d23__0[3U] = ((((~ (IData)(vlSelf->__VdfgTmp_h2b093bd6__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_haca7471f__0[3U]);
+        __Vtemp_hf2887d23__0[4U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_2) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_2))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_2)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_2)
+                                                  ? 
+                                                 ((0xbU 
+                                                   > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_2))
+                                                   ? 
+                                                  ((QData)((IData)(
+                                                                   (0x7fffffU 
+                                                                    & (vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h32659c74__0 
+                                                                       << (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h5ab7d79f__0))))) 
+                                                   << 0x1dU)
+                                                   : 0ULL)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x380U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h320e1296__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h32659c74__0)) 
+                                                   << 0x1dU))))));
+        __Vtemp_hf2887d23__0[5U] = ((((~ (IData)(vlSelf->__VdfgTmp_ha2370895__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_h94514c01__0[5U]);
+        __Vtemp_hf2887d23__0[6U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_3) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_3))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_3)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_3)
+                                                  ? 
+                                                 ((0xbU 
+                                                   > (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT___shift_amount_T_3))
+                                                   ? 
+                                                  ((QData)((IData)(
+                                                                   (0x7fffffU 
+                                                                    & (vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h377d6809__0 
+                                                                       << (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_he23e9279__0))))) 
+                                                   << 0x1dU)
+                                                   : 0ULL)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x380U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h371503e3__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT____VdfgTmp_h377d6809__0)) 
+                                                   << 0x1dU))))));
+        __Vtemp_hf2887d23__0[7U] = ((((~ (IData)(vlSelf->__VdfgTmp_h935eb1a2__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_hf2f22d27__0[7U]);
+        bufp->chgWData(oldp+464,(__Vtemp_hf2887d23__0),256);
+        bufp->chgBit(oldp+472,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero));
+        bufp->chgBit(oldp+473,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf));
+        bufp->chgBit(oldp+474,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan));
+        bufp->chgBit(oldp+475,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm));
+        bufp->chgBit(oldp+476,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_1));
+        bufp->chgBit(oldp+477,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_1));
+        bufp->chgBit(oldp+478,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_1));
+        bufp->chgBit(oldp+479,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_1));
+        bufp->chgBit(oldp+480,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_2));
+        bufp->chgBit(oldp+481,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_2));
+        bufp->chgBit(oldp+482,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_2));
+        bufp->chgBit(oldp+483,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_2));
+        bufp->chgBit(oldp+484,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_zero_3));
+        bufp->chgBit(oldp+485,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_inf_3));
+        bufp->chgBit(oldp+486,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_nan_3));
+        bufp->chgBit(oldp+487,(vlSelf->PvuTop__DOT__fp32_to_fp64__DOT__is_denorm_3));
+        __Vtemp_h8c2726da__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h413b6de8__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h8c2726da__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h413b6de8__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h8c2726da__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h6e459f22__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h8c2726da__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h6e459f22__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h8c2726da__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h5febac79__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h8c2726da__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h5febac79__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h8c2726da__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_hd60b55f6__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h8c2726da__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_hd60b55f6__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+488,(__Vtemp_h8c2726da__0),256);
+        bufp->chgWData(oldp+496,(vlSelf->PvuTop__DOT____Vcellout__fp32_to_fp8__io_float_out),256);
+        bufp->chgBit(oldp+504,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_zero));
+        bufp->chgBit(oldp+505,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_inf));
+        bufp->chgBit(oldp+506,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_nan));
+        bufp->chgBit(oldp+507,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_denorm));
+        bufp->chgBit(oldp+508,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_zero_1));
+        bufp->chgBit(oldp+509,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_inf_1));
+        bufp->chgBit(oldp+510,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_nan_1));
+        bufp->chgBit(oldp+511,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_denorm_1));
+        bufp->chgBit(oldp+512,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_zero_2));
+        bufp->chgBit(oldp+513,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_inf_2));
+        bufp->chgBit(oldp+514,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_nan_2));
+        bufp->chgBit(oldp+515,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_denorm_2));
+        bufp->chgBit(oldp+516,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_zero_3));
+        bufp->chgBit(oldp+517,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_inf_3));
+        bufp->chgBit(oldp+518,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_nan_3));
+        bufp->chgBit(oldp+519,(vlSelf->PvuTop__DOT__fp32_to_fp8__DOT__is_denorm_3));
+        __Vtemp_hec274be6__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h1e242726__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hec274be6__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h1e242726__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hec274be6__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_habda7934__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hec274be6__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_habda7934__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hec274be6__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h9c32add0__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hec274be6__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h9c32add0__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hec274be6__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h9c778124__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hec274be6__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h9c778124__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+520,(__Vtemp_hec274be6__0),256);
+        bufp->chgWData(oldp+528,(vlSelf->PvuTop__DOT____Vcellout__fp4_to_fp16__io_float_out),256);
+        bufp->chgBit(oldp+536,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_zero));
+        bufp->chgBit(oldp+537,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_inf));
+        bufp->chgBit(oldp+538,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_nan));
+        bufp->chgBit(oldp+539,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_denorm));
+        bufp->chgBit(oldp+540,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_zero_1));
+        bufp->chgBit(oldp+541,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_inf_1));
+        bufp->chgBit(oldp+542,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_nan_1));
+        bufp->chgBit(oldp+543,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_denorm_1));
+        bufp->chgBit(oldp+544,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_zero_2));
+        bufp->chgBit(oldp+545,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_inf_2));
+        bufp->chgBit(oldp+546,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_nan_2));
+        bufp->chgBit(oldp+547,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_denorm_2));
+        bufp->chgBit(oldp+548,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_zero_3));
+        bufp->chgBit(oldp+549,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_inf_3));
+        bufp->chgBit(oldp+550,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_nan_3));
+        bufp->chgBit(oldp+551,(vlSelf->PvuTop__DOT__fp4_to_fp16__DOT__is_denorm_3));
+        __Vtemp_h60eb032f__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h0bcff801__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h60eb032f__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h0bcff801__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h60eb032f__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h9eb6a829__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h60eb032f__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h9eb6a829__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h60eb032f__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_ha8cf7ab5__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h60eb032f__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_ha8cf7ab5__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h60eb032f__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h93133603__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h60eb032f__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h93133603__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+552,(__Vtemp_h60eb032f__0),256);
+        bufp->chgWData(oldp+560,(vlSelf->PvuTop__DOT____Vcellout__fp4_to_fp32__io_float_out),256);
+        bufp->chgBit(oldp+568,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_zero));
+        bufp->chgBit(oldp+569,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_inf));
+        bufp->chgBit(oldp+570,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_nan));
+        bufp->chgBit(oldp+571,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_denorm));
+        bufp->chgBit(oldp+572,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_zero_1));
+        bufp->chgBit(oldp+573,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_inf_1));
+        bufp->chgBit(oldp+574,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_nan_1));
+        bufp->chgBit(oldp+575,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_denorm_1));
+        bufp->chgBit(oldp+576,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_zero_2));
+        bufp->chgBit(oldp+577,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_inf_2));
+        bufp->chgBit(oldp+578,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_nan_2));
+        bufp->chgBit(oldp+579,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_denorm_2));
+        bufp->chgBit(oldp+580,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_zero_3));
+        bufp->chgBit(oldp+581,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_inf_3));
+        bufp->chgBit(oldp+582,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_nan_3));
+        bufp->chgBit(oldp+583,(vlSelf->PvuTop__DOT__fp4_to_fp32__DOT__is_denorm_3));
+        __Vtemp_h25d372e0__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h992cff7b__0)
+                                             ? vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0
+                                             : 0ULL));
+        __Vtemp_h25d372e0__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h992cff7b__0)
+                                              ? vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0
+                                              : 0ULL) 
+                                            >> 0x20U));
+        __Vtemp_h25d372e0__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h0b96a680__0)
+                                             ? vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0
+                                             : 0ULL));
+        __Vtemp_h25d372e0__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h0b96a680__0)
+                                              ? vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0
+                                              : 0ULL) 
+                                            >> 0x20U));
+        __Vtemp_h25d372e0__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h9db6e766__0)
+                                             ? vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0
+                                             : 0ULL));
+        __Vtemp_h25d372e0__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h9db6e766__0)
+                                              ? vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0
+                                              : 0ULL) 
+                                            >> 0x20U));
+        __Vtemp_h25d372e0__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_haa2b6d6d__0)
+                                             ? vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0
+                                             : 0ULL));
+        __Vtemp_h25d372e0__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_haa2b6d6d__0)
+                                              ? vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0
+                                              : 0ULL) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+584,(__Vtemp_h25d372e0__0),256);
+        bufp->chgWData(oldp+592,(vlSelf->PvuTop__DOT____Vcellout__fp4_to_fp4__io_float_out),256);
+        bufp->chgBit(oldp+600,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_zero));
+        bufp->chgBit(oldp+601,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_inf));
+        bufp->chgBit(oldp+602,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_nan));
+        bufp->chgBit(oldp+603,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_denorm));
+        bufp->chgBit(oldp+604,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_zero_1));
+        bufp->chgBit(oldp+605,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_inf_1));
+        bufp->chgBit(oldp+606,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_nan_1));
+        bufp->chgBit(oldp+607,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_denorm_1));
+        bufp->chgBit(oldp+608,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_zero_2));
+        bufp->chgBit(oldp+609,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_inf_2));
+        bufp->chgBit(oldp+610,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_nan_2));
+        bufp->chgBit(oldp+611,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_denorm_2));
+        bufp->chgBit(oldp+612,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_zero_3));
+        bufp->chgBit(oldp+613,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_inf_3));
+        bufp->chgBit(oldp+614,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_nan_3));
+        bufp->chgBit(oldp+615,(vlSelf->PvuTop__DOT__fp4_to_fp4__DOT__is_denorm_3));
+        __Vtemp_heb942c9a__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h8460d8f0__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_heb942c9a__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h8460d8f0__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_heb942c9a__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h241789fa__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_heb942c9a__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h241789fa__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_heb942c9a__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h226e5a8a__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_heb942c9a__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h226e5a8a__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_heb942c9a__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h15b456f2__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_heb942c9a__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h15b456f2__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+616,(__Vtemp_heb942c9a__0),256);
+        __Vtemp_hfb7165d2__0[0U] = (IData)((((QData)((IData)(
+                                                             ((~ (IData)(vlSelf->__VdfgTmp_h8460d8f0__0)) 
+                                                              & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                 >> 0x3fU)))) 
+                                             << 0x3fU) 
+                                            | (((QData)((IData)(
+                                                                ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero)
+                                                                  ? 0U
+                                                                  : 
+                                                                 (((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf) 
+                                                                   | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan))
+                                                                   ? 0x7ffU
+                                                                   : 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm)
+                                                                       ? 
+                                                                      ((IData)(0x400U) 
+                                                                       - 
+                                                                       (3U 
+                                                                        & ((IData)(1U) 
+                                                                           + 
+                                                                           (0x16U 
+                                                                            >> 
+                                                                            (7U 
+                                                                             & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h300b5423__0) 
+                                                                                << 1U))))))
+                                                                       : 
+                                                                      (VL_GTS_III(11, 1U, 
+                                                                                (0x7ffU 
+                                                                                & ((IData)(0x3ffU) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h303337ca__0))))
+                                                                        ? 0U
+                                                                        : 
+                                                                       ((IData)(0x3ffU) 
+                                                                        + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h303337ca__0))))))))) 
+                                                << 0x34U) 
+                                               | (((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero) 
+                                                   | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan)
+                                                    ? 0x8000000000000ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm)
+                                                     ? 
+                                                    ((QData)((IData)(
+                                                                     (3U 
+                                                                      & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h300b5423__0) 
+                                                                         << (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_haaf54442__0))))) 
+                                                     << 0x32U)
+                                                     : 
+                                                    (VL_GTS_III(11, 1U, 
+                                                                (0x7ffU 
+                                                                 & ((IData)(0x3ffU) 
+                                                                    + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h303337ca__0))))
+                                                      ? 0ULL
+                                                      : 
+                                                     ((QData)((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h300b5423__0)) 
+                                                      << 0x32U))))))));
+        __Vtemp_hfb7165d2__0[1U] = (IData)(((((QData)((IData)(
+                                                              ((~ (IData)(vlSelf->__VdfgTmp_h8460d8f0__0)) 
+                                                               & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                  >> 0x3fU)))) 
+                                              << 0x3fU) 
+                                             | (((QData)((IData)(
+                                                                 ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero)
+                                                                   ? 0U
+                                                                   : 
+                                                                  (((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf) 
+                                                                    | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan))
+                                                                    ? 0x7ffU
+                                                                    : 
+                                                                   (0x7ffU 
+                                                                    & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm)
+                                                                        ? 
+                                                                       ((IData)(0x400U) 
+                                                                        - 
+                                                                        (3U 
+                                                                         & ((IData)(1U) 
+                                                                            + 
+                                                                            (0x16U 
+                                                                             >> 
+                                                                             (7U 
+                                                                              & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h300b5423__0) 
+                                                                                << 1U))))))
+                                                                        : 
+                                                                       (VL_GTS_III(11, 1U, 
+                                                                                (0x7ffU 
+                                                                                & ((IData)(0x3ffU) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h303337ca__0))))
+                                                                         ? 0U
+                                                                         : 
+                                                                        ((IData)(0x3ffU) 
+                                                                         + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h303337ca__0))))))))) 
+                                                 << 0x34U) 
+                                                | (((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero) 
+                                                    | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf))
+                                                    ? 0ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan)
+                                                     ? 0x8000000000000ULL
+                                                     : 
+                                                    ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm)
+                                                      ? 
+                                                     ((QData)((IData)(
+                                                                      (3U 
+                                                                       & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h300b5423__0) 
+                                                                          << (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_haaf54442__0))))) 
+                                                      << 0x32U)
+                                                      : 
+                                                     (VL_GTS_III(11, 1U, 
+                                                                 (0x7ffU 
+                                                                  & ((IData)(0x3ffU) 
+                                                                     + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h303337ca__0))))
+                                                       ? 0ULL
+                                                       : 
+                                                      ((QData)((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h300b5423__0)) 
+                                                       << 0x32U))))))) 
+                                            >> 0x20U));
+        __Vtemp_h705fa604__0[3U] = ((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_1)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_1) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_1))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_1)
+                                                       ? 
+                                                      ((IData)(0x400U) 
+                                                       - 
+                                                       (3U 
+                                                        & ((IData)(1U) 
+                                                           + 
+                                                           (0x16U 
+                                                            >> 
+                                                            (7U 
+                                                             & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd024d7e__0) 
+                                                                << 1U))))))
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x3ffU) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd3adc97__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x3ffU) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd3adc97__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_1) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_1))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_1)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_1)
+                                                              ? 
+                                                             ((QData)((IData)(
+                                                                              (3U 
+                                                                               & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd024d7e__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hdb4cf40f__0))))) 
+                                                              << 0x32U)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x3ffU) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd3adc97__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd024d7e__0)) 
+                                                               << 0x32U))))) 
+                                                          >> 0x20U)));
+        __Vtemp_h29a89877__0[5U] = ((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_2)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_2) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_2))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_2)
+                                                       ? 
+                                                      ((IData)(0x400U) 
+                                                       - 
+                                                       (3U 
+                                                        & ((IData)(1U) 
+                                                           + 
+                                                           (0x16U 
+                                                            >> 
+                                                            (7U 
+                                                             & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h3235ea91__0) 
+                                                                << 1U))))))
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x3ffU) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h320d6d68__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x3ffU) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h320d6d68__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_2) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_2))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_2)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_2)
+                                                              ? 
+                                                             ((QData)((IData)(
+                                                                              (3U 
+                                                                               & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h3235ea91__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_he44846bb__0))))) 
+                                                              << 0x32U)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x3ffU) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h320d6d68__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h3235ea91__0)) 
+                                                               << 0x32U))))) 
+                                                          >> 0x20U)));
+        __Vtemp_hc9fc1a0c__0[7U] = ((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_3)
+                                       ? 0U : (((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_3) 
+                                                | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_3))
+                                                ? 0x7ffU
+                                                : (0x7ffU 
+                                                   & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_3)
+                                                       ? 
+                                                      ((IData)(0x400U) 
+                                                       - 
+                                                       (3U 
+                                                        & ((IData)(1U) 
+                                                           + 
+                                                           (0x16U 
+                                                            >> 
+                                                            (7U 
+                                                             & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h372c0b34__0) 
+                                                                << 1U))))))
+                                                       : 
+                                                      (VL_GTS_III(11, 1U, 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(0x3ffU) 
+                                                                      + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h37eef33d__0))))
+                                                        ? 0U
+                                                        : 
+                                                       ((IData)(0x3ffU) 
+                                                        + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h37eef33d__0))))))) 
+                                     << 0x14U) | (IData)(
+                                                         ((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_3) 
+                                                            | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_3))
+                                                            ? 0ULL
+                                                            : 
+                                                           ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_3)
+                                                             ? 0x8000000000000ULL
+                                                             : 
+                                                            ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_3)
+                                                              ? 
+                                                             ((QData)((IData)(
+                                                                              (3U 
+                                                                               & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h372c0b34__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h350b96b8__0))))) 
+                                                              << 0x32U)
+                                                              : 
+                                                             (VL_GTS_III(11, 1U, 
+                                                                         (0x7ffU 
+                                                                          & ((IData)(0x3ffU) 
+                                                                             + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h37eef33d__0))))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((QData)((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h372c0b34__0)) 
+                                                               << 0x32U))))) 
+                                                          >> 0x20U)));
+        __Vtemp_h9d62c4df__0[0U] = __Vtemp_hfb7165d2__0[0U];
+        __Vtemp_h9d62c4df__0[1U] = __Vtemp_hfb7165d2__0[1U];
+        __Vtemp_h9d62c4df__0[2U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_1) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_1))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_1)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_1)
+                                                  ? 
+                                                 ((QData)((IData)(
+                                                                  (3U 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd024d7e__0) 
+                                                                      << (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hdb4cf40f__0))))) 
+                                                  << 0x32U)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3ffU) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd3adc97__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_hcd024d7e__0)) 
+                                                   << 0x32U))))));
+        __Vtemp_h9d62c4df__0[3U] = ((((~ (IData)(vlSelf->__VdfgTmp_h241789fa__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_h705fa604__0[3U]);
+        __Vtemp_h9d62c4df__0[4U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_2) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_2))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_2)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_2)
+                                                  ? 
+                                                 ((QData)((IData)(
+                                                                  (3U 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h3235ea91__0) 
+                                                                      << (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_he44846bb__0))))) 
+                                                  << 0x32U)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3ffU) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h320d6d68__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h3235ea91__0)) 
+                                                   << 0x32U))))));
+        __Vtemp_h9d62c4df__0[5U] = ((((~ (IData)(vlSelf->__VdfgTmp_h226e5a8a__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_h29a89877__0[5U]);
+        __Vtemp_h9d62c4df__0[6U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_3) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_3))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_3)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_3)
+                                                  ? 
+                                                 ((QData)((IData)(
+                                                                  (3U 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h372c0b34__0) 
+                                                                      << (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h350b96b8__0))))) 
+                                                  << 0x32U)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3ffU) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h37eef33d__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT____VdfgTmp_h372c0b34__0)) 
+                                                   << 0x32U))))));
+        __Vtemp_h9d62c4df__0[7U] = ((((~ (IData)(vlSelf->__VdfgTmp_h15b456f2__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | __Vtemp_hc9fc1a0c__0[7U]);
+        bufp->chgWData(oldp+624,(__Vtemp_h9d62c4df__0),256);
+        bufp->chgBit(oldp+632,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero));
+        bufp->chgBit(oldp+633,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf));
+        bufp->chgBit(oldp+634,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan));
+        bufp->chgBit(oldp+635,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm));
+        bufp->chgBit(oldp+636,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_1));
+        bufp->chgBit(oldp+637,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_1));
+        bufp->chgBit(oldp+638,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_1));
+        bufp->chgBit(oldp+639,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_1));
+        bufp->chgBit(oldp+640,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_2));
+        bufp->chgBit(oldp+641,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_2));
+        bufp->chgBit(oldp+642,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_2));
+        bufp->chgBit(oldp+643,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_2));
+        bufp->chgBit(oldp+644,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_zero_3));
+        bufp->chgBit(oldp+645,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_inf_3));
+        bufp->chgBit(oldp+646,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_nan_3));
+        bufp->chgBit(oldp+647,(vlSelf->PvuTop__DOT__fp4_to_fp64__DOT__is_denorm_3));
+        __Vtemp_hf78dbada__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h411cbcdc__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hf78dbada__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h411cbcdc__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hf78dbada__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h68e3ed8e__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hf78dbada__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h68e3ed8e__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hf78dbada__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_he13a365e__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hf78dbada__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_he13a365e__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hf78dbada__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h596ffade__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hf78dbada__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h596ffade__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+648,(__Vtemp_hf78dbada__0),256);
+        bufp->chgWData(oldp+656,(vlSelf->PvuTop__DOT____Vcellout__fp4_to_fp8__io_float_out),256);
+        bufp->chgBit(oldp+664,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_zero));
+        bufp->chgBit(oldp+665,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_inf));
+        bufp->chgBit(oldp+666,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_nan));
+        bufp->chgBit(oldp+667,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_denorm));
+        bufp->chgBit(oldp+668,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_zero_1));
+        bufp->chgBit(oldp+669,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_inf_1));
+        bufp->chgBit(oldp+670,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_nan_1));
+        bufp->chgBit(oldp+671,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_denorm_1));
+        bufp->chgBit(oldp+672,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_zero_2));
+        bufp->chgBit(oldp+673,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_inf_2));
+        bufp->chgBit(oldp+674,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_nan_2));
+        bufp->chgBit(oldp+675,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_denorm_2));
+        bufp->chgBit(oldp+676,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_zero_3));
+        bufp->chgBit(oldp+677,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_inf_3));
+        bufp->chgBit(oldp+678,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_nan_3));
+        bufp->chgBit(oldp+679,(vlSelf->PvuTop__DOT__fp4_to_fp8__DOT__is_denorm_3));
+        __Vtemp_hbaea1cc6__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_he1bac748__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hbaea1cc6__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_he1bac748__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hbaea1cc6__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_hf0c96c05__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hbaea1cc6__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_hf0c96c05__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hbaea1cc6__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h2b240b4c__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hbaea1cc6__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h2b240b4c__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hbaea1cc6__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h25888089__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hbaea1cc6__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h25888089__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+680,(__Vtemp_hbaea1cc6__0),256);
+        bufp->chgWData(oldp+688,(vlSelf->PvuTop__DOT____Vcellout__fp64_to_fp16__io_float_out),256);
+        bufp->chgBit(oldp+696,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_zero));
+        bufp->chgBit(oldp+697,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_inf));
+        bufp->chgBit(oldp+698,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_nan));
+        bufp->chgBit(oldp+699,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_denorm));
+        bufp->chgBit(oldp+700,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_zero_1));
+        bufp->chgBit(oldp+701,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_inf_1));
+        bufp->chgBit(oldp+702,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_nan_1));
+        bufp->chgBit(oldp+703,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_denorm_1));
+        bufp->chgBit(oldp+704,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_zero_2));
+        bufp->chgBit(oldp+705,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_inf_2));
+        bufp->chgBit(oldp+706,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_nan_2));
+        bufp->chgBit(oldp+707,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_denorm_2));
+        bufp->chgBit(oldp+708,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_zero_3));
+        bufp->chgBit(oldp+709,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_inf_3));
+        bufp->chgBit(oldp+710,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_nan_3));
+        bufp->chgBit(oldp+711,(vlSelf->PvuTop__DOT__fp64_to_fp16__DOT__is_denorm_3));
+        __Vtemp_hcd8480dd__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_hd25eb653__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hcd8480dd__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_hd25eb653__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hcd8480dd__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_hfc2d1ce2__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hcd8480dd__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_hfc2d1ce2__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hcd8480dd__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h3840d851__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hcd8480dd__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h3840d851__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hcd8480dd__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h32ac5fac__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hcd8480dd__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h32ac5fac__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+712,(__Vtemp_hcd8480dd__0),256);
+        bufp->chgWData(oldp+720,(vlSelf->PvuTop__DOT____Vcellout__fp64_to_fp32__io_float_out),256);
+        bufp->chgBit(oldp+728,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_zero));
+        bufp->chgBit(oldp+729,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_inf));
+        bufp->chgBit(oldp+730,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_nan));
+        bufp->chgBit(oldp+731,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_denorm));
+        bufp->chgBit(oldp+732,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_zero_1));
+        bufp->chgBit(oldp+733,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_inf_1));
+        bufp->chgBit(oldp+734,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_nan_1));
+        bufp->chgBit(oldp+735,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_denorm_1));
+        bufp->chgBit(oldp+736,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_zero_2));
+        bufp->chgBit(oldp+737,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_inf_2));
+        bufp->chgBit(oldp+738,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_nan_2));
+        bufp->chgBit(oldp+739,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_denorm_2));
+        bufp->chgBit(oldp+740,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_zero_3));
+        bufp->chgBit(oldp+741,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_inf_3));
+        bufp->chgBit(oldp+742,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_nan_3));
+        bufp->chgBit(oldp+743,(vlSelf->PvuTop__DOT__fp64_to_fp32__DOT__is_denorm_3));
+        __Vtemp_h789a3603__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_hd37a9c4b__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h789a3603__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_hd37a9c4b__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h789a3603__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h348bbcec__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h789a3603__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h348bbcec__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h789a3603__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_ha8dc6f5e__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h789a3603__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_ha8dc6f5e__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h789a3603__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h6562b589__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h789a3603__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h6562b589__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+744,(__Vtemp_h789a3603__0),256);
+        bufp->chgWData(oldp+752,(vlSelf->PvuTop__DOT____Vcellout__fp64_to_fp4__io_float_out),256);
+        bufp->chgBit(oldp+760,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_zero));
+        bufp->chgBit(oldp+761,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_inf));
+        bufp->chgBit(oldp+762,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_nan));
+        bufp->chgBit(oldp+763,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_denorm));
+        bufp->chgBit(oldp+764,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_zero_1));
+        bufp->chgBit(oldp+765,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_inf_1));
+        bufp->chgBit(oldp+766,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_nan_1));
+        bufp->chgBit(oldp+767,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_denorm_1));
+        bufp->chgBit(oldp+768,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_zero_2));
+        bufp->chgBit(oldp+769,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_inf_2));
+        bufp->chgBit(oldp+770,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_nan_2));
+        bufp->chgBit(oldp+771,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_denorm_2));
+        bufp->chgBit(oldp+772,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_zero_3));
+        bufp->chgBit(oldp+773,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_inf_3));
+        bufp->chgBit(oldp+774,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_nan_3));
+        bufp->chgBit(oldp+775,(vlSelf->PvuTop__DOT__fp64_to_fp4__DOT__is_denorm_3));
+        __Vtemp_hd6f5efb8__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h5bff9602__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hd6f5efb8__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h5bff9602__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hd6f5efb8__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h768a3cd3__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hd6f5efb8__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h768a3cd3__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hd6f5efb8__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_ha2e13806__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hd6f5efb8__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_ha2e13806__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hd6f5efb8__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_habcf7fdf__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hd6f5efb8__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_habcf7fdf__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+776,(__Vtemp_hd6f5efb8__0),256);
+        __Vtemp_h8ca573ac__0[0U] = (IData)((((QData)((IData)(
+                                                             ((~ (IData)(vlSelf->__VdfgTmp_h5bff9602__0)) 
+                                                              & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                 >> 0x3fU)))) 
+                                             << 0x3fU) 
+                                            | (((QData)((IData)(
+                                                                ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero)
+                                                                  ? 0U
+                                                                  : 
+                                                                 (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf) 
+                                                                   | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan))
+                                                                   ? 0x7ffU
+                                                                   : 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm)
+                                                                       ? 
+                                                                      ((0xbU 
+                                                                        > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T))
+                                                                        ? 
+                                                                       ((IData)(1U) 
+                                                                        - (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T))
+                                                                        : 0U)
+                                                                       : 
+                                                                      ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hab79ba39__0)
+                                                                        ? 0x7ffU
+                                                                        : 
+                                                                       (VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h302bfc49__0))
+                                                                         ? 0U
+                                                                         : (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h302bfc49__0))))))))) 
+                                                << 0x34U) 
+                                               | (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero) 
+                                                   | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan)
+                                                    ? 0x8000000000000ULL
+                                                    : 
+                                                   (0xfffffffffffffULL 
+                                                    & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm)
+                                                        ? 
+                                                       ((0xbU 
+                                                         > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T))
+                                                         ? 
+                                                        (vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h33253286__0 
+                                                         << (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_he8395c69__0))
+                                                         : 0ULL)
+                                                        : 
+                                                       (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hab79ba39__0) 
+                                                         | VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h302bfc49__0)))
+                                                         ? 0ULL
+                                                         : vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h33253286__0))))))));
+        __Vtemp_h8ca573ac__0[1U] = (IData)(((((QData)((IData)(
+                                                              ((~ (IData)(vlSelf->__VdfgTmp_h5bff9602__0)) 
+                                                               & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                  >> 0x3fU)))) 
+                                              << 0x3fU) 
+                                             | (((QData)((IData)(
+                                                                 ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero)
+                                                                   ? 0U
+                                                                   : 
+                                                                  (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf) 
+                                                                    | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan))
+                                                                    ? 0x7ffU
+                                                                    : 
+                                                                   (0x7ffU 
+                                                                    & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm)
+                                                                        ? 
+                                                                       ((0xbU 
+                                                                         > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T))
+                                                                         ? 
+                                                                        ((IData)(1U) 
+                                                                         - (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T))
+                                                                         : 0U)
+                                                                        : 
+                                                                       ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hab79ba39__0)
+                                                                         ? 0x7ffU
+                                                                         : 
+                                                                        (VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h302bfc49__0))
+                                                                          ? 0U
+                                                                          : (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h302bfc49__0))))))))) 
+                                                 << 0x34U) 
+                                                | (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero) 
+                                                    | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf))
+                                                    ? 0ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan)
+                                                     ? 0x8000000000000ULL
+                                                     : 
+                                                    (0xfffffffffffffULL 
+                                                     & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm)
+                                                         ? 
+                                                        ((0xbU 
+                                                          > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T))
+                                                          ? 
+                                                         (vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h33253286__0 
+                                                          << (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_he8395c69__0))
+                                                          : 0ULL)
+                                                         : 
+                                                        (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hab79ba39__0) 
+                                                          | VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h302bfc49__0)))
+                                                          ? 0ULL
+                                                          : vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h33253286__0))))))) 
+                                            >> 0x20U));
+        __Vtemp_h11794d59__0[3U] = ((((~ (IData)(vlSelf->__VdfgTmp_h768a3cd3__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | ((
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_1)
+                                                     ? 0U
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_1) 
+                                                      | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_1))
+                                                      ? 0x7ffU
+                                                      : 
+                                                     (0x7ffU 
+                                                      & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_1)
+                                                          ? 
+                                                         ((0xbU 
+                                                           > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_1))
+                                                           ? 
+                                                          ((IData)(1U) 
+                                                           - (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_1))
+                                                           : 0U)
+                                                          : 
+                                                         ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hce7086fa__0)
+                                                           ? 0x7ffU
+                                                           : 
+                                                          (VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hcd22e906__0))
+                                                            ? 0U
+                                                            : (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hcd22e906__0))))))) 
+                                                   << 0x14U) 
+                                                  | (IData)(
+                                                            ((((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_1) 
+                                                               | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_1))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_1)
+                                                                ? 0x8000000000000ULL
+                                                                : 
+                                                               (0xfffffffffffffULL 
+                                                                & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_1)
+                                                                    ? 
+                                                                   ((0xbU 
+                                                                     > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_1))
+                                                                     ? 
+                                                                    (vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h3036f5a1__0 
+                                                                     << (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h5876bbaf__0))
+                                                                     : 0ULL)
+                                                                    : 
+                                                                   (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hce7086fa__0) 
+                                                                     | VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hcd22e906__0)))
+                                                                     ? 0ULL
+                                                                     : vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h3036f5a1__0))))) 
+                                                             >> 0x20U))));
+        __Vtemp_hc996c197__0[5U] = ((((~ (IData)(vlSelf->__VdfgTmp_ha2e13806__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | ((
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_2)
+                                                     ? 0U
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_2) 
+                                                      | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_2))
+                                                      ? 0x7ffU
+                                                      : 
+                                                     (0x7ffU 
+                                                      & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_2)
+                                                          ? 
+                                                         ((0xbU 
+                                                           > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_2))
+                                                           ? 
+                                                          ((IData)(1U) 
+                                                           - (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_2))
+                                                           : 0U)
+                                                          : 
+                                                         ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_ha48228af__0)
+                                                           ? 0x7ffU
+                                                           : 
+                                                          (VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h32558ed3__0))
+                                                            ? 0U
+                                                            : (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h32558ed3__0))))))) 
+                                                   << 0x14U) 
+                                                  | (IData)(
+                                                            ((((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_2) 
+                                                               | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_2))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_2)
+                                                                ? 0x8000000000000ULL
+                                                                : 
+                                                               (0xfffffffffffffULL 
+                                                                & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_2)
+                                                                    ? 
+                                                                   ((0xbU 
+                                                                     > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_2))
+                                                                     ? 
+                                                                    (vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hcdf41dbc__0 
+                                                                     << (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h42b3bd47__0))
+                                                                     : 0ULL)
+                                                                    : 
+                                                                   (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_ha48228af__0) 
+                                                                     | VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h32558ed3__0)))
+                                                                     ? 0ULL
+                                                                     : vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hcdf41dbc__0))))) 
+                                                             >> 0x20U))));
+        __Vtemp_h622f89ff__0[0U] = __Vtemp_h8ca573ac__0[0U];
+        __Vtemp_h622f89ff__0[1U] = __Vtemp_h8ca573ac__0[1U];
+        __Vtemp_h622f89ff__0[2U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_1) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_1))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_1)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                (0xfffffffffffffULL 
+                                                 & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_1)
+                                                     ? 
+                                                    ((0xbU 
+                                                      > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_1))
+                                                      ? 
+                                                     (vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h3036f5a1__0 
+                                                      << (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h5876bbaf__0))
+                                                      : 0ULL)
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hce7086fa__0) 
+                                                      | VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hcd22e906__0)))
+                                                      ? 0ULL
+                                                      : vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h3036f5a1__0))))));
+        __Vtemp_h622f89ff__0[3U] = __Vtemp_h11794d59__0[3U];
+        __Vtemp_h622f89ff__0[4U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_2) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_2))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_2)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                (0xfffffffffffffULL 
+                                                 & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_2)
+                                                     ? 
+                                                    ((0xbU 
+                                                      > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_2))
+                                                      ? 
+                                                     (vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hcdf41dbc__0 
+                                                      << (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h42b3bd47__0))
+                                                      : 0ULL)
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_ha48228af__0) 
+                                                      | VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h32558ed3__0)))
+                                                      ? 0ULL
+                                                      : vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_hcdf41dbc__0))))));
+        __Vtemp_h622f89ff__0[5U] = __Vtemp_hc996c197__0[5U];
+        __Vtemp_h622f89ff__0[6U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_3) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_3))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_3)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                (0xfffffffffffffULL 
+                                                 & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_3)
+                                                     ? 
+                                                    ((0xbU 
+                                                      > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_3))
+                                                      ? 
+                                                     (vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h36ff1edf__0 
+                                                      << (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h80cfb3f4__0))
+                                                      : 0ULL)
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_ha3993518__0) 
+                                                      | VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h374c7b68__0)))
+                                                      ? 0ULL
+                                                      : vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h36ff1edf__0))))));
+        __Vtemp_h622f89ff__0[7U] = ((((~ (IData)(vlSelf->__VdfgTmp_habcf7fdf__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | ((
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_3)
+                                                     ? 0U
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_3) 
+                                                      | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_3))
+                                                      ? 0x7ffU
+                                                      : 
+                                                     (0x7ffU 
+                                                      & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_3)
+                                                          ? 
+                                                         ((0xbU 
+                                                           > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_3))
+                                                           ? 
+                                                          ((IData)(1U) 
+                                                           - (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_3))
+                                                           : 0U)
+                                                          : 
+                                                         ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_ha3993518__0)
+                                                           ? 0x7ffU
+                                                           : 
+                                                          (VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h374c7b68__0))
+                                                            ? 0U
+                                                            : (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h374c7b68__0))))))) 
+                                                   << 0x14U) 
+                                                  | (IData)(
+                                                            ((((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_3) 
+                                                               | (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_3))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_3)
+                                                                ? 0x8000000000000ULL
+                                                                : 
+                                                               (0xfffffffffffffULL 
+                                                                & ((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_3)
+                                                                    ? 
+                                                                   ((0xbU 
+                                                                     > (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT___shift_amount_T_3))
+                                                                     ? 
+                                                                    (vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h36ff1edf__0 
+                                                                     << (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h80cfb3f4__0))
+                                                                     : 0ULL)
+                                                                    : 
+                                                                   (((IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_ha3993518__0) 
+                                                                     | VL_GTS_III(12, 1U, (IData)(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h374c7b68__0)))
+                                                                     ? 0ULL
+                                                                     : vlSelf->PvuTop__DOT__fp64_to_fp64__DOT____VdfgTmp_h36ff1edf__0))))) 
+                                                             >> 0x20U))));
+        bufp->chgWData(oldp+784,(__Vtemp_h622f89ff__0),256);
+        bufp->chgBit(oldp+792,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero));
+        bufp->chgBit(oldp+793,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf));
+        bufp->chgBit(oldp+794,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan));
+        bufp->chgBit(oldp+795,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm));
+        bufp->chgBit(oldp+796,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_1));
+        bufp->chgBit(oldp+797,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_1));
+        bufp->chgBit(oldp+798,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_1));
+        bufp->chgBit(oldp+799,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_1));
+        bufp->chgBit(oldp+800,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_2));
+        bufp->chgBit(oldp+801,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_2));
+        bufp->chgBit(oldp+802,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_2));
+        bufp->chgBit(oldp+803,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_2));
+        bufp->chgBit(oldp+804,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_zero_3));
+        bufp->chgBit(oldp+805,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_inf_3));
+        bufp->chgBit(oldp+806,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_nan_3));
+        bufp->chgBit(oldp+807,(vlSelf->PvuTop__DOT__fp64_to_fp64__DOT__is_denorm_3));
+        __Vtemp_h1f870f82__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h9cb2723e__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h1f870f82__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h9cb2723e__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h1f870f82__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_hb3c1d0bf__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h1f870f82__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_hb3c1d0bf__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h1f870f82__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_he62da43a__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h1f870f82__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_he62da43a__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h1f870f82__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h68931b03__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h1f870f82__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h68931b03__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+808,(__Vtemp_h1f870f82__0),256);
+        bufp->chgWData(oldp+816,(vlSelf->PvuTop__DOT____Vcellout__fp64_to_fp8__io_float_out),256);
+        bufp->chgBit(oldp+824,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_zero));
+        bufp->chgBit(oldp+825,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_inf));
+        bufp->chgBit(oldp+826,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_nan));
+        bufp->chgBit(oldp+827,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_denorm));
+        bufp->chgBit(oldp+828,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_zero_1));
+        bufp->chgBit(oldp+829,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_inf_1));
+        bufp->chgBit(oldp+830,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_nan_1));
+        bufp->chgBit(oldp+831,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_denorm_1));
+        bufp->chgBit(oldp+832,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_zero_2));
+        bufp->chgBit(oldp+833,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_inf_2));
+        bufp->chgBit(oldp+834,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_nan_2));
+        bufp->chgBit(oldp+835,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_denorm_2));
+        bufp->chgBit(oldp+836,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_zero_3));
+        bufp->chgBit(oldp+837,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_inf_3));
+        bufp->chgBit(oldp+838,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_nan_3));
+        bufp->chgBit(oldp+839,(vlSelf->PvuTop__DOT__fp64_to_fp8__DOT__is_denorm_3));
+        __Vtemp_h2f3c53aa__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h8be99ebf__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h2f3c53aa__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h8be99ebf__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h2f3c53aa__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h25d3423a__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h2f3c53aa__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h25d3423a__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h2f3c53aa__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h765b6a76__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h2f3c53aa__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h765b6a76__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h2f3c53aa__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_hee0a8df2__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h2f3c53aa__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_hee0a8df2__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+840,(__Vtemp_h2f3c53aa__0),256);
+        bufp->chgWData(oldp+848,(vlSelf->PvuTop__DOT____Vcellout__fp8_to_fp16__io_float_out),256);
+        bufp->chgBit(oldp+856,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_zero));
+        bufp->chgBit(oldp+857,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_inf));
+        bufp->chgBit(oldp+858,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_nan));
+        bufp->chgBit(oldp+859,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_denorm));
+        bufp->chgBit(oldp+860,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_zero_1));
+        bufp->chgBit(oldp+861,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_inf_1));
+        bufp->chgBit(oldp+862,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_nan_1));
+        bufp->chgBit(oldp+863,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_denorm_1));
+        bufp->chgBit(oldp+864,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_zero_2));
+        bufp->chgBit(oldp+865,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_inf_2));
+        bufp->chgBit(oldp+866,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_nan_2));
+        bufp->chgBit(oldp+867,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_denorm_2));
+        bufp->chgBit(oldp+868,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_zero_3));
+        bufp->chgBit(oldp+869,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_inf_3));
+        bufp->chgBit(oldp+870,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_nan_3));
+        bufp->chgBit(oldp+871,(vlSelf->PvuTop__DOT__fp8_to_fp16__DOT__is_denorm_3));
+        __Vtemp_h5f593718__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h960d4da4__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h5f593718__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h960d4da4__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h5f593718__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h3afef341__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h5f593718__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h3afef341__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h5f593718__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h0ba7bb51__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h5f593718__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h0ba7bb51__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h5f593718__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_he2ef3cd7__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h5f593718__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_he2ef3cd7__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+872,(__Vtemp_h5f593718__0),256);
+        bufp->chgWData(oldp+880,(vlSelf->PvuTop__DOT____Vcellout__fp8_to_fp32__io_float_out),256);
+        bufp->chgBit(oldp+888,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_zero));
+        bufp->chgBit(oldp+889,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_inf));
+        bufp->chgBit(oldp+890,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_nan));
+        bufp->chgBit(oldp+891,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_denorm));
+        bufp->chgBit(oldp+892,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_zero_1));
+        bufp->chgBit(oldp+893,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_inf_1));
+        bufp->chgBit(oldp+894,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_nan_1));
+        bufp->chgBit(oldp+895,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_denorm_1));
+        bufp->chgBit(oldp+896,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_zero_2));
+        bufp->chgBit(oldp+897,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_inf_2));
+        bufp->chgBit(oldp+898,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_nan_2));
+        bufp->chgBit(oldp+899,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_denorm_2));
+        bufp->chgBit(oldp+900,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_zero_3));
+        bufp->chgBit(oldp+901,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_inf_3));
+        bufp->chgBit(oldp+902,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_nan_3));
+        bufp->chgBit(oldp+903,(vlSelf->PvuTop__DOT__fp8_to_fp32__DOT__is_denorm_3));
+        __Vtemp_h3bb0277d__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h87747188__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h3bb0277d__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h87747188__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h3bb0277d__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h52bde5bf__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h3bb0277d__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h52bde5bf__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h3bb0277d__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_hb11ec14d__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h3bb0277d__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_hb11ec14d__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h3bb0277d__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h27a4687a__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h3bb0277d__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h27a4687a__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+904,(__Vtemp_h3bb0277d__0),256);
+        bufp->chgWData(oldp+912,(vlSelf->PvuTop__DOT____Vcellout__fp8_to_fp4__io_float_out),256);
+        bufp->chgBit(oldp+920,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_zero));
+        bufp->chgBit(oldp+921,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_inf));
+        bufp->chgBit(oldp+922,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_nan));
+        bufp->chgBit(oldp+923,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_denorm));
+        bufp->chgBit(oldp+924,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_zero_1));
+        bufp->chgBit(oldp+925,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_inf_1));
+        bufp->chgBit(oldp+926,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_nan_1));
+        bufp->chgBit(oldp+927,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_denorm_1));
+        bufp->chgBit(oldp+928,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_zero_2));
+        bufp->chgBit(oldp+929,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_inf_2));
+        bufp->chgBit(oldp+930,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_nan_2));
+        bufp->chgBit(oldp+931,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_denorm_2));
+        bufp->chgBit(oldp+932,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_zero_3));
+        bufp->chgBit(oldp+933,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_inf_3));
+        bufp->chgBit(oldp+934,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_nan_3));
+        bufp->chgBit(oldp+935,(vlSelf->PvuTop__DOT__fp8_to_fp4__DOT__is_denorm_3));
+        __Vtemp_h3807057e__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h0dacad75__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_h3807057e__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h0dacad75__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_h3807057e__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_hbc1f9370__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_h3807057e__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_hbc1f9370__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_h3807057e__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h8c069a80__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_h3807057e__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h8c069a80__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_h3807057e__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_h6449dc04__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_h3807057e__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_h6449dc04__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+936,(__Vtemp_h3807057e__0),256);
+        __Vtemp_hd335ae67__0[0U] = (IData)((((QData)((IData)(
+                                                             ((~ (IData)(vlSelf->__VdfgTmp_h0dacad75__0)) 
+                                                              & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                 >> 0x3fU)))) 
+                                             << 0x3fU) 
+                                            | (((QData)((IData)(
+                                                                ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero)
+                                                                  ? 0U
+                                                                  : 
+                                                                 (((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf) 
+                                                                   | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan))
+                                                                   ? 0x7ffU
+                                                                   : 
+                                                                  (0x7ffU 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm)
+                                                                       ? 
+                                                                      ((IData)(0x3f9U) 
+                                                                       - (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T))
+                                                                       : 
+                                                                      (VL_GTS_III(11, 1U, 
+                                                                                (0x7ffU 
+                                                                                & ((IData)(0x3f8U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3007fd29__0))))
+                                                                        ? 0U
+                                                                        : 
+                                                                       ((IData)(0x3f8U) 
+                                                                        + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3007fd29__0))))))))) 
+                                                << 0x34U) 
+                                               | (((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero) 
+                                                   | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan)
+                                                    ? 0x8000000000000ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm)
+                                                     ? 
+                                                    ((QData)((IData)(
+                                                                     (7U 
+                                                                      & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h305b8707__0) 
+                                                                         << (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T))))) 
+                                                     << 0x31U)
+                                                     : 
+                                                    (VL_GTS_III(11, 1U, 
+                                                                (0x7ffU 
+                                                                 & ((IData)(0x3f8U) 
+                                                                    + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3007fd29__0))))
+                                                      ? 0ULL
+                                                      : 
+                                                     ((QData)((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h305b8707__0)) 
+                                                      << 0x31U))))))));
+        __Vtemp_hd335ae67__0[1U] = (IData)(((((QData)((IData)(
+                                                              ((~ (IData)(vlSelf->__VdfgTmp_h0dacad75__0)) 
+                                                               & (vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0 
+                                                                  >> 0x3fU)))) 
+                                              << 0x3fU) 
+                                             | (((QData)((IData)(
+                                                                 ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero)
+                                                                   ? 0U
+                                                                   : 
+                                                                  (((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf) 
+                                                                    | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan))
+                                                                    ? 0x7ffU
+                                                                    : 
+                                                                   (0x7ffU 
+                                                                    & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm)
+                                                                        ? 
+                                                                       ((IData)(0x3f9U) 
+                                                                        - (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T))
+                                                                        : 
+                                                                       (VL_GTS_III(11, 1U, 
+                                                                                (0x7ffU 
+                                                                                & ((IData)(0x3f8U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3007fd29__0))))
+                                                                         ? 0U
+                                                                         : 
+                                                                        ((IData)(0x3f8U) 
+                                                                         + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3007fd29__0))))))))) 
+                                                 << 0x34U) 
+                                                | (((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero) 
+                                                    | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf))
+                                                    ? 0ULL
+                                                    : 
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan)
+                                                     ? 0x8000000000000ULL
+                                                     : 
+                                                    ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm)
+                                                      ? 
+                                                     ((QData)((IData)(
+                                                                      (7U 
+                                                                       & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h305b8707__0) 
+                                                                          << (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T))))) 
+                                                      << 0x31U)
+                                                      : 
+                                                     (VL_GTS_III(11, 1U, 
+                                                                 (0x7ffU 
+                                                                  & ((IData)(0x3f8U) 
+                                                                     + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3007fd29__0))))
+                                                       ? 0ULL
+                                                       : 
+                                                      ((QData)((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h305b8707__0)) 
+                                                       << 0x31U))))))) 
+                                            >> 0x20U));
+        __Vtemp_he33b9022__0[3U] = ((((~ (IData)(vlSelf->__VdfgTmp_hbc1f9370__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | ((
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_1)
+                                                     ? 0U
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_1) 
+                                                      | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_1))
+                                                      ? 0x7ffU
+                                                      : 
+                                                     (0x7ffU 
+                                                      & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_1)
+                                                          ? 
+                                                         ((IData)(0x3f9U) 
+                                                          - (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_1))
+                                                          : 
+                                                         (VL_GTS_III(11, 1U, 
+                                                                     (0x7ffU 
+                                                                      & ((IData)(0x3f8U) 
+                                                                         + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_hcd069624__0))))
+                                                           ? 0U
+                                                           : 
+                                                          ((IData)(0x3f8U) 
+                                                           + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_hcd069624__0))))))) 
+                                                   << 0x14U) 
+                                                  | (IData)(
+                                                            ((((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_1) 
+                                                               | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_1))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_1)
+                                                                ? 0x8000000000000ULL
+                                                                : 
+                                                               ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_1)
+                                                                 ? 
+                                                                ((QData)((IData)(
+                                                                                (7U 
+                                                                                & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_hcd527c1a__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_1))))) 
+                                                                 << 0x31U)
+                                                                 : 
+                                                                (VL_GTS_III(11, 1U, 
+                                                                            (0x7ffU 
+                                                                             & ((IData)(0x3f8U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_hcd069624__0))))
+                                                                  ? 0ULL
+                                                                  : 
+                                                                 ((QData)((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_hcd527c1a__0)) 
+                                                                  << 0x31U))))) 
+                                                             >> 0x20U))));
+        __Vtemp_h85e552db__0[5U] = ((((~ (IData)(vlSelf->__VdfgTmp_h8c069a80__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | ((
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_2)
+                                                     ? 0U
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_2) 
+                                                      | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_2))
+                                                      ? 0x7ffU
+                                                      : 
+                                                     (0x7ffU 
+                                                      & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_2)
+                                                          ? 
+                                                         ((IData)(0x3f9U) 
+                                                          - (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_2))
+                                                          : 
+                                                         (VL_GTS_III(11, 1U, 
+                                                                     (0x7ffU 
+                                                                      & ((IData)(0x3f8U) 
+                                                                         + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3231d3cb__0))))
+                                                           ? 0U
+                                                           : 
+                                                          ((IData)(0x3f8U) 
+                                                           + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3231d3cb__0))))))) 
+                                                   << 0x14U) 
+                                                  | (IData)(
+                                                            ((((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_2) 
+                                                               | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_2))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_2)
+                                                                ? 0x8000000000000ULL
+                                                                : 
+                                                               ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_2)
+                                                                 ? 
+                                                                ((QData)((IData)(
+                                                                                (7U 
+                                                                                & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h320519b5__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_2))))) 
+                                                                 << 0x31U)
+                                                                 : 
+                                                                (VL_GTS_III(11, 1U, 
+                                                                            (0x7ffU 
+                                                                             & ((IData)(0x3f8U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3231d3cb__0))))
+                                                                  ? 0ULL
+                                                                  : 
+                                                                 ((QData)((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h320519b5__0)) 
+                                                                  << 0x31U))))) 
+                                                             >> 0x20U))));
+        __Vtemp_hccc23c01__0[0U] = __Vtemp_hd335ae67__0[0U];
+        __Vtemp_hccc23c01__0[1U] = __Vtemp_hd335ae67__0[1U];
+        __Vtemp_hccc23c01__0[2U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_1) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_1))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_1)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_1)
+                                                  ? 
+                                                 ((QData)((IData)(
+                                                                  (7U 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_hcd527c1a__0) 
+                                                                      << (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_1))))) 
+                                                  << 0x31U)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3f8U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_hcd069624__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_hcd527c1a__0)) 
+                                                   << 0x31U))))));
+        __Vtemp_hccc23c01__0[3U] = __Vtemp_he33b9022__0[3U];
+        __Vtemp_hccc23c01__0[4U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_2) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_2))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_2)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_2)
+                                                  ? 
+                                                 ((QData)((IData)(
+                                                                  (7U 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h320519b5__0) 
+                                                                      << (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_2))))) 
+                                                  << 0x31U)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3f8U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3231d3cb__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h320519b5__0)) 
+                                                   << 0x31U))))));
+        __Vtemp_hccc23c01__0[5U] = __Vtemp_h85e552db__0[5U];
+        __Vtemp_hccc23c01__0[6U] = (IData)((((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_3) 
+                                             | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_3))
+                                             ? 0ULL
+                                             : ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_3)
+                                                 ? 0x8000000000000ULL
+                                                 : 
+                                                ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_3)
+                                                  ? 
+                                                 ((QData)((IData)(
+                                                                  (7U 
+                                                                   & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h371c7e10__0) 
+                                                                      << (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_3))))) 
+                                                  << 0x31U)
+                                                  : 
+                                                 (VL_GTS_III(11, 1U, 
+                                                             (0x7ffU 
+                                                              & ((IData)(0x3f8U) 
+                                                                 + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3720d4ce__0))))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((QData)((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h371c7e10__0)) 
+                                                   << 0x31U))))));
+        __Vtemp_hccc23c01__0[7U] = ((((~ (IData)(vlSelf->__VdfgTmp_h6449dc04__0)) 
+                                      & (vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0 
+                                         >> 0x3fU)) 
+                                     << 0x1fU) | ((
+                                                   ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_3)
+                                                     ? 0U
+                                                     : 
+                                                    (((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_3) 
+                                                      | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_3))
+                                                      ? 0x7ffU
+                                                      : 
+                                                     (0x7ffU 
+                                                      & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_3)
+                                                          ? 
+                                                         ((IData)(0x3f9U) 
+                                                          - (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_3))
+                                                          : 
+                                                         (VL_GTS_III(11, 1U, 
+                                                                     (0x7ffU 
+                                                                      & ((IData)(0x3f8U) 
+                                                                         + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3720d4ce__0))))
+                                                           ? 0U
+                                                           : 
+                                                          ((IData)(0x3f8U) 
+                                                           + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3720d4ce__0))))))) 
+                                                   << 0x14U) 
+                                                  | (IData)(
+                                                            ((((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_3) 
+                                                               | (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_3))
+                                                               ? 0ULL
+                                                               : 
+                                                              ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_3)
+                                                                ? 0x8000000000000ULL
+                                                                : 
+                                                               ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_3)
+                                                                 ? 
+                                                                ((QData)((IData)(
+                                                                                (7U 
+                                                                                & ((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h371c7e10__0) 
+                                                                                << (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT___shift_amount_T_3))))) 
+                                                                 << 0x31U)
+                                                                 : 
+                                                                (VL_GTS_III(11, 1U, 
+                                                                            (0x7ffU 
+                                                                             & ((IData)(0x3f8U) 
+                                                                                + (IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h3720d4ce__0))))
+                                                                  ? 0ULL
+                                                                  : 
+                                                                 ((QData)((IData)(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT____VdfgTmp_h371c7e10__0)) 
+                                                                  << 0x31U))))) 
+                                                             >> 0x20U))));
+        bufp->chgWData(oldp+944,(__Vtemp_hccc23c01__0),256);
+        bufp->chgBit(oldp+952,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero));
+        bufp->chgBit(oldp+953,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf));
+        bufp->chgBit(oldp+954,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan));
+        bufp->chgBit(oldp+955,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm));
+        bufp->chgBit(oldp+956,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_1));
+        bufp->chgBit(oldp+957,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_1));
+        bufp->chgBit(oldp+958,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_1));
+        bufp->chgBit(oldp+959,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_1));
+        bufp->chgBit(oldp+960,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_2));
+        bufp->chgBit(oldp+961,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_2));
+        bufp->chgBit(oldp+962,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_2));
+        bufp->chgBit(oldp+963,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_2));
+        bufp->chgBit(oldp+964,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_zero_3));
+        bufp->chgBit(oldp+965,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_inf_3));
+        bufp->chgBit(oldp+966,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_nan_3));
+        bufp->chgBit(oldp+967,(vlSelf->PvuTop__DOT__fp8_to_fp64__DOT__is_denorm_3));
+        __Vtemp_hbd3288fd__0[0U] = (IData)(((IData)(vlSelf->__VdfgTmp_h48e03101__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0));
+        __Vtemp_hbd3288fd__0[1U] = (IData)((((IData)(vlSelf->__VdfgTmp_h48e03101__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf2cc154c__0) 
+                                            >> 0x20U));
+        __Vtemp_hbd3288fd__0[2U] = (IData)(((IData)(vlSelf->__VdfgTmp_h612b2fac__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0));
+        __Vtemp_hbd3288fd__0[3U] = (IData)((((IData)(vlSelf->__VdfgTmp_h612b2fac__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hdcdfe7d5__0) 
+                                            >> 0x20U));
+        __Vtemp_hbd3288fd__0[4U] = (IData)(((IData)(vlSelf->__VdfgTmp_h3152feec__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0));
+        __Vtemp_hbd3288fd__0[5U] = (IData)((((IData)(vlSelf->__VdfgTmp_h3152feec__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_h4ad59538__0) 
+                                            >> 0x20U));
+        __Vtemp_hbd3288fd__0[6U] = (IData)(((IData)(vlSelf->__VdfgTmp_hab027068__0)
+                                             ? 0ULL
+                                             : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0));
+        __Vtemp_hbd3288fd__0[7U] = (IData)((((IData)(vlSelf->__VdfgTmp_hab027068__0)
+                                              ? 0ULL
+                                              : vlSelf->PvuTop__DOT____VdfgTmp_hf06e86db__0) 
+                                            >> 0x20U));
+        bufp->chgWData(oldp+968,(__Vtemp_hbd3288fd__0),256);
+        bufp->chgWData(oldp+976,(vlSelf->PvuTop__DOT____Vcellout__fp8_to_fp8__io_float_out),256);
+        bufp->chgBit(oldp+984,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_zero));
+        bufp->chgBit(oldp+985,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_inf));
+        bufp->chgBit(oldp+986,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_nan));
+        bufp->chgBit(oldp+987,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_denorm));
+        bufp->chgBit(oldp+988,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_zero_1));
+        bufp->chgBit(oldp+989,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_inf_1));
+        bufp->chgBit(oldp+990,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_nan_1));
+        bufp->chgBit(oldp+991,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_denorm_1));
+        bufp->chgBit(oldp+992,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_zero_2));
+        bufp->chgBit(oldp+993,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_inf_2));
+        bufp->chgBit(oldp+994,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_nan_2));
+        bufp->chgBit(oldp+995,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_denorm_2));
+        bufp->chgBit(oldp+996,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_zero_3));
+        bufp->chgBit(oldp+997,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_inf_3));
+        bufp->chgBit(oldp+998,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_nan_3));
+        bufp->chgBit(oldp+999,(vlSelf->PvuTop__DOT__fp8_to_fp8__DOT__is_denorm_3));
+        bufp->chgWData(oldp+1000,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT____Vcellinp__positDecoder__io_posit),128);
+        bufp->chgCData(oldp+1004,(vlSelf->PvuTop__DOT__greater__DOT__ACTUAL_DST_POSIT_WIDTH),6);
+        bufp->chgBit(oldp+1005,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__isNaR));
+        bufp->chgBit(oldp+1006,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__isNaR_1));
+        bufp->chgBit(oldp+1007,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__isNaR_2));
+        bufp->chgBit(oldp+1008,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__isNaR_3));
+        bufp->chgCData(oldp+1009,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.io_Sign),4);
+        bufp->chgCData(oldp+1010,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT____Vcellinp__floatEncoder__io_isNaN),4);
+        bufp->chgCData(oldp+1011,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.io_Sign),4);
+        bufp->chgCData(oldp+1012,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.io_Sign),4);
+        bufp->chgCData(oldp+1013,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Sign),4);
+        bufp->chgCData(oldp+1014,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
+        bufp->chgCData(oldp+1015,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.io_Sign),4);
+        bufp->chgWData(oldp+1016,(vlSelf->PvuTop__DOT____Vcellinp__decode1__io_posit),128);
+        bufp->chgCData(oldp+1020,(vlSymsp->TOP__PvuTop__DOT__decode1.io_Sign),4);
+        bufp->chgCData(oldp+1021,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__isNaR),4);
+        bufp->chgIData(oldp+1022,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT___operand_0_T_6),31);
+        bufp->chgIData(oldp+1023,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT___operand_1_T_6),31);
+        bufp->chgIData(oldp+1024,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT___operand_2_T_6),31);
+        bufp->chgIData(oldp+1025,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT___operand_3_T_6),31);
+        bufp->chgIData(oldp+1026,(vlSymsp->TOP__PvuTop__DOT__decode1.__Vcellinp__lzcModule__in_i),31);
+        bufp->chgIData(oldp+1027,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1028,(vlSymsp->TOP__PvuTop__DOT__decode1.__Vcellinp__lzcModule_1__in_i),31);
+        bufp->chgIData(oldp+1029,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1030,(vlSymsp->TOP__PvuTop__DOT__decode1.__Vcellinp__lzcModule_2__in_i),31);
+        bufp->chgIData(oldp+1031,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1032,(vlSymsp->TOP__PvuTop__DOT__decode1.__Vcellinp__lzcModule_3__in_i),31);
+        bufp->chgIData(oldp+1033,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgWData(oldp+1034,(vlSelf->PvuTop__DOT____Vcellinp__decode2__io_posit),128);
+        bufp->chgCData(oldp+1038,(vlSymsp->TOP__PvuTop__DOT__decode2.io_Sign),4);
+        bufp->chgCData(oldp+1039,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__isNaR),4);
+        bufp->chgIData(oldp+1040,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT___operand_0_T_6),31);
+        bufp->chgIData(oldp+1041,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT___operand_1_T_6),31);
+        bufp->chgIData(oldp+1042,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT___operand_2_T_6),31);
+        bufp->chgIData(oldp+1043,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT___operand_3_T_6),31);
+        bufp->chgIData(oldp+1044,(vlSymsp->TOP__PvuTop__DOT__decode2.__Vcellinp__lzcModule__in_i),31);
+        bufp->chgIData(oldp+1045,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1046,(vlSymsp->TOP__PvuTop__DOT__decode2.__Vcellinp__lzcModule_1__in_i),31);
+        bufp->chgIData(oldp+1047,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1048,(vlSymsp->TOP__PvuTop__DOT__decode2.__Vcellinp__lzcModule_2__in_i),31);
+        bufp->chgIData(oldp+1049,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1050,(vlSymsp->TOP__PvuTop__DOT__decode2.__Vcellinp__lzcModule_3__in_i),31);
+        bufp->chgIData(oldp+1051,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgCData(oldp+1052,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__isNaR),4);
+        bufp->chgIData(oldp+1053,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___operand_0_T_6),31);
+        bufp->chgIData(oldp+1054,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___operand_1_T_6),31);
+        bufp->chgIData(oldp+1055,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___operand_2_T_6),31);
+        bufp->chgIData(oldp+1056,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___operand_3_T_6),31);
+        bufp->chgIData(oldp+1057,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
+        bufp->chgIData(oldp+1058,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1059,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
+        bufp->chgIData(oldp+1060,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1061,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
+        bufp->chgIData(oldp+1062,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1063,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
+        bufp->chgIData(oldp+1064,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgCData(oldp+1065,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__isNaR),4);
+        bufp->chgIData(oldp+1066,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___operand_0_T_6),31);
+        bufp->chgIData(oldp+1067,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___operand_1_T_6),31);
+        bufp->chgIData(oldp+1068,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___operand_2_T_6),31);
+        bufp->chgIData(oldp+1069,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___operand_3_T_6),31);
+        bufp->chgIData(oldp+1070,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
+        bufp->chgIData(oldp+1071,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1072,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
+        bufp->chgIData(oldp+1073,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1074,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
+        bufp->chgIData(oldp+1075,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1076,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
+        bufp->chgIData(oldp+1077,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgCData(oldp+1078,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__isNaR),4);
+        bufp->chgIData(oldp+1079,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___operand_0_T_6),31);
+        bufp->chgIData(oldp+1080,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___operand_1_T_6),31);
+        bufp->chgIData(oldp+1081,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___operand_2_T_6),31);
+        bufp->chgIData(oldp+1082,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___operand_3_T_6),31);
+        bufp->chgIData(oldp+1083,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
+        bufp->chgIData(oldp+1084,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1085,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
+        bufp->chgIData(oldp+1086,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1087,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
+        bufp->chgIData(oldp+1088,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1089,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
+        bufp->chgIData(oldp+1090,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgCData(oldp+1091,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__isNaR),4);
+        bufp->chgIData(oldp+1092,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___operand_0_T_6),31);
+        bufp->chgIData(oldp+1093,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___operand_1_T_6),31);
+        bufp->chgIData(oldp+1094,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___operand_2_T_6),31);
+        bufp->chgIData(oldp+1095,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___operand_3_T_6),31);
+        bufp->chgIData(oldp+1096,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
+        bufp->chgIData(oldp+1097,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1098,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
+        bufp->chgIData(oldp+1099,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1100,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
+        bufp->chgIData(oldp+1101,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1102,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
+        bufp->chgIData(oldp+1103,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgCData(oldp+1104,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__isNaR),4);
+        bufp->chgIData(oldp+1105,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___operand_0_T_6),31);
+        bufp->chgIData(oldp+1106,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___operand_1_T_6),31);
+        bufp->chgIData(oldp+1107,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___operand_2_T_6),31);
+        bufp->chgIData(oldp+1108,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___operand_3_T_6),31);
+        bufp->chgIData(oldp+1109,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vcellinp__lzcModule__in_i),31);
+        bufp->chgIData(oldp+1110,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1111,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vcellinp__lzcModule_1__in_i),31);
+        bufp->chgIData(oldp+1112,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1113,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vcellinp__lzcModule_2__in_i),31);
+        bufp->chgIData(oldp+1114,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp),31);
+        bufp->chgIData(oldp+1115,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__Vcellinp__lzcModule_3__in_i),31);
+        bufp->chgIData(oldp+1116,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp),31);
     }
     if (VL_UNLIKELY(((((vlSelf->__Vm_traceActivity[1U] 
                         | vlSelf->__Vm_traceActivity
@@ -1046,60 +3970,64 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                      ((IData)(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Sign) 
                                       << 0x1cU)) | 
                                     __Vtemp_hdc346f1d__0[7U]);
-        bufp->chgWData(oldp+317,(__Vtemp_h1e7fb753__0),256);
-        bufp->chgBit(oldp+325,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN)) 
-                                    & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Frac[0U] 
-                                       >> 0x1bU))) 
-                                & (0xc02U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN)
-                                               ? 0U
-                                               : ((0xf00U 
-                                                   & ((- (IData)(
-                                                                 (1U 
-                                                                  & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
-                                                                     >> 7U)))) 
-                                                      << 8U)) 
-                                                  | (0xffU 
-                                                     & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp)))))));
-        bufp->chgBit(oldp+326,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_0)) 
-                                    & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Frac[1U] 
-                                       >> 0x17U))) 
-                                & (0xc02U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_0)
-                                               ? 0U
-                                               : ((0xf00U 
-                                                   & ((- (IData)(
-                                                                 (1U 
-                                                                  & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
-                                                                     >> 0xfU)))) 
-                                                      << 8U)) 
-                                                  | (0xffU 
-                                                     & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
-                                                        >> 8U))))))));
-        bufp->chgBit(oldp+327,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_1)) 
-                                    & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Frac[2U] 
-                                       >> 0x13U))) 
-                                & (0xc02U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_1)
-                                               ? 0U
-                                               : ((0xf00U 
-                                                   & ((- (IData)(
-                                                                 (1U 
-                                                                  & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
-                                                                     >> 0x17U)))) 
-                                                      << 8U)) 
-                                                  | (0xffU 
-                                                     & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
-                                                        >> 0x10U))))))));
-        bufp->chgBit(oldp+328,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_2)) 
-                                    & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Frac[3U] 
-                                       >> 0xfU))) & 
-                                (0xc02U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_2)
-                                             ? 0U : 
-                                            ((0xf00U 
-                                              & ((- (IData)(
-                                                            (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
-                                                             >> 0x1fU))) 
-                                                 << 8U)) 
-                                             | (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
-                                                >> 0x18U)))))));
+        bufp->chgWData(oldp+1117,(__Vtemp_h1e7fb753__0),256);
+        bufp->chgBit(oldp+1125,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN)) 
+                                     & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Frac[0U] 
+                                        >> 0x1bU))) 
+                                 & (0xc02U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN)
+                                                ? 0U
+                                                : (
+                                                   (0xf00U 
+                                                    & ((- (IData)(
+                                                                  (1U 
+                                                                   & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
+                                                                      >> 7U)))) 
+                                                       << 8U)) 
+                                                   | (0xffU 
+                                                      & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp)))))));
+        bufp->chgBit(oldp+1126,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_0)) 
+                                     & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Frac[1U] 
+                                        >> 0x17U))) 
+                                 & (0xc02U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_0)
+                                                ? 0U
+                                                : (
+                                                   (0xf00U 
+                                                    & ((- (IData)(
+                                                                  (1U 
+                                                                   & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
+                                                                      >> 0xfU)))) 
+                                                       << 8U)) 
+                                                   | (0xffU 
+                                                      & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
+                                                         >> 8U))))))));
+        bufp->chgBit(oldp+1127,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_1)) 
+                                     & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Frac[2U] 
+                                        >> 0x13U))) 
+                                 & (0xc02U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_1)
+                                                ? 0U
+                                                : (
+                                                   (0xf00U 
+                                                    & ((- (IData)(
+                                                                  (1U 
+                                                                   & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
+                                                                      >> 0x17U)))) 
+                                                       << 8U)) 
+                                                   | (0xffU 
+                                                      & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
+                                                         >> 0x10U))))))));
+        bufp->chgBit(oldp+1128,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_2)) 
+                                     & (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Frac[3U] 
+                                        >> 0xfU))) 
+                                 & (0xc02U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp64__DOT___GEN_2)
+                                                ? 0U
+                                                : (
+                                                   (0xf00U 
+                                                    & ((- (IData)(
+                                                                  (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
+                                                                   >> 0x1fU))) 
+                                                       << 8U)) 
+                                                   | (vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.io_Exp 
+                                                      >> 0x18U)))))));
     }
     if (VL_UNLIKELY(((vlSelf->__Vm_traceActivity[1U] 
                       | vlSelf->__Vm_traceActivity[0x1fU]) 
@@ -1239,7 +4167,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                   << 0x19U)) 
                                              >> 0x20U)) 
                                     >> 1U);
-        bufp->chgWData(oldp+329,(__Vtemp_h460208bb__0),212);
+        bufp->chgWData(oldp+1129,(__Vtemp_h460208bb__0),212);
     }
     if (VL_UNLIKELY(((((vlSelf->__Vm_traceActivity[1U] 
                         | vlSelf->__Vm_traceActivity
@@ -1445,7 +4373,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           (~ vlSelf->PvuTop__DOT__convert24__DOT__posit_encoder__DOT___value_after_round_2_T))))
                                                     : vlSelf->PvuTop__DOT__convert24__DOT__posit_encoder__DOT___value_after_round_2_T)))) 
                                                >> 0x10U));
-        bufp->chgWData(oldp+336,(__Vtemp_h117aa8cd__0),96);
+        bufp->chgWData(oldp+1136,(__Vtemp_h117aa8cd__0),96);
         __Vtemp_hf444b557__0[1U] = (IData)((((QData)((IData)(
                                                              (((IData)(vlSelf->PvuTop__DOT__convert8__DOT__posit_encoder__DOT____VdfgTmp_h878add96__0) 
                                                                & (0U 
@@ -1621,7 +4549,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                    : vlSelf->PvuTop__DOT__convert32__DOT__posit_encoder__DOT___value_after_round_1_T))));
         __Vtemp_h734ad2fd__0[2U] = __Vtemp_hf444b557__0[1U];
         __Vtemp_h734ad2fd__0[3U] = __Vtemp_hf444b557__0[2U];
-        bufp->chgWData(oldp+339,(__Vtemp_h734ad2fd__0),128);
+        bufp->chgWData(oldp+1139,(__Vtemp_h734ad2fd__0),128);
         __Vtemp_h3950a85b__0[1U] = (((IData)((((IData)(vlSelf->PvuTop__DOT__convert8__DOT__posit_encoder__DOT____VdfgTmp_h87f57e3c__0) 
                                                & (0ULL 
                                                   == vlSelf->__VdfgTmp_h95a8cfbd__0))
@@ -1968,7 +4896,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                              : vlSelf->PvuTop__DOT__convert40__DOT__posit_encoder__DOT___value_after_round_3_T)))) 
                                                         >> 0x20U)) 
                                                << 0x18U));
-        bufp->chgWData(oldp+343,(__Vtemp_h533e5e38__0),160);
+        bufp->chgWData(oldp+1143,(__Vtemp_h533e5e38__0),160);
         __Vtemp_h63b46251__0[1U] = (((IData)((((IData)(vlSelf->PvuTop__DOT__convert8__DOT__posit_encoder__DOT____VdfgTmp_h878e0f03__0) 
                                                & (0ULL 
                                                   == vlSelf->__VdfgTmp_h02c83ba5__0))
@@ -2319,7 +5247,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                 : vlSelf->PvuTop__DOT__convert48__DOT__posit_encoder__DOT___value_after_round_3_T)))) 
                                                            >> 0x20U)) 
                                                   << 0x10U));
-        bufp->chgWData(oldp+348,(__Vtemp_h9fefc3a5__0),192);
+        bufp->chgWData(oldp+1148,(__Vtemp_h9fefc3a5__0),192);
         __Vtemp_h34d788c7__0[1U] = (((IData)((((IData)(vlSelf->PvuTop__DOT__convert8__DOT__posit_encoder__DOT____VdfgTmp_h87f57e3c__0) 
                                                & (0ULL 
                                                   == vlSelf->__VdfgTmp_h1fec2fad__0))
@@ -2734,7 +5662,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                 : vlSelf->PvuTop__DOT__convert56__DOT__posit_encoder__DOT___value_after_round_3_T)))) 
                                                            >> 0x20U)) 
                                                   << 8U));
-        bufp->chgWData(oldp+354,(__Vtemp_h903258f8__0),224);
+        bufp->chgWData(oldp+1154,(__Vtemp_h903258f8__0),224);
         __Vtemp_hcf697661__0[0U] = (IData)((((IData)(vlSelf->PvuTop__DOT__convert8__DOT__posit_encoder__DOT____VdfgTmp_h87f12fa9__0) 
                                              & (0ULL 
                                                 == vlSelf->__VdfgTmp_h483ce63c__0))
@@ -2973,36 +5901,36 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           (~ vlSelf->PvuTop__DOT__convert64__DOT__posit_encoder__DOT___value_after_round_3_T))))
                                                     : vlSelf->PvuTop__DOT__convert64__DOT__posit_encoder__DOT___value_after_round_3_T)))) 
                                             >> 0x20U));
-        bufp->chgWData(oldp+361,(__Vtemp_hcf697661__0),256);
+        bufp->chgWData(oldp+1161,(__Vtemp_hcf697661__0),256);
     }
     if (VL_UNLIKELY(((vlSelf->__Vm_traceActivity[1U] 
                       | vlSelf->__Vm_traceActivity[0x27U]) 
                      | vlSelf->__Vm_traceActivity[0x7aU]))) {
-        bufp->chgCData(oldp+369,(((8U & ((((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2) 
-                                           | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_3))
-                                           ? ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                              >> 3U)
-                                           : ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
-                                              >> 3U)) 
-                                         << 3U)) | 
-                                  ((4U & ((((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1) 
-                                            | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_2))
+        bufp->chgCData(oldp+1169,(((8U & ((((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2) 
+                                            | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_3))
                                             ? ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                               >> 2U)
-                                            : ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
-                                               >> 2U)) 
-                                          << 2U)) | 
-                                   ((2U & ((((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0) 
-                                             | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_1))
+                                               >> 3U)
+                                            : ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
+                                               >> 3U)) 
+                                          << 3U)) | 
+                                   ((4U & ((((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1) 
+                                             | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_2))
                                              ? ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                >> 1U)
-                                             : ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
-                                                >> 1U)) 
-                                           << 1U)) 
-                                    | (1U & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN) 
-                                              | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater))
-                                              ? (IData)(vlSelf->PvuTop__DOT___GEN_40)
-                                              : (IData)(vlSelf->PvuTop__DOT___GEN_134))))))),4);
+                                                >> 2U)
+                                             : ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
+                                                >> 2U)) 
+                                           << 2U)) 
+                                    | ((2U & ((((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0) 
+                                                | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_1))
+                                                ? ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
+                                                   >> 1U)
+                                                : ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
+                                                   >> 1U)) 
+                                              << 1U)) 
+                                       | (1U & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater))
+                                                 ? (IData)(vlSelf->PvuTop__DOT___GEN_40)
+                                                 : (IData)(vlSelf->PvuTop__DOT___GEN_172))))))),4);
         __Vtemp_h0b535a74__0[0U] = (IData)((((QData)((IData)(
                                                              ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0)
                                                                ? vlSelf->__VdfgTmp_h7ffb051e__0
@@ -3037,7 +5965,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                       ? vlSelf->__VdfgTmp_h0cc2f08a__0
                                       : vlSelf->__VdfgTmp_h7b8aa9cd__0) 
                                     >> 6U);
-        bufp->chgWData(oldp+370,(__Vtemp_h0b535a74__0),120);
+        bufp->chgWData(oldp+1170,(__Vtemp_h0b535a74__0),120);
         if (vlSelf->__VdfgTmp_h4c08f538__0) {
             __Vtemp_h6b317542__0[0U] = 0U;
             __Vtemp_h6b317542__0[1U] = 0U;
@@ -3081,81 +6009,83 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                           : vlSelf->__VdfgTmp_h0cc2f08a__0) 
                                         >> 6U);
         }
-        bufp->chgWData(oldp+374,(__Vtemp_h6b317542__0),120);
-        bufp->chgCData(oldp+378,(((8U & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2)
-                                           ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h3a630f85__0 
-                                               != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0b529d0d__0) 
-                                              & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_3)) 
-                                                 ^ 
-                                                 ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                  >> 3U)))
-                                           : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                              >> 3U)) 
-                                         << 3U)) | 
-                                  ((4U & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1)
-                                            ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h39ddc1a5__0 
-                                                != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0e8cac5d__0) 
-                                               & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_2)) 
+        bufp->chgWData(oldp+1174,(__Vtemp_h6b317542__0),120);
+        bufp->chgCData(oldp+1178,(((8U & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2)
+                                            ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h3a630f85__0 
+                                                != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0b529d0d__0) 
+                                               & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_3)) 
                                                   ^ 
                                                   ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                   >> 2U)))
+                                                   >> 3U)))
                                             : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                               >> 2U)) 
-                                          << 2U)) | 
-                                   ((2U & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0)
-                                             ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h39412272__0 
-                                                 != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0e3057ea__0) 
-                                                & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_1)) 
+                                               >> 3U)) 
+                                          << 3U)) | 
+                                   ((4U & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1)
+                                             ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h39ddc1a5__0 
+                                                 != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0e8cac5d__0) 
+                                                & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_2)) 
                                                    ^ 
                                                    ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                    >> 1U)))
+                                                    >> 2U)))
                                              : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                >> 1U)) 
-                                           << 1U)) 
-                                    | (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN)
-                                              ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h38f0a4f9__0 
+                                                >> 2U)) 
+                                           << 2U)) 
+                                    | ((2U & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0)
+                                                ? (
+                                                   (vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h39412272__0 
+                                                    != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0e3057ea__0) 
+                                                   & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_1)) 
+                                                      ^ 
+                                                      ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
+                                                       >> 1U)))
+                                                : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
+                                                   >> 1U)) 
+                                              << 1U)) 
+                                       | (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN)
+                                                 ? 
+                                                ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h38f0a4f9__0 
                                                   != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h09a65a41__0) 
                                                  & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater)) 
                                                     ^ (IData)(vlSelf->PvuTop__DOT___GEN_40)))
-                                              : (IData)(vlSelf->PvuTop__DOT___GEN_40))))))),4);
-        bufp->chgIData(oldp+379,(((((1U & ((~ (vlSelf->PvuTop__DOT__add__DOT__sum_3 
-                                               >> 0x1eU)) 
-                                           | (IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2)))
-                                     ? (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_3_T_1)
-                                     : ((IData)(1U) 
-                                        + (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_3_T_1))) 
-                                   << 0x18U) | ((0xff0000U 
-                                                 & (((1U 
-                                                      & ((~ 
-                                                          (vlSelf->PvuTop__DOT__add__DOT__sum_2 
-                                                           >> 0x1eU)) 
-                                                         | (IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1)))
-                                                      ? (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_2_T_1)
-                                                      : 
-                                                     ((IData)(1U) 
-                                                      + (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_2_T_1))) 
-                                                    << 0x10U)) 
-                                                | ((0xff00U 
-                                                    & (((1U 
-                                                         & ((~ 
-                                                             (vlSelf->PvuTop__DOT__add__DOT__sum_1 
-                                                              >> 0x1eU)) 
-                                                            | (IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0)))
-                                                         ? (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_1_T_1)
-                                                         : 
-                                                        ((IData)(1U) 
-                                                         + (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_1_T_1))) 
-                                                       << 8U)) 
-                                                   | (0xffU 
-                                                      & ((1U 
+                                                 : (IData)(vlSelf->PvuTop__DOT___GEN_40))))))),4);
+        bufp->chgIData(oldp+1179,(((((1U & ((~ (vlSelf->PvuTop__DOT__add__DOT__sum_3 
+                                                >> 0x1eU)) 
+                                            | (IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2)))
+                                      ? (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_3_T_1)
+                                      : ((IData)(1U) 
+                                         + (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_3_T_1))) 
+                                    << 0x18U) | ((0xff0000U 
+                                                  & (((1U 
+                                                       & ((~ 
+                                                           (vlSelf->PvuTop__DOT__add__DOT__sum_2 
+                                                            >> 0x1eU)) 
+                                                          | (IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1)))
+                                                       ? (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_2_T_1)
+                                                       : 
+                                                      ((IData)(1U) 
+                                                       + (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_2_T_1))) 
+                                                     << 0x10U)) 
+                                                 | ((0xff00U 
+                                                     & (((1U 
                                                           & ((~ 
-                                                              (vlSelf->PvuTop__DOT__add__DOT__sum 
+                                                              (vlSelf->PvuTop__DOT__add__DOT__sum_1 
                                                                >> 0x1eU)) 
-                                                             | (IData)(vlSelf->PvuTop__DOT__add__DOT___GEN)))
-                                                          ? (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_0_T_1)
+                                                             | (IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0)))
+                                                          ? (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_1_T_1)
                                                           : 
                                                          ((IData)(1U) 
-                                                          + (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_0_T_1)))))))),32);
+                                                          + (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_1_T_1))) 
+                                                        << 8U)) 
+                                                    | (0xffU 
+                                                       & ((1U 
+                                                           & ((~ 
+                                                               (vlSelf->PvuTop__DOT__add__DOT__sum 
+                                                                >> 0x1eU)) 
+                                                              | (IData)(vlSelf->PvuTop__DOT__add__DOT___GEN)))
+                                                           ? (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_0_T_1)
+                                                           : 
+                                                          ((IData)(1U) 
+                                                           + (IData)(vlSelf->PvuTop__DOT__fracalign_1__DOT___io_pir_max_exp_0_T_1)))))))),32);
         __Vtemp_h69523846__0[0U] = (IData)((((QData)((IData)(
                                                              ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0)
                                                                ? vlSelf->__VdfgTmp_h993763af__0
@@ -3190,21 +6120,21 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                       ? vlSelf->__VdfgTmp_h7b8aa9cd__0
                                       : vlSelf->__VdfgTmp_h0cc2f08a__0) 
                                     >> 6U);
-        bufp->chgWData(oldp+380,(__Vtemp_h69523846__0),120);
+        bufp->chgWData(oldp+1180,(__Vtemp_h69523846__0),120);
     }
     if (VL_UNLIKELY(((vlSelf->__Vm_traceActivity[1U] 
                       | vlSelf->__Vm_traceActivity[0x32U]) 
                      | vlSelf->__Vm_traceActivity[0x85U]))) {
-        bufp->chgCData(oldp+384,(((((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h9b56b116__0) 
-                                    & (IData)(vlSelf->PvuTop__DOT___GEN_88)) 
-                                   << 3U) | ((((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h4d703b6d__0) 
-                                               & (IData)(vlSelf->PvuTop__DOT___GEN_87)) 
-                                              << 2U) 
-                                             | ((((IData)(vlSelf->PvuTop__DOT____VdfgTmp_hfe6df398__0) 
-                                                  & (IData)(vlSelf->PvuTop__DOT___GEN_86)) 
-                                                 << 1U) 
-                                                | ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h48f6830c__0) 
-                                                   & (IData)(vlSelf->PvuTop__DOT___GEN_85)))))),4);
+        bufp->chgCData(oldp+1184,(((((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h9b56b116__0) 
+                                     & (IData)(vlSelf->PvuTop__DOT___GEN_86)) 
+                                    << 3U) | ((((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h4d703b6d__0) 
+                                                & (IData)(vlSelf->PvuTop__DOT___GEN_85)) 
+                                               << 2U) 
+                                              | ((((IData)(vlSelf->PvuTop__DOT____VdfgTmp_hfe6df398__0) 
+                                                   & (IData)(vlSelf->PvuTop__DOT___GEN_84)) 
+                                                  << 1U) 
+                                                 | ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h48f6830c__0) 
+                                                    & (IData)(vlSelf->PvuTop__DOT___GEN_83)))))),4);
         __Vtemp_h9d1d3331__0[0U] = ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN)
                                      ? 0x80000000U : 
                                     ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_19)
@@ -3310,7 +6240,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                        - (IData)(vlSelf->PvuTop__DOT__greater__DOT__ACTUAL_DST_POSIT_WIDTH))))
                                                                    : 0U)))))) 
                                             >> 0x20U));
-        bufp->chgWData(oldp+385,(__Vtemp_h9d1d3331__0),128);
+        bufp->chgWData(oldp+1185,(__Vtemp_h9d1d3331__0),128);
         __Vtemp_headba69e__0[0U] = (IData)(((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN)
                                              ? 0ULL
                                              : vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h7b829ab6__0));
@@ -3359,7 +6289,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                              : vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h459f37c1__0) 
                                                            >> 0x20U)) 
                                                   << 3U));
-        bufp->chgWData(oldp+389,(__Vtemp_headba69e__0),132);
+        bufp->chgWData(oldp+1189,(__Vtemp_headba69e__0),132);
         __Vtemp_haefad08b__0[0U] = (IData)((((QData)((IData)(
                                                              ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_4)
                                                                ? 0U
@@ -3404,19 +6334,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                       ? 0U : (0xfffffffU 
                                               & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h459f37c1__0))) 
                                     >> 0xcU);
-        bufp->chgWData(oldp+394,(__Vtemp_haefad08b__0),112);
-        bufp->chgBit(oldp+398,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN)
-                                        ? 0U : (0xfffffffU 
-                                                & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h7b829ab6__0))))));
-        bufp->chgBit(oldp+399,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_4)
-                                        ? 0U : (0xfffffffU 
-                                                & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h097c16a4__0))))));
-        bufp->chgBit(oldp+400,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_9)
-                                        ? 0U : (0xfffffffU 
-                                                & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_hc3975437__0))))));
-        bufp->chgBit(oldp+401,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_14)
-                                        ? 0U : (0xfffffffU 
-                                                & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h459f37c1__0))))));
+        bufp->chgWData(oldp+1194,(__Vtemp_haefad08b__0),112);
+        bufp->chgBit(oldp+1198,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN)
+                                         ? 0U : (0xfffffffU 
+                                                 & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h7b829ab6__0))))));
+        bufp->chgBit(oldp+1199,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_4)
+                                         ? 0U : (0xfffffffU 
+                                                 & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h097c16a4__0))))));
+        bufp->chgBit(oldp+1200,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_9)
+                                         ? 0U : (0xfffffffU 
+                                                 & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_hc3975437__0))))));
+        bufp->chgBit(oldp+1201,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_14)
+                                         ? 0U : (0xfffffffU 
+                                                 & (IData)(vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h459f37c1__0))))));
         __Vtemp_h1c86d8fc__0[0U] = (IData)(((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN)
                                              ? 0ULL
                                              : vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_hc528e02b__0));
@@ -3465,7 +6395,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                              : vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_h0207e970__0) 
                                                            >> 0x20U)) 
                                                   << 3U));
-        bufp->chgWData(oldp+402,(__Vtemp_h1c86d8fc__0),132);
+        bufp->chgWData(oldp+1202,(__Vtemp_h1c86d8fc__0),132);
         __Vtemp_h61b15f4f__0[0U] = (IData)((((QData)((IData)(
                                                              ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_4)
                                                                ? 0U
@@ -3510,19 +6440,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                       ? 0U : (0xfffffffU 
                                               & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_h0207e970__0))) 
                                     >> 0xcU);
-        bufp->chgWData(oldp+407,(__Vtemp_h61b15f4f__0),112);
-        bufp->chgBit(oldp+411,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN)
-                                        ? 0U : (0xfffffffU 
-                                                & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_hc528e02b__0))))));
-        bufp->chgBit(oldp+412,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_4)
-                                        ? 0U : (0xfffffffU 
-                                                & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_hda3bad21__0))))));
-        bufp->chgBit(oldp+413,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_9)
-                                        ? 0U : (0xfffffffU 
-                                                & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_hc3b54484__0))))));
-        bufp->chgBit(oldp+414,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_14)
-                                        ? 0U : (0xfffffffU 
-                                                & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_h0207e970__0))))));
+        bufp->chgWData(oldp+1207,(__Vtemp_h61b15f4f__0),112);
+        bufp->chgBit(oldp+1211,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN)
+                                         ? 0U : (0xfffffffU 
+                                                 & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_hc528e02b__0))))));
+        bufp->chgBit(oldp+1212,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_4)
+                                         ? 0U : (0xfffffffU 
+                                                 & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_hda3bad21__0))))));
+        bufp->chgBit(oldp+1213,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_9)
+                                         ? 0U : (0xfffffffU 
+                                                 & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_hc3b54484__0))))));
+        bufp->chgBit(oldp+1214,((0U == ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_14)
+                                         ? 0U : (0xfffffffU 
+                                                 & (IData)(vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_h0207e970__0))))));
     }
     if (VL_UNLIKELY(((vlSelf->__Vm_traceActivity[1U] 
                       | vlSelf->__Vm_traceActivity[0x52U]) 
@@ -3588,505 +6518,493 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                             | (vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[2U] 
                                                >> 0x14U)))
                                       : 0U) >> 0xcU);
-        bufp->chgWData(oldp+415,(__Vtemp_h500bbad9__0),112);
-        bufp->chgBit(oldp+419,((0U == ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha15d0789__0)
-                                        ? (0xfffffffU 
-                                           & vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[0U])
-                                        : 0U))));
-        bufp->chgBit(oldp+420,((0U == ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h792c5c44__0)
-                                        ? (0xfffffffU 
-                                           & ((vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[1U] 
-                                               << 4U) 
-                                              | (vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[0U] 
-                                                 >> 0x1cU)))
-                                        : 0U))));
-        bufp->chgBit(oldp+421,((0U == ((2U < (IData)(vlSelf->PvuTop__DOT__ACTUAL_VECTOR_SIZE))
-                                        ? (0xfffffffU 
-                                           & ((vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[2U] 
-                                               << 8U) 
-                                              | (vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[1U] 
-                                                 >> 0x18U)))
-                                        : 0U))));
-        bufp->chgBit(oldp+422,((0U == ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha10fc7a1__0)
-                                        ? (0xfffffffU 
-                                           & ((vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[3U] 
-                                               << 0xcU) 
-                                              | (vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[2U] 
-                                                 >> 0x14U)))
-                                        : 0U))));
+        bufp->chgWData(oldp+1215,(__Vtemp_h500bbad9__0),112);
+        bufp->chgBit(oldp+1219,((0U == ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha15d0789__0)
+                                         ? (0xfffffffU 
+                                            & vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[0U])
+                                         : 0U))));
+        bufp->chgBit(oldp+1220,((0U == ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h792c5c44__0)
+                                         ? (0xfffffffU 
+                                            & ((vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[1U] 
+                                                << 4U) 
+                                               | (vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[0U] 
+                                                  >> 0x1cU)))
+                                         : 0U))));
+        bufp->chgBit(oldp+1221,((0U == ((2U < (IData)(vlSelf->PvuTop__DOT__ACTUAL_VECTOR_SIZE))
+                                         ? (0xfffffffU 
+                                            & ((vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[2U] 
+                                                << 8U) 
+                                               | (vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[1U] 
+                                                  >> 0x18U)))
+                                         : 0U))));
+        bufp->chgBit(oldp+1222,((0U == ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha10fc7a1__0)
+                                         ? (0xfffffffU 
+                                            & ((vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[3U] 
+                                                << 0xcU) 
+                                               | (vlSymsp->TOP__PvuTop__DOT__result_converted_decoder.io_Frac[2U] 
+                                                  >> 0x14U)))
+                                         : 0U))));
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[2U] 
                      | vlSelf->__Vm_traceActivity[0x55U]))) {
-        bufp->chgCData(oldp+423,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+424,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
-        bufp->chgCData(oldp+425,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+426,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1223,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1224,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
+        bufp->chgCData(oldp+1225,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1226,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[3U] 
                      | vlSelf->__Vm_traceActivity[0x56U]))) {
-        bufp->chgCData(oldp+431,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+432,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
-        bufp->chgCData(oldp+433,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+434,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1231,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1232,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
+        bufp->chgCData(oldp+1233,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1234,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[4U] 
                      | vlSelf->__Vm_traceActivity[0x57U]))) {
-        bufp->chgCData(oldp+439,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+440,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
-        bufp->chgCData(oldp+441,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+442,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1239,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1240,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
+        bufp->chgCData(oldp+1241,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1242,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[5U] 
                      | vlSelf->__Vm_traceActivity[0x58U]))) {
-        bufp->chgCData(oldp+447,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+448,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
-        bufp->chgCData(oldp+449,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+450,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1247,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1248,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
+        bufp->chgCData(oldp+1249,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1250,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[6U] 
                      | vlSelf->__Vm_traceActivity[0x59U]))) {
-        bufp->chgCData(oldp+455,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+456,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
-        bufp->chgCData(oldp+457,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+458,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1255,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1256,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
+        bufp->chgCData(oldp+1257,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1258,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[7U] 
                      | vlSelf->__Vm_traceActivity[0x5aU]))) {
-        bufp->chgCData(oldp+463,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+464,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
-        bufp->chgCData(oldp+465,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+466,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1263,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1264,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
+        bufp->chgCData(oldp+1265,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1266,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[8U] 
                      | vlSelf->__Vm_traceActivity[0x5bU]))) {
-        bufp->chgCData(oldp+471,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+472,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
-        bufp->chgCData(oldp+473,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+474,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1271,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1272,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
+        bufp->chgCData(oldp+1273,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1274,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[9U] 
                      | vlSelf->__Vm_traceActivity[0x5cU]))) {
-        bufp->chgCData(oldp+479,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+480,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
-        bufp->chgCData(oldp+481,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+482,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1279,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1280,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
+        bufp->chgCData(oldp+1281,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1282,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0xaU] 
                      | vlSelf->__Vm_traceActivity[0x5dU]))) {
-        bufp->chgCData(oldp+487,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+488,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
-        bufp->chgCData(oldp+489,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+490,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1287,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1288,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
+        bufp->chgCData(oldp+1289,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1290,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0xbU] 
                      | vlSelf->__Vm_traceActivity[0x5eU]))) {
-        bufp->chgCData(oldp+495,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+496,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
-        bufp->chgCData(oldp+497,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+498,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1295,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1296,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
+        bufp->chgCData(oldp+1297,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1298,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0xcU] 
                      | vlSelf->__Vm_traceActivity[0x5fU]))) {
-        bufp->chgCData(oldp+503,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+504,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
-        bufp->chgCData(oldp+505,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+506,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1303,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1304,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
+        bufp->chgCData(oldp+1305,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1306,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0xdU] 
                      | vlSelf->__Vm_traceActivity[0x60U]))) {
-        bufp->chgCData(oldp+511,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+512,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
-        bufp->chgCData(oldp+513,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+514,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1311,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1312,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
+        bufp->chgCData(oldp+1313,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1314,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0xeU] 
                      | vlSelf->__Vm_traceActivity[0x61U]))) {
-        bufp->chgCData(oldp+519,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+520,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
-        bufp->chgCData(oldp+521,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+522,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1319,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1320,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
+        bufp->chgCData(oldp+1321,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1322,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0xfU] 
                      | vlSelf->__Vm_traceActivity[0x62U]))) {
-        bufp->chgCData(oldp+527,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+528,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
-        bufp->chgCData(oldp+529,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+530,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1327,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1328,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
+        bufp->chgCData(oldp+1329,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1330,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x10U] 
                      | vlSelf->__Vm_traceActivity[0x63U]))) {
-        bufp->chgCData(oldp+535,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+536,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
-        bufp->chgCData(oldp+537,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+538,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1335,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1336,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
+        bufp->chgCData(oldp+1337,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1338,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x11U] 
                      | vlSelf->__Vm_traceActivity[0x64U]))) {
-        bufp->chgCData(oldp+543,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+544,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
-        bufp->chgCData(oldp+545,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+546,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1343,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1344,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
+        bufp->chgCData(oldp+1345,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1346,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x12U] 
                      | vlSelf->__Vm_traceActivity[0x65U]))) {
-        bufp->chgCData(oldp+551,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+552,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
-        bufp->chgCData(oldp+553,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+554,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1351,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1352,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___barrel_shifter_3_io_result_o),31);
+        bufp->chgCData(oldp+1353,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1354,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x13U] 
                      | vlSelf->__Vm_traceActivity[0x66U]))) {
-        bufp->chgCData(oldp+559,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+560,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
-        bufp->chgCData(oldp+561,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+562,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1359,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1360,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___barrel_shifter_2_io_result_o),31);
+        bufp->chgCData(oldp+1361,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1362,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x14U] 
                      | vlSelf->__Vm_traceActivity[0x67U]))) {
-        bufp->chgCData(oldp+567,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+568,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
-        bufp->chgCData(oldp+569,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+570,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1367,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1368,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___barrel_shifter_1_io_result_o),31);
+        bufp->chgCData(oldp+1369,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1370,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x15U] 
                      | vlSelf->__Vm_traceActivity[0x68U]))) {
-        bufp->chgCData(oldp+575,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgIData(oldp+576,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
-        bufp->chgCData(oldp+577,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+578,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1375,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgIData(oldp+1376,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT___barrel_shifter_io_result_o),31);
+        bufp->chgCData(oldp+1377,((0x1fU & vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1378,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x16U] 
                      | vlSelf->__Vm_traceActivity[0x69U]))) {
-        bufp->chgCData(oldp+583,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgCData(oldp+584,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+585,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1383,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgCData(oldp+1384,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1385,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x17U] 
                      | vlSelf->__Vm_traceActivity[0x6aU]))) {
-        bufp->chgCData(oldp+590,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgCData(oldp+591,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+592,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1390,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgCData(oldp+1391,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1392,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x18U] 
                      | vlSelf->__Vm_traceActivity[0x6bU]))) {
-        bufp->chgCData(oldp+597,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgCData(oldp+598,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+599,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1397,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgCData(oldp+1398,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1399,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x19U] 
                      | vlSelf->__Vm_traceActivity[0x6cU]))) {
-        bufp->chgCData(oldp+604,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgCData(oldp+605,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+606,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1404,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgCData(oldp+1405,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1406,(vlSymsp->TOP__PvuTop__DOT__decode2.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x1aU] 
                      | vlSelf->__Vm_traceActivity[0x6dU]))) {
-        bufp->chgCData(oldp+611,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgCData(oldp+612,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+613,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1411,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgCData(oldp+1412,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1413,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x1bU] 
                      | vlSelf->__Vm_traceActivity[0x6eU]))) {
-        bufp->chgCData(oldp+618,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgCData(oldp+619,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+620,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1418,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgCData(oldp+1419,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1420,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x1cU] 
                      | vlSelf->__Vm_traceActivity[0x6fU]))) {
-        bufp->chgCData(oldp+625,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgCData(oldp+626,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+627,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1425,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgCData(oldp+1426,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1427,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x1dU] 
                      | vlSelf->__Vm_traceActivity[0x70U]))) {
-        bufp->chgCData(oldp+632,((0x1fU & ((IData)(1U) 
-                                           + vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
-        bufp->chgCData(oldp+633,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
-        bufp->chgWData(oldp+634,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
+        bufp->chgCData(oldp+1432,((0x1fU & ((IData)(1U) 
+                                            + vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U]))),5);
+        bufp->chgCData(oldp+1433,((0x1fU & vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U])),5);
+        bufp->chgWData(oldp+1434,(vlSymsp->TOP__PvuTop__DOT__decode1.__PVT__lzcModule__DOT__gen_lzc__DOT__index_nodes),160);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x20U] 
                      | vlSelf->__Vm_traceActivity[0x73U]))) {
-        bufp->chgCData(oldp+639,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__safe_shift_amount),8);
-        bufp->chgIData(oldp+640,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__shifted_base),28);
-        bufp->chgCData(oldp+641,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__safe_shift_amount_1),8);
-        bufp->chgIData(oldp+642,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__shifted_base_1),28);
-        bufp->chgCData(oldp+643,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__safe_shift_amount_2),8);
-        bufp->chgIData(oldp+644,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__shifted_base_2),28);
-        bufp->chgCData(oldp+645,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__safe_shift_amount_3),8);
-        bufp->chgIData(oldp+646,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__shifted_base_3),28);
-        bufp->chgCData(oldp+647,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_14)
-                                     ? 0U : (IData)(vlSelf->__VdfgTmp_h67c762b7__0)) 
-                                   << 6U) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_10)
-                                                ? 0U
-                                                : (IData)(vlSelf->__VdfgTmp_h3ba1ecff__0)) 
-                                              << 4U) 
-                                             | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_6)
-                                                   ? 0U
-                                                   : (IData)(vlSelf->__VdfgTmp_hac6b94cd__0)) 
-                                                 << 2U) 
-                                                | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_2)
+        bufp->chgCData(oldp+1439,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__safe_shift_amount),8);
+        bufp->chgIData(oldp+1440,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__shifted_base),28);
+        bufp->chgCData(oldp+1441,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__safe_shift_amount_1),8);
+        bufp->chgIData(oldp+1442,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__shifted_base_1),28);
+        bufp->chgCData(oldp+1443,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__safe_shift_amount_2),8);
+        bufp->chgIData(oldp+1444,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__shifted_base_2),28);
+        bufp->chgCData(oldp+1445,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__safe_shift_amount_3),8);
+        bufp->chgIData(oldp+1446,(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__shifted_base_3),28);
+        bufp->chgCData(oldp+1447,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_14)
+                                      ? 0U : (IData)(vlSelf->__VdfgTmp_h67c762b7__0)) 
+                                    << 6U) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_10)
+                                                 ? 0U
+                                                 : (IData)(vlSelf->__VdfgTmp_h3ba1ecff__0)) 
+                                               << 4U) 
+                                              | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_6)
                                                     ? 0U
-                                                    : (IData)(vlSelf->__VdfgTmp_h0a8ed410__0)))))),8);
-        bufp->chgSData(oldp+648,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_14)
-                                     ? 0U : (IData)(vlSelf->__VdfgTmp_hbeca2c52__0)) 
-                                   << 9U) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_10)
-                                                ? 0U
-                                                : (IData)(vlSelf->__VdfgTmp_hf52bdd2a__0)) 
-                                              << 6U) 
-                                             | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_6)
-                                                   ? 0U
-                                                   : (IData)(vlSelf->__VdfgTmp_hb9ec287b__0)) 
-                                                 << 3U) 
-                                                | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_2)
+                                                    : (IData)(vlSelf->__VdfgTmp_hac6b94cd__0)) 
+                                                  << 2U) 
+                                                 | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_2)
+                                                     ? 0U
+                                                     : (IData)(vlSelf->__VdfgTmp_h0a8ed410__0)))))),8);
+        bufp->chgSData(oldp+1448,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_14)
+                                      ? 0U : (IData)(vlSelf->__VdfgTmp_hbeca2c52__0)) 
+                                    << 9U) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_10)
+                                                 ? 0U
+                                                 : (IData)(vlSelf->__VdfgTmp_hf52bdd2a__0)) 
+                                               << 6U) 
+                                              | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_6)
                                                     ? 0U
-                                                    : (IData)(vlSelf->__VdfgTmp_h40a686be__0)))))),12);
-        bufp->chgCData(oldp+649,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_hf256099e__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_hf25a5b0b__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
-        bufp->chgCData(oldp+650,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
-        bufp->chgBit(oldp+651,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_2)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_h40a686be__0) 
-                                       >> 2U))) & (1U 
-                                                   == 
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_2)
+                                                    : (IData)(vlSelf->__VdfgTmp_hb9ec287b__0)) 
+                                                  << 3U) 
+                                                 | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_2)
                                                      ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h0a8ed410__0))))));
-        bufp->chgBit(oldp+652,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_6)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_hb9ec287b__0) 
-                                       >> 2U))) & (1U 
-                                                   == 
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_6)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_hac6b94cd__0))))));
-        bufp->chgBit(oldp+653,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_10)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_hf52bdd2a__0) 
-                                       >> 2U))) & (1U 
-                                                   == 
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_10)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h3ba1ecff__0))))));
-        bufp->chgBit(oldp+654,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_14)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_hbeca2c52__0) 
-                                       >> 2U))) & (1U 
-                                                   == 
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_14)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h67c762b7__0))))));
-        bufp->chgIData(oldp+655,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.io_Exp),32);
+                                                     : (IData)(vlSelf->__VdfgTmp_h40a686be__0)))))),12);
+        bufp->chgCData(oldp+1449,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_hf256099e__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_hf25a5b0b__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
+        bufp->chgCData(oldp+1450,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
+        bufp->chgBit(oldp+1451,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_2)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_h40a686be__0) 
+                                        >> 2U))) & 
+                                 (1U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_2)
+                                          ? 0U : (IData)(vlSelf->__VdfgTmp_h0a8ed410__0))))));
+        bufp->chgBit(oldp+1452,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_6)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_hb9ec287b__0) 
+                                        >> 2U))) & 
+                                 (1U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_6)
+                                          ? 0U : (IData)(vlSelf->__VdfgTmp_hac6b94cd__0))))));
+        bufp->chgBit(oldp+1453,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_10)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_hf52bdd2a__0) 
+                                        >> 2U))) & 
+                                 (1U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_10)
+                                          ? 0U : (IData)(vlSelf->__VdfgTmp_h3ba1ecff__0))))));
+        bufp->chgBit(oldp+1454,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_14)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_hbeca2c52__0) 
+                                        >> 2U))) & 
+                                 (1U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp4__DOT___GEN_14)
+                                          ? 0U : (IData)(vlSelf->__VdfgTmp_h67c762b7__0))))));
+        bufp->chgIData(oldp+1455,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.io_Exp),32);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x21U] 
                      | vlSelf->__Vm_traceActivity[0x74U]))) {
-        bufp->chgCData(oldp+656,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__safe_shift_amount),8);
-        bufp->chgIData(oldp+657,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__shifted_base),28);
-        bufp->chgCData(oldp+658,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__safe_shift_amount_1),8);
-        bufp->chgIData(oldp+659,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__shifted_base_1),28);
-        bufp->chgCData(oldp+660,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__safe_shift_amount_2),8);
-        bufp->chgIData(oldp+661,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__shifted_base_2),28);
-        bufp->chgCData(oldp+662,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__safe_shift_amount_3),8);
-        bufp->chgIData(oldp+663,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__shifted_base_3),28);
-        bufp->chgIData(oldp+664,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_10)
-                                     ? 0U : (IData)(vlSelf->__VdfgTmp_h876083fa__0)) 
-                                   << 0xfU) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_7)
-                                                  ? 0U
-                                                  : (IData)(vlSelf->__VdfgTmp_h01f62327__0)) 
-                                                << 0xaU) 
-                                               | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_4)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h4fb214a8__0)) 
-                                                   << 5U) 
-                                                  | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_1)
+        bufp->chgCData(oldp+1456,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__safe_shift_amount),8);
+        bufp->chgIData(oldp+1457,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__shifted_base),28);
+        bufp->chgCData(oldp+1458,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__safe_shift_amount_1),8);
+        bufp->chgIData(oldp+1459,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__shifted_base_1),28);
+        bufp->chgCData(oldp+1460,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__safe_shift_amount_2),8);
+        bufp->chgIData(oldp+1461,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__shifted_base_2),28);
+        bufp->chgCData(oldp+1462,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__safe_shift_amount_3),8);
+        bufp->chgIData(oldp+1463,(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__shifted_base_3),28);
+        bufp->chgIData(oldp+1464,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_10)
+                                      ? 0U : (IData)(vlSelf->__VdfgTmp_h876083fa__0)) 
+                                    << 0xfU) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_7)
+                                                   ? 0U
+                                                   : (IData)(vlSelf->__VdfgTmp_h01f62327__0)) 
+                                                 << 0xaU) 
+                                                | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_4)
                                                       ? 0U
-                                                      : (IData)(vlSelf->__VdfgTmp_haaab3f46__0)))))),20);
-        bufp->chgSData(oldp+665,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_10)
-                                     ? 0U : (IData)(vlSelf->__VdfgTmp_hb7970779__0)) 
-                                   << 0xcU) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_7)
-                                                  ? 0U
-                                                  : (IData)(vlSelf->__VdfgTmp_h9e39cbf9__0)) 
-                                                << 8U) 
-                                               | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_4)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h8b0fae15__0)) 
-                                                   << 4U) 
-                                                  | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_1)
+                                                      : (IData)(vlSelf->__VdfgTmp_h4fb214a8__0)) 
+                                                    << 5U) 
+                                                   | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_1)
+                                                       ? 0U
+                                                       : (IData)(vlSelf->__VdfgTmp_haaab3f46__0)))))),20);
+        bufp->chgSData(oldp+1465,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_10)
+                                      ? 0U : (IData)(vlSelf->__VdfgTmp_hb7970779__0)) 
+                                    << 0xcU) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_7)
+                                                   ? 0U
+                                                   : (IData)(vlSelf->__VdfgTmp_h9e39cbf9__0)) 
+                                                 << 8U) 
+                                                | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_4)
                                                       ? 0U
-                                                      : (IData)(vlSelf->__VdfgTmp_h4f025f70__0)))))),16);
-        bufp->chgCData(oldp+666,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_hf256099e__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_hf25a5b0b__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
-        bufp->chgCData(oldp+667,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
-        bufp->chgBit(oldp+668,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_1)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_h4f025f70__0) 
-                                       >> 3U))) & (0x1aU 
-                                                   == 
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_1)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_haaab3f46__0))))));
-        bufp->chgBit(oldp+669,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_4)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_h8b0fae15__0) 
-                                       >> 3U))) & (0x1aU 
-                                                   == 
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_4)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h4fb214a8__0))))));
-        bufp->chgBit(oldp+670,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_7)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_h9e39cbf9__0) 
-                                       >> 3U))) & (0x1aU 
-                                                   == 
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_7)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h01f62327__0))))));
-        bufp->chgBit(oldp+671,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_10)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_hb7970779__0) 
-                                       >> 3U))) & (0x1aU 
-                                                   == 
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_10)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h876083fa__0))))));
-        bufp->chgIData(oldp+672,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.io_Exp),32);
+                                                      : (IData)(vlSelf->__VdfgTmp_h8b0fae15__0)) 
+                                                    << 4U) 
+                                                   | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_1)
+                                                       ? 0U
+                                                       : (IData)(vlSelf->__VdfgTmp_h4f025f70__0)))))),16);
+        bufp->chgCData(oldp+1466,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_hf256099e__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_hf25a5b0b__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
+        bufp->chgCData(oldp+1467,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
+        bufp->chgBit(oldp+1468,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_1)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_h4f025f70__0) 
+                                        >> 3U))) & 
+                                 (0x1aU == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_1)
+                                             ? 0U : (IData)(vlSelf->__VdfgTmp_haaab3f46__0))))));
+        bufp->chgBit(oldp+1469,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_4)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_h8b0fae15__0) 
+                                        >> 3U))) & 
+                                 (0x1aU == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_4)
+                                             ? 0U : (IData)(vlSelf->__VdfgTmp_h4fb214a8__0))))));
+        bufp->chgBit(oldp+1470,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_7)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_h9e39cbf9__0) 
+                                        >> 3U))) & 
+                                 (0x1aU == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_7)
+                                             ? 0U : (IData)(vlSelf->__VdfgTmp_h01f62327__0))))));
+        bufp->chgBit(oldp+1471,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_10)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_hb7970779__0) 
+                                        >> 3U))) & 
+                                 (0x1aU == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp8__DOT___GEN_10)
+                                             ? 0U : (IData)(vlSelf->__VdfgTmp_h876083fa__0))))));
+        bufp->chgIData(oldp+1472,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder.io_Exp),32);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x22U] 
                      | vlSelf->__Vm_traceActivity[0x75U]))) {
-        bufp->chgCData(oldp+673,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__safe_shift_amount),8);
-        bufp->chgIData(oldp+674,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__shifted_base),28);
-        bufp->chgCData(oldp+675,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__safe_shift_amount_1),8);
-        bufp->chgIData(oldp+676,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__shifted_base_1),28);
-        bufp->chgCData(oldp+677,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__safe_shift_amount_2),8);
-        bufp->chgIData(oldp+678,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__shifted_base_2),28);
-        bufp->chgCData(oldp+679,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__safe_shift_amount_3),8);
-        bufp->chgIData(oldp+680,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__shifted_base_3),28);
-        bufp->chgIData(oldp+681,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_14)
-                                     ? 0U : (IData)(vlSelf->__VdfgTmp_h00c4dd81__0)) 
-                                   << 0x12U) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_10)
-                                                   ? 0U
-                                                   : (IData)(vlSelf->__VdfgTmp_h7ae519d9__0)) 
-                                                 << 0xcU) 
-                                                | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_6)
-                                                      ? 0U
-                                                      : (IData)(vlSelf->__VdfgTmp_h53ace542__0)) 
-                                                    << 6U) 
-                                                   | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_2)
+        bufp->chgCData(oldp+1473,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__safe_shift_amount),8);
+        bufp->chgIData(oldp+1474,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__shifted_base),28);
+        bufp->chgCData(oldp+1475,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__safe_shift_amount_1),8);
+        bufp->chgIData(oldp+1476,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__shifted_base_1),28);
+        bufp->chgCData(oldp+1477,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__safe_shift_amount_2),8);
+        bufp->chgIData(oldp+1478,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__shifted_base_2),28);
+        bufp->chgCData(oldp+1479,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__safe_shift_amount_3),8);
+        bufp->chgIData(oldp+1480,(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__shifted_base_3),28);
+        bufp->chgIData(oldp+1481,(((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_14)
+                                      ? 0U : (IData)(vlSelf->__VdfgTmp_h00c4dd81__0)) 
+                                    << 0x12U) | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_10)
+                                                    ? 0U
+                                                    : (IData)(vlSelf->__VdfgTmp_h7ae519d9__0)) 
+                                                  << 0xcU) 
+                                                 | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_6)
                                                        ? 0U
-                                                       : (IData)(vlSelf->__VdfgTmp_h2a16531b__0)))))),24);
-        bufp->chgQData(oldp+682,((((QData)((IData)(
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_14)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h8be48673__0)))) 
-                                   << 0x21U) | (((QData)((IData)(
-                                                                 ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_10)
-                                                                   ? 0U
-                                                                   : (IData)(vlSelf->__VdfgTmp_h2da98235__0)))) 
-                                                 << 0x16U) 
-                                                | (QData)((IData)(
-                                                                  ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_6)
-                                                                      ? 0U
-                                                                      : (IData)(vlSelf->__VdfgTmp_h459491c7__0)) 
-                                                                    << 0xbU) 
-                                                                   | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_2)
+                                                       : (IData)(vlSelf->__VdfgTmp_h53ace542__0)) 
+                                                     << 6U) 
+                                                    | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_2)
+                                                        ? 0U
+                                                        : (IData)(vlSelf->__VdfgTmp_h2a16531b__0)))))),24);
+        bufp->chgQData(oldp+1482,((((QData)((IData)(
+                                                    ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_14)
+                                                      ? 0U
+                                                      : (IData)(vlSelf->__VdfgTmp_h8be48673__0)))) 
+                                    << 0x21U) | (((QData)((IData)(
+                                                                  ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_10)
+                                                                    ? 0U
+                                                                    : (IData)(vlSelf->__VdfgTmp_h2da98235__0)))) 
+                                                  << 0x16U) 
+                                                 | (QData)((IData)(
+                                                                   ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_6)
                                                                        ? 0U
-                                                                       : (IData)(vlSelf->__VdfgTmp_he84adc79__0)))))))),44);
-        bufp->chgCData(oldp+684,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_hf256099e__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_hf25a5b0b__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
-        bufp->chgCData(oldp+685,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
-        bufp->chgBit(oldp+686,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_2)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_he84adc79__0) 
-                                       >> 0xaU))) & 
-                                (0x32U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_2)
-                                            ? 0U : (IData)(vlSelf->__VdfgTmp_h2a16531b__0))))));
-        bufp->chgBit(oldp+687,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_6)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_h459491c7__0) 
-                                       >> 0xaU))) & 
-                                (0x32U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_6)
-                                            ? 0U : (IData)(vlSelf->__VdfgTmp_h53ace542__0))))));
-        bufp->chgBit(oldp+688,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_10)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_h2da98235__0) 
-                                       >> 0xaU))) & 
-                                (0x32U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_10)
-                                            ? 0U : (IData)(vlSelf->__VdfgTmp_h7ae519d9__0))))));
-        bufp->chgBit(oldp+689,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_14)) 
-                                    & ((IData)(vlSelf->__VdfgTmp_h8be48673__0) 
-                                       >> 0xaU))) & 
-                                (0x32U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_14)
-                                            ? 0U : (IData)(vlSelf->__VdfgTmp_h00c4dd81__0))))));
-        bufp->chgIData(oldp+690,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.io_Exp),32);
+                                                                       : (IData)(vlSelf->__VdfgTmp_h459491c7__0)) 
+                                                                     << 0xbU) 
+                                                                    | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_2)
+                                                                        ? 0U
+                                                                        : (IData)(vlSelf->__VdfgTmp_he84adc79__0)))))))),44);
+        bufp->chgCData(oldp+1484,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_hf256099e__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_hf25a5b0b__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
+        bufp->chgCData(oldp+1485,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
+        bufp->chgBit(oldp+1486,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_2)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_he84adc79__0) 
+                                        >> 0xaU))) 
+                                 & (0x32U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_2)
+                                               ? 0U
+                                               : (IData)(vlSelf->__VdfgTmp_h2a16531b__0))))));
+        bufp->chgBit(oldp+1487,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_6)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_h459491c7__0) 
+                                        >> 0xaU))) 
+                                 & (0x32U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_6)
+                                               ? 0U
+                                               : (IData)(vlSelf->__VdfgTmp_h53ace542__0))))));
+        bufp->chgBit(oldp+1488,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_10)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_h2da98235__0) 
+                                        >> 0xaU))) 
+                                 & (0x32U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_10)
+                                               ? 0U
+                                               : (IData)(vlSelf->__VdfgTmp_h7ae519d9__0))))));
+        bufp->chgBit(oldp+1489,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_14)) 
+                                     & ((IData)(vlSelf->__VdfgTmp_h8be48673__0) 
+                                        >> 0xaU))) 
+                                 & (0x32U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp16__DOT___GEN_14)
+                                               ? 0U
+                                               : (IData)(vlSelf->__VdfgTmp_h00c4dd81__0))))));
+        bufp->chgIData(oldp+1490,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp16__DOT__positDecoder.io_Exp),32);
     }
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x23U] 
                      | vlSelf->__Vm_traceActivity[0x76U]))) {
-        bufp->chgCData(oldp+691,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__safe_shift_amount),8);
-        bufp->chgIData(oldp+692,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__shifted_base),28);
-        bufp->chgCData(oldp+693,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__safe_shift_amount_1),8);
-        bufp->chgIData(oldp+694,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__shifted_base_1),28);
-        bufp->chgCData(oldp+695,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__safe_shift_amount_2),8);
-        bufp->chgIData(oldp+696,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__shifted_base_2),28);
-        bufp->chgCData(oldp+697,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__safe_shift_amount_3),8);
-        bufp->chgIData(oldp+698,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__shifted_base_3),28);
-        bufp->chgQData(oldp+699,((((QData)((IData)(
-                                                   ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_14)
-                                                     ? 0U
-                                                     : (IData)(vlSelf->__VdfgTmp_h88f0c350__0)))) 
-                                   << 0x1bU) | (QData)((IData)(
-                                                               ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_10)
-                                                                   ? 0U
-                                                                   : (IData)(vlSelf->__VdfgTmp_hfc141949__0)) 
-                                                                 << 0x12U) 
-                                                                | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_6)
-                                                                      ? 0U
-                                                                      : (IData)(vlSelf->__VdfgTmp_hf5799464__0)) 
-                                                                    << 9U) 
-                                                                   | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_2)
+        bufp->chgCData(oldp+1491,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__safe_shift_amount),8);
+        bufp->chgIData(oldp+1492,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__shifted_base),28);
+        bufp->chgCData(oldp+1493,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__safe_shift_amount_1),8);
+        bufp->chgIData(oldp+1494,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__shifted_base_1),28);
+        bufp->chgCData(oldp+1495,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__safe_shift_amount_2),8);
+        bufp->chgIData(oldp+1496,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__shifted_base_2),28);
+        bufp->chgCData(oldp+1497,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__safe_shift_amount_3),8);
+        bufp->chgIData(oldp+1498,(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__shifted_base_3),28);
+        bufp->chgQData(oldp+1499,((((QData)((IData)(
+                                                    ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_14)
+                                                      ? 0U
+                                                      : (IData)(vlSelf->__VdfgTmp_h88f0c350__0)))) 
+                                    << 0x1bU) | (QData)((IData)(
+                                                                ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_10)
+                                                                    ? 0U
+                                                                    : (IData)(vlSelf->__VdfgTmp_hfc141949__0)) 
+                                                                  << 0x12U) 
+                                                                 | ((((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_6)
                                                                        ? 0U
-                                                                       : (IData)(vlSelf->__VdfgTmp_h492a5605__0)))))))),36);
+                                                                       : (IData)(vlSelf->__VdfgTmp_hf5799464__0)) 
+                                                                     << 9U) 
+                                                                    | ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_2)
+                                                                        ? 0U
+                                                                        : (IData)(vlSelf->__VdfgTmp_h492a5605__0)))))))),36);
         __Vtemp_hdf594eac__0[0U] = (IData)((((QData)((IData)(
                                                              ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_6)
                                                                ? 0U
@@ -4115,44 +7033,44 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                  ? 0U
                                                  : vlSelf->__VdfgTmp_h6f085be2__0) 
                                                >> 0x10U));
-        bufp->chgWData(oldp+701,(__Vtemp_hdf594eac__0),96);
-        bufp->chgCData(oldp+704,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_hf256099e__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_hf25a5b0b__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
-        bufp->chgCData(oldp+705,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
-                                   << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
-                                              << 2U) 
-                                             | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
-                                                 << 1U) 
-                                                | (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
-        bufp->chgBit(oldp+706,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_2)) 
-                                    & (vlSelf->__VdfgTmp_h8592d4be__0 
-                                       >> 0x17U))) 
-                                & (0x182U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_2)
-                                               ? 0U
-                                               : (IData)(vlSelf->__VdfgTmp_h492a5605__0))))));
-        bufp->chgBit(oldp+707,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_6)) 
-                                    & (vlSelf->__VdfgTmp_h00901bc7__0 
-                                       >> 0x17U))) 
-                                & (0x182U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_6)
-                                               ? 0U
-                                               : (IData)(vlSelf->__VdfgTmp_hf5799464__0))))));
-        bufp->chgBit(oldp+708,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_10)) 
-                                    & (vlSelf->__VdfgTmp_h6f085be2__0 
-                                       >> 0x17U))) 
-                                & (0x182U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_10)
-                                               ? 0U
-                                               : (IData)(vlSelf->__VdfgTmp_hfc141949__0))))));
-        bufp->chgBit(oldp+709,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_14)) 
-                                    & (vlSelf->__VdfgTmp_h8c68a7bd__0 
-                                       >> 0x17U))) 
-                                & (0x182U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_14)
-                                               ? 0U
-                                               : (IData)(vlSelf->__VdfgTmp_h88f0c350__0))))));
-        bufp->chgIData(oldp+710,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.io_Exp),32);
+        bufp->chgWData(oldp+1501,(__Vtemp_hdf594eac__0),96);
+        bufp->chgCData(oldp+1504,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_hf256099e__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_hf25a5b0b__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h8d992a04__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h8d85fb91__0))))),4);
+        bufp->chgCData(oldp+1505,((((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h5501d1d1__0) 
+                                    << 3U) | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h5505034c__0) 
+                                               << 2U) 
+                                              | (((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h554e727b__0) 
+                                                  << 1U) 
+                                                 | (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT__floatEncoder__DOT____VdfgTmp_h554a23d6__0))))),4);
+        bufp->chgBit(oldp+1506,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_2)) 
+                                     & (vlSelf->__VdfgTmp_h8592d4be__0 
+                                        >> 0x17U))) 
+                                 & (0x182U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_2)
+                                                ? 0U
+                                                : (IData)(vlSelf->__VdfgTmp_h492a5605__0))))));
+        bufp->chgBit(oldp+1507,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_6)) 
+                                     & (vlSelf->__VdfgTmp_h00901bc7__0 
+                                        >> 0x17U))) 
+                                 & (0x182U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_6)
+                                                ? 0U
+                                                : (IData)(vlSelf->__VdfgTmp_hf5799464__0))))));
+        bufp->chgBit(oldp+1508,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_10)) 
+                                     & (vlSelf->__VdfgTmp_h6f085be2__0 
+                                        >> 0x17U))) 
+                                 & (0x182U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_10)
+                                                ? 0U
+                                                : (IData)(vlSelf->__VdfgTmp_hfc141949__0))))));
+        bufp->chgBit(oldp+1509,(((~ ((~ (IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_14)) 
+                                     & (vlSelf->__VdfgTmp_h8c68a7bd__0 
+                                        >> 0x17U))) 
+                                 & (0x182U == ((IData)(vlSelf->PvuTop__DOT__posit2float_fp32__DOT___GEN_14)
+                                                ? 0U
+                                                : (IData)(vlSelf->__VdfgTmp_h88f0c350__0))))));
+        bufp->chgIData(oldp+1510,(vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder.io_Exp),32);
     }
     if (VL_UNLIKELY((((((vlSelf->__Vm_traceActivity
                          [0x24U] | vlSelf->__Vm_traceActivity
@@ -4474,7 +7392,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)
                                          ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a
                                          : 0U) >> 0x14U);
-        bufp->chgWData(oldp+711,(__Vtemp_h7e888b05__0),840);
+        bufp->chgWData(oldp+1511,(__Vtemp_h7e888b05__0),840);
         __Vtemp_h72a7a22e__0[0U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_h290cb9ab__0[0U];
         __Vtemp_h72a7a22e__0[1U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_h290cb9ab__0[1U];
         __Vtemp_h72a7a22e__0[2U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_h290cb9ab__0[2U];
@@ -4511,7 +7429,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          : 0U) << 4U) 
                                       | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
                                          << 2U));
-        bufp->chgWData(oldp+738,(__Vtemp_h72a7a22e__0),448);
+        bufp->chgWData(oldp+1538,(__Vtemp_h72a7a22e__0),448);
         __Vtemp_h684bb4e7__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -4825,7 +7743,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)
                                          ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a
                                          : 0U) >> 0x14U);
-        bufp->chgWData(oldp+752,(__Vtemp_h684bb4e7__0),840);
+        bufp->chgWData(oldp+1552,(__Vtemp_h684bb4e7__0),840);
         __Vtemp_h22868c4c__0[0U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__VdfgTmp_h290cb9ab__0[0U];
         __Vtemp_h22868c4c__0[1U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__VdfgTmp_h290cb9ab__0[1U];
         __Vtemp_h22868c4c__0[2U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__VdfgTmp_h290cb9ab__0[2U];
@@ -4862,7 +7780,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          : 0U) << 4U) 
                                       | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
                                          << 2U));
-        bufp->chgWData(oldp+779,(__Vtemp_h22868c4c__0),448);
+        bufp->chgWData(oldp+1579,(__Vtemp_h22868c4c__0),448);
         __Vtemp_hf763ebd4__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -5176,7 +8094,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)
                                          ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a
                                          : 0U) >> 0x14U);
-        bufp->chgWData(oldp+793,(__Vtemp_hf763ebd4__0),840);
+        bufp->chgWData(oldp+1593,(__Vtemp_hf763ebd4__0),840);
         __Vtemp_h272d4489__0[0U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__VdfgTmp_h290cb9ab__0[0U];
         __Vtemp_h272d4489__0[1U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__VdfgTmp_h290cb9ab__0[1U];
         __Vtemp_h272d4489__0[2U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__VdfgTmp_h290cb9ab__0[2U];
@@ -5213,7 +8131,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          : 0U) << 4U) 
                                       | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
                                          << 2U));
-        bufp->chgWData(oldp+820,(__Vtemp_h272d4489__0),448);
+        bufp->chgWData(oldp+1620,(__Vtemp_h272d4489__0),448);
         __Vtemp_h14c8cd49__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -5527,7 +8445,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)
                                          ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a
                                          : 0U) >> 0x14U);
-        bufp->chgWData(oldp+834,(__Vtemp_h14c8cd49__0),840);
+        bufp->chgWData(oldp+1634,(__Vtemp_h14c8cd49__0),840);
         __Vtemp_h1c8470c3__0[0U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__VdfgTmp_h290cb9ab__0[0U];
         __Vtemp_h1c8470c3__0[1U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__VdfgTmp_h290cb9ab__0[1U];
         __Vtemp_h1c8470c3__0[2U] = vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__VdfgTmp_h290cb9ab__0[2U];
@@ -5564,7 +8482,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          : 0U) << 4U) 
                                       | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
                                          << 2U));
-        bufp->chgWData(oldp+861,(__Vtemp_h1c8470c3__0),448);
+        bufp->chgWData(oldp+1661,(__Vtemp_h1c8470c3__0),448);
         __Vtemp_hff308137__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -5878,7 +8796,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)
                                          ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a
                                          : 0U) >> 0x14U);
-        bufp->chgWData(oldp+875,(__Vtemp_hff308137__0),840);
+        bufp->chgWData(oldp+1675,(__Vtemp_hff308137__0),840);
         __Vtemp_h2262e335__0[0U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_h290cb9ab__0[0U];
         __Vtemp_h2262e335__0[1U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_h290cb9ab__0[1U];
         __Vtemp_h2262e335__0[2U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_h290cb9ab__0[2U];
@@ -5915,7 +8833,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          : 0U) << 4U) 
                                       | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
                                          << 2U));
-        bufp->chgWData(oldp+902,(__Vtemp_h2262e335__0),448);
+        bufp->chgWData(oldp+1702,(__Vtemp_h2262e335__0),448);
         __Vtemp_h7bc4a3d3__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -6229,7 +9147,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)
                                          ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a
                                          : 0U) >> 0x14U);
-        bufp->chgWData(oldp+916,(__Vtemp_h7bc4a3d3__0),840);
+        bufp->chgWData(oldp+1716,(__Vtemp_h7bc4a3d3__0),840);
         __Vtemp_h63f8f503__0[0U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__VdfgTmp_h290cb9ab__0[0U];
         __Vtemp_h63f8f503__0[1U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__VdfgTmp_h290cb9ab__0[1U];
         __Vtemp_h63f8f503__0[2U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__VdfgTmp_h290cb9ab__0[2U];
@@ -6266,7 +9184,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          : 0U) << 4U) 
                                       | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
                                          << 2U));
-        bufp->chgWData(oldp+943,(__Vtemp_h63f8f503__0),448);
+        bufp->chgWData(oldp+1743,(__Vtemp_h63f8f503__0),448);
         __Vtemp_h20ce619b__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -6580,7 +9498,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)
                                          ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a
                                          : 0U) >> 0x14U);
-        bufp->chgWData(oldp+957,(__Vtemp_h20ce619b__0),840);
+        bufp->chgWData(oldp+1757,(__Vtemp_h20ce619b__0),840);
         __Vtemp_h67cfbd3c__0[0U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__VdfgTmp_h290cb9ab__0[0U];
         __Vtemp_h67cfbd3c__0[1U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__VdfgTmp_h290cb9ab__0[1U];
         __Vtemp_h67cfbd3c__0[2U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__VdfgTmp_h290cb9ab__0[2U];
@@ -6617,7 +9535,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          : 0U) << 4U) 
                                       | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
                                          << 2U));
-        bufp->chgWData(oldp+984,(__Vtemp_h67cfbd3c__0),448);
+        bufp->chgWData(oldp+1784,(__Vtemp_h67cfbd3c__0),448);
         __Vtemp_h08e58782__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -6931,7 +9849,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)
                                          ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a
                                          : 0U) >> 0x14U);
-        bufp->chgWData(oldp+998,(__Vtemp_h08e58782__0),840);
+        bufp->chgWData(oldp+1798,(__Vtemp_h08e58782__0),840);
         __Vtemp_hd116f8e8__0[0U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__VdfgTmp_h290cb9ab__0[0U];
         __Vtemp_hd116f8e8__0[1U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__VdfgTmp_h290cb9ab__0[1U];
         __Vtemp_hd116f8e8__0[2U] = vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__VdfgTmp_h290cb9ab__0[2U];
@@ -6968,17 +9886,17 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                          : 0U) << 4U) 
                                       | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
                                          << 2U));
-        bufp->chgWData(oldp+1025,(__Vtemp_hd116f8e8__0),448);
+        bufp->chgWData(oldp+1825,(__Vtemp_hd116f8e8__0),448);
     }
     if (VL_UNLIKELY((((vlSelf->__Vm_traceActivity[0x24U] 
                        | vlSelf->__Vm_traceActivity
                        [0x26U]) | vlSelf->__Vm_traceActivity
                       [0x77U]) | vlSelf->__Vm_traceActivity
                      [0x79U]))) {
-        bufp->chgIData(oldp+1039,(((0x8000000U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)
+        bufp->chgIData(oldp+1839,(((0x8000000U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)
                                     ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a
                                     : 0U)),29);
-        bufp->chgIData(oldp+1040,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1840,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7002,7 +9920,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1041,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1841,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7026,7 +9944,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1042,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1842,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7050,7 +9968,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1043,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1843,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7074,10 +9992,10 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1044,(((0x8000000U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)
+        bufp->chgIData(oldp+1844,(((0x8000000U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)
                                     ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a
                                     : 0U)),29);
-        bufp->chgIData(oldp+1045,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1845,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7101,7 +10019,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1046,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1846,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7125,7 +10043,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1047,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1847,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7149,7 +10067,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1048,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1848,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7173,10 +10091,10 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1049,(((0x8000000U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)
+        bufp->chgIData(oldp+1849,(((0x8000000U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)
                                     ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a
                                     : 0U)),29);
-        bufp->chgIData(oldp+1050,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1850,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7200,7 +10118,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1051,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1851,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7224,7 +10142,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1052,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1852,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7248,7 +10166,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1053,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1853,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7272,10 +10190,10 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1054,(((0x8000000U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)
+        bufp->chgIData(oldp+1854,(((0x8000000U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)
                                     ? vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a
                                     : 0U)),29);
-        bufp->chgIData(oldp+1055,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1855,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7299,7 +10217,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1056,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1856,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7323,7 +10241,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1057,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1857,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7347,7 +10265,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1058,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1858,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7371,7 +10289,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1059,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1859,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7395,7 +10313,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1060,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1860,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7419,7 +10337,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1061,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1861,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7443,7 +10361,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1062,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1862,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7467,7 +10385,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1063,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1863,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7491,7 +10409,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1064,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1864,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7515,7 +10433,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1065,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1865,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7539,7 +10457,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1066,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1866,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7563,7 +10481,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1067,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1867,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7587,7 +10505,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1068,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1868,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7611,7 +10529,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1069,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1869,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7635,7 +10553,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1070,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1870,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7659,7 +10577,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1071,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1871,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7683,7 +10601,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1072,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1872,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7707,7 +10625,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1073,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1873,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7731,7 +10649,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                     (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_a 
                                                      << 1U)
                                                      : 0U))))),29);
-        bufp->chgIData(oldp+1074,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+        bufp->chgIData(oldp+1874,((0x1fffffffU & ((- (IData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -7826,7 +10744,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                        | (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_5_io_partial_prod 
                                           >> 4U)));
         __Vtemp_h835c614f__0[0xcU] = 0U;
-        bufp->chgWData(oldp+1075,(__Vtemp_h835c614f__0),392);
+        bufp->chgWData(oldp+1875,(__Vtemp_h835c614f__0),392);
         __Vtemp_hd96c750c__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -7862,8 +10780,8 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                 | (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                    >> 0xcU)));
         __Vtemp_hd96c750c__0[5U] = 0U;
-        bufp->chgWData(oldp+1088,(__Vtemp_hd96c750c__0),168);
-        bufp->chgQData(oldp+1094,((0x400000000ULL | 
+        bufp->chgWData(oldp+1888,(__Vtemp_hd96c750c__0),168);
+        bufp->chgQData(oldp+1894,((0x400000000ULL | 
                                    (((QData)((IData)(
                                                      (1U 
                                                       & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))))) 
@@ -8082,7 +11000,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | (1U 
                                                                                 & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))))))))))))))))))))))))))))))))))))))),56);
-        bufp->chgQData(oldp+1096,((((QData)((IData)(
+        bufp->chgQData(oldp+1896,((((QData)((IData)(
                                                     (1U 
                                                      & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                         >> 0x1cU)))) 
@@ -8355,30 +11273,30 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | ((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                                                                 << 1U))))))))))))))))))))))))))))))))))),56);
-        bufp->chgBit(oldp+1098,((1U & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+1898,((1U & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                        ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1099,((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+1899,((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1100,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1900,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                  ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1101,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1901,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                         & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
                                        | ((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                            >> 2U) & vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_io_partial_prod)))));
-        bufp->chgBit(oldp+1102,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1902,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x19U)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1bU)))));
-        bufp->chgBit(oldp+1103,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1903,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x1aU)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1cU)))));
-        bufp->chgBit(oldp+1104,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1904,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                        ^ (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1105,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1905,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                         & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                            >> 0x1bU)) 
                                        | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -8448,7 +11366,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                        | (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_5_io_partial_prod 
                                           >> 4U)));
         __Vtemp_hc1590ab9__0[0xcU] = 0U;
-        bufp->chgWData(oldp+1106,(__Vtemp_hc1590ab9__0),392);
+        bufp->chgWData(oldp+1906,(__Vtemp_hc1590ab9__0),392);
         __Vtemp_hf3a1926b__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -8484,8 +11402,8 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                 | (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                    >> 0xcU)));
         __Vtemp_hf3a1926b__0[5U] = 0U;
-        bufp->chgWData(oldp+1119,(__Vtemp_hf3a1926b__0),168);
-        bufp->chgQData(oldp+1125,((0x400000000ULL | 
+        bufp->chgWData(oldp+1919,(__Vtemp_hf3a1926b__0),168);
+        bufp->chgQData(oldp+1925,((0x400000000ULL | 
                                    (((QData)((IData)(
                                                      (1U 
                                                       & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))))) 
@@ -8704,7 +11622,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | (1U 
                                                                                 & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))))))))))))))))))))))))))))))))))))))),56);
-        bufp->chgQData(oldp+1127,((((QData)((IData)(
+        bufp->chgQData(oldp+1927,((((QData)((IData)(
                                                     (1U 
                                                      & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                         >> 0x1cU)))) 
@@ -8977,30 +11895,30 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | ((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                                                                 << 1U))))))))))))))))))))))))))))))))))),56);
-        bufp->chgBit(oldp+1129,((1U & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+1929,((1U & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                        ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1130,((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+1930,((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1131,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1931,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                  ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1132,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1932,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                         & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
                                        | ((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                            >> 2U) & vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_io_partial_prod)))));
-        bufp->chgBit(oldp+1133,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1933,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x19U)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1bU)))));
-        bufp->chgBit(oldp+1134,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1934,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x1aU)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1cU)))));
-        bufp->chgBit(oldp+1135,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1935,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                        ^ (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1136,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1936,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                         & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                            >> 0x1bU)) 
                                        | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -9070,7 +11988,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                        | (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_5_io_partial_prod 
                                           >> 4U)));
         __Vtemp_hc8c6acad__0[0xcU] = 0U;
-        bufp->chgWData(oldp+1137,(__Vtemp_hc8c6acad__0),392);
+        bufp->chgWData(oldp+1937,(__Vtemp_hc8c6acad__0),392);
         __Vtemp_hec8e93ca__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -9106,8 +12024,8 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                 | (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                    >> 0xcU)));
         __Vtemp_hec8e93ca__0[5U] = 0U;
-        bufp->chgWData(oldp+1150,(__Vtemp_hec8e93ca__0),168);
-        bufp->chgQData(oldp+1156,((0x400000000ULL | 
+        bufp->chgWData(oldp+1950,(__Vtemp_hec8e93ca__0),168);
+        bufp->chgQData(oldp+1956,((0x400000000ULL | 
                                    (((QData)((IData)(
                                                      (1U 
                                                       & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))))) 
@@ -9326,7 +12244,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | (1U 
                                                                                 & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))))))))))))))))))))))))))))))))))))))),56);
-        bufp->chgQData(oldp+1158,((((QData)((IData)(
+        bufp->chgQData(oldp+1958,((((QData)((IData)(
                                                     (1U 
                                                      & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                         >> 0x1cU)))) 
@@ -9599,30 +12517,30 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | ((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                                                                 << 1U))))))))))))))))))))))))))))))))))),56);
-        bufp->chgBit(oldp+1160,((1U & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+1960,((1U & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                        ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1161,((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+1961,((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1162,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1962,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                  ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1163,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1963,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                         & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
                                        | ((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                            >> 2U) & vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_io_partial_prod)))));
-        bufp->chgBit(oldp+1164,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1964,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x19U)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1bU)))));
-        bufp->chgBit(oldp+1165,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1965,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x1aU)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1cU)))));
-        bufp->chgBit(oldp+1166,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1966,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                        ^ (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1167,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1967,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                         & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                            >> 0x1bU)) 
                                        | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -9692,7 +12610,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                        | (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_5_io_partial_prod 
                                           >> 4U)));
         __Vtemp_hbc3b72ce__0[0xcU] = 0U;
-        bufp->chgWData(oldp+1168,(__Vtemp_hbc3b72ce__0),392);
+        bufp->chgWData(oldp+1968,(__Vtemp_hbc3b72ce__0),392);
         __Vtemp_he92a3bf5__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -9728,8 +12646,8 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                 | (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                    >> 0xcU)));
         __Vtemp_he92a3bf5__0[5U] = 0U;
-        bufp->chgWData(oldp+1181,(__Vtemp_he92a3bf5__0),168);
-        bufp->chgQData(oldp+1187,((0x400000000ULL | 
+        bufp->chgWData(oldp+1981,(__Vtemp_he92a3bf5__0),168);
+        bufp->chgQData(oldp+1987,((0x400000000ULL | 
                                    (((QData)((IData)(
                                                      (1U 
                                                       & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))))) 
@@ -9948,7 +12866,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | (1U 
                                                                                 & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))))))))))))))))))))))))))))))))))))))),56);
-        bufp->chgQData(oldp+1189,((((QData)((IData)(
+        bufp->chgQData(oldp+1989,((((QData)((IData)(
                                                     (1U 
                                                      & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                         >> 0x1cU)))) 
@@ -10221,30 +13139,30 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | ((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                                                                 << 1U))))))))))))))))))))))))))))))))))),56);
-        bufp->chgBit(oldp+1191,((1U & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+1991,((1U & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                        ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1192,((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+1992,((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1193,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1993,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                  ^ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1194,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1994,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                         & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
                                        | ((vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                            >> 2U) & vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_io_partial_prod)))));
-        bufp->chgBit(oldp+1195,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1995,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x19U)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1bU)))));
-        bufp->chgBit(oldp+1196,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1996,((((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x1aU)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1cU)))));
-        bufp->chgBit(oldp+1197,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1997,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                        ^ (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1198,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+1998,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                         & (vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                            >> 0x1bU)) 
                                        | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -10314,7 +13232,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                        | (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_5_io_partial_prod 
                                           >> 4U)));
         __Vtemp_hd2c0d3bd__0[0xcU] = 0U;
-        bufp->chgWData(oldp+1199,(__Vtemp_hd2c0d3bd__0),392);
+        bufp->chgWData(oldp+1999,(__Vtemp_hd2c0d3bd__0),392);
         __Vtemp_h03972147__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -10350,8 +13268,8 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                 | (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                    >> 0xcU)));
         __Vtemp_h03972147__0[5U] = 0U;
-        bufp->chgWData(oldp+1212,(__Vtemp_h03972147__0),168);
-        bufp->chgQData(oldp+1218,((0x400000000ULL | 
+        bufp->chgWData(oldp+2012,(__Vtemp_h03972147__0),168);
+        bufp->chgQData(oldp+2018,((0x400000000ULL | 
                                    (((QData)((IData)(
                                                      (1U 
                                                       & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))))) 
@@ -10570,7 +13488,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | (1U 
                                                                                 & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))))))))))))))))))))))))))))))))))))))),56);
-        bufp->chgQData(oldp+1220,((((QData)((IData)(
+        bufp->chgQData(oldp+2020,((((QData)((IData)(
                                                     (1U 
                                                      & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                         >> 0x1cU)))) 
@@ -10843,30 +13761,30 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                                                                 << 1U))))))))))))))))))))))))))))))))))),56);
-        bufp->chgBit(oldp+1222,((1U & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+2022,((1U & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                        ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1223,((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+2023,((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1224,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2024,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                  ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1225,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2025,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                         & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
                                        | ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                            >> 2U) & vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_io_partial_prod)))));
-        bufp->chgBit(oldp+1226,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2026,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x19U)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1bU)))));
-        bufp->chgBit(oldp+1227,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2027,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x1aU)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1cU)))));
-        bufp->chgBit(oldp+1228,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2028,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                        ^ (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1229,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2029,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                         & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                            >> 0x1bU)) 
                                        | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -10936,7 +13854,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                        | (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_5_io_partial_prod 
                                           >> 4U)));
         __Vtemp_h76bcbf32__0[0xcU] = 0U;
-        bufp->chgWData(oldp+1230,(__Vtemp_h76bcbf32__0),392);
+        bufp->chgWData(oldp+2030,(__Vtemp_h76bcbf32__0),392);
         __Vtemp_h0ecd49ab__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -10972,8 +13890,8 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                 | (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                    >> 0xcU)));
         __Vtemp_h0ecd49ab__0[5U] = 0U;
-        bufp->chgWData(oldp+1243,(__Vtemp_h0ecd49ab__0),168);
-        bufp->chgQData(oldp+1249,((0x400000000ULL | 
+        bufp->chgWData(oldp+2043,(__Vtemp_h0ecd49ab__0),168);
+        bufp->chgQData(oldp+2049,((0x400000000ULL | 
                                    (((QData)((IData)(
                                                      (1U 
                                                       & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))))) 
@@ -11192,7 +14110,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | (1U 
                                                                                 & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))))))))))))))))))))))))))))))))))))))),56);
-        bufp->chgQData(oldp+1251,((((QData)((IData)(
+        bufp->chgQData(oldp+2051,((((QData)((IData)(
                                                     (1U 
                                                      & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                         >> 0x1cU)))) 
@@ -11465,30 +14383,30 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                                                                 << 1U))))))))))))))))))))))))))))))))))),56);
-        bufp->chgBit(oldp+1253,((1U & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+2053,((1U & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                        ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1254,((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+2054,((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1255,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2055,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                  ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1256,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2056,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                         & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
                                        | ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                            >> 2U) & vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_io_partial_prod)))));
-        bufp->chgBit(oldp+1257,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2057,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x19U)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1bU)))));
-        bufp->chgBit(oldp+1258,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2058,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x1aU)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1cU)))));
-        bufp->chgBit(oldp+1259,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2059,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                        ^ (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1260,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2060,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                         & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                            >> 0x1bU)) 
                                        | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -11558,7 +14476,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                        | (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_5_io_partial_prod 
                                           >> 4U)));
         __Vtemp_h965b985a__0[0xcU] = 0U;
-        bufp->chgWData(oldp+1261,(__Vtemp_h965b985a__0),392);
+        bufp->chgWData(oldp+2061,(__Vtemp_h965b985a__0),392);
         __Vtemp_haa1eebec__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -11594,8 +14512,8 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                 | (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                    >> 0xcU)));
         __Vtemp_haa1eebec__0[5U] = 0U;
-        bufp->chgWData(oldp+1274,(__Vtemp_haa1eebec__0),168);
-        bufp->chgQData(oldp+1280,((0x400000000ULL | 
+        bufp->chgWData(oldp+2074,(__Vtemp_haa1eebec__0),168);
+        bufp->chgQData(oldp+2080,((0x400000000ULL | 
                                    (((QData)((IData)(
                                                      (1U 
                                                       & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))))) 
@@ -11814,7 +14732,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | (1U 
                                                                                 & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))))))))))))))))))))))))))))))))))))))),56);
-        bufp->chgQData(oldp+1282,((((QData)((IData)(
+        bufp->chgQData(oldp+2082,((((QData)((IData)(
                                                     (1U 
                                                      & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                         >> 0x1cU)))) 
@@ -12087,30 +15005,30 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                                                                 << 1U))))))))))))))))))))))))))))))))))),56);
-        bufp->chgBit(oldp+1284,((1U & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+2084,((1U & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                        ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1285,((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+2085,((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1286,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2086,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                  ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1287,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2087,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                         & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
                                        | ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                            >> 2U) & vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_io_partial_prod)))));
-        bufp->chgBit(oldp+1288,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2088,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x19U)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1bU)))));
-        bufp->chgBit(oldp+1289,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2089,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x1aU)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1cU)))));
-        bufp->chgBit(oldp+1290,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2090,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                        ^ (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1291,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2091,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                         & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                            >> 0x1bU)) 
                                        | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -12180,7 +15098,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                        | (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_5_io_partial_prod 
                                           >> 4U)));
         __Vtemp_h7a85c464__0[0xcU] = 0U;
-        bufp->chgWData(oldp+1292,(__Vtemp_h7a85c464__0),392);
+        bufp->chgWData(oldp+2092,(__Vtemp_h7a85c464__0),392);
         __Vtemp_ha94ddd71__0[0U] = (IData)((((QData)((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                              << 0x38U) 
                                             | (QData)((IData)(
@@ -12216,8 +15134,8 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                 | (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                    >> 0xcU)));
         __Vtemp_ha94ddd71__0[5U] = 0U;
-        bufp->chgWData(oldp+1305,(__Vtemp_ha94ddd71__0),168);
-        bufp->chgQData(oldp+1311,((0x400000000ULL | 
+        bufp->chgWData(oldp+2105,(__Vtemp_ha94ddd71__0),168);
+        bufp->chgQData(oldp+2111,((0x400000000ULL | 
                                    (((QData)((IData)(
                                                      (1U 
                                                       & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))))) 
@@ -12436,7 +15354,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | (1U 
                                                                                 & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))))))))))))))))))))))))))))))))))))))),56);
-        bufp->chgQData(oldp+1313,((((QData)((IData)(
+        bufp->chgQData(oldp+2113,((((QData)((IData)(
                                                     (1U 
                                                      & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                                         >> 0x1cU)))) 
@@ -12709,30 +15627,30 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                                                 | ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                                                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)) 
                                                                                 << 1U))))))))))))))))))))))))))))))))))),56);
-        bufp->chgBit(oldp+1315,((1U & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+2115,((1U & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                        ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1316,((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
+        bufp->chgBit(oldp+2116,((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1317,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2117,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                  ^ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))));
-        bufp->chgBit(oldp+1318,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2118,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T) 
                                         & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
                                        | ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProdFirst_io_partial_prod 
                                            >> 2U) & vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_io_partial_prod)))));
-        bufp->chgBit(oldp+1319,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2119,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x19U)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1bU)))));
-        bufp->chgBit(oldp+1320,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2120,((((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T) 
                                   & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                      >> 0x1aU)) | ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                                    & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_io_partial_prod 
                                                       >> 0x1cU)))));
-        bufp->chgBit(oldp+1321,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2121,((1U & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                        ^ (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1322,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
+        bufp->chgBit(oldp+2122,((1U & (((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T) 
                                         & (vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT___genProd_1_io_partial_prod 
                                            >> 0x1bU)) 
                                        | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -12764,7 +15682,7 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           (vlSelf->PvuTop__DOT__greater__DOT____VdfgTmp_h2ad44887__0 
                                                            >> 0x20U)) 
                                                   << 3U));
-        bufp->chgWData(oldp+1323,(__Vtemp_h7bb27773__0),132);
+        bufp->chgWData(oldp+2123,(__Vtemp_h7bb27773__0),132);
         __Vtemp_hf998175b__0[0U] = (IData)((((QData)((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
                                              << 0x1cU) 
                                             | (QData)((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b))));
@@ -12779,25 +15697,25 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                   >> 8U));
         __Vtemp_hf998175b__0[3U] = (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
                                     >> 0xcU);
-        bufp->chgWData(oldp+1328,(__Vtemp_hf998175b__0),112);
-        bufp->chgBit(oldp+1332,((0U == vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)));
-        bufp->chgBit(oldp+1333,((0U == vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)));
-        bufp->chgBit(oldp+1334,((0U == vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)));
-        bufp->chgBit(oldp+1335,((0U == vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)));
-        bufp->chgBit(oldp+1336,(vlSelf->PvuTop__DOT__greater__DOT__is_zero2));
-        bufp->chgBit(oldp+1337,(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_1));
-        bufp->chgBit(oldp+1338,(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_2));
-        bufp->chgBit(oldp+1339,(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_3));
-        bufp->chgWData(oldp+1340,(vlSymsp->TOP__PvuTop__DOT__decode2.io_Frac),112);
-        bufp->chgIData(oldp+1344,(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b),28);
-        bufp->chgBit(oldp+1345,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1346,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1347,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1348,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1349,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)))));
-        bufp->chgCData(oldp+1350,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgWData(oldp+2128,(__Vtemp_hf998175b__0),112);
+        bufp->chgBit(oldp+2132,((0U == vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)));
+        bufp->chgBit(oldp+2133,((0U == vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)));
+        bufp->chgBit(oldp+2134,((0U == vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)));
+        bufp->chgBit(oldp+2135,((0U == vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)));
+        bufp->chgBit(oldp+2136,(vlSelf->PvuTop__DOT__greater__DOT__is_zero2));
+        bufp->chgBit(oldp+2137,(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_1));
+        bufp->chgBit(oldp+2138,(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_2));
+        bufp->chgBit(oldp+2139,(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_3));
+        bufp->chgWData(oldp+2140,(vlSymsp->TOP__PvuTop__DOT__decode2.io_Frac),112);
+        bufp->chgIData(oldp+2144,(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b),28);
+        bufp->chgBit(oldp+2145,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2146,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2147,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
+        bufp->chgBit(oldp+2148,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)))));
+        bufp->chgBit(oldp+2149,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)))));
+        bufp->chgCData(oldp+2150,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 1U))),3);
-        bufp->chgBit(oldp+1351,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2151,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 1U))) 
                                  | (IData)(((0xeU == 
                                              (0xeU 
@@ -12814,35 +15732,35 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 1U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1352,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2152,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 1U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1353,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2153,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 1U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1354,((6U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2154,((6U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          << 1U))),3);
-        bufp->chgBit(oldp+1355,((0U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b))));
-        bufp->chgBit(oldp+1356,(((0U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
+        bufp->chgBit(oldp+2155,((0U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b))));
+        bufp->chgBit(oldp+2156,(((0U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
                                  & ((1U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
                                     | ((2U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
                                        & (3U == (3U 
                                                  & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)))))));
-        bufp->chgBit(oldp+1357,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_hd6a46e59__0) 
+        bufp->chgBit(oldp+2157,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_hd6a46e59__0) 
                                  & (2U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)))));
-        bufp->chgCData(oldp+1358,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2158,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0x1bU))),3);
-        bufp->chgBit(oldp+1359,((1U & (~ (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2159,((1U & (~ (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1360,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2160,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                        >> 0x1bU))));
-        bufp->chgCData(oldp+1361,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2161,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 3U))),3);
-        bufp->chgBit(oldp+1362,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1363,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2162,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2163,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 3U))) 
                                  | (IData)(((0x38U 
                                              == (0x38U 
@@ -12859,19 +15777,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 3U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1364,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2164,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 3U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1365,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2165,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 3U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1366,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2166,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0x15U))),3);
-        bufp->chgBit(oldp+1367,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1368,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2167,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2168,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x15U))) 
                                  | (IData)(((0xe00000U 
                                              == (0xe00000U 
@@ -12888,19 +15806,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 0x15U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1369,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2169,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x15U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1370,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2170,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 0x15U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1371,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2171,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0x17U))),3);
-        bufp->chgBit(oldp+1372,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1373,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2172,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2173,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x17U))) 
                                  | (IData)(((0x3800000U 
                                              == (0x3800000U 
@@ -12917,19 +15835,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 0x17U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1374,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2174,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x17U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1375,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2175,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 0x17U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1376,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2176,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0x19U))),3);
-        bufp->chgBit(oldp+1377,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1378,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2177,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2178,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x19U))) 
                                  | (IData)(((0xe000000U 
                                              == (0xe000000U 
@@ -12946,19 +15864,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 0x19U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1379,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2179,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x19U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1380,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2180,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 0x19U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1381,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2181,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 5U))),3);
-        bufp->chgBit(oldp+1382,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1383,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2182,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2183,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 5U))) 
                                  | (IData)(((0xe0U 
                                              == (0xe0U 
@@ -12975,19 +15893,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 5U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1384,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2184,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 5U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1385,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2185,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 5U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1386,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2186,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 7U))),3);
-        bufp->chgBit(oldp+1387,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1388,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2187,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2188,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 7U))) 
                                  | (IData)(((0x380U 
                                              == (0x380U 
@@ -13004,19 +15922,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 7U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1389,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2189,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 7U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1390,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2190,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 7U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1391,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2191,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 9U))),3);
-        bufp->chgBit(oldp+1392,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1393,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2192,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2193,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 9U))) 
                                  | (IData)(((0xe00U 
                                              == (0xe00U 
@@ -13033,19 +15951,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 9U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1394,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2194,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 9U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1395,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2195,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 9U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1396,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2196,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0xbU))),3);
-        bufp->chgBit(oldp+1397,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1398,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2197,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2198,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0xbU))) 
                                  | (IData)(((0x3800U 
                                              == (0x3800U 
@@ -13062,19 +15980,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 0xbU))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1399,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2199,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0xbU))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1400,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2200,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 0xbU))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1401,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2201,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0xdU))),3);
-        bufp->chgBit(oldp+1402,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1403,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2202,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2203,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0xdU))) 
                                  | (IData)(((0xe000U 
                                              == (0xe000U 
@@ -13091,19 +16009,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 0xdU))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1404,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2204,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0xdU))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1405,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2205,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 0xdU))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1406,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2206,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0xfU))),3);
-        bufp->chgBit(oldp+1407,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1408,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2207,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2208,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0xfU))) 
                                  | (IData)(((0x38000U 
                                              == (0x38000U 
@@ -13120,19 +16038,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 0xfU))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1409,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2209,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0xfU))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1410,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2210,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 0xfU))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1411,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2211,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0x11U))),3);
-        bufp->chgBit(oldp+1412,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1413,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2212,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2213,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x11U))) 
                                  | (IData)(((0xe0000U 
                                              == (0xe0000U 
@@ -13149,19 +16067,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 0x11U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1414,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2214,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x11U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1415,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2215,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 0x11U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1416,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgCData(oldp+2216,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                          >> 0x13U))),3);
-        bufp->chgBit(oldp+1417,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1418,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2217,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2218,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x13U))) 
                                  | (IData)(((0x380000U 
                                              == (0x380000U 
@@ -13178,24 +16096,24 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                              >> 0x13U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1419,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2219,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                >> 0x13U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1420,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
+        bufp->chgBit(oldp+2220,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
                                                    >> 0x13U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgIData(oldp+1421,(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b),28);
-        bufp->chgBit(oldp+1422,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1423,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1424,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1425,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1426,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)))));
-        bufp->chgCData(oldp+1427,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgIData(oldp+2221,(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b),28);
+        bufp->chgBit(oldp+2222,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2223,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2224,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
+        bufp->chgBit(oldp+2225,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)))));
+        bufp->chgBit(oldp+2226,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)))));
+        bufp->chgCData(oldp+2227,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 1U))),3);
-        bufp->chgBit(oldp+1428,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2228,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 1U))) 
                                  | (IData)(((0xeU == 
                                              (0xeU 
@@ -13212,35 +16130,35 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                              >> 1U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1429,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2229,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 1U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1430,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2230,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                    >> 1U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1431,((6U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2231,((6U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          << 1U))),3);
-        bufp->chgBit(oldp+1432,((0U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b))));
-        bufp->chgBit(oldp+1433,(((0U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
+        bufp->chgBit(oldp+2232,((0U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b))));
+        bufp->chgBit(oldp+2233,(((0U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
                                  & ((1U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
                                     | ((2U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
                                        & (3U == (3U 
                                                  & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)))))));
-        bufp->chgBit(oldp+1434,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__VdfgTmp_hd6a46e59__0) 
+        bufp->chgBit(oldp+2234,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__VdfgTmp_hd6a46e59__0) 
                                  & (2U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)))));
-        bufp->chgCData(oldp+1435,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2235,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 0x1bU))),3);
-        bufp->chgBit(oldp+1436,((1U & (~ (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2236,((1U & (~ (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                           >> 0x1bU)))));
-        bufp->chgBit(oldp+1437,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2237,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                        >> 0x1bU))));
-        bufp->chgCData(oldp+1438,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2238,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 3U))),3);
-        bufp->chgBit(oldp+1439,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1440,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2239,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2240,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 3U))) 
                                  | (IData)(((0x38U 
                                              == (0x38U 
@@ -13257,19 +16175,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                              >> 3U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1441,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2241,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 3U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1442,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2242,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                    >> 3U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1443,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2243,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 0x15U))),3);
-        bufp->chgBit(oldp+1444,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1445,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2244,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2245,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 0x15U))) 
                                  | (IData)(((0xe00000U 
                                              == (0xe00000U 
@@ -13286,19 +16204,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                              >> 0x15U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1446,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2246,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 0x15U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1447,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2247,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                    >> 0x15U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1448,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2248,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 0x17U))),3);
-        bufp->chgBit(oldp+1449,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1450,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2249,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2250,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 0x17U))) 
                                  | (IData)(((0x3800000U 
                                              == (0x3800000U 
@@ -13315,19 +16233,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                              >> 0x17U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1451,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2251,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 0x17U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1452,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2252,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                    >> 0x17U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1453,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2253,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 0x19U))),3);
-        bufp->chgBit(oldp+1454,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1455,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2254,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2255,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 0x19U))) 
                                  | (IData)(((0xe000000U 
                                              == (0xe000000U 
@@ -13344,19 +16262,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                              >> 0x19U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1456,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2256,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 0x19U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1457,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2257,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                    >> 0x19U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1458,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2258,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 5U))),3);
-        bufp->chgBit(oldp+1459,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1460,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2259,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2260,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 5U))) 
                                  | (IData)(((0xe0U 
                                              == (0xe0U 
@@ -13373,19 +16291,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                              >> 5U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1461,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2261,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 5U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1462,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2262,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                    >> 5U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1463,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2263,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 7U))),3);
-        bufp->chgBit(oldp+1464,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1465,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2264,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2265,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 7U))) 
                                  | (IData)(((0x380U 
                                              == (0x380U 
@@ -13402,19 +16320,19 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                              >> 7U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1466,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2266,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 7U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1467,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2267,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                    >> 7U))) 
                                      | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                  & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1468,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgCData(oldp+2268,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                          >> 9U))),3);
-        bufp->chgBit(oldp+1469,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1470,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2269,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg));
+        bufp->chgBit(oldp+2270,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 9U))) 
                                  | (IData)(((0xe00U 
                                              == (0xe00U 
@@ -13431,1177 +16349,10 @@ void VPvuTop___024root__trace_chg_sub_0(VPvuTop___024root* vlSelf, VerilatedVcd:
                                                           & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                              >> 9U))) 
                                                         | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1471,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
+        bufp->chgBit(oldp+2271,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
                                                >> 9U))) 
                                  & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                     | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                        & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1472,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                   >> 9U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1473,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                         >> 0xbU))),3);
-        bufp->chgBit(oldp+1474,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1475,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0xbU))) 
-                                 | (IData)(((0x3800U 
-                                             == (0x3800U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                          >> 0xbU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                             >> 0xbU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1476,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0xbU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1477,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                   >> 0xbU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1478,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                         >> 0xdU))),3);
-        bufp->chgBit(oldp+1479,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1480,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0xdU))) 
-                                 | (IData)(((0xe000U 
-                                             == (0xe000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                          >> 0xdU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                             >> 0xdU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1481,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0xdU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1482,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                   >> 0xdU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1483,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                         >> 0xfU))),3);
-        bufp->chgBit(oldp+1484,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1485,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0xfU))) 
-                                 | (IData)(((0x38000U 
-                                             == (0x38000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                          >> 0xfU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                             >> 0xfU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1486,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0xfU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1487,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                   >> 0xfU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1488,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                         >> 0x11U))),3);
-        bufp->chgBit(oldp+1489,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1490,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0x11U))) 
-                                 | (IData)(((0xe0000U 
-                                             == (0xe0000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                          >> 0x11U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                             >> 0x11U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1491,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0x11U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1492,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                   >> 0x11U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1493,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                         >> 0x13U))),3);
-        bufp->chgBit(oldp+1494,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1495,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0x13U))) 
-                                 | (IData)(((0x380000U 
-                                             == (0x380000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                          >> 0x13U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                             >> 0x13U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1496,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                               >> 0x13U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1497,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b 
-                                                   >> 0x13U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgIData(oldp+1498,(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b),28);
-        bufp->chgBit(oldp+1499,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1500,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1501,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1502,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1503,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)))));
-        bufp->chgCData(oldp+1504,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 1U))),3);
-        bufp->chgBit(oldp+1505,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 1U))) 
-                                 | (IData)(((0xeU == 
-                                             (0xeU 
-                                              & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 1U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 1U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1506,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 1U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1507,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 1U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1508,((6U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         << 1U))),3);
-        bufp->chgBit(oldp+1509,((0U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b))));
-        bufp->chgBit(oldp+1510,(((0U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                 & ((1U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                    | ((2U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                       & (3U == (3U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)))))));
-        bufp->chgBit(oldp+1511,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__VdfgTmp_hd6a46e59__0) 
-                                 & (2U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)))));
-        bufp->chgCData(oldp+1512,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0x1bU))),3);
-        bufp->chgBit(oldp+1513,((1U & (~ (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                          >> 0x1bU)))));
-        bufp->chgBit(oldp+1514,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                       >> 0x1bU))));
-        bufp->chgCData(oldp+1515,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 3U))),3);
-        bufp->chgBit(oldp+1516,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1517,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 3U))) 
-                                 | (IData)(((0x38U 
-                                             == (0x38U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 3U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 3U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1518,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 3U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1519,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 3U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1520,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0x15U))),3);
-        bufp->chgBit(oldp+1521,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1522,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x15U))) 
-                                 | (IData)(((0xe00000U 
-                                             == (0xe00000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 0x15U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 0x15U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1523,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x15U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1524,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 0x15U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1525,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0x17U))),3);
-        bufp->chgBit(oldp+1526,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1527,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x17U))) 
-                                 | (IData)(((0x3800000U 
-                                             == (0x3800000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 0x17U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 0x17U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1528,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x17U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1529,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 0x17U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1530,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0x19U))),3);
-        bufp->chgBit(oldp+1531,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1532,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x19U))) 
-                                 | (IData)(((0xe000000U 
-                                             == (0xe000000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 0x19U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 0x19U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1533,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x19U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1534,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 0x19U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1535,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 5U))),3);
-        bufp->chgBit(oldp+1536,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1537,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 5U))) 
-                                 | (IData)(((0xe0U 
-                                             == (0xe0U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 5U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 5U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1538,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 5U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1539,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 5U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1540,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 7U))),3);
-        bufp->chgBit(oldp+1541,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1542,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 7U))) 
-                                 | (IData)(((0x380U 
-                                             == (0x380U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 7U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 7U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1543,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 7U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1544,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 7U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1545,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 9U))),3);
-        bufp->chgBit(oldp+1546,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1547,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 9U))) 
-                                 | (IData)(((0xe00U 
-                                             == (0xe00U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 9U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 9U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1548,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 9U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1549,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 9U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1550,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0xbU))),3);
-        bufp->chgBit(oldp+1551,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1552,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0xbU))) 
-                                 | (IData)(((0x3800U 
-                                             == (0x3800U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 0xbU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 0xbU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1553,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0xbU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1554,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 0xbU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1555,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0xdU))),3);
-        bufp->chgBit(oldp+1556,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1557,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0xdU))) 
-                                 | (IData)(((0xe000U 
-                                             == (0xe000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 0xdU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 0xdU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1558,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0xdU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1559,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 0xdU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1560,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0xfU))),3);
-        bufp->chgBit(oldp+1561,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1562,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0xfU))) 
-                                 | (IData)(((0x38000U 
-                                             == (0x38000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 0xfU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 0xfU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1563,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0xfU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1564,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 0xfU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1565,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0x11U))),3);
-        bufp->chgBit(oldp+1566,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1567,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x11U))) 
-                                 | (IData)(((0xe0000U 
-                                             == (0xe0000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 0x11U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 0x11U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1568,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x11U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1569,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 0x11U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1570,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                         >> 0x13U))),3);
-        bufp->chgBit(oldp+1571,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1572,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x13U))) 
-                                 | (IData)(((0x380000U 
-                                             == (0x380000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                          >> 0x13U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                             >> 0x13U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1573,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                               >> 0x13U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1574,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b 
-                                                   >> 0x13U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgIData(oldp+1575,(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b),28);
-        bufp->chgBit(oldp+1576,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1577,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1578,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1579,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1580,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)))));
-        bufp->chgCData(oldp+1581,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 1U))),3);
-        bufp->chgBit(oldp+1582,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 1U))) 
-                                 | (IData)(((0xeU == 
-                                             (0xeU 
-                                              & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 1U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 1U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1583,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 1U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1584,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 1U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1585,((6U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         << 1U))),3);
-        bufp->chgBit(oldp+1586,((0U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b))));
-        bufp->chgBit(oldp+1587,(((0U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                 & ((1U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                    | ((2U != (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                       & (3U == (3U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)))))));
-        bufp->chgBit(oldp+1588,(((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__VdfgTmp_hd6a46e59__0) 
-                                 & (2U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)))));
-        bufp->chgCData(oldp+1589,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0x1bU))),3);
-        bufp->chgBit(oldp+1590,((1U & (~ (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                          >> 0x1bU)))));
-        bufp->chgBit(oldp+1591,((1U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                       >> 0x1bU))));
-        bufp->chgCData(oldp+1592,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 3U))),3);
-        bufp->chgBit(oldp+1593,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1594,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 3U))) 
-                                 | (IData)(((0x38U 
-                                             == (0x38U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 3U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 3U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1595,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 3U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1596,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 3U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1597,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0x15U))),3);
-        bufp->chgBit(oldp+1598,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1599,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x15U))) 
-                                 | (IData)(((0xe00000U 
-                                             == (0xe00000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 0x15U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 0x15U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1600,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x15U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1601,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 0x15U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1602,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0x17U))),3);
-        bufp->chgBit(oldp+1603,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1604,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x17U))) 
-                                 | (IData)(((0x3800000U 
-                                             == (0x3800000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 0x17U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 0x17U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1605,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x17U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1606,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 0x17U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1607,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0x19U))),3);
-        bufp->chgBit(oldp+1608,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1609,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x19U))) 
-                                 | (IData)(((0xe000000U 
-                                             == (0xe000000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 0x19U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 0x19U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1610,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x19U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1611,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 0x19U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1612,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 5U))),3);
-        bufp->chgBit(oldp+1613,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1614,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 5U))) 
-                                 | (IData)(((0xe0U 
-                                             == (0xe0U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 5U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 5U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1615,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 5U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1616,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 5U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1617,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 7U))),3);
-        bufp->chgBit(oldp+1618,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1619,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 7U))) 
-                                 | (IData)(((0x380U 
-                                             == (0x380U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 7U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 7U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1620,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 7U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1621,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 7U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1622,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 9U))),3);
-        bufp->chgBit(oldp+1623,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1624,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 9U))) 
-                                 | (IData)(((0xe00U 
-                                             == (0xe00U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 9U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 9U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1625,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 9U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1626,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 9U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1627,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0xbU))),3);
-        bufp->chgBit(oldp+1628,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1629,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0xbU))) 
-                                 | (IData)(((0x3800U 
-                                             == (0x3800U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 0xbU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 0xbU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1630,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0xbU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1631,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 0xbU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1632,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0xdU))),3);
-        bufp->chgBit(oldp+1633,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1634,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0xdU))) 
-                                 | (IData)(((0xe000U 
-                                             == (0xe000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 0xdU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 0xdU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1635,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0xdU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1636,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 0xdU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1637,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0xfU))),3);
-        bufp->chgBit(oldp+1638,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1639,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0xfU))) 
-                                 | (IData)(((0x38000U 
-                                             == (0x38000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 0xfU))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 0xfU))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1640,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0xfU))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1641,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 0xfU))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1642,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0x11U))),3);
-        bufp->chgBit(oldp+1643,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1644,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x11U))) 
-                                 | (IData)(((0xe0000U 
-                                             == (0xe0000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 0x11U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 0x11U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1645,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x11U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1646,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 0x11U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgCData(oldp+1647,((7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                         >> 0x13U))),3);
-        bufp->chgBit(oldp+1648,(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1649,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x13U))) 
-                                 | (IData)(((0x380000U 
-                                             == (0x380000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                          >> 0x13U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                             >> 0x13U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1650,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                               >> 0x13U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1651,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_3__io_operand_b 
-                                                   >> 0x13U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.__PVT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3.genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgBit(oldp+1652,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1653,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1654,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1655,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1656,((1U & (~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)))));
-        bufp->chgBit(oldp+1657,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 1U))) 
-                                 | (IData)(((0xeU == 
-                                             (0xeU 
-                                              & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                          >> 1U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                             >> 1U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1658,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 1U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1659,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                   >> 1U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgBit(oldp+1660,(((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__VdfgTmp_hd6a46e59__0) 
-                                 & (2U == (3U & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)))));
-        bufp->chgBit(oldp+1661,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1662,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 3U))) 
-                                 | (IData)(((0x38U 
-                                             == (0x38U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                          >> 3U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                             >> 3U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1663,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 3U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1664,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                   >> 3U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgBit(oldp+1665,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1666,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 0x15U))) 
-                                 | (IData)(((0xe00000U 
-                                             == (0xe00000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                          >> 0x15U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                             >> 0x15U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1667,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 0x15U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1668,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                   >> 0x15U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgBit(oldp+1669,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1670,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 0x17U))) 
-                                 | (IData)(((0x3800000U 
-                                             == (0x3800000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                          >> 0x17U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                             >> 0x17U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1671,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 0x17U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1672,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                   >> 0x17U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgBit(oldp+1673,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1674,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 0x19U))) 
-                                 | (IData)(((0xe000000U 
-                                             == (0xe000000U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                          >> 0x19U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                             >> 0x19U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1675,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 0x19U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1676,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                   >> 0x19U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgBit(oldp+1677,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1678,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 5U))) 
-                                 | (IData)(((0xe0U 
-                                             == (0xe0U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                          >> 5U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                             >> 5U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1679,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 5U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1680,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                   >> 5U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgBit(oldp+1681,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1682,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 7U))) 
-                                 | (IData)(((0x380U 
-                                             == (0x380U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                          >> 7U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                             >> 7U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1683,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 7U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1684,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                   >> 7U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
-        bufp->chgBit(oldp+1685,(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg));
-        bufp->chgBit(oldp+1686,(((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 9U))) 
-                                 | (IData)(((0xe00U 
-                                             == (0xe00U 
-                                                 & vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                            & (~ ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
-                                                  | ((3U 
-                                                      == 
-                                                      (7U 
-                                                       & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                          >> 9U))) 
-                                                     | ((4U 
-                                                         == 
-                                                         (7U 
-                                                          & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                             >> 9U))) 
-                                                        | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))))))));
-        bufp->chgBit(oldp+1687,(((0U != (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                               >> 9U))) 
-                                 & ((IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
-                                    | ((~ (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
-                                       & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))));
-        bufp->chgBit(oldp+1688,(((~ ((0U == (7U & (vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b 
-                                                   >> 9U))) 
-                                     | (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.__PVT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
-                                 & (IData)(vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier.genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))));
     }
 }

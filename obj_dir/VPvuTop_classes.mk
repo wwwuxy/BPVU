@@ -32,6 +32,7 @@ VM_CLASSES_FAST += \
 	VPvuTop___024root__DepSet_h6498118e__1 \
 	VPvuTop___024root__DepSet_h6498118e__2 \
 	VPvuTop___024root__DepSet_h6498118e__3 \
+	VPvuTop___024root__DepSet_h6498118e__4 \
 	VPvuTop_PositDecode__DepSet_h56c1e779__0 \
 	VPvuTop_PositDecode__DepSet_h2008ce25__0 \
 	VPvuTop_Radix4BoothMultiplier__DepSet_ha8b963b5__0 \
@@ -58,6 +59,7 @@ VM_CLASSES_SLOW += \
 	VPvuTop___024root__DepSet_h08eac463__0__Slow \
 	VPvuTop___024root__DepSet_h6498118e__0__Slow \
 	VPvuTop___024root__DepSet_h6498118e__1__Slow \
+	VPvuTop___024root__DepSet_h6498118e__2__Slow \
 	VPvuTop_PositDecode__Slow \
 	VPvuTop_PositDecode__DepSet_h56c1e779__0__Slow \
 	VPvuTop_Radix4BoothMultiplier__Slow \

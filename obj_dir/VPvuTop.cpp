@@ -18,6 +18,7 @@ VPvuTop::VPvuTop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , io_Outposit{vlSymsp->TOP.io_Outposit}
     , io_float_mode{vlSymsp->TOP.io_float_mode}
     , io_float_posit{vlSymsp->TOP.io_float_posit}
+    , io_dst_float_mode{vlSymsp->TOP.io_dst_float_mode}
     , io_src_posit_width{vlSymsp->TOP.io_src_posit_width}
     , io_vector_size{vlSymsp->TOP.io_vector_size}
     , io_dst_posit_width{vlSymsp->TOP.io_dst_posit_width}

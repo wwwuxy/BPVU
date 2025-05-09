@@ -6089,10 +6089,12 @@ VL_ATTR_COLD void VPvuTop___024root___eval_triggers__stl(VPvuTop___024root* vlSe
 }
 
 VL_ATTR_COLD void VPvuTop___024root___stl_sequent__TOP__0(VPvuTop___024root* vlSelf);
+VL_ATTR_COLD void VPvuTop___024root___stl_sequent__TOP__1(VPvuTop___024root* vlSelf);
+VL_ATTR_COLD void VPvuTop___024root___stl_sequent__TOP__2(VPvuTop___024root* vlSelf);
 void VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__0(VPvuTop_PositDecode* vlSelf);
 void VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__decode2__0(VPvuTop_PositDecode* vlSelf);
 void VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__decode1__0(VPvuTop_PositDecode* vlSelf);
-void VPvuTop___024root___ico_sequent__TOP__1(VPvuTop___024root* vlSelf);
+void VPvuTop___024root___ico_sequent__TOP__3(VPvuTop___024root* vlSelf);
 void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__decode1__5(VPvuTop_PositDecode* vlSelf);
 void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__result_converted_decoder__2(VPvuTop_PositDecode* vlSelf);
 void VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__decode1__7(VPvuTop_PositDecode* vlSelf);
@@ -6273,6 +6275,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
             vlSelf->__Vm_traceActivity[__Vilp] = 1U;
             __Vilp = ((IData)(1U) + __Vilp);
         }
+        VPvuTop___024root___stl_sequent__TOP__1(vlSelf);
+        VPvuTop___024root___stl_sequent__TOP__2(vlSelf);
         VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__0((&vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder));
         VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__0((&vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder));
         VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__0((&vlSymsp->TOP__PvuTop__DOT__posit2float_fp8__DOT__positDecoder));
@@ -6280,7 +6284,7 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
         VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder__0((&vlSymsp->TOP__PvuTop__DOT__posit2float_fp32__DOT__positDecoder));
         VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__decode2__0((&vlSymsp->TOP__PvuTop__DOT__decode2));
         VPvuTop_PositDecode___ico_sequent__TOP__PvuTop__DOT__decode1__0((&vlSymsp->TOP__PvuTop__DOT__decode1));
-        VPvuTop___024root___ico_sequent__TOP__1(vlSelf);
+        VPvuTop___024root___ico_sequent__TOP__3(vlSelf);
     }
     if ((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(0x86U))) {
         VPvuTop_PositDecode___ico_comb__TOP__PvuTop__DOT__decode1__5((&vlSymsp->TOP__PvuTop__DOT__posit2float_fp64__DOT__positDecoder));

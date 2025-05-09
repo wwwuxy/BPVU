@@ -5038,10 +5038,10 @@ void VPvuTop___024root___eval_triggers__ico(VPvuTop___024root* vlSelf) {
 #endif
 }
 
-VL_INLINE_OPT void VPvuTop___024root___ico_sequent__TOP__1(VPvuTop___024root* vlSelf) {
+VL_INLINE_OPT void VPvuTop___024root___ico_sequent__TOP__3(VPvuTop___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VPvuTop___024root___ico_sequent__TOP__1\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VPvuTop___024root___ico_sequent__TOP__3\n"); );
     // Init
     CData/*0:0*/ PvuTop__DOT___GEN_4;
     PvuTop__DOT___GEN_4 = 0;
@@ -5064,7 +5064,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_sequent__TOP__1(VPvuTop___024root* vl
                            & ((IData)(vlSymsp->TOP__PvuTop__DOT__decode1.io_Sign) 
                               >> 2U));
     if (vlSelf->io_Isposit) {
-        vlSelf->PvuTop__DOT___GEN_134 = ((0xfffffff8U 
+        vlSelf->PvuTop__DOT___GEN_172 = ((0xfffffff8U 
                                           & (((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha10fc7a1__0) 
                                               << 3U) 
                                              & (IData)(vlSymsp->TOP__PvuTop__DOT__decode2.io_Sign))) 
@@ -5087,7 +5087,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_sequent__TOP__1(VPvuTop___024root* vl
                                                        << 1U) 
                                                       | (IData)(PvuTop__DOT___GEN_4))));
     } else {
-        vlSelf->PvuTop__DOT___GEN_134 = ((((IData)(vlSelf->PvuTop__DOT____VdfgTmp_hfcce9a03__0) 
+        vlSelf->PvuTop__DOT___GEN_172 = ((((IData)(vlSelf->PvuTop__DOT____VdfgTmp_hfcce9a03__0) 
                                            & ((~ (IData)(vlSelf->io_Isposit)) 
                                               & (IData)(
                                                         (vlSelf->io_float_i2_3 
@@ -5135,65 +5135,65 @@ VL_INLINE_OPT void VPvuTop___024root___ico_sequent__TOP__1(VPvuTop___024root* vl
            & ((IData)(vlSelf->io_Isposit) ? (IData)(PvuTop__DOT___GEN_8)
                : (IData)(vlSelf->PvuTop__DOT___GEN_31)));
     vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o 
-        = ((IData)(vlSelf->PvuTop__DOT___GEN_40) ^ (IData)(vlSelf->PvuTop__DOT___GEN_134));
+        = ((IData)(vlSelf->PvuTop__DOT___GEN_40) ^ (IData)(vlSelf->PvuTop__DOT___GEN_172));
     vlSelf->__VdfgTmp_he53970bf__0 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_40)) 
-                                            & (IData)(vlSelf->PvuTop__DOT___GEN_134)));
-    vlSelf->__VdfgTmp_hf7267e6a__0 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_134)) 
+                                            & (IData)(vlSelf->PvuTop__DOT___GEN_172)));
+    vlSelf->__VdfgTmp_hf7267e6a__0 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_172)) 
                                             & (IData)(vlSelf->PvuTop__DOT___GEN_40)));
     vlSelf->__VdfgTmp_hffb5dbbb__0 = (1U & ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                            | (IData)(vlSelf->PvuTop__DOT___GEN_134)));
+                                            | (IData)(vlSelf->PvuTop__DOT___GEN_172)));
     vlSelf->__VdfgTmp_h91b2e26a__0 = (1U & ((~ ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                 >> 1U)) 
-                                            & ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                            & ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                >> 1U)));
-    vlSelf->__VdfgTmp_hc465359f__0 = (1U & ((~ ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+    vlSelf->__VdfgTmp_hc465359f__0 = (1U & ((~ ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                 >> 1U)) 
                                             & ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                >> 1U)));
     vlSelf->__VdfgTmp_hfe81dba1__0 = (1U & (((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                             | (IData)(vlSelf->PvuTop__DOT___GEN_134)) 
+                                             | (IData)(vlSelf->PvuTop__DOT___GEN_172)) 
                                             >> 1U));
     vlSelf->__VdfgTmp_h175b7e19__0 = (1U & ((~ ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                 >> 2U)) 
-                                            & ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                            & ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                >> 2U)));
-    vlSelf->__VdfgTmp_h7300ed44__0 = (1U & ((~ ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+    vlSelf->__VdfgTmp_h7300ed44__0 = (1U & ((~ ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                 >> 2U)) 
                                             & ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                >> 2U)));
     vlSelf->__VdfgTmp_hb5d700b8__0 = (1U & (((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                             | (IData)(vlSelf->PvuTop__DOT___GEN_134)) 
+                                             | (IData)(vlSelf->PvuTop__DOT___GEN_172)) 
                                             >> 2U));
     vlSelf->__VdfgTmp_h0ac2602d__0 = (IData)(((~ ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                   >> 3U)) 
-                                              & ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                              & ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                  >> 3U)));
-    vlSelf->__VdfgTmp_h7f9446f2__0 = (IData)(((~ ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+    vlSelf->__VdfgTmp_h7f9446f2__0 = (IData)(((~ ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                   >> 3U)) 
                                               & ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                  >> 3U)));
     vlSelf->__VdfgTmp_hb52a27cf__0 = (1U & (((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                             | (IData)(vlSelf->PvuTop__DOT___GEN_134)) 
+                                             | (IData)(vlSelf->PvuTop__DOT___GEN_172)) 
                                             >> 3U));
     vlSelf->PvuTop__DOT__add__DOT___GEN_1 = ((1U & 
                                               ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                >> 2U)) 
                                              == (1U 
-                                                 & ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                 & ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                     >> 2U)));
     vlSelf->PvuTop__DOT__add__DOT___GEN_0 = ((1U & 
                                               ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                >> 1U)) 
                                              == (1U 
-                                                 & ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                 & ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                     >> 1U)));
     vlSelf->PvuTop__DOT__add__DOT___GEN = ((1U & (IData)(vlSelf->PvuTop__DOT___GEN_40)) 
-                                           == (1U & (IData)(vlSelf->PvuTop__DOT___GEN_134)));
+                                           == (1U & (IData)(vlSelf->PvuTop__DOT___GEN_172)));
     vlSelf->PvuTop__DOT__add__DOT___GEN_2 = ((1U & 
                                               ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                >> 3U)) 
                                              == (1U 
-                                                 & ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                 & ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                     >> 3U)));
 }
 

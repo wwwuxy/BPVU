@@ -1283,58 +1283,6 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__9(VPvuTop___024root* vlSel
     __Vtemp_h1a82d4d4__0[0xdU] = 0U;
     __Vtemp_h1a82d4d4__0[0xeU] = 0U;
     __Vtemp_h1a82d4d4__0[0xfU] = 0U;
-    vlSelf->PvuTop__DOT____VdfgTmp_hd471070e__0 = (
-                                                   ((QData)((IData)(
-                                                                    __Vtemp_h1a82d4d4__0[
-                                                                    (((IData)(0x3fU) 
-                                                                      + 
-                                                                      (0x1ffU 
-                                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                                          << 6U))) 
-                                                                     >> 5U)])) 
-                                                    << 
-                                                    ((0U 
-                                                      == 
-                                                      (0x1fU 
-                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                          << 6U)))
-                                                      ? 0x20U
-                                                      : 
-                                                     ((IData)(0x40U) 
-                                                      - 
-                                                      (0x1fU 
-                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                          << 6U))))) 
-                                                   | (((0U 
-                                                        == 
-                                                        (0x1fU 
-                                                         & ((IData)(vlSelf->io_float_mode) 
-                                                            << 6U)))
-                                                        ? 0ULL
-                                                        : 
-                                                       ((QData)((IData)(
-                                                                        __Vtemp_h1a82d4d4__0[
-                                                                        (((IData)(0x1fU) 
-                                                                          + 
-                                                                          (0x1ffU 
-                                                                           & ((IData)(vlSelf->io_float_mode) 
-                                                                              << 6U))) 
-                                                                         >> 5U)])) 
-                                                        << 
-                                                        ((IData)(0x20U) 
-                                                         - 
-                                                         (0x1fU 
-                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                             << 6U))))) 
-                                                      | ((QData)((IData)(
-                                                                         __Vtemp_h1a82d4d4__0[
-                                                                         (0xeU 
-                                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                                             << 1U))])) 
-                                                         >> 
-                                                         (0x1fU 
-                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                             << 6U)))));
     __Vtemp_h0d3e3769__0[0U] = (IData)((QData)((IData)(
                                                        ((8U 
                                                          & ((IData)(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.io_Sign) 
@@ -1593,58 +1541,6 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__9(VPvuTop___024root* vlSel
     __Vtemp_h1fd4cc7b__0[0xdU] = 0U;
     __Vtemp_h1fd4cc7b__0[0xeU] = 0U;
     __Vtemp_h1fd4cc7b__0[0xfU] = 0U;
-    vlSelf->PvuTop__DOT____VdfgTmp_h12086d12__0 = (
-                                                   ((QData)((IData)(
-                                                                    __Vtemp_h1fd4cc7b__0[
-                                                                    (((IData)(0x3fU) 
-                                                                      + 
-                                                                      (0x1ffU 
-                                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                                          << 6U))) 
-                                                                     >> 5U)])) 
-                                                    << 
-                                                    ((0U 
-                                                      == 
-                                                      (0x1fU 
-                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                          << 6U)))
-                                                      ? 0x20U
-                                                      : 
-                                                     ((IData)(0x40U) 
-                                                      - 
-                                                      (0x1fU 
-                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                          << 6U))))) 
-                                                   | (((0U 
-                                                        == 
-                                                        (0x1fU 
-                                                         & ((IData)(vlSelf->io_float_mode) 
-                                                            << 6U)))
-                                                        ? 0ULL
-                                                        : 
-                                                       ((QData)((IData)(
-                                                                        __Vtemp_h1fd4cc7b__0[
-                                                                        (((IData)(0x1fU) 
-                                                                          + 
-                                                                          (0x1ffU 
-                                                                           & ((IData)(vlSelf->io_float_mode) 
-                                                                              << 6U))) 
-                                                                         >> 5U)])) 
-                                                        << 
-                                                        ((IData)(0x20U) 
-                                                         - 
-                                                         (0x1fU 
-                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                             << 6U))))) 
-                                                      | ((QData)((IData)(
-                                                                         __Vtemp_h1fd4cc7b__0[
-                                                                         (0xeU 
-                                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                                             << 1U))])) 
-                                                         >> 
-                                                         (0x1fU 
-                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                             << 6U)))));
     __Vtemp_h347ff95c__0[0U] = (IData)((QData)((IData)(
                                                        ((8U 
                                                          & ((IData)(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.io_Sign) 
@@ -1901,58 +1797,6 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__9(VPvuTop___024root* vlSel
     __Vtemp_h26774ce0__0[0xdU] = 0U;
     __Vtemp_h26774ce0__0[0xeU] = 0U;
     __Vtemp_h26774ce0__0[0xfU] = 0U;
-    vlSelf->PvuTop__DOT____VdfgTmp_h3d760f20__0 = (
-                                                   ((QData)((IData)(
-                                                                    __Vtemp_h26774ce0__0[
-                                                                    (((IData)(0x3fU) 
-                                                                      + 
-                                                                      (0x1ffU 
-                                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                                          << 6U))) 
-                                                                     >> 5U)])) 
-                                                    << 
-                                                    ((0U 
-                                                      == 
-                                                      (0x1fU 
-                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                          << 6U)))
-                                                      ? 0x20U
-                                                      : 
-                                                     ((IData)(0x40U) 
-                                                      - 
-                                                      (0x1fU 
-                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                          << 6U))))) 
-                                                   | (((0U 
-                                                        == 
-                                                        (0x1fU 
-                                                         & ((IData)(vlSelf->io_float_mode) 
-                                                            << 6U)))
-                                                        ? 0ULL
-                                                        : 
-                                                       ((QData)((IData)(
-                                                                        __Vtemp_h26774ce0__0[
-                                                                        (((IData)(0x1fU) 
-                                                                          + 
-                                                                          (0x1ffU 
-                                                                           & ((IData)(vlSelf->io_float_mode) 
-                                                                              << 6U))) 
-                                                                         >> 5U)])) 
-                                                        << 
-                                                        ((IData)(0x20U) 
-                                                         - 
-                                                         (0x1fU 
-                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                             << 6U))))) 
-                                                      | ((QData)((IData)(
-                                                                         __Vtemp_h26774ce0__0[
-                                                                         (0xeU 
-                                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                                             << 1U))])) 
-                                                         >> 
-                                                         (0x1fU 
-                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                             << 6U)))));
     __Vtemp_ha02cf3ea__0[0U] = (IData)((QData)((IData)(
                                                        ((8U 
                                                          & (IData)(vlSymsp->TOP__PvuTop__DOT__posit2float_fp4__DOT__positDecoder.io_Sign)) 
@@ -2203,68 +2047,439 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__9(VPvuTop___024root* vlSel
     __Vtemp_h112780ca__0[0xdU] = 0U;
     __Vtemp_h112780ca__0[0xeU] = 0U;
     __Vtemp_h112780ca__0[0xfU] = 0U;
-    vlSelf->PvuTop__DOT____VdfgTmp_h098a558a__0 = (
-                                                   ((QData)((IData)(
-                                                                    __Vtemp_h112780ca__0[
-                                                                    (((IData)(0x3fU) 
-                                                                      + 
-                                                                      (0x1ffU 
-                                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                                          << 6U))) 
-                                                                     >> 5U)])) 
-                                                    << 
-                                                    ((0U 
-                                                      == 
-                                                      (0x1fU 
-                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                          << 6U)))
-                                                      ? 0x20U
-                                                      : 
-                                                     ((IData)(0x40U) 
-                                                      - 
-                                                      (0x1fU 
-                                                       & ((IData)(vlSelf->io_float_mode) 
-                                                          << 6U))))) 
-                                                   | (((0U 
-                                                        == 
-                                                        (0x1fU 
-                                                         & ((IData)(vlSelf->io_float_mode) 
-                                                            << 6U)))
-                                                        ? 0ULL
-                                                        : 
-                                                       ((QData)((IData)(
-                                                                        __Vtemp_h112780ca__0[
-                                                                        (((IData)(0x1fU) 
-                                                                          + 
-                                                                          (0x1ffU 
-                                                                           & ((IData)(vlSelf->io_float_mode) 
-                                                                              << 6U))) 
-                                                                         >> 5U)])) 
-                                                        << 
-                                                        ((IData)(0x20U) 
-                                                         - 
-                                                         (0x1fU 
-                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                             << 6U))))) 
-                                                      | ((QData)((IData)(
-                                                                         __Vtemp_h112780ca__0[
-                                                                         (0xeU 
-                                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                                             << 1U))])) 
-                                                         >> 
-                                                         (0x1fU 
-                                                          & ((IData)(vlSelf->io_float_mode) 
-                                                             << 6U)))));
-    if (vlSelf->PvuTop__DOT___GEN_73) {
-        vlSelf->PvuTop__DOT___GEN_74 = 0ULL;
-        vlSelf->PvuTop__DOT___GEN_75 = 0ULL;
-        vlSelf->PvuTop__DOT___GEN_76 = 0ULL;
-        vlSelf->PvuTop__DOT___GEN_77 = 0ULL;
+    if ((7U == (IData)(vlSelf->io_op))) {
+        if (vlSelf->io_float_posit) {
+            vlSelf->PvuTop__DOT___GEN_127 = 0ULL;
+            vlSelf->PvuTop__DOT___GEN_131 = 0ULL;
+            vlSelf->PvuTop__DOT___GEN_134 = 0ULL;
+            vlSelf->PvuTop__DOT___GEN_137 = 0ULL;
+        } else {
+            vlSelf->PvuTop__DOT___GEN_127 = (((QData)((IData)(
+                                                              __Vtemp_h1a82d4d4__0[
+                                                              (((IData)(0x3fU) 
+                                                                + 
+                                                                (0x1ffU 
+                                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                                    << 6U))) 
+                                                               >> 5U)])) 
+                                              << ((0U 
+                                                   == 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U)))
+                                                   ? 0x20U
+                                                   : 
+                                                  ((IData)(0x40U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                             | (((0U 
+                                                  == 
+                                                  (0x1fU 
+                                                   & ((IData)(vlSelf->io_float_mode) 
+                                                      << 6U)))
+                                                  ? 0ULL
+                                                  : 
+                                                 ((QData)((IData)(
+                                                                  __Vtemp_h1a82d4d4__0[
+                                                                  (((IData)(0x1fU) 
+                                                                    + 
+                                                                    (0x1ffU 
+                                                                     & ((IData)(vlSelf->io_float_mode) 
+                                                                        << 6U))) 
+                                                                   >> 5U)])) 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                                | ((QData)((IData)(
+                                                                   __Vtemp_h1a82d4d4__0[
+                                                                   (0xeU 
+                                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                                       << 1U))])) 
+                                                   >> 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U)))));
+            vlSelf->PvuTop__DOT___GEN_131 = (((QData)((IData)(
+                                                              __Vtemp_h1fd4cc7b__0[
+                                                              (((IData)(0x3fU) 
+                                                                + 
+                                                                (0x1ffU 
+                                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                                    << 6U))) 
+                                                               >> 5U)])) 
+                                              << ((0U 
+                                                   == 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U)))
+                                                   ? 0x20U
+                                                   : 
+                                                  ((IData)(0x40U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                             | (((0U 
+                                                  == 
+                                                  (0x1fU 
+                                                   & ((IData)(vlSelf->io_float_mode) 
+                                                      << 6U)))
+                                                  ? 0ULL
+                                                  : 
+                                                 ((QData)((IData)(
+                                                                  __Vtemp_h1fd4cc7b__0[
+                                                                  (((IData)(0x1fU) 
+                                                                    + 
+                                                                    (0x1ffU 
+                                                                     & ((IData)(vlSelf->io_float_mode) 
+                                                                        << 6U))) 
+                                                                   >> 5U)])) 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                                | ((QData)((IData)(
+                                                                   __Vtemp_h1fd4cc7b__0[
+                                                                   (0xeU 
+                                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                                       << 1U))])) 
+                                                   >> 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U)))));
+            vlSelf->PvuTop__DOT___GEN_134 = (((QData)((IData)(
+                                                              __Vtemp_h26774ce0__0[
+                                                              (((IData)(0x3fU) 
+                                                                + 
+                                                                (0x1ffU 
+                                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                                    << 6U))) 
+                                                               >> 5U)])) 
+                                              << ((0U 
+                                                   == 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U)))
+                                                   ? 0x20U
+                                                   : 
+                                                  ((IData)(0x40U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                             | (((0U 
+                                                  == 
+                                                  (0x1fU 
+                                                   & ((IData)(vlSelf->io_float_mode) 
+                                                      << 6U)))
+                                                  ? 0ULL
+                                                  : 
+                                                 ((QData)((IData)(
+                                                                  __Vtemp_h26774ce0__0[
+                                                                  (((IData)(0x1fU) 
+                                                                    + 
+                                                                    (0x1ffU 
+                                                                     & ((IData)(vlSelf->io_float_mode) 
+                                                                        << 6U))) 
+                                                                   >> 5U)])) 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                                | ((QData)((IData)(
+                                                                   __Vtemp_h26774ce0__0[
+                                                                   (0xeU 
+                                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                                       << 1U))])) 
+                                                   >> 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U)))));
+            vlSelf->PvuTop__DOT___GEN_137 = (((QData)((IData)(
+                                                              __Vtemp_h112780ca__0[
+                                                              (((IData)(0x3fU) 
+                                                                + 
+                                                                (0x1ffU 
+                                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                                    << 6U))) 
+                                                               >> 5U)])) 
+                                              << ((0U 
+                                                   == 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U)))
+                                                   ? 0x20U
+                                                   : 
+                                                  ((IData)(0x40U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                             | (((0U 
+                                                  == 
+                                                  (0x1fU 
+                                                   & ((IData)(vlSelf->io_float_mode) 
+                                                      << 6U)))
+                                                  ? 0ULL
+                                                  : 
+                                                 ((QData)((IData)(
+                                                                  __Vtemp_h112780ca__0[
+                                                                  (((IData)(0x1fU) 
+                                                                    + 
+                                                                    (0x1ffU 
+                                                                     & ((IData)(vlSelf->io_float_mode) 
+                                                                        << 6U))) 
+                                                                   >> 5U)])) 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                                | ((QData)((IData)(
+                                                                   __Vtemp_h112780ca__0[
+                                                                   (0xeU 
+                                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                                       << 1U))])) 
+                                                   >> 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U)))));
+        }
     } else {
-        vlSelf->PvuTop__DOT___GEN_74 = vlSelf->PvuTop__DOT____VdfgTmp_hd471070e__0;
-        vlSelf->PvuTop__DOT___GEN_75 = vlSelf->PvuTop__DOT____VdfgTmp_h12086d12__0;
-        vlSelf->PvuTop__DOT___GEN_76 = vlSelf->PvuTop__DOT____VdfgTmp_h3d760f20__0;
-        vlSelf->PvuTop__DOT___GEN_77 = vlSelf->PvuTop__DOT____VdfgTmp_h098a558a__0;
+        vlSelf->PvuTop__DOT___GEN_127 = ((1U & ((~ 
+                                                 ((0xbU 
+                                                   == (IData)(vlSelf->io_op)) 
+                                                  & (IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha15d0789__0))) 
+                                                | (IData)(vlSelf->PvuTop__DOT___GEN_126)))
+                                          ? 0ULL : 
+                                         (((QData)((IData)(
+                                                           vlSelf->PvuTop__DOT___GEN_125[
+                                                           (((IData)(0x3fU) 
+                                                             + 
+                                                             (0x1ffU 
+                                                              & ((IData)(vlSelf->io_float_mode) 
+                                                                 << 6U))) 
+                                                            >> 5U)])) 
+                                           << ((0U 
+                                                == 
+                                                (0x1fU 
+                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                    << 6U)))
+                                                ? 0x20U
+                                                : ((IData)(0x40U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                          | (((0U == 
+                                               (0x1fU 
+                                                & ((IData)(vlSelf->io_float_mode) 
+                                                   << 6U)))
+                                               ? 0ULL
+                                               : ((QData)((IData)(
+                                                                  vlSelf->PvuTop__DOT___GEN_125[
+                                                                  (((IData)(0x1fU) 
+                                                                    + 
+                                                                    (0x1ffU 
+                                                                     & ((IData)(vlSelf->io_float_mode) 
+                                                                        << 6U))) 
+                                                                   >> 5U)])) 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                             | ((QData)((IData)(
+                                                                vlSelf->PvuTop__DOT___GEN_125[
+                                                                (0xeU 
+                                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                                    << 1U))])) 
+                                                >> 
+                                                (0x1fU 
+                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                    << 6U))))));
+        vlSelf->PvuTop__DOT___GEN_131 = ((1U & ((~ 
+                                                 ((0xbU 
+                                                   == (IData)(vlSelf->io_op)) 
+                                                  & (IData)(vlSelf->PvuTop__DOT____VdfgTmp_h792c5c44__0))) 
+                                                | (IData)(vlSelf->PvuTop__DOT___GEN_126)))
+                                          ? 0ULL : 
+                                         (((QData)((IData)(
+                                                           vlSelf->PvuTop__DOT___GEN_130[
+                                                           (((IData)(0x3fU) 
+                                                             + 
+                                                             (0x1ffU 
+                                                              & ((IData)(vlSelf->io_float_mode) 
+                                                                 << 6U))) 
+                                                            >> 5U)])) 
+                                           << ((0U 
+                                                == 
+                                                (0x1fU 
+                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                    << 6U)))
+                                                ? 0x20U
+                                                : ((IData)(0x40U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                          | (((0U == 
+                                               (0x1fU 
+                                                & ((IData)(vlSelf->io_float_mode) 
+                                                   << 6U)))
+                                               ? 0ULL
+                                               : ((QData)((IData)(
+                                                                  vlSelf->PvuTop__DOT___GEN_130[
+                                                                  (((IData)(0x1fU) 
+                                                                    + 
+                                                                    (0x1ffU 
+                                                                     & ((IData)(vlSelf->io_float_mode) 
+                                                                        << 6U))) 
+                                                                   >> 5U)])) 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                             | ((QData)((IData)(
+                                                                vlSelf->PvuTop__DOT___GEN_130[
+                                                                (0xeU 
+                                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                                    << 1U))])) 
+                                                >> 
+                                                (0x1fU 
+                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                    << 6U))))));
+        vlSelf->PvuTop__DOT___GEN_134 = ((1U & ((~ 
+                                                 ((0xbU 
+                                                   == (IData)(vlSelf->io_op)) 
+                                                  & (2U 
+                                                     < (IData)(vlSelf->PvuTop__DOT__ACTUAL_VECTOR_SIZE)))) 
+                                                | (IData)(vlSelf->PvuTop__DOT___GEN_126)))
+                                          ? 0ULL : 
+                                         (((QData)((IData)(
+                                                           vlSelf->PvuTop__DOT___GEN_133[
+                                                           (((IData)(0x3fU) 
+                                                             + 
+                                                             (0x1ffU 
+                                                              & ((IData)(vlSelf->io_float_mode) 
+                                                                 << 6U))) 
+                                                            >> 5U)])) 
+                                           << ((0U 
+                                                == 
+                                                (0x1fU 
+                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                    << 6U)))
+                                                ? 0x20U
+                                                : ((IData)(0x40U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                          | (((0U == 
+                                               (0x1fU 
+                                                & ((IData)(vlSelf->io_float_mode) 
+                                                   << 6U)))
+                                               ? 0ULL
+                                               : ((QData)((IData)(
+                                                                  vlSelf->PvuTop__DOT___GEN_133[
+                                                                  (((IData)(0x1fU) 
+                                                                    + 
+                                                                    (0x1ffU 
+                                                                     & ((IData)(vlSelf->io_float_mode) 
+                                                                        << 6U))) 
+                                                                   >> 5U)])) 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                             | ((QData)((IData)(
+                                                                vlSelf->PvuTop__DOT___GEN_133[
+                                                                (0xeU 
+                                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                                    << 1U))])) 
+                                                >> 
+                                                (0x1fU 
+                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                    << 6U))))));
+        vlSelf->PvuTop__DOT___GEN_137 = ((1U & ((~ 
+                                                 ((0xbU 
+                                                   == (IData)(vlSelf->io_op)) 
+                                                  & (IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha10fc7a1__0))) 
+                                                | (IData)(vlSelf->PvuTop__DOT___GEN_126)))
+                                          ? 0ULL : 
+                                         (((QData)((IData)(
+                                                           vlSelf->PvuTop__DOT___GEN_136[
+                                                           (((IData)(0x3fU) 
+                                                             + 
+                                                             (0x1ffU 
+                                                              & ((IData)(vlSelf->io_float_mode) 
+                                                                 << 6U))) 
+                                                            >> 5U)])) 
+                                           << ((0U 
+                                                == 
+                                                (0x1fU 
+                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                    << 6U)))
+                                                ? 0x20U
+                                                : ((IData)(0x40U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                          | (((0U == 
+                                               (0x1fU 
+                                                & ((IData)(vlSelf->io_float_mode) 
+                                                   << 6U)))
+                                               ? 0ULL
+                                               : ((QData)((IData)(
+                                                                  vlSelf->PvuTop__DOT___GEN_136[
+                                                                  (((IData)(0x1fU) 
+                                                                    + 
+                                                                    (0x1ffU 
+                                                                     & ((IData)(vlSelf->io_float_mode) 
+                                                                        << 6U))) 
+                                                                   >> 5U)])) 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & ((IData)(vlSelf->io_float_mode) 
+                                                       << 6U))))) 
+                                             | ((QData)((IData)(
+                                                                vlSelf->PvuTop__DOT___GEN_136[
+                                                                (0xeU 
+                                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                                    << 1U))])) 
+                                                >> 
+                                                (0x1fU 
+                                                 & ((IData)(vlSelf->io_float_mode) 
+                                                    << 6U))))));
+    }
+    if (vlSelf->PvuTop__DOT___GEN_90) {
+        vlSelf->PvuTop__DOT___GEN_129 = 0ULL;
+        vlSelf->PvuTop__DOT___GEN_132 = 0ULL;
+        vlSelf->PvuTop__DOT___GEN_135 = 0ULL;
+        vlSelf->PvuTop__DOT___GEN_138 = 0ULL;
+    } else {
+        vlSelf->PvuTop__DOT___GEN_129 = vlSelf->PvuTop__DOT___GEN_127;
+        vlSelf->PvuTop__DOT___GEN_132 = vlSelf->PvuTop__DOT___GEN_131;
+        vlSelf->PvuTop__DOT___GEN_135 = vlSelf->PvuTop__DOT___GEN_134;
+        vlSelf->PvuTop__DOT___GEN_138 = vlSelf->PvuTop__DOT___GEN_137;
     }
 }
 
@@ -2587,7 +2802,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                         | ((IData)(vlSelf->__VdfgTmp_ha768b880__0) 
                                                            | ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero1_3)
                                                                ? 
-                                                              ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                              ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                                >> 3U)
                                                                : 
                                                               ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_3)
@@ -2620,7 +2835,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                           | ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero1_3)
                                                               ? 
                                                              (~ 
-                                                              ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                              ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                                >> 3U))
                                                               : 
                                                              ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_3)
@@ -2652,7 +2867,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                         | ((IData)(vlSelf->__VdfgTmp_h431d52cc__0) 
                                                            | ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero1_2)
                                                                ? 
-                                                              ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                              ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                                >> 2U)
                                                                : 
                                                               ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_2)
@@ -2685,7 +2900,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                           | ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero1_2)
                                                               ? 
                                                              (~ 
-                                                              ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                              ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                                >> 2U))
                                                               : 
                                                              ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_2)
@@ -2717,7 +2932,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                          | ((IData)(vlSelf->__VdfgTmp_ha0210fbc__0) 
                                                             | ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero1_1)
                                                                 ? 
-                                                               ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                               ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                                 >> 1U)
                                                                 : 
                                                                ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_1)
@@ -2750,7 +2965,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                          | ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero1_1)
                                                              ? 
                                                             (~ 
-                                                             ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                             ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                               >> 1U))
                                                              : 
                                                             ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero2_1)
@@ -2781,7 +2996,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                           == vlSelf->io_posit_i1_0) 
                                                          | ((IData)(vlSelf->__VdfgTmp_h72d9ce31__0) 
                                                             | ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero1)
-                                                                ? (IData)(vlSelf->PvuTop__DOT___GEN_134)
+                                                                ? (IData)(vlSelf->PvuTop__DOT___GEN_172)
                                                                 : 
                                                                ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero2)
                                                                  ? 
@@ -2810,7 +3025,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                       | ((IData)(vlSelf->__VdfgTmp_h72d9ce31__0) 
                                                          | ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero1)
                                                              ? 
-                                                            (~ (IData)(vlSelf->PvuTop__DOT___GEN_134))
+                                                            (~ (IData)(vlSelf->PvuTop__DOT___GEN_172))
                                                              : 
                                                             ((IData)(vlSelf->PvuTop__DOT__greater__DOT__is_zero2)
                                                               ? (IData)(vlSelf->PvuTop__DOT___GEN_40)
@@ -3450,7 +3665,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
     vlSelf->PvuTop__DOT__greater__DOT__encode__DOT____VdfgTmp_h878add96__0 
         = (1U & ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_14) 
                  | ((IData)(PvuTop__DOT__greater__DOT___GEN_17)
-                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                         >> 3U) : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                   >> 3U))));
     if (PvuTop__DOT__less__DOT___GEN_17) {
@@ -3467,7 +3682,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
     vlSelf->PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h878add96__0 
         = (1U & ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_14) 
                  | ((IData)(PvuTop__DOT__less__DOT___GEN_17)
-                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                         >> 3U) : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                   >> 3U))));
     if (PvuTop__DOT__greater__DOT___GEN_12) {
@@ -3484,7 +3699,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
     vlSelf->PvuTop__DOT__greater__DOT__encode__DOT____VdfgTmp_h878e0f03__0 
         = (1U & ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_9) 
                  | ((IData)(PvuTop__DOT__greater__DOT___GEN_12)
-                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                         >> 2U) : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                   >> 2U))));
     if (PvuTop__DOT__less__DOT___GEN_12) {
@@ -3501,7 +3716,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
     vlSelf->PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h878e0f03__0 
         = (1U & ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_9) 
                  | ((IData)(PvuTop__DOT__less__DOT___GEN_12)
-                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                         >> 2U) : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                   >> 2U))));
     if (PvuTop__DOT__greater__DOT___GEN_7) {
@@ -3518,7 +3733,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
     vlSelf->PvuTop__DOT__greater__DOT__encode__DOT____VdfgTmp_h87f57e3c__0 
         = (1U & ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_4) 
                  | ((IData)(PvuTop__DOT__greater__DOT___GEN_7)
-                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                         >> 1U) : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                   >> 1U))));
     if (PvuTop__DOT__less__DOT___GEN_7) {
@@ -3535,7 +3750,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
     vlSelf->PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h87f57e3c__0 
         = (1U & ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_4) 
                  | ((IData)(PvuTop__DOT__less__DOT___GEN_7)
-                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                     ? ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                         >> 1U) : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                   >> 1U))));
     if (PvuTop__DOT__greater__DOT___GEN_2) {
@@ -3550,7 +3765,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
     vlSelf->PvuTop__DOT__greater__DOT__encode__DOT____VdfgTmp_h87f12fa9__0 
         = (1U & ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN) 
                  | ((IData)(PvuTop__DOT__greater__DOT___GEN_2)
-                     ? (IData)(vlSelf->PvuTop__DOT___GEN_134)
+                     ? (IData)(vlSelf->PvuTop__DOT___GEN_172)
                      : (IData)(vlSelf->PvuTop__DOT___GEN_40))));
     if (PvuTop__DOT__less__DOT___GEN_2) {
         vlSelf->PvuTop__DOT__less__DOT____VdfgTmp_hc528e02b__0 
@@ -3564,7 +3779,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
     vlSelf->PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h87f12fa9__0 
         = (1U & ((IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN) 
                  | ((IData)(PvuTop__DOT__less__DOT___GEN_2)
-                     ? (IData)(vlSelf->PvuTop__DOT___GEN_134)
+                     ? (IData)(vlSelf->PvuTop__DOT___GEN_172)
                      : (IData)(vlSelf->PvuTop__DOT___GEN_40))));
     vlSelf->PvuTop__DOT__dotproduct__DOT__csaTree__DOT__compressor__DOT__counter_55__DOT___carryWire_T_4 
         = (IData)(((vlSelf->__VdfgTmp_h9c6aa78d__0 
@@ -3793,40 +4008,40 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
         = ((~ (IData)(vlSelf->PvuTop__DOT__greater__DOT___GEN_14)) 
            & ((IData)(__VdfgTmp_hc5219626__0) >> 7U));
     if ((1U == (IData)(vlSelf->io_op))) {
-        vlSelf->PvuTop__DOT___GEN_88 = (1U & ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha10fc7a1__0) 
+        vlSelf->PvuTop__DOT___GEN_86 = (1U & ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha10fc7a1__0) 
                                               & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2) 
                                                   | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_3))
                                                   ? 
                                                  ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                   >> 3U)
                                                   : 
-                                                 ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                 ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                   >> 3U))));
-        vlSelf->PvuTop__DOT___GEN_87 = (1U & ((2U < (IData)(vlSelf->PvuTop__DOT__ACTUAL_VECTOR_SIZE)) 
+        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((2U < (IData)(vlSelf->PvuTop__DOT__ACTUAL_VECTOR_SIZE)) 
                                               & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1) 
                                                   | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_2))
                                                   ? 
                                                  ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                   >> 2U)
                                                   : 
-                                                 ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                 ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                   >> 2U))));
-        vlSelf->PvuTop__DOT___GEN_86 = (1U & ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h792c5c44__0) 
+        vlSelf->PvuTop__DOT___GEN_84 = (1U & ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h792c5c44__0) 
                                               & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0) 
                                                   | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_1))
                                                   ? 
                                                  ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                   >> 1U)
                                                   : 
-                                                 ((IData)(vlSelf->PvuTop__DOT___GEN_134) 
+                                                 ((IData)(vlSelf->PvuTop__DOT___GEN_172) 
                                                   >> 1U))));
-        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha15d0789__0) 
+        vlSelf->PvuTop__DOT___GEN_83 = (1U & ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha15d0789__0) 
                                               & (((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN) 
                                                   | (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater))
                                                   ? (IData)(vlSelf->PvuTop__DOT___GEN_40)
-                                                  : (IData)(vlSelf->PvuTop__DOT___GEN_134))));
+                                                  : (IData)(vlSelf->PvuTop__DOT___GEN_172))));
     } else if ((2U == (IData)(vlSelf->io_op))) {
-        vlSelf->PvuTop__DOT___GEN_88 = (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2)
+        vlSelf->PvuTop__DOT___GEN_86 = (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_2)
                                                ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h3a630f85__0 
                                                    != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0b529d0d__0) 
                                                   & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_3)) 
@@ -3835,7 +4050,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                       >> 3U)))
                                                : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                   >> 3U)));
-        vlSelf->PvuTop__DOT___GEN_87 = (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1)
+        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_1)
                                                ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h39ddc1a5__0 
                                                    != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0e8cac5d__0) 
                                                   & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_2)) 
@@ -3844,7 +4059,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                       >> 2U)))
                                                : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                   >> 2U)));
-        vlSelf->PvuTop__DOT___GEN_86 = (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0)
+        vlSelf->PvuTop__DOT___GEN_84 = (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN_0)
                                                ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h39412272__0 
                                                    != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h0e3057ea__0) 
                                                   & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater_1)) 
@@ -3853,42 +4068,42 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                       >> 1U)))
                                                : ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
                                                   >> 1U)));
-        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN)
+        vlSelf->PvuTop__DOT___GEN_83 = (1U & ((IData)(vlSelf->PvuTop__DOT__add__DOT___GEN)
                                                ? ((vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h38f0a4f9__0 
                                                    != vlSelf->PvuTop__DOT__add__DOT____VdfgTmp_h09a65a41__0) 
                                                   & ((~ (IData)(vlSelf->PvuTop__DOT__add__DOT__mant1_greater)) 
                                                      ^ (IData)(vlSelf->PvuTop__DOT___GEN_40)))
                                                : (IData)(vlSelf->PvuTop__DOT___GEN_40)));
     } else if ((3U == (IData)(vlSelf->io_op))) {
-        vlSelf->PvuTop__DOT___GEN_88 = (1U & ((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o) 
-                                              >> 3U));
-        vlSelf->PvuTop__DOT___GEN_87 = (1U & ((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o) 
-                                              >> 2U));
         vlSelf->PvuTop__DOT___GEN_86 = (1U & ((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o) 
+                                              >> 3U));
+        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o) 
+                                              >> 2U));
+        vlSelf->PvuTop__DOT___GEN_84 = (1U & ((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o) 
                                               >> 1U));
-        vlSelf->PvuTop__DOT___GEN_85 = (1U & (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o));
+        vlSelf->PvuTop__DOT___GEN_83 = (1U & (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o));
     } else if ((4U == (IData)(vlSelf->io_op))) {
-        vlSelf->PvuTop__DOT___GEN_88 = (1U & ((IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_164) 
+        vlSelf->PvuTop__DOT___GEN_86 = (1U & ((IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_164) 
                                               | ((~ (IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_165)) 
                                                  & (((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                     ^ (IData)(vlSelf->PvuTop__DOT___GEN_134)) 
+                                                     ^ (IData)(vlSelf->PvuTop__DOT___GEN_172)) 
                                                     >> 3U))));
-        vlSelf->PvuTop__DOT___GEN_87 = (1U & ((IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_109) 
+        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_109) 
                                               | ((~ (IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_110)) 
                                                  & (((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                     ^ (IData)(vlSelf->PvuTop__DOT___GEN_134)) 
+                                                     ^ (IData)(vlSelf->PvuTop__DOT___GEN_172)) 
                                                     >> 2U))));
-        vlSelf->PvuTop__DOT___GEN_86 = (1U & ((IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_54) 
+        vlSelf->PvuTop__DOT___GEN_84 = (1U & ((IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_54) 
                                               | ((~ (IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_55)) 
                                                  & (((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                     ^ (IData)(vlSelf->PvuTop__DOT___GEN_134)) 
+                                                     ^ (IData)(vlSelf->PvuTop__DOT___GEN_172)) 
                                                     >> 1U))));
-        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN) 
+        vlSelf->PvuTop__DOT___GEN_83 = (1U & ((IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN) 
                                               | ((~ (IData)(vlSelf->PvuTop__DOT__div_inst__DOT___GEN_0)) 
                                                  & ((IData)(vlSelf->PvuTop__DOT___GEN_40) 
-                                                    ^ (IData)(vlSelf->PvuTop__DOT___GEN_134)))));
+                                                    ^ (IData)(vlSelf->PvuTop__DOT___GEN_172)))));
     } else {
-        vlSelf->PvuTop__DOT___GEN_88 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_84)) 
+        vlSelf->PvuTop__DOT___GEN_86 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_82)) 
                                               & ((8U 
                                                   == (IData)(vlSelf->io_op))
                                                   ? (IData)(vlSelf->PvuTop__DOT__greater__DOT__encode__DOT____VdfgTmp_h878add96__0)
@@ -3896,7 +4111,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                  ((9U 
                                                    == (IData)(vlSelf->io_op)) 
                                                   & (IData)(vlSelf->PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h878add96__0)))));
-        vlSelf->PvuTop__DOT___GEN_87 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_84)) 
+        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_82)) 
                                               & ((8U 
                                                   == (IData)(vlSelf->io_op))
                                                   ? (IData)(vlSelf->PvuTop__DOT__greater__DOT__encode__DOT____VdfgTmp_h878e0f03__0)
@@ -3904,7 +4119,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                  ((9U 
                                                    == (IData)(vlSelf->io_op)) 
                                                   & (IData)(vlSelf->PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h878e0f03__0)))));
-        vlSelf->PvuTop__DOT___GEN_86 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_84)) 
+        vlSelf->PvuTop__DOT___GEN_84 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_82)) 
                                               & ((8U 
                                                   == (IData)(vlSelf->io_op))
                                                   ? (IData)(vlSelf->PvuTop__DOT__greater__DOT__encode__DOT____VdfgTmp_h87f57e3c__0)
@@ -3912,7 +4127,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                  ((9U 
                                                    == (IData)(vlSelf->io_op)) 
                                                   & (IData)(vlSelf->PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h87f57e3c__0)))));
-        vlSelf->PvuTop__DOT___GEN_85 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_84)) 
+        vlSelf->PvuTop__DOT___GEN_83 = (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_82)) 
                                               & ((8U 
                                                   == (IData)(vlSelf->io_op))
                                                   ? (IData)(vlSelf->PvuTop__DOT__greater__DOT__encode__DOT____VdfgTmp_h87f12fa9__0)
@@ -4583,7 +4798,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                     - (IData)(2U)));
     vlSelf->PvuTop__DOT__encode__DOT____VdfgTmp_h878add96__0 
         = ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha10fc7a1__0) 
-           & (IData)(vlSelf->PvuTop__DOT___GEN_88));
+           & (IData)(vlSelf->PvuTop__DOT___GEN_86));
     if (vlSelf->PvuTop__DOT__greater__DOT___GEN_14) {
         vlSelf->__VdfgTmp_h87dd8442__0 = 0U;
         PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h9347f0fa__0 = 0U;
@@ -4659,7 +4874,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                     - (IData)(2U)));
     vlSelf->PvuTop__DOT__encode__DOT____VdfgTmp_h878e0f03__0 
         = ((2U < (IData)(vlSelf->PvuTop__DOT__ACTUAL_VECTOR_SIZE)) 
-           & (IData)(vlSelf->PvuTop__DOT___GEN_87));
+           & (IData)(vlSelf->PvuTop__DOT___GEN_85));
     if (vlSelf->PvuTop__DOT__greater__DOT___GEN_9) {
         vlSelf->__VdfgTmp_h74bddf7d__0 = 0U;
         PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h96e1f5ff__0 = 0U;
@@ -4735,7 +4950,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                     - (IData)(2U)));
     vlSelf->PvuTop__DOT__encode__DOT____VdfgTmp_h87f57e3c__0 
         = ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_h792c5c44__0) 
-           & (IData)(vlSelf->PvuTop__DOT___GEN_86));
+           & (IData)(vlSelf->PvuTop__DOT___GEN_84));
     if (vlSelf->PvuTop__DOT__greater__DOT___GEN_4) {
         vlSelf->__VdfgTmp_h858cd4b3__0 = 0U;
         PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h962fac1b__0 = 0U;
@@ -4811,7 +5026,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                     - (IData)(2U)));
     vlSelf->PvuTop__DOT__encode__DOT____VdfgTmp_h87f12fa9__0 
         = ((IData)(vlSelf->PvuTop__DOT____VdfgTmp_ha15d0789__0) 
-           & (IData)(vlSelf->PvuTop__DOT___GEN_85));
+           & (IData)(vlSelf->PvuTop__DOT___GEN_83));
     if (vlSelf->PvuTop__DOT__greater__DOT___GEN) {
         vlSelf->__VdfgTmp_hfeb2b7ac__0 = 0U;
         PvuTop__DOT__less__DOT__encode__DOT____VdfgTmp_h91c3a767__0 = 0U;
@@ -7363,24 +7578,24 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__38(VPvuTop___024root* vlSe
                                                           - (IData)(vlSelf->PvuTop__DOT__greater__DOT__ACTUAL_DST_POSIT_WIDTH))))
                                                       : 0U)));
     if ((7U == (IData)(vlSelf->io_op))) {
-        vlSelf->PvuTop__DOT___GEN_98 = vlSelf->PvuTop__DOT___GEN_81;
-        vlSelf->PvuTop__DOT___GEN_96 = vlSelf->PvuTop__DOT___GEN_80;
-        vlSelf->PvuTop__DOT___GEN_94 = vlSelf->PvuTop__DOT___GEN_79;
-        vlSelf->PvuTop__DOT___GEN_90 = vlSelf->PvuTop__DOT___GEN_78;
+        vlSelf->PvuTop__DOT___GEN_96 = vlSelf->PvuTop__DOT___GEN_79;
+        vlSelf->PvuTop__DOT___GEN_94 = vlSelf->PvuTop__DOT___GEN_78;
+        vlSelf->PvuTop__DOT___GEN_92 = vlSelf->PvuTop__DOT___GEN_77;
+        vlSelf->PvuTop__DOT___GEN_88 = vlSelf->PvuTop__DOT___GEN_76;
     } else {
-        vlSelf->PvuTop__DOT___GEN_98 = ((1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_97)) 
-                                               | (8U 
-                                                  == (IData)(vlSelf->io_op))))
-                                         ? 0U : vlSelf->PvuTop__DOT____VdfgTmp_hb3e87736__0);
         vlSelf->PvuTop__DOT___GEN_96 = ((1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_95)) 
                                                | (8U 
                                                   == (IData)(vlSelf->io_op))))
-                                         ? 0U : vlSelf->PvuTop__DOT____VdfgTmp_hb77deba8__0);
+                                         ? 0U : vlSelf->PvuTop__DOT____VdfgTmp_hb3e87736__0);
         vlSelf->PvuTop__DOT___GEN_94 = ((1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_93)) 
                                                | (8U 
                                                   == (IData)(vlSelf->io_op))))
+                                         ? 0U : vlSelf->PvuTop__DOT____VdfgTmp_hb77deba8__0);
+        vlSelf->PvuTop__DOT___GEN_92 = ((1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_91)) 
+                                               | (8U 
+                                                  == (IData)(vlSelf->io_op))))
                                          ? 0U : vlSelf->PvuTop__DOT____VdfgTmp_hb6e28043__0);
-        vlSelf->PvuTop__DOT___GEN_90 = ((1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_89)) 
+        vlSelf->PvuTop__DOT___GEN_88 = ((1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_87)) 
                                                | (8U 
                                                   == (IData)(vlSelf->io_op))))
                                          ? 0U : vlSelf->PvuTop__DOT____VdfgTmp_hb66c10f5__0);
@@ -7662,144 +7877,5 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__40(VPvuTop___024root* vlSe
             = PvuTop__DOT__frac_norm_div__DOT__shifter_2__DOT___temp_results_0_T_2[1U];
         vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_2_io_result_o[2U] 
             = (0xfU & PvuTop__DOT__frac_norm_div__DOT__shifter_2__DOT___temp_results_0_T_2[2U]);
-    }
-}
-
-VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__41(VPvuTop___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
-    VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VPvuTop___024root___ico_comb__TOP__41\n"); );
-    // Init
-    VlWide<3>/*67:0*/ PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2;
-    VL_ZERO_W(68, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2);
-    VlWide<3>/*67:0*/ PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2;
-    VL_ZERO_W(68, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2);
-    VlWide<3>/*67:0*/ PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2;
-    VL_ZERO_W(68, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2);
-    VlWide<3>/*67:0*/ PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2;
-    VL_ZERO_W(68, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2);
-    VlWide<3>/*67:0*/ PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2;
-    VL_ZERO_W(68, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2);
-    VlWide<3>/*67:0*/ PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2;
-    VL_ZERO_W(68, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2);
-    VlWide<3>/*95:0*/ __Vtemp_ha6edac0c__0;
-    VlWide<3>/*95:0*/ __Vtemp_h9f17b6c4__0;
-    VlWide<3>/*95:0*/ __Vtemp_h7471db2a__0;
-    VlWide<3>/*95:0*/ __Vtemp_h3a5ba430__0;
-    VlWide<3>/*95:0*/ __Vtemp_h3bb6e5fa__0;
-    VlWide<3>/*95:0*/ __Vtemp_hdb7cf72a__0;
-    VlWide<3>/*95:0*/ __Vtemp_h314fbfa9__0;
-    // Body
-    VL_SHIFTL_WWI(68,68,32, __Vtemp_ha6edac0c__0, vlSelf->PvuTop__DOT__frac_norm_div__DOT____Vcellinp__shifter_1__io_operand_i, 0x40U);
-    if ((0x40U & vlSymsp->TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_1.__PVT__gen_lzc__DOT__index_nodes[0U])) {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[0U] 
-            = __Vtemp_ha6edac0c__0[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[1U] 
-            = __Vtemp_ha6edac0c__0[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[2U] 
-            = (0xfU & __Vtemp_ha6edac0c__0[2U]);
-    } else {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[0U] 
-            = vlSelf->PvuTop__DOT__frac_norm_div__DOT____Vcellinp__shifter_1__io_operand_i[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[1U] 
-            = vlSelf->PvuTop__DOT__frac_norm_div__DOT____Vcellinp__shifter_1__io_operand_i[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[2U] 
-            = (0xfU & vlSelf->PvuTop__DOT__frac_norm_div__DOT____Vcellinp__shifter_1__io_operand_i[2U]);
-    }
-    VL_SHIFTL_WWI(68,68,32, __Vtemp_h9f17b6c4__0, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2, 0x20U);
-    if ((0x20U & vlSymsp->TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_1.__PVT__gen_lzc__DOT__index_nodes[0U])) {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[0U] 
-            = __Vtemp_h9f17b6c4__0[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[1U] 
-            = __Vtemp_h9f17b6c4__0[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[2U] 
-            = (0xfU & __Vtemp_h9f17b6c4__0[2U]);
-    } else {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[0U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[1U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[2U] 
-            = (0xfU & PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_5_T_2[2U]);
-    }
-    VL_SHIFTL_WWI(68,68,32, __Vtemp_h7471db2a__0, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2, 0x10U);
-    if ((0x10U & vlSymsp->TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_1.__PVT__gen_lzc__DOT__index_nodes[0U])) {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[0U] 
-            = __Vtemp_h7471db2a__0[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[1U] 
-            = __Vtemp_h7471db2a__0[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[2U] 
-            = (0xfU & __Vtemp_h7471db2a__0[2U]);
-    } else {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[0U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[1U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[2U] 
-            = (0xfU & PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_4_T_2[2U]);
-    }
-    VL_SHIFTL_WWI(68,68,32, __Vtemp_h3a5ba430__0, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2, 8U);
-    if ((8U & vlSymsp->TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_1.__PVT__gen_lzc__DOT__index_nodes[0U])) {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[0U] 
-            = __Vtemp_h3a5ba430__0[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[1U] 
-            = __Vtemp_h3a5ba430__0[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[2U] 
-            = (0xfU & __Vtemp_h3a5ba430__0[2U]);
-    } else {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[0U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[1U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[2U] 
-            = (0xfU & PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_3_T_2[2U]);
-    }
-    VL_SHIFTL_WWI(68,68,32, __Vtemp_h3bb6e5fa__0, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2, 4U);
-    if ((4U & vlSymsp->TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_1.__PVT__gen_lzc__DOT__index_nodes[0U])) {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[0U] 
-            = __Vtemp_h3bb6e5fa__0[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[1U] 
-            = __Vtemp_h3bb6e5fa__0[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[2U] 
-            = (0xfU & __Vtemp_h3bb6e5fa__0[2U]);
-    } else {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[0U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[1U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[2U] 
-            = (0xfU & PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_2_T_2[2U]);
-    }
-    VL_SHIFTL_WWI(68,68,32, __Vtemp_hdb7cf72a__0, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2, 2U);
-    if ((2U & vlSymsp->TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_1.__PVT__gen_lzc__DOT__index_nodes[0U])) {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[0U] 
-            = __Vtemp_hdb7cf72a__0[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[1U] 
-            = __Vtemp_hdb7cf72a__0[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[2U] 
-            = (0xfU & __Vtemp_hdb7cf72a__0[2U]);
-    } else {
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[0U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[0U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[1U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[1U];
-        PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[2U] 
-            = (0xfU & PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_1_T_2[2U]);
-    }
-    VL_SHIFTL_WWI(68,68,32, __Vtemp_h314fbfa9__0, PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2, 1U);
-    if ((1U & vlSymsp->TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_1.__PVT__gen_lzc__DOT__index_nodes[0U])) {
-        vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_1_io_result_o[0U] 
-            = __Vtemp_h314fbfa9__0[0U];
-        vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_1_io_result_o[1U] 
-            = __Vtemp_h314fbfa9__0[1U];
-        vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_1_io_result_o[2U] 
-            = (0xfU & __Vtemp_h314fbfa9__0[2U]);
-    } else {
-        vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_1_io_result_o[0U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[0U];
-        vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_1_io_result_o[1U] 
-            = PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[1U];
-        vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_1_io_result_o[2U] 
-            = (0xfU & PvuTop__DOT__frac_norm_div__DOT__shifter_1__DOT___temp_results_0_T_2[2U]);
     }
 }

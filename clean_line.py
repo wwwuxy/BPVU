@@ -36,4 +36,3 @@ if __name__ == "__main__":
 
     # 调用函数移除尾部行
     remove_last_lines(target_file, lines_to_remove)
-

@@ -8754,6 +8754,7115 @@ module PositQuantizeToInt8(	// src/main/scala/pvu/PositQuantizeToInt8.scala:17:7
                         : _roundedValue_T_4[7:0]}};	// src/main/scala/pvu/PositQuantizeToInt8.scala:17:7, :49:34, :139:{14,23}, :141:18, :143:30, :215:31, :235:34, :237:27, :242:{25,46,61,83}, :244:{21,34}, :247:{27,36}, :249:{28,48}, :250:25, :252:25, :272:37, :279:{30,39}, :280:25, :281:{37,47}, :282:25, :284:{25,40}
 endmodule
 
+module FloatConvert(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire [3:0][1:0] _GEN = '{2'h0, 2'h1, 2'h1, 2'h2};	// src/main/scala/pvu/FloatConvert.scala:83:50
+  wire            _is_inf_T_1 = io_float_in[2'h0][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire            is_zero = ~(io_float_in[2'h0][62]) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :67:16
+  wire            is_inf = io_float_in[2'h0][62] & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :67:16
+  wire            is_nan = io_float_in[2'h0][62] & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :67:16
+  wire            is_denorm = ~(io_float_in[2'h0][62]) & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :67:16
+  wire [1:0]      _shift_amount_T = _GEN[io_float_in[2'h0][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :83:50, :94:44, :129:26
+  wire            _GEN_0 = _shift_amount_T == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:67:16, :94:44, :97:26
+  wire [4:0]      _shifted_frac_T =
+    {3'h0, io_float_in[2'h0][61:60]} << ((&_shift_amount_T) ? 2'h2 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :83:50, :94:44, :102:{29,43}, :103:34
+  wire            _is_inf_T_3 = io_float_in[2'h1][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16, :129:26
+  wire            is_zero_1 = ~(io_float_in[2'h1][62]) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :129:26
+  wire            is_inf_1 = io_float_in[2'h1][62] & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :129:26
+  wire            is_nan_1 = io_float_in[2'h1][62] & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :129:26
+  wire            is_denorm_1 = ~(io_float_in[2'h1][62]) & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :129:26
+  wire [1:0]      _shift_amount_T_1 = _GEN[io_float_in[2'h1][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :129:26
+  wire            _GEN_1 = _shift_amount_T_1 == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:67:16, :94:44, :97:26
+  wire [4:0]      _shifted_frac_T_1 =
+    {3'h0, io_float_in[2'h1][61:60]} << ((&_shift_amount_T_1) ? 2'h2 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34, :129:26
+  wire            _is_inf_T_5 = io_float_in[2'h2][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16, :83:50
+  wire            is_zero_2 = ~(io_float_in[2'h2][62]) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_2 = io_float_in[2'h2][62] & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_2 = io_float_in[2'h2][62] & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_2 = ~(io_float_in[2'h2][62]) & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_2 = _GEN[io_float_in[2'h2][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :129:26
+  wire            _GEN_2 = _shift_amount_T_2 == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:67:16, :94:44, :97:26
+  wire [4:0]      _shifted_frac_T_2 =
+    {3'h0, io_float_in[2'h2][61:60]} << ((&_shift_amount_T_2) ? 2'h2 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire            _is_inf_T_7 = io_float_in[2'h3][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire            is_zero_3 = ~(io_float_in[2'h3][62]) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}
+  wire            is_inf_3 = io_float_in[2'h3][62] & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57
+  wire            is_nan_3 = io_float_in[2'h3][62] & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}
+  wire            is_denorm_3 = ~(io_float_in[2'h3][62]) & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]      _shift_amount_T_3 = _GEN[io_float_in[2'h3][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :129:26
+  wire            _GEN_3 = _shift_amount_T_3 == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:67:16, :94:44, :97:26
+  wire [4:0]      _shifted_frac_T_3 =
+    {3'h0, io_float_in[2'h3][61:60]} << ((&_shift_amount_T_3) ? 2'h2 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       ~is_zero_3
+         & (is_inf_3 | is_nan_3
+            | (is_denorm_3
+                 ? _GEN_3 & 1'h1 - _shift_amount_T_3[0]
+                 : io_float_in[2'h3][62])),
+       is_zero_3 | is_inf_3
+         ? 2'h0
+         : is_nan_3 ? 2'h2 : is_denorm_3 & _GEN_3 ? _shifted_frac_T_3[1:0] : 2'h0,
+       60'h0}},
+     {{io_float_in[2'h2][63],
+       ~is_zero_2
+         & (is_inf_2 | is_nan_2
+            | (is_denorm_2
+                 ? _GEN_2 & 1'h1 - _shift_amount_T_2[0]
+                 : io_float_in[2'h2][62])),
+       is_zero_2 | is_inf_2
+         ? 2'h0
+         : is_nan_2 ? 2'h2 : is_denorm_2 & _GEN_2 ? _shifted_frac_T_2[1:0] : 2'h0,
+       60'h0}},
+     {{io_float_in[2'h1][63],
+       ~is_zero_1
+         & (is_inf_1 | is_nan_1
+            | (is_denorm_1
+                 ? _GEN_1 & 1'h1 - _shift_amount_T_1[0]
+                 : io_float_in[2'h1][62])),
+       is_zero_1 | is_inf_1
+         ? 2'h0
+         : is_nan_1 ? 2'h2 : is_denorm_1 & _GEN_1 ? _shifted_frac_T_1[1:0] : 2'h0,
+       60'h0}},
+     {{io_float_in[2'h0][63],
+       ~is_zero
+         & (is_inf | is_nan
+            | (is_denorm ? _GEN_0 & 1'h1 - _shift_amount_T[0] : io_float_in[2'h0][62])),
+       is_zero | is_inf
+         ? 2'h0
+         : is_nan ? 2'h2 : is_denorm & _GEN_0 ? _shifted_frac_T[1:0] : 2'h0,
+       60'h0}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:{37,52}, :45:25, :46:24, :53:33, :54:{23,57}, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :83:50, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :120:17, :129:{26,59}, :161:44
+endmodule
+
+module FloatConvert_1(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire [3:0][1:0] _GEN = '{2'h0, 2'h1, 2'h1, 2'h2};	// src/main/scala/pvu/FloatConvert.scala:83:50
+  wire            _is_inf_T_1 = io_float_in[2'h0][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero = ~(io_float_in[2'h0][62]) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf = io_float_in[2'h0][62] & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan = io_float_in[2'h0][62] & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm = ~(io_float_in[2'h0][62]) & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T = _GEN[io_float_in[2'h0][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T =
+    {3'h0, io_float_in[2'h0][61:60]} << ((&_shift_amount_T) ? 2'h2 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [3:0]      _adjusted_exp_T_1 = {3'h0, io_float_in[2'h0][62]} + 4'h7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :67:16, :83:50, :127:35
+  wire            _GEN_0 = $signed(_adjusted_exp_T_1) < 4'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_3 = io_float_in[2'h1][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_1 = ~(io_float_in[2'h1][62]) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_1 = io_float_in[2'h1][62] & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_1 = io_float_in[2'h1][62] & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_1 = ~(io_float_in[2'h1][62]) & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_1 = _GEN[io_float_in[2'h1][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_1 =
+    {3'h0, io_float_in[2'h1][61:60]} << ((&_shift_amount_T_1) ? 2'h2 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [3:0]      _adjusted_exp_T_4 = {3'h0, io_float_in[2'h1][62]} + 4'h7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :67:16, :83:50, :127:35
+  wire            _GEN_1 = $signed(_adjusted_exp_T_4) < 4'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_5 = io_float_in[2'h2][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_2 = ~(io_float_in[2'h2][62]) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_2 = io_float_in[2'h2][62] & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_2 = io_float_in[2'h2][62] & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_2 = ~(io_float_in[2'h2][62]) & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_2 = _GEN[io_float_in[2'h2][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_2 =
+    {3'h0, io_float_in[2'h2][61:60]} << ((&_shift_amount_T_2) ? 2'h2 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [3:0]      _adjusted_exp_T_7 = {3'h0, io_float_in[2'h2][62]} + 4'h7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :67:16, :83:50, :127:35
+  wire            _GEN_2 = $signed(_adjusted_exp_T_7) < 4'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_7 = io_float_in[2'h3][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_3 = ~(io_float_in[2'h3][62]) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}
+  wire            is_inf_3 = io_float_in[2'h3][62] & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57
+  wire            is_nan_3 = io_float_in[2'h3][62] & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}
+  wire            is_denorm_3 = ~(io_float_in[2'h3][62]) & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]      _shift_amount_T_3 = _GEN[io_float_in[2'h3][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_3 =
+    {3'h0, io_float_in[2'h3][61:60]} << ((&_shift_amount_T_3) ? 2'h2 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [3:0]      _adjusted_exp_T_10 = {3'h0, io_float_in[2'h3][62]} + 4'h7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :67:16, :127:35
+  wire            _GEN_3 = $signed(_adjusted_exp_T_10) < 4'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 4'h0
+         : is_inf_3 | is_nan_3
+             ? 4'hF
+             : is_denorm_3
+                 ? 4'h8 - {2'h0, _shift_amount_T_3}
+                 : _GEN_3 ? 4'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 3'h0
+         : is_nan_3
+             ? 3'h4
+             : is_denorm_3
+                 ? {_shifted_frac_T_3[1:0], 1'h0}
+                 : _GEN_3 ? 3'h0 : {io_float_in[2'h3][61:60], 1'h0},
+       56'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 4'h0
+         : is_inf_2 | is_nan_2
+             ? 4'hF
+             : is_denorm_2
+                 ? 4'h8 - {2'h0, _shift_amount_T_2}
+                 : _GEN_2 ? 4'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 3'h0
+         : is_nan_2
+             ? 3'h4
+             : is_denorm_2
+                 ? {_shifted_frac_T_2[1:0], 1'h0}
+                 : _GEN_2 ? 3'h0 : {io_float_in[2'h2][61:60], 1'h0},
+       56'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 4'h0
+         : is_inf_1 | is_nan_1
+             ? 4'hF
+             : is_denorm_1
+                 ? 4'h8 - {2'h0, _shift_amount_T_1}
+                 : _GEN_1 ? 4'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 3'h0
+         : is_nan_1
+             ? 3'h4
+             : is_denorm_1
+                 ? {_shifted_frac_T_1[1:0], 1'h0}
+                 : _GEN_1 ? 3'h0 : {io_float_in[2'h1][61:60], 1'h0},
+       56'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 4'h0
+         : is_inf | is_nan
+             ? 4'hF
+             : is_denorm
+                 ? 4'h8 - {2'h0, _shift_amount_T}
+                 : _GEN_0 ? 4'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 3'h0
+         : is_nan
+             ? 3'h4
+             : is_denorm
+                 ? {_shifted_frac_T[1:0], 1'h0}
+                 : _GEN_0 ? 3'h0 : {io_float_in[2'h0][61:60], 1'h0},
+       56'h0}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :50:32, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :83:50, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :110:26, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :161:44
+endmodule
+
+module FloatConvert_2(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire [3:0][1:0] _GEN = '{2'h0, 2'h1, 2'h1, 2'h2};	// src/main/scala/pvu/FloatConvert.scala:83:50
+  wire            _is_inf_T_1 = io_float_in[2'h0][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero = ~(io_float_in[2'h0][62]) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf = io_float_in[2'h0][62] & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan = io_float_in[2'h0][62] & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm = ~(io_float_in[2'h0][62]) & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T = _GEN[io_float_in[2'h0][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T =
+    {3'h0, io_float_in[2'h0][61:60]} << ((&_shift_amount_T) ? 2'h2 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [4:0]      _adjusted_exp_T_1 = {4'h0, io_float_in[2'h0][62]} + 5'hF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_0 = $signed(_adjusted_exp_T_1) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_3 = io_float_in[2'h1][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_1 = ~(io_float_in[2'h1][62]) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_1 = io_float_in[2'h1][62] & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_1 = io_float_in[2'h1][62] & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_1 = ~(io_float_in[2'h1][62]) & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_1 = _GEN[io_float_in[2'h1][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_1 =
+    {3'h0, io_float_in[2'h1][61:60]} << ((&_shift_amount_T_1) ? 2'h2 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [4:0]      _adjusted_exp_T_4 = {4'h0, io_float_in[2'h1][62]} + 5'hF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_1 = $signed(_adjusted_exp_T_4) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_5 = io_float_in[2'h2][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_2 = ~(io_float_in[2'h2][62]) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_2 = io_float_in[2'h2][62] & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_2 = io_float_in[2'h2][62] & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_2 = ~(io_float_in[2'h2][62]) & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_2 = _GEN[io_float_in[2'h2][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_2 =
+    {3'h0, io_float_in[2'h2][61:60]} << ((&_shift_amount_T_2) ? 2'h2 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [4:0]      _adjusted_exp_T_7 = {4'h0, io_float_in[2'h2][62]} + 5'hF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_2 = $signed(_adjusted_exp_T_7) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_7 = io_float_in[2'h3][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_3 = ~(io_float_in[2'h3][62]) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}
+  wire            is_inf_3 = io_float_in[2'h3][62] & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57
+  wire            is_nan_3 = io_float_in[2'h3][62] & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}
+  wire            is_denorm_3 = ~(io_float_in[2'h3][62]) & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]      _shift_amount_T_3 = _GEN[io_float_in[2'h3][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_3 =
+    {3'h0, io_float_in[2'h3][61:60]} << ((&_shift_amount_T_3) ? 2'h2 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [4:0]      _adjusted_exp_T_10 = {4'h0, io_float_in[2'h3][62]} + 5'hF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:35
+  wire            _GEN_3 = $signed(_adjusted_exp_T_10) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 5'h0
+         : is_inf_3 | is_nan_3
+             ? 5'h1F
+             : is_denorm_3
+                 ? 5'h10 - {3'h0, _shift_amount_T_3}
+                 : _GEN_3 ? 5'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 10'h0
+         : is_nan_3
+             ? 10'h200
+             : is_denorm_3
+                 ? {_shifted_frac_T_3[1:0], 8'h0}
+                 : _GEN_3 ? 10'h0 : {io_float_in[2'h3][61:60], 8'h0},
+       48'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 5'h0
+         : is_inf_2 | is_nan_2
+             ? 5'h1F
+             : is_denorm_2
+                 ? 5'h10 - {3'h0, _shift_amount_T_2}
+                 : _GEN_2 ? 5'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 10'h0
+         : is_nan_2
+             ? 10'h200
+             : is_denorm_2
+                 ? {_shifted_frac_T_2[1:0], 8'h0}
+                 : _GEN_2 ? 10'h0 : {io_float_in[2'h2][61:60], 8'h0},
+       48'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 5'h0
+         : is_inf_1 | is_nan_1
+             ? 5'h1F
+             : is_denorm_1
+                 ? 5'h10 - {3'h0, _shift_amount_T_1}
+                 : _GEN_1 ? 5'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 10'h0
+         : is_nan_1
+             ? 10'h200
+             : is_denorm_1
+                 ? {_shifted_frac_T_1[1:0], 8'h0}
+                 : _GEN_1 ? 10'h0 : {io_float_in[2'h1][61:60], 8'h0},
+       48'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 5'h0
+         : is_inf | is_nan
+             ? 5'h1F
+             : is_denorm
+                 ? 5'h10 - {3'h0, _shift_amount_T}
+                 : _GEN_0 ? 5'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 10'h0
+         : is_nan
+             ? 10'h200
+             : is_denorm
+                 ? {_shifted_frac_T[1:0], 8'h0}
+                 : _GEN_0 ? 10'h0 : {io_float_in[2'h0][61:60], 8'h0},
+       48'h0}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :83:50, :94:44, :97:45, :99:46, :103:{34,48}, :110:26, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :161:44
+endmodule
+
+module FloatConvert_3(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire [3:0][1:0] _GEN = '{2'h0, 2'h1, 2'h1, 2'h2};	// src/main/scala/pvu/FloatConvert.scala:83:50
+  wire            _is_inf_T_1 = io_float_in[2'h0][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero = ~(io_float_in[2'h0][62]) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf = io_float_in[2'h0][62] & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan = io_float_in[2'h0][62] & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm = ~(io_float_in[2'h0][62]) & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T = _GEN[io_float_in[2'h0][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T =
+    {3'h0, io_float_in[2'h0][61:60]} << ((&_shift_amount_T) ? 2'h2 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [7:0]      _adjusted_exp_T_1 = {7'h0, io_float_in[2'h0][62]} + 8'h7F;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_0 = $signed(_adjusted_exp_T_1) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_3 = io_float_in[2'h1][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_1 = ~(io_float_in[2'h1][62]) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_1 = io_float_in[2'h1][62] & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_1 = io_float_in[2'h1][62] & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_1 = ~(io_float_in[2'h1][62]) & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_1 = _GEN[io_float_in[2'h1][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_1 =
+    {3'h0, io_float_in[2'h1][61:60]} << ((&_shift_amount_T_1) ? 2'h2 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [7:0]      _adjusted_exp_T_4 = {7'h0, io_float_in[2'h1][62]} + 8'h7F;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_1 = $signed(_adjusted_exp_T_4) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_5 = io_float_in[2'h2][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_2 = ~(io_float_in[2'h2][62]) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_2 = io_float_in[2'h2][62] & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_2 = io_float_in[2'h2][62] & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_2 = ~(io_float_in[2'h2][62]) & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_2 = _GEN[io_float_in[2'h2][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_2 =
+    {3'h0, io_float_in[2'h2][61:60]} << ((&_shift_amount_T_2) ? 2'h2 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [7:0]      _adjusted_exp_T_7 = {7'h0, io_float_in[2'h2][62]} + 8'h7F;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_2 = $signed(_adjusted_exp_T_7) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_7 = io_float_in[2'h3][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_3 = ~(io_float_in[2'h3][62]) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}
+  wire            is_inf_3 = io_float_in[2'h3][62] & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57
+  wire            is_nan_3 = io_float_in[2'h3][62] & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}
+  wire            is_denorm_3 = ~(io_float_in[2'h3][62]) & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]      _shift_amount_T_3 = _GEN[io_float_in[2'h3][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_3 =
+    {3'h0, io_float_in[2'h3][61:60]} << ((&_shift_amount_T_3) ? 2'h2 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [7:0]      _adjusted_exp_T_10 = {7'h0, io_float_in[2'h3][62]} + 8'h7F;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:35
+  wire            _GEN_3 = $signed(_adjusted_exp_T_10) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 8'h0
+         : is_inf_3 | is_nan_3
+             ? 8'hFF
+             : is_denorm_3
+                 ? 8'h80 - {6'h0, _shift_amount_T_3}
+                 : _GEN_3 ? 8'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 23'h0
+         : is_nan_3
+             ? 23'h400000
+             : is_denorm_3
+                 ? {_shifted_frac_T_3[1:0], 21'h0}
+                 : _GEN_3 ? 23'h0 : {io_float_in[2'h3][61:60], 21'h0},
+       32'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 8'h0
+         : is_inf_2 | is_nan_2
+             ? 8'hFF
+             : is_denorm_2
+                 ? 8'h80 - {6'h0, _shift_amount_T_2}
+                 : _GEN_2 ? 8'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 23'h0
+         : is_nan_2
+             ? 23'h400000
+             : is_denorm_2
+                 ? {_shifted_frac_T_2[1:0], 21'h0}
+                 : _GEN_2 ? 23'h0 : {io_float_in[2'h2][61:60], 21'h0},
+       32'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 8'h0
+         : is_inf_1 | is_nan_1
+             ? 8'hFF
+             : is_denorm_1
+                 ? 8'h80 - {6'h0, _shift_amount_T_1}
+                 : _GEN_1 ? 8'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 23'h0
+         : is_nan_1
+             ? 23'h400000
+             : is_denorm_1
+                 ? {_shifted_frac_T_1[1:0], 21'h0}
+                 : _GEN_1 ? 23'h0 : {io_float_in[2'h1][61:60], 21'h0},
+       32'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 8'h0
+         : is_inf | is_nan
+             ? 8'hFF
+             : is_denorm
+                 ? 8'h80 - {6'h0, _shift_amount_T}
+                 : _GEN_0 ? 8'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 23'h0
+         : is_nan
+             ? 23'h400000
+             : is_denorm
+                 ? {_shifted_frac_T[1:0], 21'h0}
+                 : _GEN_0 ? 23'h0 : {io_float_in[2'h0][61:60], 21'h0},
+       32'h0}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :83:50, :94:44, :97:45, :99:46, :103:{34,48}, :110:26, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :161:44
+endmodule
+
+module FloatConvert_4(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire [3:0][1:0] _GEN = '{2'h0, 2'h1, 2'h1, 2'h2};	// src/main/scala/pvu/FloatConvert.scala:83:50
+  wire            _is_inf_T_1 = io_float_in[2'h0][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero = ~(io_float_in[2'h0][62]) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf = io_float_in[2'h0][62] & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan = io_float_in[2'h0][62] & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm = ~(io_float_in[2'h0][62]) & (|(io_float_in[2'h0][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T = _GEN[io_float_in[2'h0][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T =
+    {3'h0, io_float_in[2'h0][61:60]} << ((&_shift_amount_T) ? 2'h2 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [10:0]     _adjusted_exp_T_1 = {10'h0, io_float_in[2'h0][62]} + 11'h3FF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_0 = $signed(_adjusted_exp_T_1) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_3 = io_float_in[2'h1][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_1 = ~(io_float_in[2'h1][62]) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_1 = io_float_in[2'h1][62] & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_1 = io_float_in[2'h1][62] & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_1 = ~(io_float_in[2'h1][62]) & (|(io_float_in[2'h1][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_1 = _GEN[io_float_in[2'h1][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_1 =
+    {3'h0, io_float_in[2'h1][61:60]} << ((&_shift_amount_T_1) ? 2'h2 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [10:0]     _adjusted_exp_T_4 = {10'h0, io_float_in[2'h1][62]} + 11'h3FF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_1 = $signed(_adjusted_exp_T_4) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_5 = io_float_in[2'h2][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_2 = ~(io_float_in[2'h2][62]) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}, :83:50
+  wire            is_inf_2 = io_float_in[2'h2][62] & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57, :83:50
+  wire            is_nan_2 = io_float_in[2'h2][62] & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}, :83:50
+  wire            is_denorm_2 = ~(io_float_in[2'h2][62]) & (|(io_float_in[2'h2][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35, :83:50
+  wire [1:0]      _shift_amount_T_2 = _GEN[io_float_in[2'h2][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_2 =
+    {3'h0, io_float_in[2'h2][61:60]} << ((&_shift_amount_T_2) ? 2'h2 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [10:0]     _adjusted_exp_T_7 = {10'h0, io_float_in[2'h2][62]} + 11'h3FF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :83:50, :99:46, :127:35
+  wire            _GEN_2 = $signed(_adjusted_exp_T_7) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire            _is_inf_T_7 = io_float_in[2'h3][61:60] == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :83:50
+  wire            is_zero_3 = ~(io_float_in[2'h3][62]) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:{24,33,42}
+  wire            is_inf_3 = io_float_in[2'h3][62] & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:57
+  wire            is_nan_3 = io_float_in[2'h3][62] & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :55:{57,66}
+  wire            is_denorm_3 = ~(io_float_in[2'h3][62]) & (|(io_float_in[2'h3][61:60]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]      _shift_amount_T_3 = _GEN[io_float_in[2'h3][61:60]] + 2'h1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44
+  wire [4:0]      _shifted_frac_T_3 =
+    {3'h0, io_float_in[2'h3][61:60]} << ((&_shift_amount_T_3) ? 2'h2 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :83:50, :94:44, :102:{29,43}, :103:34
+  wire [10:0]     _adjusted_exp_T_10 = {10'h0, io_float_in[2'h3][62]} + 11'h3FF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:35
+  wire            _GEN_3 = $signed(_adjusted_exp_T_10) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 11'h0
+         : is_inf_3 | is_nan_3
+             ? 11'h7FF
+             : is_denorm_3
+                 ? 11'h400 - {9'h0, _shift_amount_T_3}
+                 : _GEN_3 ? 11'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 52'h0
+         : is_nan_3
+             ? 52'h8000000000000
+             : is_denorm_3
+                 ? {_shifted_frac_T_3[1:0], 50'h0}
+                 : _GEN_3 ? 52'h0 : {io_float_in[2'h3][61:60], 50'h0}}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 11'h0
+         : is_inf_2 | is_nan_2
+             ? 11'h7FF
+             : is_denorm_2
+                 ? 11'h400 - {9'h0, _shift_amount_T_2}
+                 : _GEN_2 ? 11'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 52'h0
+         : is_nan_2
+             ? 52'h8000000000000
+             : is_denorm_2
+                 ? {_shifted_frac_T_2[1:0], 50'h0}
+                 : _GEN_2 ? 52'h0 : {io_float_in[2'h2][61:60], 50'h0}}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 11'h0
+         : is_inf_1 | is_nan_1
+             ? 11'h7FF
+             : is_denorm_1
+                 ? 11'h400 - {9'h0, _shift_amount_T_1}
+                 : _GEN_1 ? 11'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 52'h0
+         : is_nan_1
+             ? 52'h8000000000000
+             : is_denorm_1
+                 ? {_shifted_frac_T_1[1:0], 50'h0}
+                 : _GEN_1 ? 52'h0 : {io_float_in[2'h1][61:60], 50'h0}}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 11'h0
+         : is_inf | is_nan
+             ? 11'h7FF
+             : is_denorm
+                 ? 11'h400 - {9'h0, _shift_amount_T}
+                 : _GEN_0 ? 11'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 52'h0
+         : is_nan
+             ? 52'h8000000000000
+             : is_denorm
+                 ? {_shifted_frac_T[1:0], 50'h0}
+                 : _GEN_0 ? 52'h0 : {io_float_in[2'h0][61:60], 50'h0}}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :83:50, :94:44, :97:45, :99:46, :103:{34,48}, :110:26, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :157:24
+endmodule
+
+module FloatConvert_5(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire       _is_denorm_T = io_float_in[2'h0][62:59] == 4'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :67:16
+  wire       _is_inf_T_1 = io_float_in[2'h0][58:56] == 3'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire       is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf = (&(io_float_in[2'h0][62:59])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}, :67:16
+  wire       is_nan = (&(io_float_in[2'h0][62:59])) & (|(io_float_in[2'h0][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}, :67:16
+  wire       is_denorm = _is_denorm_T & (|(io_float_in[2'h0][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35, :67:16
+  wire [1:0] _shift_amount_T =
+    (io_float_in[2'h0][58] ? 2'h0 : io_float_in[2'h0][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53, :94:44, :129:26
+  wire       _GEN = _shift_amount_T == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:67:16, :94:44, :97:26
+  wire [5:0] _shifted_frac_T = {3'h0, io_float_in[2'h0][58:56]} << _shift_amount_T;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16, :94:44, :103:34
+  wire [4:0] _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:59]} - 5'h7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :67:16, :127:35
+  wire       _GEN_0 = $signed(_adjusted_exp_T_1) > 5'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire       _GEN_1 = $signed(_adjusted_exp_T_1) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire       _is_denorm_T_2 = io_float_in[2'h1][62:59] == 4'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :129:26
+  wire       _is_inf_T_3 = io_float_in[2'h1][58:56] == 3'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :129:26
+  wire       is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_1 = (&(io_float_in[2'h1][62:59])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}, :129:26
+  wire       is_nan_1 = (&(io_float_in[2'h1][62:59])) & (|(io_float_in[2'h1][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}, :129:26
+  wire       is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35, :129:26
+  wire [1:0] _shift_amount_T_1 =
+    (io_float_in[2'h1][58] ? 2'h0 : io_float_in[2'h1][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53, :94:44, :129:26
+  wire       _GEN_2 = _shift_amount_T_1 == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:67:16, :94:44, :97:26
+  wire [5:0] _shifted_frac_T_1 = {3'h0, io_float_in[2'h1][58:56]} << _shift_amount_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34, :129:26
+  wire [4:0] _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:59]} - 5'h7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35, :129:26
+  wire       _GEN_3 = $signed(_adjusted_exp_T_4) > 5'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire       _GEN_4 = $signed(_adjusted_exp_T_4) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire       _is_denorm_T_4 = io_float_in[2'h2][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_5 = io_float_in[2'h2][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_2 = (&(io_float_in[2'h2][62:59])) & _is_inf_T_5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_2 = (&(io_float_in[2'h2][62:59])) & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_2 =
+    (io_float_in[2'h2][58] ? 2'h0 : io_float_in[2'h2][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53, :94:44, :129:26
+  wire       _GEN_5 = _shift_amount_T_2 == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:67:16, :94:44, :97:26
+  wire [5:0] _shifted_frac_T_2 = {3'h0, io_float_in[2'h2][58:56]} << _shift_amount_T_2;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [4:0] _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:59]} - 5'h7;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35
+  wire       _GEN_6 = $signed(_adjusted_exp_T_7) > 5'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire       _GEN_7 = $signed(_adjusted_exp_T_7) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire       _is_denorm_T_6 = io_float_in[2'h3][62:59] == 4'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_7 = io_float_in[2'h3][58:56] == 3'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_3 = (&(io_float_in[2'h3][62:59])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_3 = (&(io_float_in[2'h3][62:59])) & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_3 =
+    (io_float_in[2'h3][58] ? 2'h0 : io_float_in[2'h3][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53, :94:44, :129:26
+  wire       _GEN_8 = _shift_amount_T_3 == 2'h0;	// src/main/scala/pvu/FloatConvert.scala:67:16, :94:44, :97:26
+  wire [5:0] _shifted_frac_T_3 = {3'h0, io_float_in[2'h3][58:56]} << _shift_amount_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [4:0] _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:59]} - 5'h7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35
+  wire       _GEN_9 = $signed(_adjusted_exp_T_10) > 5'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire       _GEN_10 = $signed(_adjusted_exp_T_10) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       ~is_zero_3
+         & (is_inf_3 | is_nan_3
+            | (is_denorm_3
+                 ? _GEN_8 & 1'h0 - _shift_amount_T_3[0]
+                 : _GEN_9 | ~_GEN_10 & _adjusted_exp_T_10[0])),
+       is_zero_3 | is_inf_3
+         ? 2'h0
+         : is_nan_3
+             ? 2'h2
+             : is_denorm_3
+                 ? (_GEN_8
+                      ? (_shifted_frac_T_3[0] & _shifted_frac_T_3[1]
+                           ? _shifted_frac_T_3[2:1] + 2'h1
+                           : _shifted_frac_T_3[2:1])
+                      : 2'h0)
+                 : _GEN_9 | _GEN_10
+                     ? 2'h0
+                     : io_float_in[2'h3][56] & io_float_in[2'h3][57]
+                         ? io_float_in[2'h3][58:57] + 2'h1
+                         : io_float_in[2'h3][58:57],
+       60'h0}},
+     {{io_float_in[2'h2][63],
+       ~is_zero_2
+         & (is_inf_2 | is_nan_2
+            | (is_denorm_2
+                 ? _GEN_5 & 1'h0 - _shift_amount_T_2[0]
+                 : _GEN_6 | ~_GEN_7 & _adjusted_exp_T_7[0])),
+       is_zero_2 | is_inf_2
+         ? 2'h0
+         : is_nan_2
+             ? 2'h2
+             : is_denorm_2
+                 ? (_GEN_5
+                      ? (_shifted_frac_T_2[0] & _shifted_frac_T_2[1]
+                           ? _shifted_frac_T_2[2:1] + 2'h1
+                           : _shifted_frac_T_2[2:1])
+                      : 2'h0)
+                 : _GEN_6 | _GEN_7
+                     ? 2'h0
+                     : io_float_in[2'h2][56] & io_float_in[2'h2][57]
+                         ? io_float_in[2'h2][58:57] + 2'h1
+                         : io_float_in[2'h2][58:57],
+       60'h0}},
+     {{io_float_in[2'h1][63],
+       ~is_zero_1
+         & (is_inf_1 | is_nan_1
+            | (is_denorm_1
+                 ? _GEN_2 & 1'h0 - _shift_amount_T_1[0]
+                 : _GEN_3 | ~_GEN_4 & _adjusted_exp_T_4[0])),
+       is_zero_1 | is_inf_1
+         ? 2'h0
+         : is_nan_1
+             ? 2'h2
+             : is_denorm_1
+                 ? (_GEN_2
+                      ? (_shifted_frac_T_1[0] & _shifted_frac_T_1[1]
+                           ? _shifted_frac_T_1[2:1] + 2'h1
+                           : _shifted_frac_T_1[2:1])
+                      : 2'h0)
+                 : _GEN_3 | _GEN_4
+                     ? 2'h0
+                     : io_float_in[2'h1][56] & io_float_in[2'h1][57]
+                         ? io_float_in[2'h1][58:57] + 2'h1
+                         : io_float_in[2'h1][58:57],
+       60'h0}},
+     {{io_float_in[2'h0][63],
+       ~is_zero
+         & (is_inf | is_nan
+            | (is_denorm
+                 ? _GEN & 1'h0 - _shift_amount_T[0]
+                 : _GEN_0 | ~_GEN_1 & _adjusted_exp_T_1[0])),
+       is_zero | is_inf
+         ? 2'h0
+         : is_nan
+             ? 2'h2
+             : is_denorm
+                 ? (_GEN
+                      ? (_shifted_frac_T[0] & _shifted_frac_T[1]
+                           ? _shifted_frac_T[2:1] + 2'h1
+                           : _shifted_frac_T[2:1])
+                      : 2'h0)
+                 : _GEN_0 | _GEN_1
+                     ? 2'h0
+                     : io_float_in[2'h0][56] & io_float_in[2'h0][57]
+                         ? io_float_in[2'h0][58:57] + 2'h1
+                         : io_float_in[2'h0][58:57],
+       60'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :50:32, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_6(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire       _is_denorm_T = io_float_in[2'h0][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire       _is_inf_T_1 = io_float_in[2'h0][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire       is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf = (&(io_float_in[2'h0][62:59])) & _is_inf_T_1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan = (&(io_float_in[2'h0][62:59])) & (|(io_float_in[2'h0][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm = _is_denorm_T & (|(io_float_in[2'h0][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T =
+    (io_float_in[2'h0][58] ? 2'h0 : io_float_in[2'h0][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T = {3'h0, io_float_in[2'h0][58:56]} << _shift_amount_T;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :94:44, :103:34
+  wire       _GEN = $signed({1'h0, io_float_in[2'h0][62:59]}) < 5'sh1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire       _is_denorm_T_2 = io_float_in[2'h1][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire       _is_inf_T_3 = io_float_in[2'h1][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire       is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_1 = (&(io_float_in[2'h1][62:59])) & _is_inf_T_3;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_1 = (&(io_float_in[2'h1][62:59])) & (|(io_float_in[2'h1][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_1 =
+    (io_float_in[2'h1][58] ? 2'h0 : io_float_in[2'h1][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_1 = {3'h0, io_float_in[2'h1][58:56]} << _shift_amount_T_1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :94:44, :103:34
+  wire       _GEN_0 = $signed({1'h0, io_float_in[2'h1][62:59]}) < 5'sh1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire       _is_denorm_T_4 = io_float_in[2'h2][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire       _is_inf_T_5 = io_float_in[2'h2][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire       is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_2 = (&(io_float_in[2'h2][62:59])) & _is_inf_T_5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_2 = (&(io_float_in[2'h2][62:59])) & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_2 =
+    (io_float_in[2'h2][58] ? 2'h0 : io_float_in[2'h2][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_2 = {3'h0, io_float_in[2'h2][58:56]} << _shift_amount_T_2;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :94:44, :103:34
+  wire       _GEN_1 = $signed({1'h0, io_float_in[2'h2][62:59]}) < 5'sh1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire       _is_denorm_T_6 = io_float_in[2'h3][62:59] == 4'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire       _is_inf_T_7 = io_float_in[2'h3][58:56] == 3'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire       is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_3 = (&(io_float_in[2'h3][62:59])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_3 = (&(io_float_in[2'h3][62:59])) & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_3 =
+    (io_float_in[2'h3][58] ? 2'h0 : io_float_in[2'h3][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_3 = {3'h0, io_float_in[2'h3][58:56]} << _shift_amount_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :94:44, :103:34
+  wire       _GEN_2 = $signed({1'h0, io_float_in[2'h3][62:59]}) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 4'h0
+         : is_inf_3 | is_nan_3
+             ? 4'hF
+             : is_denorm_3
+                 ? 4'h1 - {2'h0, _shift_amount_T_3}
+                 : (&(io_float_in[2'h3][62:59]))
+                     ? 4'hF
+                     : _GEN_2 ? 4'h0 : io_float_in[2'h3][62:59],
+       is_zero_3 | is_inf_3
+         ? 3'h0
+         : is_nan_3
+             ? 3'h4
+             : is_denorm_3
+                 ? _shifted_frac_T_3[2:0]
+                 : (&(io_float_in[2'h3][62:59])) | _GEN_2
+                     ? 3'h0
+                     : io_float_in[2'h3][58:56],
+       56'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 4'h0
+         : is_inf_2 | is_nan_2
+             ? 4'hF
+             : is_denorm_2
+                 ? 4'h1 - {2'h0, _shift_amount_T_2}
+                 : (&(io_float_in[2'h2][62:59]))
+                     ? 4'hF
+                     : _GEN_1 ? 4'h0 : io_float_in[2'h2][62:59],
+       is_zero_2 | is_inf_2
+         ? 3'h0
+         : is_nan_2
+             ? 3'h4
+             : is_denorm_2
+                 ? _shifted_frac_T_2[2:0]
+                 : (&(io_float_in[2'h2][62:59])) | _GEN_1
+                     ? 3'h0
+                     : io_float_in[2'h2][58:56],
+       56'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 4'h0
+         : is_inf_1 | is_nan_1
+             ? 4'hF
+             : is_denorm_1
+                 ? 4'h1 - {2'h0, _shift_amount_T_1}
+                 : (&(io_float_in[2'h1][62:59]))
+                     ? 4'hF
+                     : _GEN_0 ? 4'h0 : io_float_in[2'h1][62:59],
+       is_zero_1 | is_inf_1
+         ? 3'h0
+         : is_nan_1
+             ? 3'h4
+             : is_denorm_1
+                 ? _shifted_frac_T_1[2:0]
+                 : (&(io_float_in[2'h1][62:59])) | _GEN_0
+                     ? 3'h0
+                     : io_float_in[2'h1][58:56],
+       56'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 4'h0
+         : is_inf | is_nan
+             ? 4'hF
+             : is_denorm
+                 ? 4'h1 - {2'h0, _shift_amount_T}
+                 : (&(io_float_in[2'h0][62:59]))
+                     ? 4'hF
+                     : _GEN ? 4'h0 : io_float_in[2'h0][62:59],
+       is_zero | is_inf
+         ? 3'h0
+         : is_nan
+             ? 3'h4
+             : is_denorm
+                 ? _shifted_frac_T[2:0]
+                 : (&(io_float_in[2'h0][62:59])) | _GEN ? 3'h0 : io_float_in[2'h0][58:56],
+       56'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:{37,52}, :45:25, :46:24, :47:25, :53:33, :54:{23,57}, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :145:20, :161:44
+endmodule
+
+module FloatConvert_7(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire       _is_denorm_T = io_float_in[2'h0][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_1 = io_float_in[2'h0][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf = (&(io_float_in[2'h0][62:59])) & _is_inf_T_1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan = (&(io_float_in[2'h0][62:59])) & (|(io_float_in[2'h0][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm = _is_denorm_T & (|(io_float_in[2'h0][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T =
+    (io_float_in[2'h0][58] ? 2'h0 : io_float_in[2'h0][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T = {3'h0, io_float_in[2'h0][58:56]} << _shift_amount_T;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [4:0] _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:59]} + 5'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire       _GEN = $signed(_adjusted_exp_T_1) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire       _is_denorm_T_2 = io_float_in[2'h1][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_3 = io_float_in[2'h1][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_1 = (&(io_float_in[2'h1][62:59])) & _is_inf_T_3;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_1 = (&(io_float_in[2'h1][62:59])) & (|(io_float_in[2'h1][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_1 =
+    (io_float_in[2'h1][58] ? 2'h0 : io_float_in[2'h1][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_1 = {3'h0, io_float_in[2'h1][58:56]} << _shift_amount_T_1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [4:0] _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:59]} + 5'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire       _GEN_0 = $signed(_adjusted_exp_T_4) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire       _is_denorm_T_4 = io_float_in[2'h2][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_5 = io_float_in[2'h2][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_2 = (&(io_float_in[2'h2][62:59])) & _is_inf_T_5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_2 = (&(io_float_in[2'h2][62:59])) & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_2 =
+    (io_float_in[2'h2][58] ? 2'h0 : io_float_in[2'h2][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_2 = {3'h0, io_float_in[2'h2][58:56]} << _shift_amount_T_2;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [4:0] _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:59]} + 5'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire       _GEN_1 = $signed(_adjusted_exp_T_7) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire       _is_denorm_T_6 = io_float_in[2'h3][62:59] == 4'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_7 = io_float_in[2'h3][58:56] == 3'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_3 = (&(io_float_in[2'h3][62:59])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_3 = (&(io_float_in[2'h3][62:59])) & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_3 =
+    (io_float_in[2'h3][58] ? 2'h0 : io_float_in[2'h3][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_3 = {3'h0, io_float_in[2'h3][58:56]} << _shift_amount_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [4:0] _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:59]} + 5'h8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire       _GEN_2 = $signed(_adjusted_exp_T_10) < 5'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 5'h0
+         : is_inf_3 | is_nan_3
+             ? 5'h1F
+             : is_denorm_3
+                 ? 5'h9 - {3'h0, _shift_amount_T_3}
+                 : _GEN_2 ? 5'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 10'h0
+         : is_nan_3
+             ? 10'h200
+             : is_denorm_3
+                 ? {_shifted_frac_T_3[2:0], 7'h0}
+                 : _GEN_2 ? 10'h0 : {io_float_in[2'h3][58:56], 7'h0},
+       48'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 5'h0
+         : is_inf_2 | is_nan_2
+             ? 5'h1F
+             : is_denorm_2
+                 ? 5'h9 - {3'h0, _shift_amount_T_2}
+                 : _GEN_1 ? 5'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 10'h0
+         : is_nan_2
+             ? 10'h200
+             : is_denorm_2
+                 ? {_shifted_frac_T_2[2:0], 7'h0}
+                 : _GEN_1 ? 10'h0 : {io_float_in[2'h2][58:56], 7'h0},
+       48'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 5'h0
+         : is_inf_1 | is_nan_1
+             ? 5'h1F
+             : is_denorm_1
+                 ? 5'h9 - {3'h0, _shift_amount_T_1}
+                 : _GEN_0 ? 5'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 10'h0
+         : is_nan_1
+             ? 10'h200
+             : is_denorm_1
+                 ? {_shifted_frac_T_1[2:0], 7'h0}
+                 : _GEN_0 ? 10'h0 : {io_float_in[2'h1][58:56], 7'h0},
+       48'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 5'h0
+         : is_inf | is_nan
+             ? 5'h1F
+             : is_denorm
+                 ? 5'h9 - {3'h0, _shift_amount_T}
+                 : _GEN ? 5'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 10'h0
+         : is_nan
+             ? 10'h200
+             : is_denorm
+                 ? {_shifted_frac_T[2:0], 7'h0}
+                 : _GEN ? 10'h0 : {io_float_in[2'h0][58:56], 7'h0},
+       48'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:{33,42}, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:45, :99:46, :103:{34,48}, :110:26, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :161:44
+endmodule
+
+module FloatConvert_8(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire       _is_denorm_T = io_float_in[2'h0][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_1 = io_float_in[2'h0][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf = (&(io_float_in[2'h0][62:59])) & _is_inf_T_1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan = (&(io_float_in[2'h0][62:59])) & (|(io_float_in[2'h0][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm = _is_denorm_T & (|(io_float_in[2'h0][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T =
+    (io_float_in[2'h0][58] ? 2'h0 : io_float_in[2'h0][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T = {3'h0, io_float_in[2'h0][58:56]} << _shift_amount_T;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [7:0] _adjusted_exp_T_1 = {4'h0, io_float_in[2'h0][62:59]} + 8'h78;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :127:35
+  wire       _GEN = $signed(_adjusted_exp_T_1) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire       _is_denorm_T_2 = io_float_in[2'h1][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_3 = io_float_in[2'h1][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_1 = (&(io_float_in[2'h1][62:59])) & _is_inf_T_3;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_1 = (&(io_float_in[2'h1][62:59])) & (|(io_float_in[2'h1][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_1 =
+    (io_float_in[2'h1][58] ? 2'h0 : io_float_in[2'h1][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_1 = {3'h0, io_float_in[2'h1][58:56]} << _shift_amount_T_1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [7:0] _adjusted_exp_T_4 = {4'h0, io_float_in[2'h1][62:59]} + 8'h78;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :127:35
+  wire       _GEN_0 = $signed(_adjusted_exp_T_4) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire       _is_denorm_T_4 = io_float_in[2'h2][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_5 = io_float_in[2'h2][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_2 = (&(io_float_in[2'h2][62:59])) & _is_inf_T_5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_2 = (&(io_float_in[2'h2][62:59])) & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_2 =
+    (io_float_in[2'h2][58] ? 2'h0 : io_float_in[2'h2][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_2 = {3'h0, io_float_in[2'h2][58:56]} << _shift_amount_T_2;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [7:0] _adjusted_exp_T_7 = {4'h0, io_float_in[2'h2][62:59]} + 8'h78;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :127:35
+  wire       _GEN_1 = $signed(_adjusted_exp_T_7) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire       _is_denorm_T_6 = io_float_in[2'h3][62:59] == 4'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire       _is_inf_T_7 = io_float_in[2'h3][58:56] == 3'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire       is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire       is_inf_3 = (&(io_float_in[2'h3][62:59])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire       is_nan_3 = (&(io_float_in[2'h3][62:59])) & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire       is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0] _shift_amount_T_3 =
+    (io_float_in[2'h3][58] ? 2'h0 : io_float_in[2'h3][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0] _shifted_frac_T_3 = {3'h0, io_float_in[2'h3][58:56]} << _shift_amount_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [7:0] _adjusted_exp_T_10 = {4'h0, io_float_in[2'h3][62:59]} + 8'h78;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :127:35
+  wire       _GEN_2 = $signed(_adjusted_exp_T_10) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 8'h0
+         : is_inf_3 | is_nan_3
+             ? 8'hFF
+             : is_denorm_3
+                 ? 8'h79 - {6'h0, _shift_amount_T_3}
+                 : _GEN_2 ? 8'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 23'h0
+         : is_nan_3
+             ? 23'h400000
+             : is_denorm_3
+                 ? {_shifted_frac_T_3[2:0], 20'h0}
+                 : _GEN_2 ? 23'h0 : {io_float_in[2'h3][58:56], 20'h0},
+       32'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 8'h0
+         : is_inf_2 | is_nan_2
+             ? 8'hFF
+             : is_denorm_2
+                 ? 8'h79 - {6'h0, _shift_amount_T_2}
+                 : _GEN_1 ? 8'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 23'h0
+         : is_nan_2
+             ? 23'h400000
+             : is_denorm_2
+                 ? {_shifted_frac_T_2[2:0], 20'h0}
+                 : _GEN_1 ? 23'h0 : {io_float_in[2'h2][58:56], 20'h0},
+       32'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 8'h0
+         : is_inf_1 | is_nan_1
+             ? 8'hFF
+             : is_denorm_1
+                 ? 8'h79 - {6'h0, _shift_amount_T_1}
+                 : _GEN_0 ? 8'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 23'h0
+         : is_nan_1
+             ? 23'h400000
+             : is_denorm_1
+                 ? {_shifted_frac_T_1[2:0], 20'h0}
+                 : _GEN_0 ? 23'h0 : {io_float_in[2'h1][58:56], 20'h0},
+       32'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 8'h0
+         : is_inf | is_nan
+             ? 8'hFF
+             : is_denorm
+                 ? 8'h79 - {6'h0, _shift_amount_T}
+                 : _GEN ? 8'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 23'h0
+         : is_nan
+             ? 23'h400000
+             : is_denorm
+                 ? {_shifted_frac_T[2:0], 20'h0}
+                 : _GEN ? 23'h0 : {io_float_in[2'h0][58:56], 20'h0},
+       32'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:45, :99:46, :103:{34,48}, :110:26, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :161:44
+endmodule
+
+module FloatConvert_9(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_1 = io_float_in[2'h0][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:59])) & _is_inf_T_1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:59])) & (|(io_float_in[2'h0][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]  _shift_amount_T =
+    (io_float_in[2'h0][58] ? 2'h0 : io_float_in[2'h0][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0]  _shifted_frac_T = {3'h0, io_float_in[2'h0][58:56]} << _shift_amount_T;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [10:0] _adjusted_exp_T_1 = {7'h0, io_float_in[2'h0][62:59]} + 11'h3F8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN = $signed(_adjusted_exp_T_1) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_3 = io_float_in[2'h1][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:59])) & _is_inf_T_3;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:59])) & (|(io_float_in[2'h1][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][58] ? 2'h0 : io_float_in[2'h1][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0]  _shifted_frac_T_1 = {3'h0, io_float_in[2'h1][58:56]} << _shift_amount_T_1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [10:0] _adjusted_exp_T_4 = {7'h0, io_float_in[2'h1][62:59]} + 11'h3F8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_0 = $signed(_adjusted_exp_T_4) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:59] == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][58:56] == 3'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:59])) & _is_inf_T_5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:59])) & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][58:56]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][58] ? 2'h0 : io_float_in[2'h2][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0]  _shifted_frac_T_2 = {3'h0, io_float_in[2'h2][58:56]} << _shift_amount_T_2;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [10:0] _adjusted_exp_T_7 = {7'h0, io_float_in[2'h2][62:59]} + 11'h3F8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_1 = $signed(_adjusted_exp_T_7) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:59] == 4'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][58:56] == 3'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:59])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:59])) & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][58:56]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [1:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][58] ? 2'h0 : io_float_in[2'h3][57] ? 2'h1 : 2'h2) + 2'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [5:0]  _shifted_frac_T_3 = {3'h0, io_float_in[2'h3][58:56]} << _shift_amount_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :94:44, :103:34
+  wire [10:0] _adjusted_exp_T_10 = {7'h0, io_float_in[2'h3][62:59]} + 11'h3F8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_2 = $signed(_adjusted_exp_T_10) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 11'h0
+         : is_inf_3 | is_nan_3
+             ? 11'h7FF
+             : is_denorm_3
+                 ? 11'h3F9 - {9'h0, _shift_amount_T_3}
+                 : _GEN_2 ? 11'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 52'h0
+         : is_nan_3
+             ? 52'h8000000000000
+             : is_denorm_3
+                 ? {_shifted_frac_T_3[2:0], 49'h0}
+                 : _GEN_2 ? 52'h0 : {io_float_in[2'h3][58:56], 49'h0}}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 11'h0
+         : is_inf_2 | is_nan_2
+             ? 11'h7FF
+             : is_denorm_2
+                 ? 11'h3F9 - {9'h0, _shift_amount_T_2}
+                 : _GEN_1 ? 11'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 52'h0
+         : is_nan_2
+             ? 52'h8000000000000
+             : is_denorm_2
+                 ? {_shifted_frac_T_2[2:0], 49'h0}
+                 : _GEN_1 ? 52'h0 : {io_float_in[2'h2][58:56], 49'h0}}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 11'h0
+         : is_inf_1 | is_nan_1
+             ? 11'h7FF
+             : is_denorm_1
+                 ? 11'h3F9 - {9'h0, _shift_amount_T_1}
+                 : _GEN_0 ? 11'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 52'h0
+         : is_nan_1
+             ? 52'h8000000000000
+             : is_denorm_1
+                 ? {_shifted_frac_T_1[2:0], 49'h0}
+                 : _GEN_0 ? 52'h0 : {io_float_in[2'h1][58:56], 49'h0}}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 11'h0
+         : is_inf | is_nan
+             ? 11'h7FF
+             : is_denorm
+                 ? 11'h3F9 - {9'h0, _shift_amount_T}
+                 : _GEN ? 11'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 52'h0
+         : is_nan
+             ? 52'h8000000000000
+             : is_denorm
+                 ? {_shifted_frac_T[2:0], 49'h0}
+                 : _GEN ? 52'h0 : {io_float_in[2'h0][58:56], 49'h0}}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:45, :99:46, :103:{34,48}, :110:26, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :157:24
+endmodule
+
+module FloatConvert_10(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :67:16
+  wire        _is_inf_T_1 = io_float_in[2'h0][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:58])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}, :67:16
+  wire        is_nan = (&(io_float_in[2'h0][62:58])) & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}, :67:16
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35, :67:16
+  wire [3:0]  _shift_amount_T =
+    (io_float_in[2'h0][57]
+       ? 4'h0
+       : io_float_in[2'h0][56]
+           ? 4'h1
+           : io_float_in[2'h0][55]
+               ? 4'h2
+               : io_float_in[2'h0][54]
+                   ? 4'h3
+                   : io_float_in[2'h0][53]
+                       ? 4'h4
+                       : io_float_in[2'h0][52]
+                           ? 4'h5
+                           : io_float_in[2'h0][51]
+                               ? 4'h6
+                               : io_float_in[2'h0][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h0][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53, :94:44
+  wire        _GEN = _shift_amount_T == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T =
+    {15'h0, io_float_in[2'h0][57:48]}
+    << (_shift_amount_T > 4'hA ? 4'hA : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :94:44, :102:{29,43}, :103:34
+  wire [5:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:58]} - 6'hF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :67:16, :127:35
+  wire        _GEN_0 = $signed(_adjusted_exp_T_1) > 6'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _GEN_1 = $signed(_adjusted_exp_T_1) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :129:26
+  wire        _is_inf_T_3 = io_float_in[2'h1][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :129:26
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:58])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}, :129:26
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:58])) & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}, :129:26
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35, :129:26
+  wire [3:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][57]
+       ? 4'h0
+       : io_float_in[2'h1][56]
+           ? 4'h1
+           : io_float_in[2'h1][55]
+               ? 4'h2
+               : io_float_in[2'h1][54]
+                   ? 4'h3
+                   : io_float_in[2'h1][53]
+                       ? 4'h4
+                       : io_float_in[2'h1][52]
+                           ? 4'h5
+                           : io_float_in[2'h1][51]
+                               ? 4'h6
+                               : io_float_in[2'h1][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h1][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire        _GEN_2 = _shift_amount_T_1 == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_1 =
+    {15'h0, io_float_in[2'h1][57:48]}
+    << (_shift_amount_T_1 > 4'hA ? 4'hA : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34, :129:26
+  wire [5:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:58]} - 6'hF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35, :129:26
+  wire        _GEN_3 = $signed(_adjusted_exp_T_4) > 6'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _GEN_4 = $signed(_adjusted_exp_T_4) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:58] == 5'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][57:48] == 10'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:58])) & _is_inf_T_5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:58])) & (|(io_float_in[2'h2][57:48]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][57:48]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][57]
+       ? 4'h0
+       : io_float_in[2'h2][56]
+           ? 4'h1
+           : io_float_in[2'h2][55]
+               ? 4'h2
+               : io_float_in[2'h2][54]
+                   ? 4'h3
+                   : io_float_in[2'h2][53]
+                       ? 4'h4
+                       : io_float_in[2'h2][52]
+                           ? 4'h5
+                           : io_float_in[2'h2][51]
+                               ? 4'h6
+                               : io_float_in[2'h2][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h2][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_5 = _shift_amount_T_2 == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_2 =
+    {15'h0, io_float_in[2'h2][57:48]}
+    << (_shift_amount_T_2 > 4'hA ? 4'hA : _shift_amount_T_2);	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [5:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:58]} - 6'hF;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35
+  wire        _GEN_6 = $signed(_adjusted_exp_T_7) > 6'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _GEN_7 = $signed(_adjusted_exp_T_7) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:58])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:58])) & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][57]
+       ? 4'h0
+       : io_float_in[2'h3][56]
+           ? 4'h1
+           : io_float_in[2'h3][55]
+               ? 4'h2
+               : io_float_in[2'h3][54]
+                   ? 4'h3
+                   : io_float_in[2'h3][53]
+                       ? 4'h4
+                       : io_float_in[2'h3][52]
+                           ? 4'h5
+                           : io_float_in[2'h3][51]
+                               ? 4'h6
+                               : io_float_in[2'h3][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h3][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_8 = _shift_amount_T_3 == 4'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_3 =
+    {15'h0, io_float_in[2'h3][57:48]}
+    << (_shift_amount_T_3 > 4'hA ? 4'hA : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [5:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:58]} - 6'hF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35
+  wire        _GEN_9 = $signed(_adjusted_exp_T_10) > 6'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _GEN_10 = $signed(_adjusted_exp_T_10) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       ~is_zero_3
+         & (is_inf_3 | is_nan_3
+            | (is_denorm_3
+                 ? _GEN_8 & 1'h0 - _shift_amount_T_3[0]
+                 : _GEN_9 | ~_GEN_10 & _adjusted_exp_T_10[0])),
+       is_zero_3 | is_inf_3
+         ? 2'h0
+         : is_nan_3
+             ? 2'h2
+             : is_denorm_3
+                 ? (_GEN_8
+                      ? ((|(_shifted_frac_T_3[7:0])) & _shifted_frac_T_3[8]
+                           ? _shifted_frac_T_3[9:8] + 2'h1
+                           : _shifted_frac_T_3[9:8])
+                      : 2'h0)
+                 : _GEN_9 | _GEN_10
+                     ? 2'h0
+                     : (|(io_float_in[2'h3][55:48])) & io_float_in[2'h3][56]
+                         ? io_float_in[2'h3][57:56] + 2'h1
+                         : io_float_in[2'h3][57:56],
+       60'h0}},
+     {{io_float_in[2'h2][63],
+       ~is_zero_2
+         & (is_inf_2 | is_nan_2
+            | (is_denorm_2
+                 ? _GEN_5 & 1'h0 - _shift_amount_T_2[0]
+                 : _GEN_6 | ~_GEN_7 & _adjusted_exp_T_7[0])),
+       is_zero_2 | is_inf_2
+         ? 2'h0
+         : is_nan_2
+             ? 2'h2
+             : is_denorm_2
+                 ? (_GEN_5
+                      ? ((|(_shifted_frac_T_2[7:0])) & _shifted_frac_T_2[8]
+                           ? _shifted_frac_T_2[9:8] + 2'h1
+                           : _shifted_frac_T_2[9:8])
+                      : 2'h0)
+                 : _GEN_6 | _GEN_7
+                     ? 2'h0
+                     : (|(io_float_in[2'h2][55:48])) & io_float_in[2'h2][56]
+                         ? io_float_in[2'h2][57:56] + 2'h1
+                         : io_float_in[2'h2][57:56],
+       60'h0}},
+     {{io_float_in[2'h1][63],
+       ~is_zero_1
+         & (is_inf_1 | is_nan_1
+            | (is_denorm_1
+                 ? _GEN_2 & 1'h0 - _shift_amount_T_1[0]
+                 : _GEN_3 | ~_GEN_4 & _adjusted_exp_T_4[0])),
+       is_zero_1 | is_inf_1
+         ? 2'h0
+         : is_nan_1
+             ? 2'h2
+             : is_denorm_1
+                 ? (_GEN_2
+                      ? ((|(_shifted_frac_T_1[7:0])) & _shifted_frac_T_1[8]
+                           ? _shifted_frac_T_1[9:8] + 2'h1
+                           : _shifted_frac_T_1[9:8])
+                      : 2'h0)
+                 : _GEN_3 | _GEN_4
+                     ? 2'h0
+                     : (|(io_float_in[2'h1][55:48])) & io_float_in[2'h1][56]
+                         ? io_float_in[2'h1][57:56] + 2'h1
+                         : io_float_in[2'h1][57:56],
+       60'h0}},
+     {{io_float_in[2'h0][63],
+       ~is_zero
+         & (is_inf | is_nan
+            | (is_denorm
+                 ? _GEN & 1'h0 - _shift_amount_T[0]
+                 : _GEN_0 | ~_GEN_1 & _adjusted_exp_T_1[0])),
+       is_zero | is_inf
+         ? 2'h0
+         : is_nan
+             ? 2'h2
+             : is_denorm
+                 ? (_GEN
+                      ? ((|(_shifted_frac_T[7:0])) & _shifted_frac_T[8]
+                           ? _shifted_frac_T[9:8] + 2'h1
+                           : _shifted_frac_T[9:8])
+                      : 2'h0)
+                 : _GEN_0 | _GEN_1
+                     ? 2'h0
+                     : (|(io_float_in[2'h0][55:48])) & io_float_in[2'h0][56]
+                         ? io_float_in[2'h0][57:56] + 2'h1
+                         : io_float_in[2'h0][57:56],
+       60'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :50:32, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_11(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_1 = io_float_in[2'h0][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:58])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:58])) & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T =
+    (io_float_in[2'h0][57]
+       ? 4'h0
+       : io_float_in[2'h0][56]
+           ? 4'h1
+           : io_float_in[2'h0][55]
+               ? 4'h2
+               : io_float_in[2'h0][54]
+                   ? 4'h3
+                   : io_float_in[2'h0][53]
+                       ? 4'h4
+                       : io_float_in[2'h0][52]
+                           ? 4'h5
+                           : io_float_in[2'h0][51]
+                               ? 4'h6
+                               : io_float_in[2'h0][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h0][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :66:15, :91:53, :94:44
+  wire        _GEN = _shift_amount_T < 4'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T =
+    {15'h0, io_float_in[2'h0][57:48]}
+    << (_shift_amount_T > 4'hA ? 4'hA : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [5:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:58]} - 6'h8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_0 = $signed(_adjusted_exp_T_1) > 6'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_1 = $signed(_adjusted_exp_T_1) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_3 = io_float_in[2'h1][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:58])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:58])) & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][57]
+       ? 4'h0
+       : io_float_in[2'h1][56]
+           ? 4'h1
+           : io_float_in[2'h1][55]
+               ? 4'h2
+               : io_float_in[2'h1][54]
+                   ? 4'h3
+                   : io_float_in[2'h1][53]
+                       ? 4'h4
+                       : io_float_in[2'h1][52]
+                           ? 4'h5
+                           : io_float_in[2'h1][51]
+                               ? 4'h6
+                               : io_float_in[2'h1][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h1][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :66:15, :91:53, :94:44
+  wire        _GEN_2 = _shift_amount_T_1 < 4'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_1 =
+    {15'h0, io_float_in[2'h1][57:48]}
+    << (_shift_amount_T_1 > 4'hA ? 4'hA : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [5:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:58]} - 6'h8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_3 = $signed(_adjusted_exp_T_4) > 6'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_4 = $signed(_adjusted_exp_T_4) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:58])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:58])) & (|(io_float_in[2'h2][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][57]
+       ? 4'h0
+       : io_float_in[2'h2][56]
+           ? 4'h1
+           : io_float_in[2'h2][55]
+               ? 4'h2
+               : io_float_in[2'h2][54]
+                   ? 4'h3
+                   : io_float_in[2'h2][53]
+                       ? 4'h4
+                       : io_float_in[2'h2][52]
+                           ? 4'h5
+                           : io_float_in[2'h2][51]
+                               ? 4'h6
+                               : io_float_in[2'h2][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h2][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :66:15, :91:53, :94:44
+  wire        _GEN_5 = _shift_amount_T_2 < 4'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_2 =
+    {15'h0, io_float_in[2'h2][57:48]}
+    << (_shift_amount_T_2 > 4'hA ? 4'hA : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [5:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:58]} - 6'h8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_6 = $signed(_adjusted_exp_T_7) > 6'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_7 = $signed(_adjusted_exp_T_7) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:58])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:58])) & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][57]
+       ? 4'h0
+       : io_float_in[2'h3][56]
+           ? 4'h1
+           : io_float_in[2'h3][55]
+               ? 4'h2
+               : io_float_in[2'h3][54]
+                   ? 4'h3
+                   : io_float_in[2'h3][53]
+                       ? 4'h4
+                       : io_float_in[2'h3][52]
+                           ? 4'h5
+                           : io_float_in[2'h3][51]
+                               ? 4'h6
+                               : io_float_in[2'h3][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h3][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :66:15, :91:53, :94:44
+  wire        _GEN_8 = _shift_amount_T_3 < 4'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_3 =
+    {15'h0, io_float_in[2'h3][57:48]}
+    << (_shift_amount_T_3 > 4'hA ? 4'hA : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [5:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:58]} - 6'h8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_9 = $signed(_adjusted_exp_T_10) > 6'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_10 = $signed(_adjusted_exp_T_10) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 4'h0
+         : is_inf_3 | is_nan_3
+             ? 4'hF
+             : is_denorm_3
+                 ? (_GEN_8 ? 4'h9 - _shift_amount_T_3 : 4'h0)
+                 : _GEN_9 ? 4'hF : _GEN_10 ? 4'h0 : _adjusted_exp_T_10[3:0],
+       is_zero_3 | is_inf_3
+         ? 3'h0
+         : is_nan_3
+             ? 3'h4
+             : is_denorm_3
+                 ? (_GEN_8
+                      ? ((|(_shifted_frac_T_3[6:0])) & _shifted_frac_T_3[7]
+                           ? _shifted_frac_T_3[9:7] + 3'h1
+                           : _shifted_frac_T_3[9:7])
+                      : 3'h0)
+                 : _GEN_9 | _GEN_10
+                     ? 3'h0
+                     : (|(io_float_in[2'h3][54:48])) & io_float_in[2'h3][55]
+                         ? io_float_in[2'h3][57:55] + 3'h1
+                         : io_float_in[2'h3][57:55],
+       56'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 4'h0
+         : is_inf_2 | is_nan_2
+             ? 4'hF
+             : is_denorm_2
+                 ? (_GEN_5 ? 4'h9 - _shift_amount_T_2 : 4'h0)
+                 : _GEN_6 ? 4'hF : _GEN_7 ? 4'h0 : _adjusted_exp_T_7[3:0],
+       is_zero_2 | is_inf_2
+         ? 3'h0
+         : is_nan_2
+             ? 3'h4
+             : is_denorm_2
+                 ? (_GEN_5
+                      ? ((|(_shifted_frac_T_2[6:0])) & _shifted_frac_T_2[7]
+                           ? _shifted_frac_T_2[9:7] + 3'h1
+                           : _shifted_frac_T_2[9:7])
+                      : 3'h0)
+                 : _GEN_6 | _GEN_7
+                     ? 3'h0
+                     : (|(io_float_in[2'h2][54:48])) & io_float_in[2'h2][55]
+                         ? io_float_in[2'h2][57:55] + 3'h1
+                         : io_float_in[2'h2][57:55],
+       56'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 4'h0
+         : is_inf_1 | is_nan_1
+             ? 4'hF
+             : is_denorm_1
+                 ? (_GEN_2 ? 4'h9 - _shift_amount_T_1 : 4'h0)
+                 : _GEN_3 ? 4'hF : _GEN_4 ? 4'h0 : _adjusted_exp_T_4[3:0],
+       is_zero_1 | is_inf_1
+         ? 3'h0
+         : is_nan_1
+             ? 3'h4
+             : is_denorm_1
+                 ? (_GEN_2
+                      ? ((|(_shifted_frac_T_1[6:0])) & _shifted_frac_T_1[7]
+                           ? _shifted_frac_T_1[9:7] + 3'h1
+                           : _shifted_frac_T_1[9:7])
+                      : 3'h0)
+                 : _GEN_3 | _GEN_4
+                     ? 3'h0
+                     : (|(io_float_in[2'h1][54:48])) & io_float_in[2'h1][55]
+                         ? io_float_in[2'h1][57:55] + 3'h1
+                         : io_float_in[2'h1][57:55],
+       56'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 4'h0
+         : is_inf | is_nan
+             ? 4'hF
+             : is_denorm
+                 ? (_GEN ? 4'h9 - _shift_amount_T : 4'h0)
+                 : _GEN_0 ? 4'hF : _GEN_1 ? 4'h0 : _adjusted_exp_T_1[3:0],
+       is_zero | is_inf
+         ? 3'h0
+         : is_nan
+             ? 3'h4
+             : is_denorm
+                 ? (_GEN
+                      ? ((|(_shifted_frac_T[6:0])) & _shifted_frac_T[7]
+                           ? _shifted_frac_T[9:7] + 3'h1
+                           : _shifted_frac_T[9:7])
+                      : 3'h0)
+                 : _GEN_0 | _GEN_1
+                     ? 3'h0
+                     : (|(io_float_in[2'h0][54:48])) & io_float_in[2'h0][55]
+                         ? io_float_in[2'h0][57:55] + 3'h1
+                         : io_float_in[2'h0][57:55],
+       56'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_12(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire        _is_inf_T_1 = io_float_in[2'h0][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:58])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:58])) & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T =
+    (io_float_in[2'h0][57]
+       ? 4'h0
+       : io_float_in[2'h0][56]
+           ? 4'h1
+           : io_float_in[2'h0][55]
+               ? 4'h2
+               : io_float_in[2'h0][54]
+                   ? 4'h3
+                   : io_float_in[2'h0][53]
+                       ? 4'h4
+                       : io_float_in[2'h0][52]
+                           ? 4'h5
+                           : io_float_in[2'h0][51]
+                               ? 4'h6
+                               : io_float_in[2'h0][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h0][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN = _shift_amount_T < 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T =
+    {15'h0, io_float_in[2'h0][57:48]}
+    << (_shift_amount_T > 4'hA ? 4'hA : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire        _GEN_0 = $signed({1'h0, io_float_in[2'h0][62:58]}) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire        _is_inf_T_3 = io_float_in[2'h1][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:58])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:58])) & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][57]
+       ? 4'h0
+       : io_float_in[2'h1][56]
+           ? 4'h1
+           : io_float_in[2'h1][55]
+               ? 4'h2
+               : io_float_in[2'h1][54]
+                   ? 4'h3
+                   : io_float_in[2'h1][53]
+                       ? 4'h4
+                       : io_float_in[2'h1][52]
+                           ? 4'h5
+                           : io_float_in[2'h1][51]
+                               ? 4'h6
+                               : io_float_in[2'h1][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h1][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_1 = _shift_amount_T_1 < 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_1 =
+    {15'h0, io_float_in[2'h1][57:48]}
+    << (_shift_amount_T_1 > 4'hA ? 4'hA : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire        _GEN_2 = $signed({1'h0, io_float_in[2'h1][62:58]}) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire        _is_inf_T_5 = io_float_in[2'h2][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:58])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:58])) & (|(io_float_in[2'h2][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][57]
+       ? 4'h0
+       : io_float_in[2'h2][56]
+           ? 4'h1
+           : io_float_in[2'h2][55]
+               ? 4'h2
+               : io_float_in[2'h2][54]
+                   ? 4'h3
+                   : io_float_in[2'h2][53]
+                       ? 4'h4
+                       : io_float_in[2'h2][52]
+                           ? 4'h5
+                           : io_float_in[2'h2][51]
+                               ? 4'h6
+                               : io_float_in[2'h2][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h2][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_3 = _shift_amount_T_2 < 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_2 =
+    {15'h0, io_float_in[2'h2][57:48]}
+    << (_shift_amount_T_2 > 4'hA ? 4'hA : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire        _GEN_4 = $signed({1'h0, io_float_in[2'h2][62:58]}) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire        _is_inf_T_7 = io_float_in[2'h3][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:58])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:58])) & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][57]
+       ? 4'h0
+       : io_float_in[2'h3][56]
+           ? 4'h1
+           : io_float_in[2'h3][55]
+               ? 4'h2
+               : io_float_in[2'h3][54]
+                   ? 4'h3
+                   : io_float_in[2'h3][53]
+                       ? 4'h4
+                       : io_float_in[2'h3][52]
+                           ? 4'h5
+                           : io_float_in[2'h3][51]
+                               ? 4'h6
+                               : io_float_in[2'h3][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h3][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_5 = _shift_amount_T_3 < 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_3 =
+    {15'h0, io_float_in[2'h3][57:48]}
+    << (_shift_amount_T_3 > 4'hA ? 4'hA : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire        _GEN_6 = $signed({1'h0, io_float_in[2'h3][62:58]}) < 6'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 5'h0
+         : is_inf_3 | is_nan_3
+             ? 5'h1F
+             : is_denorm_3
+                 ? (_GEN_5 ? 5'h1 - {1'h0, _shift_amount_T_3} : 5'h0)
+                 : (&(io_float_in[2'h3][62:58]))
+                     ? 5'h1F
+                     : _GEN_6 ? 5'h0 : io_float_in[2'h3][62:58],
+       is_zero_3 | is_inf_3
+         ? 10'h0
+         : is_nan_3
+             ? 10'h200
+             : is_denorm_3
+                 ? (_GEN_5 ? _shifted_frac_T_3[9:0] : 10'h0)
+                 : (&(io_float_in[2'h3][62:58])) | _GEN_6
+                     ? 10'h0
+                     : io_float_in[2'h3][57:48],
+       48'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 5'h0
+         : is_inf_2 | is_nan_2
+             ? 5'h1F
+             : is_denorm_2
+                 ? (_GEN_3 ? 5'h1 - {1'h0, _shift_amount_T_2} : 5'h0)
+                 : (&(io_float_in[2'h2][62:58]))
+                     ? 5'h1F
+                     : _GEN_4 ? 5'h0 : io_float_in[2'h2][62:58],
+       is_zero_2 | is_inf_2
+         ? 10'h0
+         : is_nan_2
+             ? 10'h200
+             : is_denorm_2
+                 ? (_GEN_3 ? _shifted_frac_T_2[9:0] : 10'h0)
+                 : (&(io_float_in[2'h2][62:58])) | _GEN_4
+                     ? 10'h0
+                     : io_float_in[2'h2][57:48],
+       48'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 5'h0
+         : is_inf_1 | is_nan_1
+             ? 5'h1F
+             : is_denorm_1
+                 ? (_GEN_1 ? 5'h1 - {1'h0, _shift_amount_T_1} : 5'h0)
+                 : (&(io_float_in[2'h1][62:58]))
+                     ? 5'h1F
+                     : _GEN_2 ? 5'h0 : io_float_in[2'h1][62:58],
+       is_zero_1 | is_inf_1
+         ? 10'h0
+         : is_nan_1
+             ? 10'h200
+             : is_denorm_1
+                 ? (_GEN_1 ? _shifted_frac_T_1[9:0] : 10'h0)
+                 : (&(io_float_in[2'h1][62:58])) | _GEN_2
+                     ? 10'h0
+                     : io_float_in[2'h1][57:48],
+       48'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 5'h0
+         : is_inf | is_nan
+             ? 5'h1F
+             : is_denorm
+                 ? (_GEN ? 5'h1 - {1'h0, _shift_amount_T} : 5'h0)
+                 : (&(io_float_in[2'h0][62:58]))
+                     ? 5'h1F
+                     : _GEN_0 ? 5'h0 : io_float_in[2'h0][62:58],
+       is_zero | is_inf
+         ? 10'h0
+         : is_nan
+             ? 10'h200
+             : is_denorm
+                 ? (_GEN ? _shifted_frac_T[9:0] : 10'h0)
+                 : (&(io_float_in[2'h0][62:58])) | _GEN_0
+                     ? 10'h0
+                     : io_float_in[2'h0][57:48],
+       48'h0}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:{37,52}, :45:25, :46:24, :47:25, :53:33, :54:{23,57}, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :110:20, :120:17, :121:18, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :145:20, :161:44
+endmodule
+
+module FloatConvert_13(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_1 = io_float_in[2'h0][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:58])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:58])) & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T =
+    (io_float_in[2'h0][57]
+       ? 4'h0
+       : io_float_in[2'h0][56]
+           ? 4'h1
+           : io_float_in[2'h0][55]
+               ? 4'h2
+               : io_float_in[2'h0][54]
+                   ? 4'h3
+                   : io_float_in[2'h0][53]
+                       ? 4'h4
+                       : io_float_in[2'h0][52]
+                           ? 4'h5
+                           : io_float_in[2'h0][51]
+                               ? 4'h6
+                               : io_float_in[2'h0][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h0][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [24:0] _shifted_frac_T =
+    {15'h0, io_float_in[2'h0][57:48]}
+    << (_shift_amount_T > 4'hA ? 4'hA : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [7:0]  _adjusted_exp_T_1 = {3'h0, io_float_in[2'h0][62:58]} + 8'h70;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN = $signed(_adjusted_exp_T_1) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_3 = io_float_in[2'h1][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:58])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:58])) & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][57]
+       ? 4'h0
+       : io_float_in[2'h1][56]
+           ? 4'h1
+           : io_float_in[2'h1][55]
+               ? 4'h2
+               : io_float_in[2'h1][54]
+                   ? 4'h3
+                   : io_float_in[2'h1][53]
+                       ? 4'h4
+                       : io_float_in[2'h1][52]
+                           ? 4'h5
+                           : io_float_in[2'h1][51]
+                               ? 4'h6
+                               : io_float_in[2'h1][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h1][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [24:0] _shifted_frac_T_1 =
+    {15'h0, io_float_in[2'h1][57:48]}
+    << (_shift_amount_T_1 > 4'hA ? 4'hA : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [7:0]  _adjusted_exp_T_4 = {3'h0, io_float_in[2'h1][62:58]} + 8'h70;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_0 = $signed(_adjusted_exp_T_4) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:58])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:58])) & (|(io_float_in[2'h2][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][57]
+       ? 4'h0
+       : io_float_in[2'h2][56]
+           ? 4'h1
+           : io_float_in[2'h2][55]
+               ? 4'h2
+               : io_float_in[2'h2][54]
+                   ? 4'h3
+                   : io_float_in[2'h2][53]
+                       ? 4'h4
+                       : io_float_in[2'h2][52]
+                           ? 4'h5
+                           : io_float_in[2'h2][51]
+                               ? 4'h6
+                               : io_float_in[2'h2][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h2][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [24:0] _shifted_frac_T_2 =
+    {15'h0, io_float_in[2'h2][57:48]}
+    << (_shift_amount_T_2 > 4'hA ? 4'hA : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [7:0]  _adjusted_exp_T_7 = {3'h0, io_float_in[2'h2][62:58]} + 8'h70;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_1 = $signed(_adjusted_exp_T_7) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:58])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:58])) & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][57]
+       ? 4'h0
+       : io_float_in[2'h3][56]
+           ? 4'h1
+           : io_float_in[2'h3][55]
+               ? 4'h2
+               : io_float_in[2'h3][54]
+                   ? 4'h3
+                   : io_float_in[2'h3][53]
+                       ? 4'h4
+                       : io_float_in[2'h3][52]
+                           ? 4'h5
+                           : io_float_in[2'h3][51]
+                               ? 4'h6
+                               : io_float_in[2'h3][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h3][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire [24:0] _shifted_frac_T_3 =
+    {15'h0, io_float_in[2'h3][57:48]}
+    << (_shift_amount_T_3 > 4'hA ? 4'hA : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [7:0]  _adjusted_exp_T_10 = {3'h0, io_float_in[2'h3][62:58]} + 8'h70;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_2 = $signed(_adjusted_exp_T_10) < 8'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 8'h0
+         : is_inf_3 | is_nan_3
+             ? 8'hFF
+             : is_denorm_3
+                 ? (_shift_amount_T_3[3] ? 8'h0 : 8'h71 - {4'h0, _shift_amount_T_3})
+                 : _GEN_2 ? 8'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 23'h0
+         : is_nan_3
+             ? 23'h400000
+             : is_denorm_3
+                 ? (_shift_amount_T_3[3] ? 23'h0 : {_shifted_frac_T_3[9:0], 13'h0})
+                 : _GEN_2 ? 23'h0 : {io_float_in[2'h3][57:48], 13'h0},
+       32'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 8'h0
+         : is_inf_2 | is_nan_2
+             ? 8'hFF
+             : is_denorm_2
+                 ? (_shift_amount_T_2[3] ? 8'h0 : 8'h71 - {4'h0, _shift_amount_T_2})
+                 : _GEN_1 ? 8'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 23'h0
+         : is_nan_2
+             ? 23'h400000
+             : is_denorm_2
+                 ? (_shift_amount_T_2[3] ? 23'h0 : {_shifted_frac_T_2[9:0], 13'h0})
+                 : _GEN_1 ? 23'h0 : {io_float_in[2'h2][57:48], 13'h0},
+       32'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 8'h0
+         : is_inf_1 | is_nan_1
+             ? 8'hFF
+             : is_denorm_1
+                 ? (_shift_amount_T_1[3] ? 8'h0 : 8'h71 - {4'h0, _shift_amount_T_1})
+                 : _GEN_0 ? 8'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 23'h0
+         : is_nan_1
+             ? 23'h400000
+             : is_denorm_1
+                 ? (_shift_amount_T_1[3] ? 23'h0 : {_shifted_frac_T_1[9:0], 13'h0})
+                 : _GEN_0 ? 23'h0 : {io_float_in[2'h1][57:48], 13'h0},
+       32'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 8'h0
+         : is_inf | is_nan
+             ? 8'hFF
+             : is_denorm
+                 ? (_shift_amount_T[3] ? 8'h0 : 8'h71 - {4'h0, _shift_amount_T})
+                 : _GEN ? 8'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 23'h0
+         : is_nan
+             ? 23'h400000
+             : is_denorm
+                 ? (_shift_amount_T[3] ? 23'h0 : {_shifted_frac_T[9:0], 13'h0})
+                 : _GEN ? 23'h0 : {io_float_in[2'h0][57:48], 13'h0},
+       32'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :110:{20,26}, :120:17, :121:18, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :161:44
+endmodule
+
+module FloatConvert_14(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_1 = io_float_in[2'h0][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:58])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:58])) & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T =
+    (io_float_in[2'h0][57]
+       ? 4'h0
+       : io_float_in[2'h0][56]
+           ? 4'h1
+           : io_float_in[2'h0][55]
+               ? 4'h2
+               : io_float_in[2'h0][54]
+                   ? 4'h3
+                   : io_float_in[2'h0][53]
+                       ? 4'h4
+                       : io_float_in[2'h0][52]
+                           ? 4'h5
+                           : io_float_in[2'h0][51]
+                               ? 4'h6
+                               : io_float_in[2'h0][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h0][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN = _shift_amount_T < 4'hB;	// src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T =
+    {15'h0, io_float_in[2'h0][57:48]}
+    << (_shift_amount_T > 4'hA ? 4'hA : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [10:0] _adjusted_exp_T_1 = {6'h0, io_float_in[2'h0][62:58]} + 11'h3F0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_0 = $signed(_adjusted_exp_T_1) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_3 = io_float_in[2'h1][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:58])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:58])) & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][57]
+       ? 4'h0
+       : io_float_in[2'h1][56]
+           ? 4'h1
+           : io_float_in[2'h1][55]
+               ? 4'h2
+               : io_float_in[2'h1][54]
+                   ? 4'h3
+                   : io_float_in[2'h1][53]
+                       ? 4'h4
+                       : io_float_in[2'h1][52]
+                           ? 4'h5
+                           : io_float_in[2'h1][51]
+                               ? 4'h6
+                               : io_float_in[2'h1][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h1][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_1 = _shift_amount_T_1 < 4'hB;	// src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_1 =
+    {15'h0, io_float_in[2'h1][57:48]}
+    << (_shift_amount_T_1 > 4'hA ? 4'hA : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [10:0] _adjusted_exp_T_4 = {6'h0, io_float_in[2'h1][62:58]} + 11'h3F0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_2 = $signed(_adjusted_exp_T_4) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:58])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:58])) & (|(io_float_in[2'h2][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][57]
+       ? 4'h0
+       : io_float_in[2'h2][56]
+           ? 4'h1
+           : io_float_in[2'h2][55]
+               ? 4'h2
+               : io_float_in[2'h2][54]
+                   ? 4'h3
+                   : io_float_in[2'h2][53]
+                       ? 4'h4
+                       : io_float_in[2'h2][52]
+                           ? 4'h5
+                           : io_float_in[2'h2][51]
+                               ? 4'h6
+                               : io_float_in[2'h2][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h2][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_3 = _shift_amount_T_2 < 4'hB;	// src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_2 =
+    {15'h0, io_float_in[2'h2][57:48]}
+    << (_shift_amount_T_2 > 4'hA ? 4'hA : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [10:0] _adjusted_exp_T_7 = {6'h0, io_float_in[2'h2][62:58]} + 11'h3F0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_4 = $signed(_adjusted_exp_T_7) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:58] == 5'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][57:48] == 10'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:58])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:58])) & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][57:48]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][57]
+       ? 4'h0
+       : io_float_in[2'h3][56]
+           ? 4'h1
+           : io_float_in[2'h3][55]
+               ? 4'h2
+               : io_float_in[2'h3][54]
+                   ? 4'h3
+                   : io_float_in[2'h3][53]
+                       ? 4'h4
+                       : io_float_in[2'h3][52]
+                           ? 4'h5
+                           : io_float_in[2'h3][51]
+                               ? 4'h6
+                               : io_float_in[2'h3][50]
+                                   ? 4'h7
+                                   : {3'h4, ~(io_float_in[2'h3][49])}) + 4'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_5 = _shift_amount_T_3 < 4'hB;	// src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [24:0] _shifted_frac_T_3 =
+    {15'h0, io_float_in[2'h3][57:48]}
+    << (_shift_amount_T_3 > 4'hA ? 4'hA : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [10:0] _adjusted_exp_T_10 = {6'h0, io_float_in[2'h3][62:58]} + 11'h3F0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_6 = $signed(_adjusted_exp_T_10) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 11'h0
+         : is_inf_3 | is_nan_3
+             ? 11'h7FF
+             : is_denorm_3
+                 ? (_GEN_5 ? 11'h3F1 - {7'h0, _shift_amount_T_3} : 11'h0)
+                 : _GEN_6 ? 11'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 52'h0
+         : is_nan_3
+             ? 52'h8000000000000
+             : is_denorm_3
+                 ? (_GEN_5 ? {_shifted_frac_T_3[9:0], 42'h0} : 52'h0)
+                 : _GEN_6 ? 52'h0 : {io_float_in[2'h3][57:48], 42'h0}}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 11'h0
+         : is_inf_2 | is_nan_2
+             ? 11'h7FF
+             : is_denorm_2
+                 ? (_GEN_3 ? 11'h3F1 - {7'h0, _shift_amount_T_2} : 11'h0)
+                 : _GEN_4 ? 11'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 52'h0
+         : is_nan_2
+             ? 52'h8000000000000
+             : is_denorm_2
+                 ? (_GEN_3 ? {_shifted_frac_T_2[9:0], 42'h0} : 52'h0)
+                 : _GEN_4 ? 52'h0 : {io_float_in[2'h2][57:48], 42'h0}}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 11'h0
+         : is_inf_1 | is_nan_1
+             ? 11'h7FF
+             : is_denorm_1
+                 ? (_GEN_1 ? 11'h3F1 - {7'h0, _shift_amount_T_1} : 11'h0)
+                 : _GEN_2 ? 11'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 52'h0
+         : is_nan_1
+             ? 52'h8000000000000
+             : is_denorm_1
+                 ? (_GEN_1 ? {_shifted_frac_T_1[9:0], 42'h0} : 52'h0)
+                 : _GEN_2 ? 52'h0 : {io_float_in[2'h1][57:48], 42'h0}}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 11'h0
+         : is_inf | is_nan
+             ? 11'h7FF
+             : is_denorm
+                 ? (_GEN ? 11'h3F1 - {7'h0, _shift_amount_T} : 11'h0)
+                 : _GEN_0 ? 11'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 52'h0
+         : is_nan
+             ? 52'h8000000000000
+             : is_denorm
+                 ? (_GEN ? {_shifted_frac_T[9:0], 42'h0} : 52'h0)
+                 : _GEN_0 ? 52'h0 : {io_float_in[2'h0][57:48], 42'h0}}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :110:{20,26}, :120:17, :121:18, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :157:24
+endmodule
+
+module FloatConvert_15(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :67:16
+  wire        _is_inf_T_1 = io_float_in[2'h0][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:55])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}, :67:16
+  wire        is_nan = (&(io_float_in[2'h0][62:55])) & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}, :67:16
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35, :67:16
+  wire [3:0]  _GEN =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :50:32, :67:16, :91:53
+  wire [4:0]  _shift_amount_T =
+    (io_float_in[2'h0][54]
+       ? 5'h0
+       : io_float_in[2'h0][53]
+           ? 5'h1
+           : io_float_in[2'h0][52]
+               ? 5'h2
+               : io_float_in[2'h0][51]
+                   ? 5'h3
+                   : io_float_in[2'h0][50]
+                       ? 5'h4
+                       : io_float_in[2'h0][49]
+                           ? 5'h5
+                           : io_float_in[2'h0][48]
+                               ? 5'h6
+                               : io_float_in[2'h0][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h0][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h0][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h0][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h0][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h0][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h0][41]
+                                                           ? 5'hD
+                                                           : _GEN[0]
+                                                               ? 5'hE
+                                                               : _GEN[1]
+                                                                   ? 5'hF
+                                                                   : _GEN[2]
+                                                                       ? 5'h10
+                                                                       : _GEN[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h0][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h0][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h0][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h0][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53, :94:44
+  wire        _GEN_0 = _shift_amount_T == 5'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T =
+    {31'h0, io_float_in[2'h0][54:32]}
+    << (_shift_amount_T > 5'h17 ? 5'h17 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:55]} - 9'h7F;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :67:16, :127:35
+  wire        _GEN_1 = $signed(_adjusted_exp_T_1) > 9'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _GEN_2 = $signed(_adjusted_exp_T_1) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :129:26
+  wire        _is_inf_T_3 = io_float_in[2'h1][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :129:26
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:55])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}, :129:26
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:55])) & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}, :129:26
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35, :129:26
+  wire [3:0]  _GEN_3 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :50:32, :91:53, :129:26
+  wire [4:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][54]
+       ? 5'h0
+       : io_float_in[2'h1][53]
+           ? 5'h1
+           : io_float_in[2'h1][52]
+               ? 5'h2
+               : io_float_in[2'h1][51]
+                   ? 5'h3
+                   : io_float_in[2'h1][50]
+                       ? 5'h4
+                       : io_float_in[2'h1][49]
+                           ? 5'h5
+                           : io_float_in[2'h1][48]
+                               ? 5'h6
+                               : io_float_in[2'h1][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h1][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h1][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h1][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h1][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h1][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h1][41]
+                                                           ? 5'hD
+                                                           : _GEN_3[0]
+                                                               ? 5'hE
+                                                               : _GEN_3[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_3[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_3[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h1][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h1][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h1][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h1][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire        _GEN_4 = _shift_amount_T_1 == 5'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_1 =
+    {31'h0, io_float_in[2'h1][54:32]}
+    << (_shift_amount_T_1 > 5'h17 ? 5'h17 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34, :129:26
+  wire [8:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:55]} - 9'h7F;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35, :129:26
+  wire        _GEN_5 = $signed(_adjusted_exp_T_4) > 9'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _GEN_6 = $signed(_adjusted_exp_T_4) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:55] == 8'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][54:32] == 23'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:55])) & _is_inf_T_5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:55])) & (|(io_float_in[2'h2][54:32]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][54:32]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_7 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :50:32, :91:53
+  wire [4:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][54]
+       ? 5'h0
+       : io_float_in[2'h2][53]
+           ? 5'h1
+           : io_float_in[2'h2][52]
+               ? 5'h2
+               : io_float_in[2'h2][51]
+                   ? 5'h3
+                   : io_float_in[2'h2][50]
+                       ? 5'h4
+                       : io_float_in[2'h2][49]
+                           ? 5'h5
+                           : io_float_in[2'h2][48]
+                               ? 5'h6
+                               : io_float_in[2'h2][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h2][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h2][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h2][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h2][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h2][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h2][41]
+                                                           ? 5'hD
+                                                           : _GEN_7[0]
+                                                               ? 5'hE
+                                                               : _GEN_7[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_7[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_7[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h2][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h2][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h2][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h2][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_8 = _shift_amount_T_2 == 5'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_2 =
+    {31'h0, io_float_in[2'h2][54:32]}
+    << (_shift_amount_T_2 > 5'h17 ? 5'h17 : _shift_amount_T_2);	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:55]} - 9'h7F;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35
+  wire        _GEN_9 = $signed(_adjusted_exp_T_7) > 9'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _GEN_10 = $signed(_adjusted_exp_T_7) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:55])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:55])) & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_11 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :50:32, :91:53
+  wire [4:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][54]
+       ? 5'h0
+       : io_float_in[2'h3][53]
+           ? 5'h1
+           : io_float_in[2'h3][52]
+               ? 5'h2
+               : io_float_in[2'h3][51]
+                   ? 5'h3
+                   : io_float_in[2'h3][50]
+                       ? 5'h4
+                       : io_float_in[2'h3][49]
+                           ? 5'h5
+                           : io_float_in[2'h3][48]
+                               ? 5'h6
+                               : io_float_in[2'h3][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h3][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h3][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h3][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h3][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h3][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h3][41]
+                                                           ? 5'hD
+                                                           : _GEN_11[0]
+                                                               ? 5'hE
+                                                               : _GEN_11[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_11[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_11[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h3][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h3][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h3][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h3][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_12 = _shift_amount_T_3 == 5'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_3 =
+    {31'h0, io_float_in[2'h3][54:32]}
+    << (_shift_amount_T_3 > 5'h17 ? 5'h17 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:55]} - 9'h7F;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35
+  wire        _GEN_13 = $signed(_adjusted_exp_T_10) > 9'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire        _GEN_14 = $signed(_adjusted_exp_T_10) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       ~is_zero_3
+         & (is_inf_3 | is_nan_3
+            | (is_denorm_3
+                 ? _GEN_12 & 1'h0 - _shift_amount_T_3[0]
+                 : _GEN_13 | ~_GEN_14 & _adjusted_exp_T_10[0])),
+       is_zero_3 | is_inf_3
+         ? 2'h0
+         : is_nan_3
+             ? 2'h2
+             : is_denorm_3
+                 ? (_GEN_12
+                      ? ((|(_shifted_frac_T_3[20:0])) & _shifted_frac_T_3[21]
+                           ? _shifted_frac_T_3[22:21] + 2'h1
+                           : _shifted_frac_T_3[22:21])
+                      : 2'h0)
+                 : _GEN_13 | _GEN_14
+                     ? 2'h0
+                     : (|(io_float_in[2'h3][52:32])) & io_float_in[2'h3][53]
+                         ? io_float_in[2'h3][54:53] + 2'h1
+                         : io_float_in[2'h3][54:53],
+       60'h0}},
+     {{io_float_in[2'h2][63],
+       ~is_zero_2
+         & (is_inf_2 | is_nan_2
+            | (is_denorm_2
+                 ? _GEN_8 & 1'h0 - _shift_amount_T_2[0]
+                 : _GEN_9 | ~_GEN_10 & _adjusted_exp_T_7[0])),
+       is_zero_2 | is_inf_2
+         ? 2'h0
+         : is_nan_2
+             ? 2'h2
+             : is_denorm_2
+                 ? (_GEN_8
+                      ? ((|(_shifted_frac_T_2[20:0])) & _shifted_frac_T_2[21]
+                           ? _shifted_frac_T_2[22:21] + 2'h1
+                           : _shifted_frac_T_2[22:21])
+                      : 2'h0)
+                 : _GEN_9 | _GEN_10
+                     ? 2'h0
+                     : (|(io_float_in[2'h2][52:32])) & io_float_in[2'h2][53]
+                         ? io_float_in[2'h2][54:53] + 2'h1
+                         : io_float_in[2'h2][54:53],
+       60'h0}},
+     {{io_float_in[2'h1][63],
+       ~is_zero_1
+         & (is_inf_1 | is_nan_1
+            | (is_denorm_1
+                 ? _GEN_4 & 1'h0 - _shift_amount_T_1[0]
+                 : _GEN_5 | ~_GEN_6 & _adjusted_exp_T_4[0])),
+       is_zero_1 | is_inf_1
+         ? 2'h0
+         : is_nan_1
+             ? 2'h2
+             : is_denorm_1
+                 ? (_GEN_4
+                      ? ((|(_shifted_frac_T_1[20:0])) & _shifted_frac_T_1[21]
+                           ? _shifted_frac_T_1[22:21] + 2'h1
+                           : _shifted_frac_T_1[22:21])
+                      : 2'h0)
+                 : _GEN_5 | _GEN_6
+                     ? 2'h0
+                     : (|(io_float_in[2'h1][52:32])) & io_float_in[2'h1][53]
+                         ? io_float_in[2'h1][54:53] + 2'h1
+                         : io_float_in[2'h1][54:53],
+       60'h0}},
+     {{io_float_in[2'h0][63],
+       ~is_zero
+         & (is_inf | is_nan
+            | (is_denorm
+                 ? _GEN_0 & 1'h0 - _shift_amount_T[0]
+                 : _GEN_1 | ~_GEN_2 & _adjusted_exp_T_1[0])),
+       is_zero | is_inf
+         ? 2'h0
+         : is_nan
+             ? 2'h2
+             : is_denorm
+                 ? (_GEN_0
+                      ? ((|(_shifted_frac_T[20:0])) & _shifted_frac_T[21]
+                           ? _shifted_frac_T[22:21] + 2'h1
+                           : _shifted_frac_T[22:21])
+                      : 2'h0)
+                 : _GEN_1 | _GEN_2
+                     ? 2'h0
+                     : (|(io_float_in[2'h0][52:32])) & io_float_in[2'h0][53]
+                         ? io_float_in[2'h0][54:53] + 2'h1
+                         : io_float_in[2'h0][54:53],
+       60'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :50:32, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_16(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_1 = io_float_in[2'h0][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:55])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:55])) & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T =
+    (io_float_in[2'h0][54]
+       ? 5'h0
+       : io_float_in[2'h0][53]
+           ? 5'h1
+           : io_float_in[2'h0][52]
+               ? 5'h2
+               : io_float_in[2'h0][51]
+                   ? 5'h3
+                   : io_float_in[2'h0][50]
+                       ? 5'h4
+                       : io_float_in[2'h0][49]
+                           ? 5'h5
+                           : io_float_in[2'h0][48]
+                               ? 5'h6
+                               : io_float_in[2'h0][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h0][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h0][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h0][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h0][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h0][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h0][41]
+                                                           ? 5'hD
+                                                           : _GEN[0]
+                                                               ? 5'hE
+                                                               : _GEN[1]
+                                                                   ? 5'hF
+                                                                   : _GEN[2]
+                                                                       ? 5'h10
+                                                                       : _GEN[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h0][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h0][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h0][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h0][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire        _GEN_0 = _shift_amount_T < 5'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T =
+    {31'h0, io_float_in[2'h0][54:32]}
+    << (_shift_amount_T > 5'h17 ? 5'h17 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:55]} - 9'h78;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_1 = $signed(_adjusted_exp_T_1) > 9'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_2 = $signed(_adjusted_exp_T_1) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_3 = io_float_in[2'h1][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:55])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:55])) & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_3 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][54]
+       ? 5'h0
+       : io_float_in[2'h1][53]
+           ? 5'h1
+           : io_float_in[2'h1][52]
+               ? 5'h2
+               : io_float_in[2'h1][51]
+                   ? 5'h3
+                   : io_float_in[2'h1][50]
+                       ? 5'h4
+                       : io_float_in[2'h1][49]
+                           ? 5'h5
+                           : io_float_in[2'h1][48]
+                               ? 5'h6
+                               : io_float_in[2'h1][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h1][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h1][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h1][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h1][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h1][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h1][41]
+                                                           ? 5'hD
+                                                           : _GEN_3[0]
+                                                               ? 5'hE
+                                                               : _GEN_3[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_3[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_3[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h1][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h1][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h1][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h1][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire        _GEN_4 = _shift_amount_T_1 < 5'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_1 =
+    {31'h0, io_float_in[2'h1][54:32]}
+    << (_shift_amount_T_1 > 5'h17 ? 5'h17 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:55]} - 9'h78;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_5 = $signed(_adjusted_exp_T_4) > 9'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_6 = $signed(_adjusted_exp_T_4) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:55])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:55])) & (|(io_float_in[2'h2][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_7 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][54]
+       ? 5'h0
+       : io_float_in[2'h2][53]
+           ? 5'h1
+           : io_float_in[2'h2][52]
+               ? 5'h2
+               : io_float_in[2'h2][51]
+                   ? 5'h3
+                   : io_float_in[2'h2][50]
+                       ? 5'h4
+                       : io_float_in[2'h2][49]
+                           ? 5'h5
+                           : io_float_in[2'h2][48]
+                               ? 5'h6
+                               : io_float_in[2'h2][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h2][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h2][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h2][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h2][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h2][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h2][41]
+                                                           ? 5'hD
+                                                           : _GEN_7[0]
+                                                               ? 5'hE
+                                                               : _GEN_7[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_7[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_7[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h2][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h2][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h2][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h2][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire        _GEN_8 = _shift_amount_T_2 < 5'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_2 =
+    {31'h0, io_float_in[2'h2][54:32]}
+    << (_shift_amount_T_2 > 5'h17 ? 5'h17 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:55]} - 9'h78;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_9 = $signed(_adjusted_exp_T_7) > 9'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_10 = $signed(_adjusted_exp_T_7) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:55])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:55])) & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_11 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][54]
+       ? 5'h0
+       : io_float_in[2'h3][53]
+           ? 5'h1
+           : io_float_in[2'h3][52]
+               ? 5'h2
+               : io_float_in[2'h3][51]
+                   ? 5'h3
+                   : io_float_in[2'h3][50]
+                       ? 5'h4
+                       : io_float_in[2'h3][49]
+                           ? 5'h5
+                           : io_float_in[2'h3][48]
+                               ? 5'h6
+                               : io_float_in[2'h3][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h3][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h3][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h3][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h3][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h3][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h3][41]
+                                                           ? 5'hD
+                                                           : _GEN_11[0]
+                                                               ? 5'hE
+                                                               : _GEN_11[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_11[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_11[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h3][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h3][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h3][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h3][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire        _GEN_12 = _shift_amount_T_3 < 5'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_3 =
+    {31'h0, io_float_in[2'h3][54:32]}
+    << (_shift_amount_T_3 > 5'h17 ? 5'h17 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:55]} - 9'h78;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_13 = $signed(_adjusted_exp_T_10) > 9'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_14 = $signed(_adjusted_exp_T_10) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 4'h0
+         : is_inf_3 | is_nan_3
+             ? 4'hF
+             : is_denorm_3
+                 ? (_GEN_12 ? 4'h9 - _shift_amount_T_3[3:0] : 4'h0)
+                 : _GEN_13 ? 4'hF : _GEN_14 ? 4'h0 : _adjusted_exp_T_10[3:0],
+       is_zero_3 | is_inf_3
+         ? 3'h0
+         : is_nan_3
+             ? 3'h4
+             : is_denorm_3
+                 ? (_GEN_12
+                      ? ((|(_shifted_frac_T_3[19:0])) & _shifted_frac_T_3[20]
+                           ? _shifted_frac_T_3[22:20] + 3'h1
+                           : _shifted_frac_T_3[22:20])
+                      : 3'h0)
+                 : _GEN_13 | _GEN_14
+                     ? 3'h0
+                     : (|(io_float_in[2'h3][51:32])) & io_float_in[2'h3][52]
+                         ? io_float_in[2'h3][54:52] + 3'h1
+                         : io_float_in[2'h3][54:52],
+       56'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 4'h0
+         : is_inf_2 | is_nan_2
+             ? 4'hF
+             : is_denorm_2
+                 ? (_GEN_8 ? 4'h9 - _shift_amount_T_2[3:0] : 4'h0)
+                 : _GEN_9 ? 4'hF : _GEN_10 ? 4'h0 : _adjusted_exp_T_7[3:0],
+       is_zero_2 | is_inf_2
+         ? 3'h0
+         : is_nan_2
+             ? 3'h4
+             : is_denorm_2
+                 ? (_GEN_8
+                      ? ((|(_shifted_frac_T_2[19:0])) & _shifted_frac_T_2[20]
+                           ? _shifted_frac_T_2[22:20] + 3'h1
+                           : _shifted_frac_T_2[22:20])
+                      : 3'h0)
+                 : _GEN_9 | _GEN_10
+                     ? 3'h0
+                     : (|(io_float_in[2'h2][51:32])) & io_float_in[2'h2][52]
+                         ? io_float_in[2'h2][54:52] + 3'h1
+                         : io_float_in[2'h2][54:52],
+       56'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 4'h0
+         : is_inf_1 | is_nan_1
+             ? 4'hF
+             : is_denorm_1
+                 ? (_GEN_4 ? 4'h9 - _shift_amount_T_1[3:0] : 4'h0)
+                 : _GEN_5 ? 4'hF : _GEN_6 ? 4'h0 : _adjusted_exp_T_4[3:0],
+       is_zero_1 | is_inf_1
+         ? 3'h0
+         : is_nan_1
+             ? 3'h4
+             : is_denorm_1
+                 ? (_GEN_4
+                      ? ((|(_shifted_frac_T_1[19:0])) & _shifted_frac_T_1[20]
+                           ? _shifted_frac_T_1[22:20] + 3'h1
+                           : _shifted_frac_T_1[22:20])
+                      : 3'h0)
+                 : _GEN_5 | _GEN_6
+                     ? 3'h0
+                     : (|(io_float_in[2'h1][51:32])) & io_float_in[2'h1][52]
+                         ? io_float_in[2'h1][54:52] + 3'h1
+                         : io_float_in[2'h1][54:52],
+       56'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 4'h0
+         : is_inf | is_nan
+             ? 4'hF
+             : is_denorm
+                 ? (_GEN_0 ? 4'h9 - _shift_amount_T[3:0] : 4'h0)
+                 : _GEN_1 ? 4'hF : _GEN_2 ? 4'h0 : _adjusted_exp_T_1[3:0],
+       is_zero | is_inf
+         ? 3'h0
+         : is_nan
+             ? 3'h4
+             : is_denorm
+                 ? (_GEN_0
+                      ? ((|(_shifted_frac_T[19:0])) & _shifted_frac_T[20]
+                           ? _shifted_frac_T[22:20] + 3'h1
+                           : _shifted_frac_T[22:20])
+                      : 3'h0)
+                 : _GEN_1 | _GEN_2
+                     ? 3'h0
+                     : (|(io_float_in[2'h0][51:32])) & io_float_in[2'h0][52]
+                         ? io_float_in[2'h0][54:52] + 3'h1
+                         : io_float_in[2'h0][54:52],
+       56'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_17(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_1 = io_float_in[2'h0][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:55])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:55])) & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T =
+    (io_float_in[2'h0][54]
+       ? 5'h0
+       : io_float_in[2'h0][53]
+           ? 5'h1
+           : io_float_in[2'h0][52]
+               ? 5'h2
+               : io_float_in[2'h0][51]
+                   ? 5'h3
+                   : io_float_in[2'h0][50]
+                       ? 5'h4
+                       : io_float_in[2'h0][49]
+                           ? 5'h5
+                           : io_float_in[2'h0][48]
+                               ? 5'h6
+                               : io_float_in[2'h0][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h0][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h0][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h0][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h0][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h0][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h0][41]
+                                                           ? 5'hD
+                                                           : _GEN[0]
+                                                               ? 5'hE
+                                                               : _GEN[1]
+                                                                   ? 5'hF
+                                                                   : _GEN[2]
+                                                                       ? 5'h10
+                                                                       : _GEN[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h0][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h0][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h0][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h0][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :66:15, :91:53, :94:44
+  wire        _GEN_0 = _shift_amount_T < 5'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T =
+    {31'h0, io_float_in[2'h0][54:32]}
+    << (_shift_amount_T > 5'h17 ? 5'h17 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:55]} - 9'h70;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_1 = $signed(_adjusted_exp_T_1) > 9'sh1E;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_2 = $signed(_adjusted_exp_T_1) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_3 = io_float_in[2'h1][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:55])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:55])) & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_3 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][54]
+       ? 5'h0
+       : io_float_in[2'h1][53]
+           ? 5'h1
+           : io_float_in[2'h1][52]
+               ? 5'h2
+               : io_float_in[2'h1][51]
+                   ? 5'h3
+                   : io_float_in[2'h1][50]
+                       ? 5'h4
+                       : io_float_in[2'h1][49]
+                           ? 5'h5
+                           : io_float_in[2'h1][48]
+                               ? 5'h6
+                               : io_float_in[2'h1][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h1][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h1][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h1][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h1][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h1][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h1][41]
+                                                           ? 5'hD
+                                                           : _GEN_3[0]
+                                                               ? 5'hE
+                                                               : _GEN_3[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_3[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_3[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h1][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h1][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h1][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h1][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :66:15, :91:53, :94:44
+  wire        _GEN_4 = _shift_amount_T_1 < 5'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_1 =
+    {31'h0, io_float_in[2'h1][54:32]}
+    << (_shift_amount_T_1 > 5'h17 ? 5'h17 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:55]} - 9'h70;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_5 = $signed(_adjusted_exp_T_4) > 9'sh1E;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_6 = $signed(_adjusted_exp_T_4) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:55])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:55])) & (|(io_float_in[2'h2][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_7 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][54]
+       ? 5'h0
+       : io_float_in[2'h2][53]
+           ? 5'h1
+           : io_float_in[2'h2][52]
+               ? 5'h2
+               : io_float_in[2'h2][51]
+                   ? 5'h3
+                   : io_float_in[2'h2][50]
+                       ? 5'h4
+                       : io_float_in[2'h2][49]
+                           ? 5'h5
+                           : io_float_in[2'h2][48]
+                               ? 5'h6
+                               : io_float_in[2'h2][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h2][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h2][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h2][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h2][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h2][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h2][41]
+                                                           ? 5'hD
+                                                           : _GEN_7[0]
+                                                               ? 5'hE
+                                                               : _GEN_7[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_7[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_7[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h2][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h2][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h2][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h2][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :66:15, :91:53, :94:44
+  wire        _GEN_8 = _shift_amount_T_2 < 5'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_2 =
+    {31'h0, io_float_in[2'h2][54:32]}
+    << (_shift_amount_T_2 > 5'h17 ? 5'h17 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:55]} - 9'h70;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_9 = $signed(_adjusted_exp_T_7) > 9'sh1E;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_10 = $signed(_adjusted_exp_T_7) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:55])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:55])) & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_11 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][54]
+       ? 5'h0
+       : io_float_in[2'h3][53]
+           ? 5'h1
+           : io_float_in[2'h3][52]
+               ? 5'h2
+               : io_float_in[2'h3][51]
+                   ? 5'h3
+                   : io_float_in[2'h3][50]
+                       ? 5'h4
+                       : io_float_in[2'h3][49]
+                           ? 5'h5
+                           : io_float_in[2'h3][48]
+                               ? 5'h6
+                               : io_float_in[2'h3][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h3][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h3][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h3][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h3][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h3][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h3][41]
+                                                           ? 5'hD
+                                                           : _GEN_11[0]
+                                                               ? 5'hE
+                                                               : _GEN_11[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_11[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_11[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h3][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h3][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h3][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h3][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :66:15, :91:53, :94:44
+  wire        _GEN_12 = _shift_amount_T_3 < 5'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_3 =
+    {31'h0, io_float_in[2'h3][54:32]}
+    << (_shift_amount_T_3 > 5'h17 ? 5'h17 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [8:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:55]} - 9'h70;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire        _GEN_13 = $signed(_adjusted_exp_T_10) > 9'sh1E;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire        _GEN_14 = $signed(_adjusted_exp_T_10) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 5'h0
+         : is_inf_3 | is_nan_3
+             ? 5'h1F
+             : is_denorm_3
+                 ? (_GEN_12 ? 5'h11 - _shift_amount_T_3 : 5'h0)
+                 : _GEN_13 ? 5'h1F : _GEN_14 ? 5'h0 : _adjusted_exp_T_10[4:0],
+       is_zero_3 | is_inf_3
+         ? 10'h0
+         : is_nan_3
+             ? 10'h200
+             : is_denorm_3
+                 ? (_GEN_12
+                      ? ((|(_shifted_frac_T_3[12:0])) & _shifted_frac_T_3[13]
+                           ? _shifted_frac_T_3[22:13] + 10'h1
+                           : _shifted_frac_T_3[22:13])
+                      : 10'h0)
+                 : _GEN_13 | _GEN_14
+                     ? 10'h0
+                     : (|(io_float_in[2'h3][44:32])) & io_float_in[2'h3][45]
+                         ? io_float_in[2'h3][54:45] + 10'h1
+                         : io_float_in[2'h3][54:45],
+       48'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 5'h0
+         : is_inf_2 | is_nan_2
+             ? 5'h1F
+             : is_denorm_2
+                 ? (_GEN_8 ? 5'h11 - _shift_amount_T_2 : 5'h0)
+                 : _GEN_9 ? 5'h1F : _GEN_10 ? 5'h0 : _adjusted_exp_T_7[4:0],
+       is_zero_2 | is_inf_2
+         ? 10'h0
+         : is_nan_2
+             ? 10'h200
+             : is_denorm_2
+                 ? (_GEN_8
+                      ? ((|(_shifted_frac_T_2[12:0])) & _shifted_frac_T_2[13]
+                           ? _shifted_frac_T_2[22:13] + 10'h1
+                           : _shifted_frac_T_2[22:13])
+                      : 10'h0)
+                 : _GEN_9 | _GEN_10
+                     ? 10'h0
+                     : (|(io_float_in[2'h2][44:32])) & io_float_in[2'h2][45]
+                         ? io_float_in[2'h2][54:45] + 10'h1
+                         : io_float_in[2'h2][54:45],
+       48'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 5'h0
+         : is_inf_1 | is_nan_1
+             ? 5'h1F
+             : is_denorm_1
+                 ? (_GEN_4 ? 5'h11 - _shift_amount_T_1 : 5'h0)
+                 : _GEN_5 ? 5'h1F : _GEN_6 ? 5'h0 : _adjusted_exp_T_4[4:0],
+       is_zero_1 | is_inf_1
+         ? 10'h0
+         : is_nan_1
+             ? 10'h200
+             : is_denorm_1
+                 ? (_GEN_4
+                      ? ((|(_shifted_frac_T_1[12:0])) & _shifted_frac_T_1[13]
+                           ? _shifted_frac_T_1[22:13] + 10'h1
+                           : _shifted_frac_T_1[22:13])
+                      : 10'h0)
+                 : _GEN_5 | _GEN_6
+                     ? 10'h0
+                     : (|(io_float_in[2'h1][44:32])) & io_float_in[2'h1][45]
+                         ? io_float_in[2'h1][54:45] + 10'h1
+                         : io_float_in[2'h1][54:45],
+       48'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 5'h0
+         : is_inf | is_nan
+             ? 5'h1F
+             : is_denorm
+                 ? (_GEN_0 ? 5'h11 - _shift_amount_T : 5'h0)
+                 : _GEN_1 ? 5'h1F : _GEN_2 ? 5'h0 : _adjusted_exp_T_1[4:0],
+       is_zero | is_inf
+         ? 10'h0
+         : is_nan
+             ? 10'h200
+             : is_denorm
+                 ? (_GEN_0
+                      ? ((|(_shifted_frac_T[12:0])) & _shifted_frac_T[13]
+                           ? _shifted_frac_T[22:13] + 10'h1
+                           : _shifted_frac_T[22:13])
+                      : 10'h0)
+                 : _GEN_1 | _GEN_2
+                     ? 10'h0
+                     : (|(io_float_in[2'h0][44:32])) & io_float_in[2'h0][45]
+                         ? io_float_in[2'h0][54:45] + 10'h1
+                         : io_float_in[2'h0][54:45],
+       48'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_18(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire        _is_inf_T_1 = io_float_in[2'h0][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:55])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:55])) & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T =
+    (io_float_in[2'h0][54]
+       ? 5'h0
+       : io_float_in[2'h0][53]
+           ? 5'h1
+           : io_float_in[2'h0][52]
+               ? 5'h2
+               : io_float_in[2'h0][51]
+                   ? 5'h3
+                   : io_float_in[2'h0][50]
+                       ? 5'h4
+                       : io_float_in[2'h0][49]
+                           ? 5'h5
+                           : io_float_in[2'h0][48]
+                               ? 5'h6
+                               : io_float_in[2'h0][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h0][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h0][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h0][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h0][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h0][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h0][41]
+                                                           ? 5'hD
+                                                           : _GEN[0]
+                                                               ? 5'hE
+                                                               : _GEN[1]
+                                                                   ? 5'hF
+                                                                   : _GEN[2]
+                                                                       ? 5'h10
+                                                                       : _GEN[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h0][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h0][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h0][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h0][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_0 = _shift_amount_T < 5'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T =
+    {31'h0, io_float_in[2'h0][54:32]}
+    << (_shift_amount_T > 5'h17 ? 5'h17 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire        _GEN_1 = $signed({1'h0, io_float_in[2'h0][62:55]}) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire        _is_inf_T_3 = io_float_in[2'h1][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:55])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:55])) & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_2 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][54]
+       ? 5'h0
+       : io_float_in[2'h1][53]
+           ? 5'h1
+           : io_float_in[2'h1][52]
+               ? 5'h2
+               : io_float_in[2'h1][51]
+                   ? 5'h3
+                   : io_float_in[2'h1][50]
+                       ? 5'h4
+                       : io_float_in[2'h1][49]
+                           ? 5'h5
+                           : io_float_in[2'h1][48]
+                               ? 5'h6
+                               : io_float_in[2'h1][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h1][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h1][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h1][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h1][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h1][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h1][41]
+                                                           ? 5'hD
+                                                           : _GEN_2[0]
+                                                               ? 5'hE
+                                                               : _GEN_2[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_2[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_2[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h1][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h1][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h1][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h1][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_3 = _shift_amount_T_1 < 5'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_1 =
+    {31'h0, io_float_in[2'h1][54:32]}
+    << (_shift_amount_T_1 > 5'h17 ? 5'h17 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire        _GEN_4 = $signed({1'h0, io_float_in[2'h1][62:55]}) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire        _is_inf_T_5 = io_float_in[2'h2][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:55])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:55])) & (|(io_float_in[2'h2][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_5 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][54]
+       ? 5'h0
+       : io_float_in[2'h2][53]
+           ? 5'h1
+           : io_float_in[2'h2][52]
+               ? 5'h2
+               : io_float_in[2'h2][51]
+                   ? 5'h3
+                   : io_float_in[2'h2][50]
+                       ? 5'h4
+                       : io_float_in[2'h2][49]
+                           ? 5'h5
+                           : io_float_in[2'h2][48]
+                               ? 5'h6
+                               : io_float_in[2'h2][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h2][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h2][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h2][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h2][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h2][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h2][41]
+                                                           ? 5'hD
+                                                           : _GEN_5[0]
+                                                               ? 5'hE
+                                                               : _GEN_5[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_5[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_5[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h2][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h2][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h2][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h2][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_6 = _shift_amount_T_2 < 5'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_2 =
+    {31'h0, io_float_in[2'h2][54:32]}
+    << (_shift_amount_T_2 > 5'h17 ? 5'h17 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire        _GEN_7 = $signed({1'h0, io_float_in[2'h2][62:55]}) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire        _is_inf_T_7 = io_float_in[2'h3][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:55])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:55])) & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_8 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [4:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][54]
+       ? 5'h0
+       : io_float_in[2'h3][53]
+           ? 5'h1
+           : io_float_in[2'h3][52]
+               ? 5'h2
+               : io_float_in[2'h3][51]
+                   ? 5'h3
+                   : io_float_in[2'h3][50]
+                       ? 5'h4
+                       : io_float_in[2'h3][49]
+                           ? 5'h5
+                           : io_float_in[2'h3][48]
+                               ? 5'h6
+                               : io_float_in[2'h3][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h3][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h3][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h3][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h3][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h3][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h3][41]
+                                                           ? 5'hD
+                                                           : _GEN_8[0]
+                                                               ? 5'hE
+                                                               : _GEN_8[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_8[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_8[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h3][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h3][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h3][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h3][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_9 = _shift_amount_T_3 < 5'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_3 =
+    {31'h0, io_float_in[2'h3][54:32]}
+    << (_shift_amount_T_3 > 5'h17 ? 5'h17 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire        _GEN_10 = $signed({1'h0, io_float_in[2'h3][62:55]}) < 9'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 8'h0
+         : is_inf_3 | is_nan_3
+             ? 8'hFF
+             : is_denorm_3
+                 ? (_GEN_9 ? 8'h1 - {3'h0, _shift_amount_T_3} : 8'h0)
+                 : (&(io_float_in[2'h3][62:55]))
+                     ? 8'hFF
+                     : _GEN_10 ? 8'h0 : io_float_in[2'h3][62:55],
+       is_zero_3 | is_inf_3
+         ? 23'h0
+         : is_nan_3
+             ? 23'h400000
+             : is_denorm_3
+                 ? (_GEN_9 ? _shifted_frac_T_3[22:0] : 23'h0)
+                 : (&(io_float_in[2'h3][62:55])) | _GEN_10
+                     ? 23'h0
+                     : io_float_in[2'h3][54:32],
+       32'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 8'h0
+         : is_inf_2 | is_nan_2
+             ? 8'hFF
+             : is_denorm_2
+                 ? (_GEN_6 ? 8'h1 - {3'h0, _shift_amount_T_2} : 8'h0)
+                 : (&(io_float_in[2'h2][62:55]))
+                     ? 8'hFF
+                     : _GEN_7 ? 8'h0 : io_float_in[2'h2][62:55],
+       is_zero_2 | is_inf_2
+         ? 23'h0
+         : is_nan_2
+             ? 23'h400000
+             : is_denorm_2
+                 ? (_GEN_6 ? _shifted_frac_T_2[22:0] : 23'h0)
+                 : (&(io_float_in[2'h2][62:55])) | _GEN_7
+                     ? 23'h0
+                     : io_float_in[2'h2][54:32],
+       32'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 8'h0
+         : is_inf_1 | is_nan_1
+             ? 8'hFF
+             : is_denorm_1
+                 ? (_GEN_3 ? 8'h1 - {3'h0, _shift_amount_T_1} : 8'h0)
+                 : (&(io_float_in[2'h1][62:55]))
+                     ? 8'hFF
+                     : _GEN_4 ? 8'h0 : io_float_in[2'h1][62:55],
+       is_zero_1 | is_inf_1
+         ? 23'h0
+         : is_nan_1
+             ? 23'h400000
+             : is_denorm_1
+                 ? (_GEN_3 ? _shifted_frac_T_1[22:0] : 23'h0)
+                 : (&(io_float_in[2'h1][62:55])) | _GEN_4
+                     ? 23'h0
+                     : io_float_in[2'h1][54:32],
+       32'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 8'h0
+         : is_inf | is_nan
+             ? 8'hFF
+             : is_denorm
+                 ? (_GEN_0 ? 8'h1 - {3'h0, _shift_amount_T} : 8'h0)
+                 : (&(io_float_in[2'h0][62:55]))
+                     ? 8'hFF
+                     : _GEN_1 ? 8'h0 : io_float_in[2'h0][62:55],
+       is_zero | is_inf
+         ? 23'h0
+         : is_nan
+             ? 23'h400000
+             : is_denorm
+                 ? (_GEN_0 ? _shifted_frac_T[22:0] : 23'h0)
+                 : (&(io_float_in[2'h0][62:55])) | _GEN_1
+                     ? 23'h0
+                     : io_float_in[2'h0][54:32],
+       32'h0}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:{37,52}, :45:25, :46:24, :47:25, :53:33, :54:{23,57}, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :110:20, :120:17, :121:18, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :145:20, :161:44
+endmodule
+
+module FloatConvert_19(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire        _is_denorm_T = io_float_in[2'h0][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_1 = io_float_in[2'h0][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf = (&(io_float_in[2'h0][62:55])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan = (&(io_float_in[2'h0][62:55])) & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm = _is_denorm_T & (|(io_float_in[2'h0][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [4:0]  _shift_amount_T =
+    (io_float_in[2'h0][54]
+       ? 5'h0
+       : io_float_in[2'h0][53]
+           ? 5'h1
+           : io_float_in[2'h0][52]
+               ? 5'h2
+               : io_float_in[2'h0][51]
+                   ? 5'h3
+                   : io_float_in[2'h0][50]
+                       ? 5'h4
+                       : io_float_in[2'h0][49]
+                           ? 5'h5
+                           : io_float_in[2'h0][48]
+                               ? 5'h6
+                               : io_float_in[2'h0][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h0][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h0][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h0][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h0][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h0][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h0][41]
+                                                           ? 5'hD
+                                                           : _GEN[0]
+                                                               ? 5'hE
+                                                               : _GEN[1]
+                                                                   ? 5'hF
+                                                                   : _GEN[2]
+                                                                       ? 5'h10
+                                                                       : _GEN[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h0][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h0][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h0][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h0][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_0 = _shift_amount_T < 5'hB;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T =
+    {31'h0, io_float_in[2'h0][54:32]}
+    << (_shift_amount_T > 5'h17 ? 5'h17 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [10:0] _adjusted_exp_T_1 = {3'h0, io_float_in[2'h0][62:55]} + 11'h380;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_1 = $signed(_adjusted_exp_T_1) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_2 = io_float_in[2'h1][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_3 = io_float_in[2'h1][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_1 = (&(io_float_in[2'h1][62:55])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_1 = (&(io_float_in[2'h1][62:55])) & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_2 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [4:0]  _shift_amount_T_1 =
+    (io_float_in[2'h1][54]
+       ? 5'h0
+       : io_float_in[2'h1][53]
+           ? 5'h1
+           : io_float_in[2'h1][52]
+               ? 5'h2
+               : io_float_in[2'h1][51]
+                   ? 5'h3
+                   : io_float_in[2'h1][50]
+                       ? 5'h4
+                       : io_float_in[2'h1][49]
+                           ? 5'h5
+                           : io_float_in[2'h1][48]
+                               ? 5'h6
+                               : io_float_in[2'h1][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h1][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h1][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h1][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h1][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h1][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h1][41]
+                                                           ? 5'hD
+                                                           : _GEN_2[0]
+                                                               ? 5'hE
+                                                               : _GEN_2[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_2[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_2[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h1][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h1][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h1][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h1][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_3 = _shift_amount_T_1 < 5'hB;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_1 =
+    {31'h0, io_float_in[2'h1][54:32]}
+    << (_shift_amount_T_1 > 5'h17 ? 5'h17 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [10:0] _adjusted_exp_T_4 = {3'h0, io_float_in[2'h1][62:55]} + 11'h380;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_4 = $signed(_adjusted_exp_T_4) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_4 = io_float_in[2'h2][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_5 = io_float_in[2'h2][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_2 = (&(io_float_in[2'h2][62:55])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_2 = (&(io_float_in[2'h2][62:55])) & (|(io_float_in[2'h2][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_5 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [4:0]  _shift_amount_T_2 =
+    (io_float_in[2'h2][54]
+       ? 5'h0
+       : io_float_in[2'h2][53]
+           ? 5'h1
+           : io_float_in[2'h2][52]
+               ? 5'h2
+               : io_float_in[2'h2][51]
+                   ? 5'h3
+                   : io_float_in[2'h2][50]
+                       ? 5'h4
+                       : io_float_in[2'h2][49]
+                           ? 5'h5
+                           : io_float_in[2'h2][48]
+                               ? 5'h6
+                               : io_float_in[2'h2][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h2][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h2][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h2][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h2][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h2][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h2][41]
+                                                           ? 5'hD
+                                                           : _GEN_5[0]
+                                                               ? 5'hE
+                                                               : _GEN_5[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_5[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_5[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h2][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h2][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h2][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h2][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_6 = _shift_amount_T_2 < 5'hB;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_2 =
+    {31'h0, io_float_in[2'h2][54:32]}
+    << (_shift_amount_T_2 > 5'h17 ? 5'h17 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [10:0] _adjusted_exp_T_7 = {3'h0, io_float_in[2'h2][62:55]} + 11'h380;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_7 = $signed(_adjusted_exp_T_7) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire        _is_denorm_T_6 = io_float_in[2'h3][62:55] == 8'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire        _is_inf_T_7 = io_float_in[2'h3][54:32] == 23'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire        is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire        is_inf_3 = (&(io_float_in[2'h3][62:55])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire        is_nan_3 = (&(io_float_in[2'h3][62:55])) & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire        is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][54:32]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [3:0]  _GEN_8 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [4:0]  _shift_amount_T_3 =
+    (io_float_in[2'h3][54]
+       ? 5'h0
+       : io_float_in[2'h3][53]
+           ? 5'h1
+           : io_float_in[2'h3][52]
+               ? 5'h2
+               : io_float_in[2'h3][51]
+                   ? 5'h3
+                   : io_float_in[2'h3][50]
+                       ? 5'h4
+                       : io_float_in[2'h3][49]
+                           ? 5'h5
+                           : io_float_in[2'h3][48]
+                               ? 5'h6
+                               : io_float_in[2'h3][47]
+                                   ? 5'h7
+                                   : io_float_in[2'h3][46]
+                                       ? 5'h8
+                                       : io_float_in[2'h3][45]
+                                           ? 5'h9
+                                           : io_float_in[2'h3][44]
+                                               ? 5'hA
+                                               : io_float_in[2'h3][43]
+                                                   ? 5'hB
+                                                   : io_float_in[2'h3][42]
+                                                       ? 5'hC
+                                                       : io_float_in[2'h3][41]
+                                                           ? 5'hD
+                                                           : _GEN_8[0]
+                                                               ? 5'hE
+                                                               : _GEN_8[1]
+                                                                   ? 5'hF
+                                                                   : _GEN_8[2]
+                                                                       ? 5'h10
+                                                                       : _GEN_8[3]
+                                                                           ? 5'h11
+                                                                           : io_float_in[2'h3][36]
+                                                                               ? 5'h12
+                                                                               : io_float_in[2'h3][35]
+                                                                                   ? 5'h13
+                                                                                   : io_float_in[2'h3][34]
+                                                                                       ? 5'h14
+                                                                                       : io_float_in[2'h3][33]
+                                                                                           ? 5'h15
+                                                                                           : 5'h16)
+    + 5'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire        _GEN_9 = _shift_amount_T_3 < 5'hB;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [53:0] _shifted_frac_T_3 =
+    {31'h0, io_float_in[2'h3][54:32]}
+    << (_shift_amount_T_3 > 5'h17 ? 5'h17 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [10:0] _adjusted_exp_T_10 = {3'h0, io_float_in[2'h3][62:55]} + 11'h380;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35
+  wire        _GEN_10 = $signed(_adjusted_exp_T_10) < 11'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 11'h0
+         : is_inf_3 | is_nan_3
+             ? 11'h7FF
+             : is_denorm_3
+                 ? (_GEN_9 ? 11'h381 - {6'h0, _shift_amount_T_3} : 11'h0)
+                 : _GEN_10 ? 11'h0 : _adjusted_exp_T_10,
+       is_zero_3 | is_inf_3
+         ? 52'h0
+         : is_nan_3
+             ? 52'h8000000000000
+             : is_denorm_3
+                 ? (_GEN_9 ? {_shifted_frac_T_3[22:0], 29'h0} : 52'h0)
+                 : _GEN_10 ? 52'h0 : {io_float_in[2'h3][54:32], 29'h0}}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 11'h0
+         : is_inf_2 | is_nan_2
+             ? 11'h7FF
+             : is_denorm_2
+                 ? (_GEN_6 ? 11'h381 - {6'h0, _shift_amount_T_2} : 11'h0)
+                 : _GEN_7 ? 11'h0 : _adjusted_exp_T_7,
+       is_zero_2 | is_inf_2
+         ? 52'h0
+         : is_nan_2
+             ? 52'h8000000000000
+             : is_denorm_2
+                 ? (_GEN_6 ? {_shifted_frac_T_2[22:0], 29'h0} : 52'h0)
+                 : _GEN_7 ? 52'h0 : {io_float_in[2'h2][54:32], 29'h0}}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 11'h0
+         : is_inf_1 | is_nan_1
+             ? 11'h7FF
+             : is_denorm_1
+                 ? (_GEN_3 ? 11'h381 - {6'h0, _shift_amount_T_1} : 11'h0)
+                 : _GEN_4 ? 11'h0 : _adjusted_exp_T_4,
+       is_zero_1 | is_inf_1
+         ? 52'h0
+         : is_nan_1
+             ? 52'h8000000000000
+             : is_denorm_1
+                 ? (_GEN_3 ? {_shifted_frac_T_1[22:0], 29'h0} : 52'h0)
+                 : _GEN_4 ? 52'h0 : {io_float_in[2'h1][54:32], 29'h0}}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 11'h0
+         : is_inf | is_nan
+             ? 11'h7FF
+             : is_denorm
+                 ? (_GEN_0 ? 11'h381 - {6'h0, _shift_amount_T} : 11'h0)
+                 : _GEN_1 ? 11'h0 : _adjusted_exp_T_1,
+       is_zero | is_inf
+         ? 52'h0
+         : is_nan
+             ? 52'h8000000000000
+             : is_denorm
+                 ? (_GEN_0 ? {_shifted_frac_T[22:0], 29'h0} : 52'h0)
+                 : _GEN_1 ? 52'h0 : {io_float_in[2'h0][54:32], 29'h0}}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :110:{20,26}, :120:17, :121:18, :127:35, :129:59, :133:{32,40}, :135:17, :136:18, :139:17, :145:{20,26}, :157:24
+endmodule
+
+module FloatConvert_20(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire         _is_denorm_T = io_float_in[2'h0][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :67:16
+  wire         _is_inf_T_1 = io_float_in[2'h0][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire         is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf = (&(io_float_in[2'h0][62:52])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}, :67:16
+  wire         is_nan = (&(io_float_in[2'h0][62:52])) & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}, :67:16
+  wire         is_denorm = _is_denorm_T & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35, :67:16
+  wire [7:0]   _GEN =
+    {{io_float_in[2'h0][11:8], io_float_in[2'h0][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h0][15:12], io_float_in[2'h0][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53
+  wire [18:0]  _GEN_0 =
+    {io_float_in[2'h0][5:4],
+     io_float_in[2'h0][7:6],
+     io_float_in[2'h0][9:8],
+     _GEN,
+     io_float_in[2'h0][19:18],
+     io_float_in[2'h0][21:20],
+     io_float_in[2'h0][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :67:16, :91:53
+  wire [3:0]   _GEN_1 =
+    _GEN_0[18:15] | {io_float_in[2'h0][7:6], io_float_in[2'h0][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :67:16, :91:53
+  wire [7:0]   _GEN_2 = _GEN_0[14:7] | _GEN & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_3 =
+    {_GEN_0[2:0], 1'h0} | {io_float_in[2'h0][23:22], io_float_in[2'h0][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :50:32, :67:16, :91:53
+  wire [3:0]   _GEN_4 =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :50:32, :67:16, :91:53
+  wire [5:0]   _shift_amount_T =
+    (io_float_in[2'h0][51]
+       ? 6'h0
+       : io_float_in[2'h0][50]
+           ? 6'h1
+           : io_float_in[2'h0][49]
+               ? 6'h2
+               : io_float_in[2'h0][48]
+                   ? 6'h3
+                   : io_float_in[2'h0][47]
+                       ? 6'h4
+                       : io_float_in[2'h0][46]
+                           ? 6'h5
+                           : io_float_in[2'h0][45]
+                               ? 6'h6
+                               : io_float_in[2'h0][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h0][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h0][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h0][41]
+                                               ? 6'hA
+                                               : _GEN_4[0]
+                                                   ? 6'hB
+                                                   : _GEN_4[1]
+                                                       ? 6'hC
+                                                       : _GEN_4[2]
+                                                           ? 6'hD
+                                                           : _GEN_4[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h0][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h0][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h0][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h0][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h0][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h0][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h0][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h0][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h0][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h0][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h0][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h0][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_3[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_3[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_3[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_3[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h0][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h0][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_0[5]
+                                                                                                                                         | io_float_in[2'h0][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_2[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_2[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_2[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_2[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_2[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_2[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_2[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_2[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_1[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_1[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_1[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_1[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h0][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h0][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h0][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h0][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53, :94:44
+  wire         _GEN_5 = _shift_amount_T == 6'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T =
+    {63'h0, io_float_in[2'h0][51:0]}
+    << (_shift_amount_T > 6'h34 ? 6'h34 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:52]} - 12'h3FF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :67:16, :127:35
+  wire         _GEN_6 = $signed(_adjusted_exp_T_1) > 12'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire         _GEN_7 = $signed(_adjusted_exp_T_1) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire         _is_denorm_T_2 = io_float_in[2'h1][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :129:26
+  wire         _is_inf_T_3 = io_float_in[2'h1][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :129:26
+  wire         is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_1 = (&(io_float_in[2'h1][62:52])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}, :129:26
+  wire         is_nan_1 = (&(io_float_in[2'h1][62:52])) & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}, :129:26
+  wire         is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35, :129:26
+  wire [7:0]   _GEN_8 =
+    {{io_float_in[2'h1][11:8], io_float_in[2'h1][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h1][15:12], io_float_in[2'h1][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53, :129:26
+  wire [18:0]  _GEN_9 =
+    {io_float_in[2'h1][5:4],
+     io_float_in[2'h1][7:6],
+     io_float_in[2'h1][9:8],
+     _GEN_8,
+     io_float_in[2'h1][19:18],
+     io_float_in[2'h1][21:20],
+     io_float_in[2'h1][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :129:26
+  wire [3:0]   _GEN_10 =
+    _GEN_9[18:15] | {io_float_in[2'h1][7:6], io_float_in[2'h1][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :129:26
+  wire [7:0]   _GEN_11 = _GEN_9[14:7] | _GEN_8 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_12 =
+    {_GEN_9[2:0], 1'h0} | {io_float_in[2'h1][23:22], io_float_in[2'h1][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :50:32, :91:53, :129:26
+  wire [3:0]   _GEN_13 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :50:32, :91:53, :129:26
+  wire [5:0]   _shift_amount_T_1 =
+    (io_float_in[2'h1][51]
+       ? 6'h0
+       : io_float_in[2'h1][50]
+           ? 6'h1
+           : io_float_in[2'h1][49]
+               ? 6'h2
+               : io_float_in[2'h1][48]
+                   ? 6'h3
+                   : io_float_in[2'h1][47]
+                       ? 6'h4
+                       : io_float_in[2'h1][46]
+                           ? 6'h5
+                           : io_float_in[2'h1][45]
+                               ? 6'h6
+                               : io_float_in[2'h1][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h1][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h1][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h1][41]
+                                               ? 6'hA
+                                               : _GEN_13[0]
+                                                   ? 6'hB
+                                                   : _GEN_13[1]
+                                                       ? 6'hC
+                                                       : _GEN_13[2]
+                                                           ? 6'hD
+                                                           : _GEN_13[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h1][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h1][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h1][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h1][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h1][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h1][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h1][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h1][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h1][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h1][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h1][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h1][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_12[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_12[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_12[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_12[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h1][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h1][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_9[5]
+                                                                                                                                         | io_float_in[2'h1][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_8[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_11[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_11[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_11[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_11[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_11[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_11[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_11[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_11[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_10[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_10[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_10[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_10[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h1][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h1][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h1][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h1][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire         _GEN_14 = _shift_amount_T_1 == 6'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_1 =
+    {63'h0, io_float_in[2'h1][51:0]}
+    << (_shift_amount_T_1 > 6'h34 ? 6'h34 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34, :129:26
+  wire [11:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:52]} - 12'h3FF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35, :129:26
+  wire         _GEN_15 = $signed(_adjusted_exp_T_4) > 12'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire         _GEN_16 = $signed(_adjusted_exp_T_4) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire         _is_denorm_T_4 = io_float_in[2'h2][62:52] == 11'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_5 = io_float_in[2'h2][51:0] == 52'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_2 = (&(io_float_in[2'h2][62:52])) & _is_inf_T_5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_2 = (&(io_float_in[2'h2][62:52])) & (|(io_float_in[2'h2][51:0]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][51:0]));	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_17 =
+    {{io_float_in[2'h2][11:8], io_float_in[2'h2][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h2][15:12], io_float_in[2'h2][19:16]} & 8'h33;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53
+  wire [18:0]  _GEN_18 =
+    {io_float_in[2'h2][5:4],
+     io_float_in[2'h2][7:6],
+     io_float_in[2'h2][9:8],
+     _GEN_17,
+     io_float_in[2'h2][19:18],
+     io_float_in[2'h2][21:20],
+     io_float_in[2'h2][23]} & 19'h55555;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_19 =
+    _GEN_18[18:15] | {io_float_in[2'h2][7:6], io_float_in[2'h2][9:8]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_20 = _GEN_18[14:7] | _GEN_17 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_21 =
+    {_GEN_18[2:0], 1'h0} | {io_float_in[2'h2][23:22], io_float_in[2'h2][25:24]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :50:32, :91:53
+  wire [3:0]   _GEN_22 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :50:32, :91:53
+  wire [5:0]   _shift_amount_T_2 =
+    (io_float_in[2'h2][51]
+       ? 6'h0
+       : io_float_in[2'h2][50]
+           ? 6'h1
+           : io_float_in[2'h2][49]
+               ? 6'h2
+               : io_float_in[2'h2][48]
+                   ? 6'h3
+                   : io_float_in[2'h2][47]
+                       ? 6'h4
+                       : io_float_in[2'h2][46]
+                           ? 6'h5
+                           : io_float_in[2'h2][45]
+                               ? 6'h6
+                               : io_float_in[2'h2][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h2][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h2][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h2][41]
+                                               ? 6'hA
+                                               : _GEN_22[0]
+                                                   ? 6'hB
+                                                   : _GEN_22[1]
+                                                       ? 6'hC
+                                                       : _GEN_22[2]
+                                                           ? 6'hD
+                                                           : _GEN_22[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h2][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h2][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h2][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h2][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h2][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h2][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h2][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h2][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h2][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h2][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h2][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h2][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_21[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_21[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_21[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_21[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h2][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h2][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_18[5]
+                                                                                                                                         | io_float_in[2'h2][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_17[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_20[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_20[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_20[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_20[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_20[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_20[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_20[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_20[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_19[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_19[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_19[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_19[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h2][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h2][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h2][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h2][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_23 = _shift_amount_T_2 == 6'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_2 =
+    {63'h0, io_float_in[2'h2][51:0]}
+    << (_shift_amount_T_2 > 6'h34 ? 6'h34 : _shift_amount_T_2);	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:52]} - 12'h3FF;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35
+  wire         _GEN_24 = $signed(_adjusted_exp_T_7) > 12'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire         _GEN_25 = $signed(_adjusted_exp_T_7) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire         _is_denorm_T_6 = io_float_in[2'h3][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_7 = io_float_in[2'h3][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_3 = (&(io_float_in[2'h3][62:52])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_3 = (&(io_float_in[2'h3][62:52])) & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_26 =
+    {{io_float_in[2'h3][11:8], io_float_in[2'h3][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h3][15:12], io_float_in[2'h3][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :67:16, :91:53
+  wire [18:0]  _GEN_27 =
+    {io_float_in[2'h3][5:4],
+     io_float_in[2'h3][7:6],
+     io_float_in[2'h3][9:8],
+     _GEN_26,
+     io_float_in[2'h3][19:18],
+     io_float_in[2'h3][21:20],
+     io_float_in[2'h3][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_28 =
+    _GEN_27[18:15] | {io_float_in[2'h3][7:6], io_float_in[2'h3][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_29 = _GEN_27[14:7] | _GEN_26 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_30 =
+    {_GEN_27[2:0], 1'h0} | {io_float_in[2'h3][23:22], io_float_in[2'h3][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :50:32, :91:53
+  wire [3:0]   _GEN_31 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :50:32, :91:53
+  wire [5:0]   _shift_amount_T_3 =
+    (io_float_in[2'h3][51]
+       ? 6'h0
+       : io_float_in[2'h3][50]
+           ? 6'h1
+           : io_float_in[2'h3][49]
+               ? 6'h2
+               : io_float_in[2'h3][48]
+                   ? 6'h3
+                   : io_float_in[2'h3][47]
+                       ? 6'h4
+                       : io_float_in[2'h3][46]
+                           ? 6'h5
+                           : io_float_in[2'h3][45]
+                               ? 6'h6
+                               : io_float_in[2'h3][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h3][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h3][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h3][41]
+                                               ? 6'hA
+                                               : _GEN_31[0]
+                                                   ? 6'hB
+                                                   : _GEN_31[1]
+                                                       ? 6'hC
+                                                       : _GEN_31[2]
+                                                           ? 6'hD
+                                                           : _GEN_31[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h3][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h3][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h3][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h3][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h3][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h3][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h3][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h3][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h3][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h3][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h3][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h3][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_30[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_30[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_30[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_30[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h3][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h3][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_27[5]
+                                                                                                                                         | io_float_in[2'h3][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_26[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_29[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_29[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_29[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_29[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_29[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_29[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_29[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_29[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_28[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_28[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_28[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_28[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h3][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h3][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h3][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h3][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_32 = _shift_amount_T_3 == 6'h0;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_3 =
+    {63'h0, io_float_in[2'h3][51:0]}
+    << (_shift_amount_T_3 > 6'h34 ? 6'h34 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:52]} - 12'h3FF;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :50:32, :127:35
+  wire         _GEN_33 = $signed(_adjusted_exp_T_10) > 12'sh0;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  wire         _GEN_34 = $signed(_adjusted_exp_T_10) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       ~is_zero_3
+         & (is_inf_3 | is_nan_3
+            | (is_denorm_3
+                 ? _GEN_32 & 1'h0 - _shift_amount_T_3[0]
+                 : _GEN_33 | ~_GEN_34 & _adjusted_exp_T_10[0])),
+       is_zero_3 | is_inf_3
+         ? 2'h0
+         : is_nan_3
+             ? 2'h2
+             : is_denorm_3
+                 ? (_GEN_32
+                      ? ((|(_shifted_frac_T_3[49:0])) & _shifted_frac_T_3[50]
+                           ? _shifted_frac_T_3[51:50] + 2'h1
+                           : _shifted_frac_T_3[51:50])
+                      : 2'h0)
+                 : _GEN_33 | _GEN_34
+                     ? 2'h0
+                     : (|(io_float_in[2'h3][49:0])) & io_float_in[2'h3][50]
+                         ? io_float_in[2'h3][51:50] + 2'h1
+                         : io_float_in[2'h3][51:50],
+       60'h0}},
+     {{io_float_in[2'h2][63],
+       ~is_zero_2
+         & (is_inf_2 | is_nan_2
+            | (is_denorm_2
+                 ? _GEN_23 & 1'h0 - _shift_amount_T_2[0]
+                 : _GEN_24 | ~_GEN_25 & _adjusted_exp_T_7[0])),
+       is_zero_2 | is_inf_2
+         ? 2'h0
+         : is_nan_2
+             ? 2'h2
+             : is_denorm_2
+                 ? (_GEN_23
+                      ? ((|(_shifted_frac_T_2[49:0])) & _shifted_frac_T_2[50]
+                           ? _shifted_frac_T_2[51:50] + 2'h1
+                           : _shifted_frac_T_2[51:50])
+                      : 2'h0)
+                 : _GEN_24 | _GEN_25
+                     ? 2'h0
+                     : (|(io_float_in[2'h2][49:0])) & io_float_in[2'h2][50]
+                         ? io_float_in[2'h2][51:50] + 2'h1
+                         : io_float_in[2'h2][51:50],
+       60'h0}},
+     {{io_float_in[2'h1][63],
+       ~is_zero_1
+         & (is_inf_1 | is_nan_1
+            | (is_denorm_1
+                 ? _GEN_14 & 1'h0 - _shift_amount_T_1[0]
+                 : _GEN_15 | ~_GEN_16 & _adjusted_exp_T_4[0])),
+       is_zero_1 | is_inf_1
+         ? 2'h0
+         : is_nan_1
+             ? 2'h2
+             : is_denorm_1
+                 ? (_GEN_14
+                      ? ((|(_shifted_frac_T_1[49:0])) & _shifted_frac_T_1[50]
+                           ? _shifted_frac_T_1[51:50] + 2'h1
+                           : _shifted_frac_T_1[51:50])
+                      : 2'h0)
+                 : _GEN_15 | _GEN_16
+                     ? 2'h0
+                     : (|(io_float_in[2'h1][49:0])) & io_float_in[2'h1][50]
+                         ? io_float_in[2'h1][51:50] + 2'h1
+                         : io_float_in[2'h1][51:50],
+       60'h0}},
+     {{io_float_in[2'h0][63],
+       ~is_zero
+         & (is_inf | is_nan
+            | (is_denorm
+                 ? _GEN_5 & 1'h0 - _shift_amount_T[0]
+                 : _GEN_6 | ~_GEN_7 & _adjusted_exp_T_1[0])),
+       is_zero | is_inf
+         ? 2'h0
+         : is_nan
+             ? 2'h2
+             : is_denorm
+                 ? (_GEN_5
+                      ? ((|(_shifted_frac_T[49:0])) & _shifted_frac_T[50]
+                           ? _shifted_frac_T[51:50] + 2'h1
+                           : _shifted_frac_T[51:50])
+                      : 2'h0)
+                 : _GEN_6 | _GEN_7
+                     ? 2'h0
+                     : (|(io_float_in[2'h0][49:0])) & io_float_in[2'h0][50]
+                         ? io_float_in[2'h0][51:50] + 2'h1
+                         : io_float_in[2'h0][51:50],
+       60'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :50:32, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_21(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire         _is_denorm_T = io_float_in[2'h0][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_1 = io_float_in[2'h0][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf = (&(io_float_in[2'h0][62:52])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan = (&(io_float_in[2'h0][62:52])) & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm = _is_denorm_T & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN =
+    {{io_float_in[2'h0][11:8], io_float_in[2'h0][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h0][15:12], io_float_in[2'h0][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_0 =
+    {io_float_in[2'h0][5:4],
+     io_float_in[2'h0][7:6],
+     io_float_in[2'h0][9:8],
+     _GEN,
+     io_float_in[2'h0][19:18],
+     io_float_in[2'h0][21:20],
+     io_float_in[2'h0][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_1 =
+    _GEN_0[18:15] | {io_float_in[2'h0][7:6], io_float_in[2'h0][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_2 = _GEN_0[14:7] | _GEN & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_3 =
+    {_GEN_0[2:0], 1'h0} | {io_float_in[2'h0][23:22], io_float_in[2'h0][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_4 =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T =
+    (io_float_in[2'h0][51]
+       ? 6'h0
+       : io_float_in[2'h0][50]
+           ? 6'h1
+           : io_float_in[2'h0][49]
+               ? 6'h2
+               : io_float_in[2'h0][48]
+                   ? 6'h3
+                   : io_float_in[2'h0][47]
+                       ? 6'h4
+                       : io_float_in[2'h0][46]
+                           ? 6'h5
+                           : io_float_in[2'h0][45]
+                               ? 6'h6
+                               : io_float_in[2'h0][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h0][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h0][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h0][41]
+                                               ? 6'hA
+                                               : _GEN_4[0]
+                                                   ? 6'hB
+                                                   : _GEN_4[1]
+                                                       ? 6'hC
+                                                       : _GEN_4[2]
+                                                           ? 6'hD
+                                                           : _GEN_4[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h0][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h0][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h0][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h0][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h0][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h0][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h0][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h0][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h0][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h0][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h0][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h0][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_3[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_3[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_3[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_3[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h0][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h0][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_0[5]
+                                                                                                                                         | io_float_in[2'h0][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_2[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_2[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_2[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_2[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_2[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_2[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_2[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_2[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_1[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_1[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_1[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_1[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h0][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h0][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h0][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h0][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_5 = _shift_amount_T < 6'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T =
+    {63'h0, io_float_in[2'h0][51:0]}
+    << (_shift_amount_T > 6'h34 ? 6'h34 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:52]} - 12'h3F8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_6 = $signed(_adjusted_exp_T_1) > 12'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_7 = $signed(_adjusted_exp_T_1) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_2 = io_float_in[2'h1][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_3 = io_float_in[2'h1][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_1 = (&(io_float_in[2'h1][62:52])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_1 = (&(io_float_in[2'h1][62:52])) & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_8 =
+    {{io_float_in[2'h1][11:8], io_float_in[2'h1][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h1][15:12], io_float_in[2'h1][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_9 =
+    {io_float_in[2'h1][5:4],
+     io_float_in[2'h1][7:6],
+     io_float_in[2'h1][9:8],
+     _GEN_8,
+     io_float_in[2'h1][19:18],
+     io_float_in[2'h1][21:20],
+     io_float_in[2'h1][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_10 =
+    _GEN_9[18:15] | {io_float_in[2'h1][7:6], io_float_in[2'h1][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_11 = _GEN_9[14:7] | _GEN_8 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_12 =
+    {_GEN_9[2:0], 1'h0} | {io_float_in[2'h1][23:22], io_float_in[2'h1][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_13 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_1 =
+    (io_float_in[2'h1][51]
+       ? 6'h0
+       : io_float_in[2'h1][50]
+           ? 6'h1
+           : io_float_in[2'h1][49]
+               ? 6'h2
+               : io_float_in[2'h1][48]
+                   ? 6'h3
+                   : io_float_in[2'h1][47]
+                       ? 6'h4
+                       : io_float_in[2'h1][46]
+                           ? 6'h5
+                           : io_float_in[2'h1][45]
+                               ? 6'h6
+                               : io_float_in[2'h1][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h1][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h1][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h1][41]
+                                               ? 6'hA
+                                               : _GEN_13[0]
+                                                   ? 6'hB
+                                                   : _GEN_13[1]
+                                                       ? 6'hC
+                                                       : _GEN_13[2]
+                                                           ? 6'hD
+                                                           : _GEN_13[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h1][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h1][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h1][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h1][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h1][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h1][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h1][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h1][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h1][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h1][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h1][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h1][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_12[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_12[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_12[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_12[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h1][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h1][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_9[5]
+                                                                                                                                         | io_float_in[2'h1][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_8[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_11[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_11[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_11[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_11[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_11[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_11[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_11[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_11[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_10[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_10[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_10[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_10[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h1][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h1][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h1][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h1][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_14 = _shift_amount_T_1 < 6'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_1 =
+    {63'h0, io_float_in[2'h1][51:0]}
+    << (_shift_amount_T_1 > 6'h34 ? 6'h34 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:52]} - 12'h3F8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_15 = $signed(_adjusted_exp_T_4) > 12'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_16 = $signed(_adjusted_exp_T_4) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_4 = io_float_in[2'h2][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_5 = io_float_in[2'h2][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_2 = (&(io_float_in[2'h2][62:52])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_2 = (&(io_float_in[2'h2][62:52])) & (|(io_float_in[2'h2][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_17 =
+    {{io_float_in[2'h2][11:8], io_float_in[2'h2][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h2][15:12], io_float_in[2'h2][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_18 =
+    {io_float_in[2'h2][5:4],
+     io_float_in[2'h2][7:6],
+     io_float_in[2'h2][9:8],
+     _GEN_17,
+     io_float_in[2'h2][19:18],
+     io_float_in[2'h2][21:20],
+     io_float_in[2'h2][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_19 =
+    _GEN_18[18:15] | {io_float_in[2'h2][7:6], io_float_in[2'h2][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_20 = _GEN_18[14:7] | _GEN_17 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_21 =
+    {_GEN_18[2:0], 1'h0} | {io_float_in[2'h2][23:22], io_float_in[2'h2][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_22 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_2 =
+    (io_float_in[2'h2][51]
+       ? 6'h0
+       : io_float_in[2'h2][50]
+           ? 6'h1
+           : io_float_in[2'h2][49]
+               ? 6'h2
+               : io_float_in[2'h2][48]
+                   ? 6'h3
+                   : io_float_in[2'h2][47]
+                       ? 6'h4
+                       : io_float_in[2'h2][46]
+                           ? 6'h5
+                           : io_float_in[2'h2][45]
+                               ? 6'h6
+                               : io_float_in[2'h2][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h2][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h2][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h2][41]
+                                               ? 6'hA
+                                               : _GEN_22[0]
+                                                   ? 6'hB
+                                                   : _GEN_22[1]
+                                                       ? 6'hC
+                                                       : _GEN_22[2]
+                                                           ? 6'hD
+                                                           : _GEN_22[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h2][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h2][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h2][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h2][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h2][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h2][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h2][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h2][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h2][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h2][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h2][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h2][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_21[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_21[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_21[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_21[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h2][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h2][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_18[5]
+                                                                                                                                         | io_float_in[2'h2][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_17[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_20[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_20[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_20[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_20[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_20[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_20[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_20[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_20[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_19[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_19[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_19[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_19[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h2][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h2][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h2][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h2][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_23 = _shift_amount_T_2 < 6'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_2 =
+    {63'h0, io_float_in[2'h2][51:0]}
+    << (_shift_amount_T_2 > 6'h34 ? 6'h34 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:52]} - 12'h3F8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_24 = $signed(_adjusted_exp_T_7) > 12'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_25 = $signed(_adjusted_exp_T_7) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_6 = io_float_in[2'h3][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_7 = io_float_in[2'h3][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_3 = (&(io_float_in[2'h3][62:52])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_3 = (&(io_float_in[2'h3][62:52])) & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_26 =
+    {{io_float_in[2'h3][11:8], io_float_in[2'h3][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h3][15:12], io_float_in[2'h3][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_27 =
+    {io_float_in[2'h3][5:4],
+     io_float_in[2'h3][7:6],
+     io_float_in[2'h3][9:8],
+     _GEN_26,
+     io_float_in[2'h3][19:18],
+     io_float_in[2'h3][21:20],
+     io_float_in[2'h3][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_28 =
+    _GEN_27[18:15] | {io_float_in[2'h3][7:6], io_float_in[2'h3][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_29 = _GEN_27[14:7] | _GEN_26 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_30 =
+    {_GEN_27[2:0], 1'h0} | {io_float_in[2'h3][23:22], io_float_in[2'h3][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_31 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_3 =
+    (io_float_in[2'h3][51]
+       ? 6'h0
+       : io_float_in[2'h3][50]
+           ? 6'h1
+           : io_float_in[2'h3][49]
+               ? 6'h2
+               : io_float_in[2'h3][48]
+                   ? 6'h3
+                   : io_float_in[2'h3][47]
+                       ? 6'h4
+                       : io_float_in[2'h3][46]
+                           ? 6'h5
+                           : io_float_in[2'h3][45]
+                               ? 6'h6
+                               : io_float_in[2'h3][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h3][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h3][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h3][41]
+                                               ? 6'hA
+                                               : _GEN_31[0]
+                                                   ? 6'hB
+                                                   : _GEN_31[1]
+                                                       ? 6'hC
+                                                       : _GEN_31[2]
+                                                           ? 6'hD
+                                                           : _GEN_31[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h3][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h3][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h3][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h3][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h3][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h3][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h3][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h3][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h3][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h3][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h3][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h3][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_30[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_30[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_30[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_30[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h3][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h3][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_27[5]
+                                                                                                                                         | io_float_in[2'h3][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_26[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_29[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_29[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_29[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_29[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_29[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_29[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_29[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_29[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_28[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_28[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_28[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_28[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h3][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h3][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h3][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h3][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_32 = _shift_amount_T_3 < 6'h4;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_3 =
+    {63'h0, io_float_in[2'h3][51:0]}
+    << (_shift_amount_T_3 > 6'h34 ? 6'h34 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:52]} - 12'h3F8;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_33 = $signed(_adjusted_exp_T_10) > 12'shE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_34 = $signed(_adjusted_exp_T_10) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 4'h0
+         : is_inf_3 | is_nan_3
+             ? 4'hF
+             : is_denorm_3
+                 ? (_GEN_32 ? 4'h9 - _shift_amount_T_3[3:0] : 4'h0)
+                 : _GEN_33 ? 4'hF : _GEN_34 ? 4'h0 : _adjusted_exp_T_10[3:0],
+       is_zero_3 | is_inf_3
+         ? 3'h0
+         : is_nan_3
+             ? 3'h4
+             : is_denorm_3
+                 ? (_GEN_32
+                      ? ((|(_shifted_frac_T_3[48:0])) & _shifted_frac_T_3[49]
+                           ? _shifted_frac_T_3[51:49] + 3'h1
+                           : _shifted_frac_T_3[51:49])
+                      : 3'h0)
+                 : _GEN_33 | _GEN_34
+                     ? 3'h0
+                     : (|(io_float_in[2'h3][48:0])) & io_float_in[2'h3][49]
+                         ? io_float_in[2'h3][51:49] + 3'h1
+                         : io_float_in[2'h3][51:49],
+       56'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 4'h0
+         : is_inf_2 | is_nan_2
+             ? 4'hF
+             : is_denorm_2
+                 ? (_GEN_23 ? 4'h9 - _shift_amount_T_2[3:0] : 4'h0)
+                 : _GEN_24 ? 4'hF : _GEN_25 ? 4'h0 : _adjusted_exp_T_7[3:0],
+       is_zero_2 | is_inf_2
+         ? 3'h0
+         : is_nan_2
+             ? 3'h4
+             : is_denorm_2
+                 ? (_GEN_23
+                      ? ((|(_shifted_frac_T_2[48:0])) & _shifted_frac_T_2[49]
+                           ? _shifted_frac_T_2[51:49] + 3'h1
+                           : _shifted_frac_T_2[51:49])
+                      : 3'h0)
+                 : _GEN_24 | _GEN_25
+                     ? 3'h0
+                     : (|(io_float_in[2'h2][48:0])) & io_float_in[2'h2][49]
+                         ? io_float_in[2'h2][51:49] + 3'h1
+                         : io_float_in[2'h2][51:49],
+       56'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 4'h0
+         : is_inf_1 | is_nan_1
+             ? 4'hF
+             : is_denorm_1
+                 ? (_GEN_14 ? 4'h9 - _shift_amount_T_1[3:0] : 4'h0)
+                 : _GEN_15 ? 4'hF : _GEN_16 ? 4'h0 : _adjusted_exp_T_4[3:0],
+       is_zero_1 | is_inf_1
+         ? 3'h0
+         : is_nan_1
+             ? 3'h4
+             : is_denorm_1
+                 ? (_GEN_14
+                      ? ((|(_shifted_frac_T_1[48:0])) & _shifted_frac_T_1[49]
+                           ? _shifted_frac_T_1[51:49] + 3'h1
+                           : _shifted_frac_T_1[51:49])
+                      : 3'h0)
+                 : _GEN_15 | _GEN_16
+                     ? 3'h0
+                     : (|(io_float_in[2'h1][48:0])) & io_float_in[2'h1][49]
+                         ? io_float_in[2'h1][51:49] + 3'h1
+                         : io_float_in[2'h1][51:49],
+       56'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 4'h0
+         : is_inf | is_nan
+             ? 4'hF
+             : is_denorm
+                 ? (_GEN_5 ? 4'h9 - _shift_amount_T[3:0] : 4'h0)
+                 : _GEN_6 ? 4'hF : _GEN_7 ? 4'h0 : _adjusted_exp_T_1[3:0],
+       is_zero | is_inf
+         ? 3'h0
+         : is_nan
+             ? 3'h4
+             : is_denorm
+                 ? (_GEN_5
+                      ? ((|(_shifted_frac_T[48:0])) & _shifted_frac_T[49]
+                           ? _shifted_frac_T[51:49] + 3'h1
+                           : _shifted_frac_T[51:49])
+                      : 3'h0)
+                 : _GEN_6 | _GEN_7
+                     ? 3'h0
+                     : (|(io_float_in[2'h0][48:0])) & io_float_in[2'h0][49]
+                         ? io_float_in[2'h0][51:49] + 3'h1
+                         : io_float_in[2'h0][51:49],
+       56'h0}}};	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:16, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_22(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire         _is_denorm_T = io_float_in[2'h0][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_1 = io_float_in[2'h0][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf = (&(io_float_in[2'h0][62:52])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan = (&(io_float_in[2'h0][62:52])) & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm = _is_denorm_T & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN =
+    {{io_float_in[2'h0][11:8], io_float_in[2'h0][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h0][15:12], io_float_in[2'h0][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_0 =
+    {io_float_in[2'h0][5:4],
+     io_float_in[2'h0][7:6],
+     io_float_in[2'h0][9:8],
+     _GEN,
+     io_float_in[2'h0][19:18],
+     io_float_in[2'h0][21:20],
+     io_float_in[2'h0][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_1 =
+    _GEN_0[18:15] | {io_float_in[2'h0][7:6], io_float_in[2'h0][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_2 = _GEN_0[14:7] | _GEN & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_3 =
+    {_GEN_0[2:0], 1'h0} | {io_float_in[2'h0][23:22], io_float_in[2'h0][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_4 =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T =
+    (io_float_in[2'h0][51]
+       ? 6'h0
+       : io_float_in[2'h0][50]
+           ? 6'h1
+           : io_float_in[2'h0][49]
+               ? 6'h2
+               : io_float_in[2'h0][48]
+                   ? 6'h3
+                   : io_float_in[2'h0][47]
+                       ? 6'h4
+                       : io_float_in[2'h0][46]
+                           ? 6'h5
+                           : io_float_in[2'h0][45]
+                               ? 6'h6
+                               : io_float_in[2'h0][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h0][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h0][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h0][41]
+                                               ? 6'hA
+                                               : _GEN_4[0]
+                                                   ? 6'hB
+                                                   : _GEN_4[1]
+                                                       ? 6'hC
+                                                       : _GEN_4[2]
+                                                           ? 6'hD
+                                                           : _GEN_4[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h0][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h0][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h0][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h0][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h0][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h0][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h0][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h0][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h0][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h0][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h0][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h0][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_3[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_3[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_3[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_3[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h0][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h0][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_0[5]
+                                                                                                                                         | io_float_in[2'h0][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_2[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_2[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_2[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_2[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_2[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_2[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_2[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_2[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_1[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_1[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_1[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_1[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h0][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h0][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h0][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h0][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire         _GEN_5 = _shift_amount_T < 6'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T =
+    {63'h0, io_float_in[2'h0][51:0]}
+    << (_shift_amount_T > 6'h34 ? 6'h34 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:52]} - 12'h3F0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_6 = $signed(_adjusted_exp_T_1) > 12'sh1E;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_7 = $signed(_adjusted_exp_T_1) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_2 = io_float_in[2'h1][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_3 = io_float_in[2'h1][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_1 = (&(io_float_in[2'h1][62:52])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_1 = (&(io_float_in[2'h1][62:52])) & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_8 =
+    {{io_float_in[2'h1][11:8], io_float_in[2'h1][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h1][15:12], io_float_in[2'h1][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_9 =
+    {io_float_in[2'h1][5:4],
+     io_float_in[2'h1][7:6],
+     io_float_in[2'h1][9:8],
+     _GEN_8,
+     io_float_in[2'h1][19:18],
+     io_float_in[2'h1][21:20],
+     io_float_in[2'h1][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_10 =
+    _GEN_9[18:15] | {io_float_in[2'h1][7:6], io_float_in[2'h1][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_11 = _GEN_9[14:7] | _GEN_8 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_12 =
+    {_GEN_9[2:0], 1'h0} | {io_float_in[2'h1][23:22], io_float_in[2'h1][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_13 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_1 =
+    (io_float_in[2'h1][51]
+       ? 6'h0
+       : io_float_in[2'h1][50]
+           ? 6'h1
+           : io_float_in[2'h1][49]
+               ? 6'h2
+               : io_float_in[2'h1][48]
+                   ? 6'h3
+                   : io_float_in[2'h1][47]
+                       ? 6'h4
+                       : io_float_in[2'h1][46]
+                           ? 6'h5
+                           : io_float_in[2'h1][45]
+                               ? 6'h6
+                               : io_float_in[2'h1][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h1][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h1][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h1][41]
+                                               ? 6'hA
+                                               : _GEN_13[0]
+                                                   ? 6'hB
+                                                   : _GEN_13[1]
+                                                       ? 6'hC
+                                                       : _GEN_13[2]
+                                                           ? 6'hD
+                                                           : _GEN_13[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h1][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h1][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h1][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h1][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h1][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h1][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h1][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h1][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h1][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h1][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h1][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h1][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_12[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_12[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_12[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_12[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h1][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h1][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_9[5]
+                                                                                                                                         | io_float_in[2'h1][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_8[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_11[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_11[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_11[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_11[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_11[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_11[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_11[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_11[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_10[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_10[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_10[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_10[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h1][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h1][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h1][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h1][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire         _GEN_14 = _shift_amount_T_1 < 6'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_1 =
+    {63'h0, io_float_in[2'h1][51:0]}
+    << (_shift_amount_T_1 > 6'h34 ? 6'h34 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:52]} - 12'h3F0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_15 = $signed(_adjusted_exp_T_4) > 12'sh1E;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_16 = $signed(_adjusted_exp_T_4) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_4 = io_float_in[2'h2][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_5 = io_float_in[2'h2][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_2 = (&(io_float_in[2'h2][62:52])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_2 = (&(io_float_in[2'h2][62:52])) & (|(io_float_in[2'h2][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_17 =
+    {{io_float_in[2'h2][11:8], io_float_in[2'h2][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h2][15:12], io_float_in[2'h2][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_18 =
+    {io_float_in[2'h2][5:4],
+     io_float_in[2'h2][7:6],
+     io_float_in[2'h2][9:8],
+     _GEN_17,
+     io_float_in[2'h2][19:18],
+     io_float_in[2'h2][21:20],
+     io_float_in[2'h2][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_19 =
+    _GEN_18[18:15] | {io_float_in[2'h2][7:6], io_float_in[2'h2][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_20 = _GEN_18[14:7] | _GEN_17 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_21 =
+    {_GEN_18[2:0], 1'h0} | {io_float_in[2'h2][23:22], io_float_in[2'h2][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_22 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_2 =
+    (io_float_in[2'h2][51]
+       ? 6'h0
+       : io_float_in[2'h2][50]
+           ? 6'h1
+           : io_float_in[2'h2][49]
+               ? 6'h2
+               : io_float_in[2'h2][48]
+                   ? 6'h3
+                   : io_float_in[2'h2][47]
+                       ? 6'h4
+                       : io_float_in[2'h2][46]
+                           ? 6'h5
+                           : io_float_in[2'h2][45]
+                               ? 6'h6
+                               : io_float_in[2'h2][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h2][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h2][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h2][41]
+                                               ? 6'hA
+                                               : _GEN_22[0]
+                                                   ? 6'hB
+                                                   : _GEN_22[1]
+                                                       ? 6'hC
+                                                       : _GEN_22[2]
+                                                           ? 6'hD
+                                                           : _GEN_22[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h2][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h2][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h2][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h2][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h2][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h2][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h2][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h2][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h2][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h2][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h2][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h2][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_21[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_21[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_21[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_21[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h2][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h2][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_18[5]
+                                                                                                                                         | io_float_in[2'h2][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_17[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_20[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_20[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_20[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_20[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_20[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_20[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_20[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_20[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_19[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_19[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_19[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_19[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h2][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h2][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h2][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h2][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire         _GEN_23 = _shift_amount_T_2 < 6'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_2 =
+    {63'h0, io_float_in[2'h2][51:0]}
+    << (_shift_amount_T_2 > 6'h34 ? 6'h34 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:52]} - 12'h3F0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_24 = $signed(_adjusted_exp_T_7) > 12'sh1E;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_25 = $signed(_adjusted_exp_T_7) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_6 = io_float_in[2'h3][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_7 = io_float_in[2'h3][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_3 = (&(io_float_in[2'h3][62:52])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_3 = (&(io_float_in[2'h3][62:52])) & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_26 =
+    {{io_float_in[2'h3][11:8], io_float_in[2'h3][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h3][15:12], io_float_in[2'h3][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_27 =
+    {io_float_in[2'h3][5:4],
+     io_float_in[2'h3][7:6],
+     io_float_in[2'h3][9:8],
+     _GEN_26,
+     io_float_in[2'h3][19:18],
+     io_float_in[2'h3][21:20],
+     io_float_in[2'h3][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_28 =
+    _GEN_27[18:15] | {io_float_in[2'h3][7:6], io_float_in[2'h3][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_29 = _GEN_27[14:7] | _GEN_26 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_30 =
+    {_GEN_27[2:0], 1'h0} | {io_float_in[2'h3][23:22], io_float_in[2'h3][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_31 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_3 =
+    (io_float_in[2'h3][51]
+       ? 6'h0
+       : io_float_in[2'h3][50]
+           ? 6'h1
+           : io_float_in[2'h3][49]
+               ? 6'h2
+               : io_float_in[2'h3][48]
+                   ? 6'h3
+                   : io_float_in[2'h3][47]
+                       ? 6'h4
+                       : io_float_in[2'h3][46]
+                           ? 6'h5
+                           : io_float_in[2'h3][45]
+                               ? 6'h6
+                               : io_float_in[2'h3][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h3][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h3][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h3][41]
+                                               ? 6'hA
+                                               : _GEN_31[0]
+                                                   ? 6'hB
+                                                   : _GEN_31[1]
+                                                       ? 6'hC
+                                                       : _GEN_31[2]
+                                                           ? 6'hD
+                                                           : _GEN_31[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h3][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h3][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h3][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h3][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h3][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h3][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h3][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h3][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h3][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h3][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h3][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h3][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_30[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_30[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_30[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_30[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h3][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h3][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_27[5]
+                                                                                                                                         | io_float_in[2'h3][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_26[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_29[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_29[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_29[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_29[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_29[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_29[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_29[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_29[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_28[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_28[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_28[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_28[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h3][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h3][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h3][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h3][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44, :129:26
+  wire         _GEN_32 = _shift_amount_T_3 < 6'h5;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_3 =
+    {63'h0, io_float_in[2'h3][51:0]}
+    << (_shift_amount_T_3 > 6'h34 ? 6'h34 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:52]} - 12'h3F0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_33 = $signed(_adjusted_exp_T_10) > 12'sh1E;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_34 = $signed(_adjusted_exp_T_10) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 5'h0
+         : is_inf_3 | is_nan_3
+             ? 5'h1F
+             : is_denorm_3
+                 ? (_GEN_32 ? 5'h11 - _shift_amount_T_3[4:0] : 5'h0)
+                 : _GEN_33 ? 5'h1F : _GEN_34 ? 5'h0 : _adjusted_exp_T_10[4:0],
+       is_zero_3 | is_inf_3
+         ? 10'h0
+         : is_nan_3
+             ? 10'h200
+             : is_denorm_3
+                 ? (_GEN_32
+                      ? ((|(_shifted_frac_T_3[41:0])) & _shifted_frac_T_3[42]
+                           ? _shifted_frac_T_3[51:42] + 10'h1
+                           : _shifted_frac_T_3[51:42])
+                      : 10'h0)
+                 : _GEN_33 | _GEN_34
+                     ? 10'h0
+                     : (|(io_float_in[2'h3][41:0])) & io_float_in[2'h3][42]
+                         ? io_float_in[2'h3][51:42] + 10'h1
+                         : io_float_in[2'h3][51:42],
+       48'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 5'h0
+         : is_inf_2 | is_nan_2
+             ? 5'h1F
+             : is_denorm_2
+                 ? (_GEN_23 ? 5'h11 - _shift_amount_T_2[4:0] : 5'h0)
+                 : _GEN_24 ? 5'h1F : _GEN_25 ? 5'h0 : _adjusted_exp_T_7[4:0],
+       is_zero_2 | is_inf_2
+         ? 10'h0
+         : is_nan_2
+             ? 10'h200
+             : is_denorm_2
+                 ? (_GEN_23
+                      ? ((|(_shifted_frac_T_2[41:0])) & _shifted_frac_T_2[42]
+                           ? _shifted_frac_T_2[51:42] + 10'h1
+                           : _shifted_frac_T_2[51:42])
+                      : 10'h0)
+                 : _GEN_24 | _GEN_25
+                     ? 10'h0
+                     : (|(io_float_in[2'h2][41:0])) & io_float_in[2'h2][42]
+                         ? io_float_in[2'h2][51:42] + 10'h1
+                         : io_float_in[2'h2][51:42],
+       48'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 5'h0
+         : is_inf_1 | is_nan_1
+             ? 5'h1F
+             : is_denorm_1
+                 ? (_GEN_14 ? 5'h11 - _shift_amount_T_1[4:0] : 5'h0)
+                 : _GEN_15 ? 5'h1F : _GEN_16 ? 5'h0 : _adjusted_exp_T_4[4:0],
+       is_zero_1 | is_inf_1
+         ? 10'h0
+         : is_nan_1
+             ? 10'h200
+             : is_denorm_1
+                 ? (_GEN_14
+                      ? ((|(_shifted_frac_T_1[41:0])) & _shifted_frac_T_1[42]
+                           ? _shifted_frac_T_1[51:42] + 10'h1
+                           : _shifted_frac_T_1[51:42])
+                      : 10'h0)
+                 : _GEN_15 | _GEN_16
+                     ? 10'h0
+                     : (|(io_float_in[2'h1][41:0])) & io_float_in[2'h1][42]
+                         ? io_float_in[2'h1][51:42] + 10'h1
+                         : io_float_in[2'h1][51:42],
+       48'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 5'h0
+         : is_inf | is_nan
+             ? 5'h1F
+             : is_denorm
+                 ? (_GEN_5 ? 5'h11 - _shift_amount_T[4:0] : 5'h0)
+                 : _GEN_6 ? 5'h1F : _GEN_7 ? 5'h0 : _adjusted_exp_T_1[4:0],
+       is_zero | is_inf
+         ? 10'h0
+         : is_nan
+             ? 10'h200
+             : is_denorm
+                 ? (_GEN_5
+                      ? ((|(_shifted_frac_T[41:0])) & _shifted_frac_T[42]
+                           ? _shifted_frac_T[51:42] + 10'h1
+                           : _shifted_frac_T[51:42])
+                      : 10'h0)
+                 : _GEN_6 | _GEN_7
+                     ? 10'h0
+                     : (|(io_float_in[2'h0][41:0])) & io_float_in[2'h0][42]
+                         ? io_float_in[2'h0][51:42] + 10'h1
+                         : io_float_in[2'h0][51:42],
+       48'h0}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_23(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire         _is_denorm_T = io_float_in[2'h0][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_1 = io_float_in[2'h0][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf = (&(io_float_in[2'h0][62:52])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan = (&(io_float_in[2'h0][62:52])) & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm = _is_denorm_T & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN =
+    {{io_float_in[2'h0][11:8], io_float_in[2'h0][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h0][15:12], io_float_in[2'h0][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_0 =
+    {io_float_in[2'h0][5:4],
+     io_float_in[2'h0][7:6],
+     io_float_in[2'h0][9:8],
+     _GEN,
+     io_float_in[2'h0][19:18],
+     io_float_in[2'h0][21:20],
+     io_float_in[2'h0][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_1 =
+    _GEN_0[18:15] | {io_float_in[2'h0][7:6], io_float_in[2'h0][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_2 = _GEN_0[14:7] | _GEN & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_3 =
+    {_GEN_0[2:0], 1'h0} | {io_float_in[2'h0][23:22], io_float_in[2'h0][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_4 =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T =
+    (io_float_in[2'h0][51]
+       ? 6'h0
+       : io_float_in[2'h0][50]
+           ? 6'h1
+           : io_float_in[2'h0][49]
+               ? 6'h2
+               : io_float_in[2'h0][48]
+                   ? 6'h3
+                   : io_float_in[2'h0][47]
+                       ? 6'h4
+                       : io_float_in[2'h0][46]
+                           ? 6'h5
+                           : io_float_in[2'h0][45]
+                               ? 6'h6
+                               : io_float_in[2'h0][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h0][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h0][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h0][41]
+                                               ? 6'hA
+                                               : _GEN_4[0]
+                                                   ? 6'hB
+                                                   : _GEN_4[1]
+                                                       ? 6'hC
+                                                       : _GEN_4[2]
+                                                           ? 6'hD
+                                                           : _GEN_4[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h0][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h0][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h0][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h0][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h0][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h0][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h0][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h0][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h0][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h0][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h0][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h0][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_3[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_3[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_3[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_3[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h0][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h0][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_0[5]
+                                                                                                                                         | io_float_in[2'h0][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_2[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_2[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_2[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_2[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_2[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_2[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_2[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_2[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_1[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_1[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_1[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_1[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h0][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h0][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h0][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h0][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_5 = _shift_amount_T < 6'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T =
+    {63'h0, io_float_in[2'h0][51:0]}
+    << (_shift_amount_T > 6'h34 ? 6'h34 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_1 = {1'h0, io_float_in[2'h0][62:52]} - 12'h380;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_6 = $signed(_adjusted_exp_T_1) > 12'shFE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_7 = $signed(_adjusted_exp_T_1) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_2 = io_float_in[2'h1][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_3 = io_float_in[2'h1][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_1 = (&(io_float_in[2'h1][62:52])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_1 = (&(io_float_in[2'h1][62:52])) & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_8 =
+    {{io_float_in[2'h1][11:8], io_float_in[2'h1][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h1][15:12], io_float_in[2'h1][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_9 =
+    {io_float_in[2'h1][5:4],
+     io_float_in[2'h1][7:6],
+     io_float_in[2'h1][9:8],
+     _GEN_8,
+     io_float_in[2'h1][19:18],
+     io_float_in[2'h1][21:20],
+     io_float_in[2'h1][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_10 =
+    _GEN_9[18:15] | {io_float_in[2'h1][7:6], io_float_in[2'h1][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_11 = _GEN_9[14:7] | _GEN_8 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_12 =
+    {_GEN_9[2:0], 1'h0} | {io_float_in[2'h1][23:22], io_float_in[2'h1][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_13 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_1 =
+    (io_float_in[2'h1][51]
+       ? 6'h0
+       : io_float_in[2'h1][50]
+           ? 6'h1
+           : io_float_in[2'h1][49]
+               ? 6'h2
+               : io_float_in[2'h1][48]
+                   ? 6'h3
+                   : io_float_in[2'h1][47]
+                       ? 6'h4
+                       : io_float_in[2'h1][46]
+                           ? 6'h5
+                           : io_float_in[2'h1][45]
+                               ? 6'h6
+                               : io_float_in[2'h1][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h1][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h1][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h1][41]
+                                               ? 6'hA
+                                               : _GEN_13[0]
+                                                   ? 6'hB
+                                                   : _GEN_13[1]
+                                                       ? 6'hC
+                                                       : _GEN_13[2]
+                                                           ? 6'hD
+                                                           : _GEN_13[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h1][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h1][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h1][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h1][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h1][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h1][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h1][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h1][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h1][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h1][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h1][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h1][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_12[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_12[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_12[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_12[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h1][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h1][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_9[5]
+                                                                                                                                         | io_float_in[2'h1][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_8[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_11[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_11[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_11[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_11[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_11[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_11[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_11[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_11[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_10[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_10[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_10[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_10[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h1][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h1][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h1][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h1][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_14 = _shift_amount_T_1 < 6'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_1 =
+    {63'h0, io_float_in[2'h1][51:0]}
+    << (_shift_amount_T_1 > 6'h34 ? 6'h34 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_4 = {1'h0, io_float_in[2'h1][62:52]} - 12'h380;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_15 = $signed(_adjusted_exp_T_4) > 12'shFE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_16 = $signed(_adjusted_exp_T_4) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_4 = io_float_in[2'h2][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_5 = io_float_in[2'h2][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_2 = (&(io_float_in[2'h2][62:52])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_2 = (&(io_float_in[2'h2][62:52])) & (|(io_float_in[2'h2][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_17 =
+    {{io_float_in[2'h2][11:8], io_float_in[2'h2][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h2][15:12], io_float_in[2'h2][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_18 =
+    {io_float_in[2'h2][5:4],
+     io_float_in[2'h2][7:6],
+     io_float_in[2'h2][9:8],
+     _GEN_17,
+     io_float_in[2'h2][19:18],
+     io_float_in[2'h2][21:20],
+     io_float_in[2'h2][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_19 =
+    _GEN_18[18:15] | {io_float_in[2'h2][7:6], io_float_in[2'h2][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_20 = _GEN_18[14:7] | _GEN_17 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_21 =
+    {_GEN_18[2:0], 1'h0} | {io_float_in[2'h2][23:22], io_float_in[2'h2][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_22 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_2 =
+    (io_float_in[2'h2][51]
+       ? 6'h0
+       : io_float_in[2'h2][50]
+           ? 6'h1
+           : io_float_in[2'h2][49]
+               ? 6'h2
+               : io_float_in[2'h2][48]
+                   ? 6'h3
+                   : io_float_in[2'h2][47]
+                       ? 6'h4
+                       : io_float_in[2'h2][46]
+                           ? 6'h5
+                           : io_float_in[2'h2][45]
+                               ? 6'h6
+                               : io_float_in[2'h2][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h2][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h2][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h2][41]
+                                               ? 6'hA
+                                               : _GEN_22[0]
+                                                   ? 6'hB
+                                                   : _GEN_22[1]
+                                                       ? 6'hC
+                                                       : _GEN_22[2]
+                                                           ? 6'hD
+                                                           : _GEN_22[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h2][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h2][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h2][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h2][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h2][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h2][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h2][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h2][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h2][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h2][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h2][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h2][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_21[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_21[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_21[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_21[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h2][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h2][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_18[5]
+                                                                                                                                         | io_float_in[2'h2][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_17[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_20[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_20[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_20[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_20[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_20[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_20[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_20[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_20[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_19[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_19[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_19[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_19[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h2][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h2][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h2][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h2][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_23 = _shift_amount_T_2 < 6'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_2 =
+    {63'h0, io_float_in[2'h2][51:0]}
+    << (_shift_amount_T_2 > 6'h34 ? 6'h34 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_7 = {1'h0, io_float_in[2'h2][62:52]} - 12'h380;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_24 = $signed(_adjusted_exp_T_7) > 12'shFE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_25 = $signed(_adjusted_exp_T_7) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  wire         _is_denorm_T_6 = io_float_in[2'h3][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24
+  wire         _is_inf_T_7 = io_float_in[2'h3][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42
+  wire         is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_3 = (&(io_float_in[2'h3][62:52])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_3 = (&(io_float_in[2'h3][62:52])) & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_26 =
+    {{io_float_in[2'h3][11:8], io_float_in[2'h3][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h3][15:12], io_float_in[2'h3][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_27 =
+    {io_float_in[2'h3][5:4],
+     io_float_in[2'h3][7:6],
+     io_float_in[2'h3][9:8],
+     _GEN_26,
+     io_float_in[2'h3][19:18],
+     io_float_in[2'h3][21:20],
+     io_float_in[2'h3][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_28 =
+    _GEN_27[18:15] | {io_float_in[2'h3][7:6], io_float_in[2'h3][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_29 = _GEN_27[14:7] | _GEN_26 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_30 =
+    {_GEN_27[2:0], 1'h0} | {io_float_in[2'h3][23:22], io_float_in[2'h3][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_31 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_3 =
+    (io_float_in[2'h3][51]
+       ? 6'h0
+       : io_float_in[2'h3][50]
+           ? 6'h1
+           : io_float_in[2'h3][49]
+               ? 6'h2
+               : io_float_in[2'h3][48]
+                   ? 6'h3
+                   : io_float_in[2'h3][47]
+                       ? 6'h4
+                       : io_float_in[2'h3][46]
+                           ? 6'h5
+                           : io_float_in[2'h3][45]
+                               ? 6'h6
+                               : io_float_in[2'h3][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h3][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h3][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h3][41]
+                                               ? 6'hA
+                                               : _GEN_31[0]
+                                                   ? 6'hB
+                                                   : _GEN_31[1]
+                                                       ? 6'hC
+                                                       : _GEN_31[2]
+                                                           ? 6'hD
+                                                           : _GEN_31[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h3][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h3][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h3][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h3][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h3][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h3][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h3][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h3][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h3][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h3][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h3][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h3][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_30[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_30[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_30[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_30[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h3][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h3][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_27[5]
+                                                                                                                                         | io_float_in[2'h3][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_26[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_29[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_29[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_29[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_29[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_29[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_29[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_29[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_29[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_28[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_28[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_28[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_28[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h3][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h3][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h3][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h3][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_32 = _shift_amount_T_3 < 6'h8;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_3 =
+    {63'h0, io_float_in[2'h3][51:0]}
+    << (_shift_amount_T_3 > 6'h34 ? 6'h34 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire [11:0]  _adjusted_exp_T_10 = {1'h0, io_float_in[2'h3][62:52]} - 12'h380;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :127:35, :133:32
+  wire         _GEN_33 = $signed(_adjusted_exp_T_10) > 12'shFE;	// src/main/scala/pvu/FloatConvert.scala:127:35, :129:26
+  wire         _GEN_34 = $signed(_adjusted_exp_T_10) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:127:35, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 8'h0
+         : is_inf_3 | is_nan_3
+             ? 8'hFF
+             : is_denorm_3
+                 ? (_GEN_32 ? 8'h81 - {2'h0, _shift_amount_T_3} : 8'h0)
+                 : _GEN_33 ? 8'hFF : _GEN_34 ? 8'h0 : _adjusted_exp_T_10[7:0],
+       is_zero_3 | is_inf_3
+         ? 23'h0
+         : is_nan_3
+             ? 23'h400000
+             : is_denorm_3
+                 ? (_GEN_32
+                      ? ((|(_shifted_frac_T_3[28:0])) & _shifted_frac_T_3[29]
+                           ? _shifted_frac_T_3[51:29] + 23'h1
+                           : _shifted_frac_T_3[51:29])
+                      : 23'h0)
+                 : _GEN_33 | _GEN_34
+                     ? 23'h0
+                     : (|(io_float_in[2'h3][28:0])) & io_float_in[2'h3][29]
+                         ? io_float_in[2'h3][51:29] + 23'h1
+                         : io_float_in[2'h3][51:29],
+       32'h0}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 8'h0
+         : is_inf_2 | is_nan_2
+             ? 8'hFF
+             : is_denorm_2
+                 ? (_GEN_23 ? 8'h81 - {2'h0, _shift_amount_T_2} : 8'h0)
+                 : _GEN_24 ? 8'hFF : _GEN_25 ? 8'h0 : _adjusted_exp_T_7[7:0],
+       is_zero_2 | is_inf_2
+         ? 23'h0
+         : is_nan_2
+             ? 23'h400000
+             : is_denorm_2
+                 ? (_GEN_23
+                      ? ((|(_shifted_frac_T_2[28:0])) & _shifted_frac_T_2[29]
+                           ? _shifted_frac_T_2[51:29] + 23'h1
+                           : _shifted_frac_T_2[51:29])
+                      : 23'h0)
+                 : _GEN_24 | _GEN_25
+                     ? 23'h0
+                     : (|(io_float_in[2'h2][28:0])) & io_float_in[2'h2][29]
+                         ? io_float_in[2'h2][51:29] + 23'h1
+                         : io_float_in[2'h2][51:29],
+       32'h0}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 8'h0
+         : is_inf_1 | is_nan_1
+             ? 8'hFF
+             : is_denorm_1
+                 ? (_GEN_14 ? 8'h81 - {2'h0, _shift_amount_T_1} : 8'h0)
+                 : _GEN_15 ? 8'hFF : _GEN_16 ? 8'h0 : _adjusted_exp_T_4[7:0],
+       is_zero_1 | is_inf_1
+         ? 23'h0
+         : is_nan_1
+             ? 23'h400000
+             : is_denorm_1
+                 ? (_GEN_14
+                      ? ((|(_shifted_frac_T_1[28:0])) & _shifted_frac_T_1[29]
+                           ? _shifted_frac_T_1[51:29] + 23'h1
+                           : _shifted_frac_T_1[51:29])
+                      : 23'h0)
+                 : _GEN_15 | _GEN_16
+                     ? 23'h0
+                     : (|(io_float_in[2'h1][28:0])) & io_float_in[2'h1][29]
+                         ? io_float_in[2'h1][51:29] + 23'h1
+                         : io_float_in[2'h1][51:29],
+       32'h0}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 8'h0
+         : is_inf | is_nan
+             ? 8'hFF
+             : is_denorm
+                 ? (_GEN_5 ? 8'h81 - {2'h0, _shift_amount_T} : 8'h0)
+                 : _GEN_6 ? 8'hFF : _GEN_7 ? 8'h0 : _adjusted_exp_T_1[7:0],
+       is_zero | is_inf
+         ? 23'h0
+         : is_nan
+             ? 23'h400000
+             : is_denorm
+                 ? (_GEN_5
+                      ? ((|(_shifted_frac_T[28:0])) & _shifted_frac_T[29]
+                           ? _shifted_frac_T[51:29] + 23'h1
+                           : _shifted_frac_T[51:29])
+                      : 23'h0)
+                 : _GEN_6 | _GEN_7
+                     ? 23'h0
+                     : (|(io_float_in[2'h0][28:0])) & io_float_in[2'h0][29]
+                         ? io_float_in[2'h0][51:29] + 23'h1
+                         : io_float_in[2'h0][51:29],
+       32'h0}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :47:25, :53:33, :54:57, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :113:44, :114:{42,46,62}, :115:39, :116:{20,26,48}, :120:17, :121:18, :127:35, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :148:36, :149:{42,46,54}, :150:31, :151:{20,26,48}, :161:44
+endmodule
+
+module FloatConvert_24(	// src/main/scala/pvu/FloatConvert.scala:6:7
+  input  [3:0][63:0] io_float_in,	// src/main/scala/pvu/FloatConvert.scala:13:14
+  output [3:0][63:0] io_float_out	// src/main/scala/pvu/FloatConvert.scala:13:14
+);
+
+  wire         _is_denorm_T = io_float_in[2'h0][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire         _is_inf_T_1 = io_float_in[2'h0][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire         is_zero = _is_denorm_T & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf = (&(io_float_in[2'h0][62:52])) & _is_inf_T_1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan = (&(io_float_in[2'h0][62:52])) & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm = _is_denorm_T & (|(io_float_in[2'h0][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN =
+    {{io_float_in[2'h0][11:8], io_float_in[2'h0][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h0][15:12], io_float_in[2'h0][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_0 =
+    {io_float_in[2'h0][5:4],
+     io_float_in[2'h0][7:6],
+     io_float_in[2'h0][9:8],
+     _GEN,
+     io_float_in[2'h0][19:18],
+     io_float_in[2'h0][21:20],
+     io_float_in[2'h0][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_1 =
+    _GEN_0[18:15] | {io_float_in[2'h0][7:6], io_float_in[2'h0][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_2 = _GEN_0[14:7] | _GEN & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_3 =
+    {_GEN_0[2:0], 1'h0} | {io_float_in[2'h0][23:22], io_float_in[2'h0][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_4 =
+    {{io_float_in[2'h0][37:36], io_float_in[2'h0][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h0][39:38], io_float_in[2'h0][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T =
+    (io_float_in[2'h0][51]
+       ? 6'h0
+       : io_float_in[2'h0][50]
+           ? 6'h1
+           : io_float_in[2'h0][49]
+               ? 6'h2
+               : io_float_in[2'h0][48]
+                   ? 6'h3
+                   : io_float_in[2'h0][47]
+                       ? 6'h4
+                       : io_float_in[2'h0][46]
+                           ? 6'h5
+                           : io_float_in[2'h0][45]
+                               ? 6'h6
+                               : io_float_in[2'h0][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h0][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h0][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h0][41]
+                                               ? 6'hA
+                                               : _GEN_4[0]
+                                                   ? 6'hB
+                                                   : _GEN_4[1]
+                                                       ? 6'hC
+                                                       : _GEN_4[2]
+                                                           ? 6'hD
+                                                           : _GEN_4[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h0][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h0][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h0][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h0][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h0][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h0][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h0][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h0][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h0][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h0][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h0][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h0][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_3[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_3[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_3[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_3[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h0][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h0][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_0[5]
+                                                                                                                                         | io_float_in[2'h0][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_2[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_2[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_2[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_2[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_2[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_2[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_2[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_2[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_1[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_1[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_1[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_1[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h0][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h0][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h0][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h0][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_5 = _shift_amount_T < 6'hB;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T =
+    {63'h0, io_float_in[2'h0][51:0]}
+    << (_shift_amount_T > 6'h34 ? 6'h34 : _shift_amount_T);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire         _GEN_6 = $signed({1'h0, io_float_in[2'h0][62:52]}) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire         _is_denorm_T_2 = io_float_in[2'h1][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire         _is_inf_T_3 = io_float_in[2'h1][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire         is_zero_1 = _is_denorm_T_2 & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_1 = (&(io_float_in[2'h1][62:52])) & _is_inf_T_3;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_1 = (&(io_float_in[2'h1][62:52])) & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_1 = _is_denorm_T_2 & (|(io_float_in[2'h1][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_7 =
+    {{io_float_in[2'h1][11:8], io_float_in[2'h1][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h1][15:12], io_float_in[2'h1][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_8 =
+    {io_float_in[2'h1][5:4],
+     io_float_in[2'h1][7:6],
+     io_float_in[2'h1][9:8],
+     _GEN_7,
+     io_float_in[2'h1][19:18],
+     io_float_in[2'h1][21:20],
+     io_float_in[2'h1][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_9 =
+    _GEN_8[18:15] | {io_float_in[2'h1][7:6], io_float_in[2'h1][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_10 = _GEN_8[14:7] | _GEN_7 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_11 =
+    {_GEN_8[2:0], 1'h0} | {io_float_in[2'h1][23:22], io_float_in[2'h1][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_12 =
+    {{io_float_in[2'h1][37:36], io_float_in[2'h1][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h1][39:38], io_float_in[2'h1][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_1 =
+    (io_float_in[2'h1][51]
+       ? 6'h0
+       : io_float_in[2'h1][50]
+           ? 6'h1
+           : io_float_in[2'h1][49]
+               ? 6'h2
+               : io_float_in[2'h1][48]
+                   ? 6'h3
+                   : io_float_in[2'h1][47]
+                       ? 6'h4
+                       : io_float_in[2'h1][46]
+                           ? 6'h5
+                           : io_float_in[2'h1][45]
+                               ? 6'h6
+                               : io_float_in[2'h1][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h1][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h1][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h1][41]
+                                               ? 6'hA
+                                               : _GEN_12[0]
+                                                   ? 6'hB
+                                                   : _GEN_12[1]
+                                                       ? 6'hC
+                                                       : _GEN_12[2]
+                                                           ? 6'hD
+                                                           : _GEN_12[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h1][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h1][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h1][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h1][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h1][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h1][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h1][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h1][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h1][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h1][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h1][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h1][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_11[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_11[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_11[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_11[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h1][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h1][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_8[5]
+                                                                                                                                         | io_float_in[2'h1][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_7[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_10[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_10[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_10[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_10[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_10[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_10[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_10[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_10[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_9[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_9[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_9[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_9[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h1][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h1][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h1][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h1][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_13 = _shift_amount_T_1 < 6'hB;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_1 =
+    {63'h0, io_float_in[2'h1][51:0]}
+    << (_shift_amount_T_1 > 6'h34 ? 6'h34 : _shift_amount_T_1);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire         _GEN_14 = $signed({1'h0, io_float_in[2'h1][62:52]}) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire         _is_denorm_T_4 = io_float_in[2'h2][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire         _is_inf_T_5 = io_float_in[2'h2][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire         is_zero_2 = _is_denorm_T_4 & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_2 = (&(io_float_in[2'h2][62:52])) & _is_inf_T_5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_2 = (&(io_float_in[2'h2][62:52])) & (|(io_float_in[2'h2][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_2 = _is_denorm_T_4 & (|(io_float_in[2'h2][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_15 =
+    {{io_float_in[2'h2][11:8], io_float_in[2'h2][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h2][15:12], io_float_in[2'h2][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_16 =
+    {io_float_in[2'h2][5:4],
+     io_float_in[2'h2][7:6],
+     io_float_in[2'h2][9:8],
+     _GEN_15,
+     io_float_in[2'h2][19:18],
+     io_float_in[2'h2][21:20],
+     io_float_in[2'h2][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_17 =
+    _GEN_16[18:15] | {io_float_in[2'h2][7:6], io_float_in[2'h2][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_18 = _GEN_16[14:7] | _GEN_15 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_19 =
+    {_GEN_16[2:0], 1'h0} | {io_float_in[2'h2][23:22], io_float_in[2'h2][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_20 =
+    {{io_float_in[2'h2][37:36], io_float_in[2'h2][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h2][39:38], io_float_in[2'h2][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_2 =
+    (io_float_in[2'h2][51]
+       ? 6'h0
+       : io_float_in[2'h2][50]
+           ? 6'h1
+           : io_float_in[2'h2][49]
+               ? 6'h2
+               : io_float_in[2'h2][48]
+                   ? 6'h3
+                   : io_float_in[2'h2][47]
+                       ? 6'h4
+                       : io_float_in[2'h2][46]
+                           ? 6'h5
+                           : io_float_in[2'h2][45]
+                               ? 6'h6
+                               : io_float_in[2'h2][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h2][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h2][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h2][41]
+                                               ? 6'hA
+                                               : _GEN_20[0]
+                                                   ? 6'hB
+                                                   : _GEN_20[1]
+                                                       ? 6'hC
+                                                       : _GEN_20[2]
+                                                           ? 6'hD
+                                                           : _GEN_20[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h2][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h2][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h2][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h2][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h2][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h2][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h2][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h2][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h2][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h2][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h2][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h2][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_19[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_19[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_19[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_19[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h2][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h2][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_16[5]
+                                                                                                                                         | io_float_in[2'h2][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_15[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_18[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_18[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_18[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_18[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_18[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_18[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_18[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_18[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_17[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_17[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_17[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_17[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h2][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h2][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h2][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h2][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_21 = _shift_amount_T_2 < 6'hB;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_2 =
+    {63'h0, io_float_in[2'h2][51:0]}
+    << (_shift_amount_T_2 > 6'h34 ? 6'h34 : _shift_amount_T_2);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire         _GEN_22 = $signed({1'h0, io_float_in[2'h2][62:52]}) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  wire         _is_denorm_T_6 = io_float_in[2'h3][62:52] == 11'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:24, :66:15
+  wire         _is_inf_T_7 = io_float_in[2'h3][51:0] == 52'h0;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:42, :67:16
+  wire         is_zero_3 = _is_denorm_T_6 & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:53:{24,33,42}
+  wire         is_inf_3 = (&(io_float_in[2'h3][62:52])) & _is_inf_T_7;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :53:42, :54:{23,57}
+  wire         is_nan_3 = (&(io_float_in[2'h3][62:52])) & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :47:25, :54:23, :55:{57,66}
+  wire         is_denorm_3 = _is_denorm_T_6 & (|(io_float_in[2'h3][51:0]));	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :53:24, :55:66, :56:35
+  wire [7:0]   _GEN_23 =
+    {{io_float_in[2'h3][11:8], io_float_in[2'h3][15:14]} & 6'h33, 2'h0}
+    | {io_float_in[2'h3][15:12], io_float_in[2'h3][19:16]} & 8'h33;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53
+  wire [18:0]  _GEN_24 =
+    {io_float_in[2'h3][5:4],
+     io_float_in[2'h3][7:6],
+     io_float_in[2'h3][9:8],
+     _GEN_23,
+     io_float_in[2'h3][19:18],
+     io_float_in[2'h3][21:20],
+     io_float_in[2'h3][23]} & 19'h55555;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [3:0]   _GEN_25 =
+    _GEN_24[18:15] | {io_float_in[2'h3][7:6], io_float_in[2'h3][9:8]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53
+  wire [7:0]   _GEN_26 = _GEN_24[14:7] | _GEN_23 & 8'h55;	// src/main/scala/pvu/FloatConvert.scala:91:53
+  wire [3:0]   _GEN_27 =
+    {_GEN_24[2:0], 1'h0} | {io_float_in[2'h3][23:22], io_float_in[2'h3][25:24]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :91:53, :133:32
+  wire [3:0]   _GEN_28 =
+    {{io_float_in[2'h3][37:36], io_float_in[2'h3][39]} & 3'h5, 1'h0}
+    | {io_float_in[2'h3][39:38], io_float_in[2'h3][41:40]} & 4'h5;	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :133:32
+  wire [5:0]   _shift_amount_T_3 =
+    (io_float_in[2'h3][51]
+       ? 6'h0
+       : io_float_in[2'h3][50]
+           ? 6'h1
+           : io_float_in[2'h3][49]
+               ? 6'h2
+               : io_float_in[2'h3][48]
+                   ? 6'h3
+                   : io_float_in[2'h3][47]
+                       ? 6'h4
+                       : io_float_in[2'h3][46]
+                           ? 6'h5
+                           : io_float_in[2'h3][45]
+                               ? 6'h6
+                               : io_float_in[2'h3][44]
+                                   ? 6'h7
+                                   : io_float_in[2'h3][43]
+                                       ? 6'h8
+                                       : io_float_in[2'h3][42]
+                                           ? 6'h9
+                                           : io_float_in[2'h3][41]
+                                               ? 6'hA
+                                               : _GEN_28[0]
+                                                   ? 6'hB
+                                                   : _GEN_28[1]
+                                                       ? 6'hC
+                                                       : _GEN_28[2]
+                                                           ? 6'hD
+                                                           : _GEN_28[3]
+                                                               ? 6'hE
+                                                               : io_float_in[2'h3][36]
+                                                                   ? 6'hF
+                                                                   : io_float_in[2'h3][35]
+                                                                       ? 6'h10
+                                                                       : io_float_in[2'h3][34]
+                                                                           ? 6'h11
+                                                                           : io_float_in[2'h3][33]
+                                                                               ? 6'h12
+                                                                               : io_float_in[2'h3][32]
+                                                                                   ? 6'h13
+                                                                                   : io_float_in[2'h3][31]
+                                                                                       ? 6'h14
+                                                                                       : io_float_in[2'h3][30]
+                                                                                           ? 6'h15
+                                                                                           : io_float_in[2'h3][29]
+                                                                                               ? 6'h16
+                                                                                               : io_float_in[2'h3][28]
+                                                                                                   ? 6'h17
+                                                                                                   : io_float_in[2'h3][27]
+                                                                                                       ? 6'h18
+                                                                                                       : io_float_in[2'h3][26]
+                                                                                                           ? 6'h19
+                                                                                                           : io_float_in[2'h3][25]
+                                                                                                               ? 6'h1A
+                                                                                                               : _GEN_27[0]
+                                                                                                                   ? 6'h1B
+                                                                                                                   : _GEN_27[1]
+                                                                                                                       ? 6'h1C
+                                                                                                                       : _GEN_27[2]
+                                                                                                                           ? 6'h1D
+                                                                                                                           : _GEN_27[3]
+                                                                                                                               ? 6'h1E
+                                                                                                                               : io_float_in[2'h3][20]
+                                                                                                                                   ? 6'h1F
+                                                                                                                                   : io_float_in[2'h3][19]
+                                                                                                                                       ? 6'h20
+                                                                                                                                       : _GEN_24[5]
+                                                                                                                                         | io_float_in[2'h3][18]
+                                                                                                                                           ? 6'h21
+                                                                                                                                           : _GEN_23[1]
+                                                                                                                                               ? 6'h22
+                                                                                                                                               : _GEN_26[0]
+                                                                                                                                                   ? 6'h23
+                                                                                                                                                   : _GEN_26[1]
+                                                                                                                                                       ? 6'h24
+                                                                                                                                                       : _GEN_26[2]
+                                                                                                                                                           ? 6'h25
+                                                                                                                                                           : _GEN_26[3]
+                                                                                                                                                               ? 6'h26
+                                                                                                                                                               : _GEN_26[4]
+                                                                                                                                                                   ? 6'h27
+                                                                                                                                                                   : _GEN_26[5]
+                                                                                                                                                                       ? 6'h28
+                                                                                                                                                                       : _GEN_26[6]
+                                                                                                                                                                           ? 6'h29
+                                                                                                                                                                           : _GEN_26[7]
+                                                                                                                                                                               ? 6'h2A
+                                                                                                                                                                               : _GEN_25[0]
+                                                                                                                                                                                   ? 6'h2B
+                                                                                                                                                                                   : _GEN_25[1]
+                                                                                                                                                                                       ? 6'h2C
+                                                                                                                                                                                       : _GEN_25[2]
+                                                                                                                                                                                           ? 6'h2D
+                                                                                                                                                                                           : _GEN_25[3]
+                                                                                                                                                                                               ? 6'h2E
+                                                                                                                                                                                               : io_float_in[2'h3][4]
+                                                                                                                                                                                                   ? 6'h2F
+                                                                                                                                                                                                   : io_float_in[2'h3][3]
+                                                                                                                                                                                                       ? 6'h30
+                                                                                                                                                                                                       : io_float_in[2'h3][2]
+                                                                                                                                                                                                           ? 6'h31
+                                                                                                                                                                                                           : {5'h19,
+                                                                                                                                                                                                              ~(io_float_in[2'h3][1])})
+    + 6'h1;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/chisel3/util/OneHot.scala:48:45, src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :91:53, :94:44
+  wire         _GEN_29 = _shift_amount_T_3 < 6'hB;	// src/main/scala/chisel3/util/Mux.scala:50:70, src/main/scala/pvu/FloatConvert.scala:94:44, :97:26
+  wire [114:0] _shifted_frac_T_3 =
+    {63'h0, io_float_in[2'h3][51:0]}
+    << (_shift_amount_T_3 > 6'h34 ? 6'h34 : _shift_amount_T_3);	// src/main/scala/pvu/FloatConvert.scala:42:37, :47:25, :94:44, :102:{29,43}, :103:34
+  wire         _GEN_30 = $signed({1'h0, io_float_in[2'h3][62:52]}) < 12'sh1;	// src/main/scala/pvu/FloatConvert.scala:42:37, :46:24, :99:46, :127:30, :133:32
+  assign io_float_out =
+    {{{io_float_in[2'h3][63],
+       is_zero_3
+         ? 11'h0
+         : is_inf_3 | is_nan_3
+             ? 11'h7FF
+             : is_denorm_3
+                 ? (_GEN_29 ? 11'h1 - {5'h0, _shift_amount_T_3} : 11'h0)
+                 : (&(io_float_in[2'h3][62:52]))
+                     ? 11'h7FF
+                     : _GEN_30 ? 11'h0 : io_float_in[2'h3][62:52],
+       is_zero_3 | is_inf_3
+         ? 52'h0
+         : is_nan_3
+             ? 52'h8000000000000
+             : is_denorm_3
+                 ? (_GEN_29 ? _shifted_frac_T_3[51:0] : 52'h0)
+                 : (&(io_float_in[2'h3][62:52])) | _GEN_30
+                     ? 52'h0
+                     : io_float_in[2'h3][51:0]}},
+     {{io_float_in[2'h2][63],
+       is_zero_2
+         ? 11'h0
+         : is_inf_2 | is_nan_2
+             ? 11'h7FF
+             : is_denorm_2
+                 ? (_GEN_21 ? 11'h1 - {5'h0, _shift_amount_T_2} : 11'h0)
+                 : (&(io_float_in[2'h2][62:52]))
+                     ? 11'h7FF
+                     : _GEN_22 ? 11'h0 : io_float_in[2'h2][62:52],
+       is_zero_2 | is_inf_2
+         ? 52'h0
+         : is_nan_2
+             ? 52'h8000000000000
+             : is_denorm_2
+                 ? (_GEN_21 ? _shifted_frac_T_2[51:0] : 52'h0)
+                 : (&(io_float_in[2'h2][62:52])) | _GEN_22
+                     ? 52'h0
+                     : io_float_in[2'h2][51:0]}},
+     {{io_float_in[2'h1][63],
+       is_zero_1
+         ? 11'h0
+         : is_inf_1 | is_nan_1
+             ? 11'h7FF
+             : is_denorm_1
+                 ? (_GEN_13 ? 11'h1 - {5'h0, _shift_amount_T_1} : 11'h0)
+                 : (&(io_float_in[2'h1][62:52]))
+                     ? 11'h7FF
+                     : _GEN_14 ? 11'h0 : io_float_in[2'h1][62:52],
+       is_zero_1 | is_inf_1
+         ? 52'h0
+         : is_nan_1
+             ? 52'h8000000000000
+             : is_denorm_1
+                 ? (_GEN_13 ? _shifted_frac_T_1[51:0] : 52'h0)
+                 : (&(io_float_in[2'h1][62:52])) | _GEN_14
+                     ? 52'h0
+                     : io_float_in[2'h1][51:0]}},
+     {{io_float_in[2'h0][63],
+       is_zero
+         ? 11'h0
+         : is_inf | is_nan
+             ? 11'h7FF
+             : is_denorm
+                 ? (_GEN_5 ? 11'h1 - {5'h0, _shift_amount_T} : 11'h0)
+                 : (&(io_float_in[2'h0][62:52]))
+                     ? 11'h7FF
+                     : _GEN_6 ? 11'h0 : io_float_in[2'h0][62:52],
+       is_zero | is_inf
+         ? 52'h0
+         : is_nan
+             ? 52'h8000000000000
+             : is_denorm
+                 ? (_GEN_5 ? _shifted_frac_T[51:0] : 52'h0)
+                 : (&(io_float_in[2'h0][62:52])) | _GEN_6
+                     ? 52'h0
+                     : io_float_in[2'h0][51:0]}}};	// src/main/scala/pvu/FloatConvert.scala:6:7, :42:37, :45:25, :46:24, :47:25, :53:33, :54:{23,57}, :55:57, :56:35, :64:20, :66:15, :67:16, :68:25, :70:15, :71:16, :72:25, :74:15, :75:{16,23}, :76:28, :94:44, :97:{26,45}, :99:46, :103:{34,48}, :105:17, :110:20, :120:17, :121:18, :129:{26,59}, :131:17, :132:18, :133:{32,40}, :135:17, :136:18, :139:17, :145:20, :157:24
+endmodule
+
 // external module LZC
 
 module BarrelShifter_88(	// src/main/scala/pvu/BarrelShift.scala:13:7
@@ -9352,389 +16461,420 @@ module FloatEncode_5(	// src/main/scala/pvu/FloatEncode.scala:29:7
               : isSubnormal ? io_Frac[1'h0][22:0] : io_Frac[1'h0][22:0]}}};	// src/main/scala/pvu/FloatEncode.scala:29:7, :56:24, :58:21, :59:21, :60:30, :62:21, :63:21, :64:30, :66:21, :67:{21,27,38,66}, :70:{36,54}, :72:25, :73:23, :74:{23,36}, :76:{23,37}, :77:{23,36}, :81:23
 endmodule
 
-module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
-  input         clock,	// src/main/scala/pvu/PvuTop.scala:28:8
-                reset,	// src/main/scala/pvu/PvuTop.scala:28:8
-  input  [31:0] io_posit_i1_0,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_i1_1,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_i1_2,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_i1_3,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_i2_0,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_i2_1,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_i2_2,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_i2_3,	// src/main/scala/pvu/PvuTop.scala:77:15
-  input  [3:0]  io_op,	// src/main/scala/pvu/PvuTop.scala:77:15
-  input         io_Isposit,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_Outposit,	// src/main/scala/pvu/PvuTop.scala:77:15
-  input  [63:0] io_float_i_0,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_i_1,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_i_2,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_i_3,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_i2_0,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_i2_1,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_i2_2,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_i2_3,	// src/main/scala/pvu/PvuTop.scala:77:15
-  input  [2:0]  io_float_mode,	// src/main/scala/pvu/PvuTop.scala:77:15
-  input         io_float_posit,	// src/main/scala/pvu/PvuTop.scala:77:15
-  input  [5:0]  io_src_posit_width,	// src/main/scala/pvu/PvuTop.scala:77:15
-  input  [2:0]  io_vector_size,	// src/main/scala/pvu/PvuTop.scala:77:15
-  input  [5:0]  io_dst_posit_width,	// src/main/scala/pvu/PvuTop.scala:77:15
-  output [63:0] io_float_o_0,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_o_1,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_o_2,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_o_3,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_float_dot_o,	// src/main/scala/pvu/PvuTop.scala:77:15
-  output [31:0] io_posit_o_0,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_o_1,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_o_2,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_o_3,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_posit_dot_o,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_int_o_0,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_int_o_1,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_int_o_2,	// src/main/scala/pvu/PvuTop.scala:77:15
-                io_int_o_3	// src/main/scala/pvu/PvuTop.scala:77:15
+module PvuTop(	// src/main/scala/pvu/PvuTop.scala:29:8
+  input         clock,	// src/main/scala/pvu/PvuTop.scala:29:8
+                reset,	// src/main/scala/pvu/PvuTop.scala:29:8
+  input  [31:0] io_posit_i1_0,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_i1_1,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_i1_2,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_i1_3,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_i2_0,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_i2_1,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_i2_2,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_i2_3,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input  [3:0]  io_op,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input         io_Isposit,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_Outposit,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input  [63:0] io_float_i_0,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_i_1,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_i_2,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_i_3,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_i2_0,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_i2_1,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_i2_2,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_i2_3,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input  [2:0]  io_float_mode,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input         io_float_posit,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input  [3:0]  io_dst_float_mode,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input  [5:0]  io_src_posit_width,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input  [2:0]  io_vector_size,	// src/main/scala/pvu/PvuTop.scala:78:15
+  input  [5:0]  io_dst_posit_width,	// src/main/scala/pvu/PvuTop.scala:78:15
+  output [63:0] io_float_o_0,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_o_1,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_o_2,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_o_3,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_float_dot_o,	// src/main/scala/pvu/PvuTop.scala:78:15
+  output [31:0] io_posit_o_0,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_o_1,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_o_2,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_o_3,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_posit_dot_o,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_int_o_0,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_int_o_1,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_int_o_2,	// src/main/scala/pvu/PvuTop.scala:78:15
+                io_int_o_3	// src/main/scala/pvu/PvuTop.scala:78:15
 );
 
-  wire [3:0][31:0] _floatEncoder_io_float;	// src/main/scala/pvu/PvuTop.scala:1265:31
-  wire [3:0][31:0] _result_encoder_io_posit;	// src/main/scala/pvu/PvuTop.scala:1197:35
-  wire [3:0]       _result_converted_decoder_io_Sign;	// src/main/scala/pvu/PvuTop.scala:1193:45
-  wire [3:0][7:0]  _result_converted_decoder_io_Exp;	// src/main/scala/pvu/PvuTop.scala:1193:45
-  wire [3:0][27:0] _result_converted_decoder_io_Frac;	// src/main/scala/pvu/PvuTop.scala:1193:45
-  wire [3:0][31:0] _result_converter_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:1167:37
-  wire [3:0][31:0] _encode_io_posit;	// src/main/scala/pvu/PvuTop.scala:1140:27
-  wire [0:0][31:0] _floatDotEncoder_io_float;	// src/main/scala/pvu/PvuTop.scala:1096:34
-  wire [0:0][31:0] _dot_encoder_io_posit;	// src/main/scala/pvu/PvuTop.scala:1049:30
-  wire [0:0]       _dot_converted_decoder_io_Sign;	// src/main/scala/pvu/PvuTop.scala:1045:40
-  wire [0:0][7:0]  _dot_converted_decoder_io_Exp;	// src/main/scala/pvu/PvuTop.scala:1045:40
-  wire [0:0][27:0] _dot_converted_decoder_io_Frac;	// src/main/scala/pvu/PvuTop.scala:1045:40
-  wire [0:0][31:0] _dot_converter_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:1031:32
-  wire [0:0]       _dot_decoder_io_Sign;	// src/main/scala/pvu/PvuTop.scala:1027:30
-  wire [0:0][7:0]  _dot_decoder_io_Exp;	// src/main/scala/pvu/PvuTop.scala:1027:30
-  wire [0:0][27:0] _dot_decoder_io_Frac;	// src/main/scala/pvu/PvuTop.scala:1027:30
-  wire [31:0]      _encode_dot_io_posit;	// src/main/scala/pvu/PvuTop.scala:1018:29
-  wire [3:0][9:0]  _frac_norm_div_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:918:47
-  wire [3:0][27:0] _frac_norm_div_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:918:47
-  wire [3:0][9:0]  _frac_norm_mul_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:913:47
-  wire [3:0][27:0] _frac_norm_mul_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:913:47
-  wire [3:0][7:0]  _frac_norm_sub_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:908:47
-  wire [3:0][27:0] _frac_norm_sub_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:908:47
-  wire [3:0][7:0]  _frac_norm_add_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:894:32
-  wire [3:0][27:0] _frac_norm_add_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:894:32
-  wire [8:0]       _frac_norm_dot_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:889:30
-  wire [27:0]      _frac_norm_dot_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:889:30
-  wire [3:0][7:0]  _quantizeInt8_io_int8_o;	// src/main/scala/pvu/PvuTop.scala:845:31
-  wire [3:0][31:0] _less_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:820:23
-  wire [3:0]       _less_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:820:23
-  wire [3:0][7:0]  _less_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:820:23
-  wire [3:0][31:0] _greater_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:795:26
-  wire [3:0]       _greater_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:795:26
-  wire [3:0][7:0]  _greater_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:795:26
-  wire [3:0][63:0] _posit2float_fp64_io_float_out;	// src/main/scala/pvu/PvuTop.scala:770:39
-  wire [3:0][31:0] _float2posit_fp64_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:745:39
-  wire [3:0][31:0] _posit2float_fp32_io_float_out;	// src/main/scala/pvu/PvuTop.scala:732:39
-  wire [3:0][31:0] _float2posit_fp32_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:707:39
-  wire [3:0][15:0] _posit2float_fp16_io_float_out;	// src/main/scala/pvu/PvuTop.scala:694:39
-  wire [3:0][31:0] _float2posit_fp16_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:669:39
-  wire [3:0][7:0]  _posit2float_fp8_io_float_out;	// src/main/scala/pvu/PvuTop.scala:656:38
-  wire [3:0][31:0] _float2posit_fp8_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:631:38
-  wire [3:0][3:0]  _posit2float_fp4_io_float_out;	// src/main/scala/pvu/PvuTop.scala:618:38
-  wire [3:0][31:0] _float2posit_fp4_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:593:38
-  wire [3:0][63:0] _convert64_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:466:28
-  wire [3:0][55:0] _convert56_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:465:28
-  wire [3:0][47:0] _convert48_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:464:28
-  wire [3:0][39:0] _convert40_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:463:28
-  wire [3:0][31:0] _convert32_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:462:28
-  wire [3:0][23:0] _convert24_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:461:28
-  wire [3:0][15:0] _convert16_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:460:28
-  wire [3:0][7:0]  _convert8_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:459:27
-  wire             _dotproduct_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:443:28
-  wire [7:0]       _dotproduct_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:443:28
-  wire [58:0]      _dotproduct_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:443:28
-  wire [3:0]       _div_inst_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:417:27
-  wire [3:0][7:0]  _div_inst_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:417:27
-  wire [3:0][55:0] _div_inst_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:417:27
-  wire [3:0]       _mul_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:403:22
-  wire [3:0][7:0]  _mul_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:403:22
-  wire [3:0][55:0] _mul_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:403:22
-  wire [3:0]       _sub_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:381:28
-  wire [3:0][7:0]  _sub_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:381:28
-  wire [3:0][29:0] _sub_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:381:28
-  wire [3:0][29:0] _fracalign_1_io_pir_frac1_align;	// src/main/scala/pvu/PvuTop.scala:380:28
-  wire [3:0][29:0] _fracalign_1_io_pir_frac2_align;	// src/main/scala/pvu/PvuTop.scala:380:28
-  wire [3:0][7:0]  _fracalign_1_io_pir_max_exp;	// src/main/scala/pvu/PvuTop.scala:380:28
-  wire [3:0]       _add_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:345:28
-  wire [3:0][7:0]  _add_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:345:28
-  wire [3:0][29:0] _add_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:345:28
-  wire [3:0][29:0] _fracalign_io_pir_frac1_align;	// src/main/scala/pvu/PvuTop.scala:344:28
-  wire [3:0][29:0] _fracalign_io_pir_frac2_align;	// src/main/scala/pvu/PvuTop.scala:344:28
-  wire [3:0][7:0]  _fracalign_io_pir_max_exp;	// src/main/scala/pvu/PvuTop.scala:344:28
-  wire [3:0]       _floatDecode2_io_Sign;	// src/main/scala/pvu/PvuTop.scala:115:28
-  wire [3:0][8:0]  _floatDecode2_io_Exp;	// src/main/scala/pvu/PvuTop.scala:115:28
-  wire [3:0][23:0] _floatDecode2_io_Frac;	// src/main/scala/pvu/PvuTop.scala:115:28
-  wire [3:0]       _floatDecode2_io_isNaN;	// src/main/scala/pvu/PvuTop.scala:115:28
-  wire [3:0]       _floatDecode2_io_isInf;	// src/main/scala/pvu/PvuTop.scala:115:28
-  wire [3:0]       _floatDecode2_io_isZero;	// src/main/scala/pvu/PvuTop.scala:115:28
-  wire [3:0]       _floatDecode1_io_Sign;	// src/main/scala/pvu/PvuTop.scala:114:28
-  wire [3:0][8:0]  _floatDecode1_io_Exp;	// src/main/scala/pvu/PvuTop.scala:114:28
-  wire [3:0][23:0] _floatDecode1_io_Frac;	// src/main/scala/pvu/PvuTop.scala:114:28
-  wire [3:0]       _floatDecode1_io_isNaN;	// src/main/scala/pvu/PvuTop.scala:114:28
-  wire [3:0]       _floatDecode1_io_isInf;	// src/main/scala/pvu/PvuTop.scala:114:28
-  wire [3:0]       _floatDecode1_io_isZero;	// src/main/scala/pvu/PvuTop.scala:114:28
-  wire [3:0]       _decode2_io_Sign;	// src/main/scala/pvu/PvuTop.scala:111:23
-  wire [3:0][7:0]  _decode2_io_Exp;	// src/main/scala/pvu/PvuTop.scala:111:23
-  wire [3:0][27:0] _decode2_io_Frac;	// src/main/scala/pvu/PvuTop.scala:111:23
-  wire [3:0]       _decode1_io_Sign;	// src/main/scala/pvu/PvuTop.scala:110:23
-  wire [3:0][7:0]  _decode1_io_Exp;	// src/main/scala/pvu/PvuTop.scala:110:23
-  wire [3:0][27:0] _decode1_io_Frac;	// src/main/scala/pvu/PvuTop.scala:110:23
-  wire [3:0][67:0] _GEN = '{68'h0, 68'h0, 68'h0, 68'h0};	// src/main/scala/pvu/PvuTop.scala:321:26, :333:23, :370:29, :402:29
-  wire [3:0][29:0] _GEN_0 = '{30'h0, 30'h0, 30'h0, 30'h0};	// src/main/scala/pvu/PvuTop.scala:320:26, :333:23, :370:29
-  wire [3:0][31:0] _GEN_1 = '{32'h0, 32'h0, 32'h0, 32'h0};	// src/main/scala/pvu/PvuTop.scala:246:21, :247:28, :263:28
+  wire [3:0][31:0] _floatEncoder_io_float;	// src/main/scala/pvu/PvuTop.scala:1527:31
+  wire [3:0][31:0] _result_encoder_io_posit;	// src/main/scala/pvu/PvuTop.scala:1459:35
+  wire [3:0]       _result_converted_decoder_io_Sign;	// src/main/scala/pvu/PvuTop.scala:1455:45
+  wire [3:0][7:0]  _result_converted_decoder_io_Exp;	// src/main/scala/pvu/PvuTop.scala:1455:45
+  wire [3:0][27:0] _result_converted_decoder_io_Frac;	// src/main/scala/pvu/PvuTop.scala:1455:45
+  wire [3:0][31:0] _result_converter_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:1429:37
+  wire [3:0][31:0] _encode_io_posit;	// src/main/scala/pvu/PvuTop.scala:1402:27
+  wire [0:0][31:0] _floatDotEncoder_io_float;	// src/main/scala/pvu/PvuTop.scala:1356:34
+  wire [0:0][31:0] _dot_encoder_io_posit;	// src/main/scala/pvu/PvuTop.scala:1309:30
+  wire [0:0]       _dot_converted_decoder_io_Sign;	// src/main/scala/pvu/PvuTop.scala:1305:40
+  wire [0:0][7:0]  _dot_converted_decoder_io_Exp;	// src/main/scala/pvu/PvuTop.scala:1305:40
+  wire [0:0][27:0] _dot_converted_decoder_io_Frac;	// src/main/scala/pvu/PvuTop.scala:1305:40
+  wire [0:0][31:0] _dot_converter_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:1291:32
+  wire [0:0]       _dot_decoder_io_Sign;	// src/main/scala/pvu/PvuTop.scala:1287:30
+  wire [0:0][7:0]  _dot_decoder_io_Exp;	// src/main/scala/pvu/PvuTop.scala:1287:30
+  wire [0:0][27:0] _dot_decoder_io_Frac;	// src/main/scala/pvu/PvuTop.scala:1287:30
+  wire [31:0]      _encode_dot_io_posit;	// src/main/scala/pvu/PvuTop.scala:1278:29
+  wire [3:0][9:0]  _frac_norm_div_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:1178:47
+  wire [3:0][27:0] _frac_norm_div_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:1178:47
+  wire [3:0][9:0]  _frac_norm_mul_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:1173:47
+  wire [3:0][27:0] _frac_norm_mul_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:1173:47
+  wire [3:0][7:0]  _frac_norm_sub_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:1168:47
+  wire [3:0][27:0] _frac_norm_sub_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:1168:47
+  wire [3:0][7:0]  _frac_norm_add_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:1154:32
+  wire [3:0][27:0] _frac_norm_add_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:1154:32
+  wire [8:0]       _frac_norm_dot_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:1149:30
+  wire [27:0]      _frac_norm_dot_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:1149:30
+  wire [3:0][63:0] _fp64_to_fp64_io_float_out;	// src/main/scala/pvu/PvuTop.scala:899:31
+  wire [3:0][63:0] _fp64_to_fp32_io_float_out;	// src/main/scala/pvu/PvuTop.scala:898:31
+  wire [3:0][63:0] _fp64_to_fp16_io_float_out;	// src/main/scala/pvu/PvuTop.scala:897:31
+  wire [3:0][63:0] _fp64_to_fp8_io_float_out;	// src/main/scala/pvu/PvuTop.scala:896:31
+  wire [3:0][63:0] _fp64_to_fp4_io_float_out;	// src/main/scala/pvu/PvuTop.scala:895:31
+  wire [3:0][63:0] _fp32_to_fp64_io_float_out;	// src/main/scala/pvu/PvuTop.scala:893:31
+  wire [3:0][63:0] _fp32_to_fp32_io_float_out;	// src/main/scala/pvu/PvuTop.scala:892:31
+  wire [3:0][63:0] _fp32_to_fp16_io_float_out;	// src/main/scala/pvu/PvuTop.scala:891:31
+  wire [3:0][63:0] _fp32_to_fp8_io_float_out;	// src/main/scala/pvu/PvuTop.scala:890:31
+  wire [3:0][63:0] _fp32_to_fp4_io_float_out;	// src/main/scala/pvu/PvuTop.scala:889:31
+  wire [3:0][63:0] _fp16_to_fp64_io_float_out;	// src/main/scala/pvu/PvuTop.scala:887:31
+  wire [3:0][63:0] _fp16_to_fp32_io_float_out;	// src/main/scala/pvu/PvuTop.scala:886:31
+  wire [3:0][63:0] _fp16_to_fp16_io_float_out;	// src/main/scala/pvu/PvuTop.scala:885:31
+  wire [3:0][63:0] _fp16_to_fp8_io_float_out;	// src/main/scala/pvu/PvuTop.scala:884:31
+  wire [3:0][63:0] _fp16_to_fp4_io_float_out;	// src/main/scala/pvu/PvuTop.scala:883:31
+  wire [3:0][63:0] _fp8_to_fp64_io_float_out;	// src/main/scala/pvu/PvuTop.scala:881:31
+  wire [3:0][63:0] _fp8_to_fp32_io_float_out;	// src/main/scala/pvu/PvuTop.scala:880:31
+  wire [3:0][63:0] _fp8_to_fp16_io_float_out;	// src/main/scala/pvu/PvuTop.scala:879:31
+  wire [3:0][63:0] _fp8_to_fp8_io_float_out;	// src/main/scala/pvu/PvuTop.scala:878:31
+  wire [3:0][63:0] _fp8_to_fp4_io_float_out;	// src/main/scala/pvu/PvuTop.scala:877:31
+  wire [3:0][63:0] _fp4_to_fp64_io_float_out;	// src/main/scala/pvu/PvuTop.scala:875:31
+  wire [3:0][63:0] _fp4_to_fp32_io_float_out;	// src/main/scala/pvu/PvuTop.scala:874:31
+  wire [3:0][63:0] _fp4_to_fp16_io_float_out;	// src/main/scala/pvu/PvuTop.scala:873:31
+  wire [3:0][63:0] _fp4_to_fp8_io_float_out;	// src/main/scala/pvu/PvuTop.scala:872:31
+  wire [3:0][63:0] _fp4_to_fp4_io_float_out;	// src/main/scala/pvu/PvuTop.scala:871:31
+  wire [3:0][7:0]  _quantizeInt8_io_int8_o;	// src/main/scala/pvu/PvuTop.scala:849:31
+  wire [3:0][31:0] _less_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:824:23
+  wire [3:0]       _less_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:824:23
+  wire [3:0][7:0]  _less_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:824:23
+  wire [3:0][31:0] _greater_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:799:26
+  wire [3:0]       _greater_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:799:26
+  wire [3:0][7:0]  _greater_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:799:26
+  wire [3:0][63:0] _posit2float_fp64_io_float_out;	// src/main/scala/pvu/PvuTop.scala:774:39
+  wire [3:0][31:0] _float2posit_fp64_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:749:39
+  wire [3:0][31:0] _posit2float_fp32_io_float_out;	// src/main/scala/pvu/PvuTop.scala:736:39
+  wire [3:0][31:0] _float2posit_fp32_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:711:39
+  wire [3:0][15:0] _posit2float_fp16_io_float_out;	// src/main/scala/pvu/PvuTop.scala:698:39
+  wire [3:0][31:0] _float2posit_fp16_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:673:39
+  wire [3:0][7:0]  _posit2float_fp8_io_float_out;	// src/main/scala/pvu/PvuTop.scala:660:38
+  wire [3:0][31:0] _float2posit_fp8_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:635:38
+  wire [3:0][3:0]  _posit2float_fp4_io_float_out;	// src/main/scala/pvu/PvuTop.scala:622:38
+  wire [3:0][31:0] _float2posit_fp4_io_posit_out;	// src/main/scala/pvu/PvuTop.scala:597:38
+  wire [3:0][63:0] _convert64_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:470:28
+  wire [3:0][55:0] _convert56_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:469:28
+  wire [3:0][47:0] _convert48_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:468:28
+  wire [3:0][39:0] _convert40_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:467:28
+  wire [3:0][31:0] _convert32_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:466:28
+  wire [3:0][23:0] _convert24_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:465:28
+  wire [3:0][15:0] _convert16_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:464:28
+  wire [3:0][7:0]  _convert8_io_posit_o;	// src/main/scala/pvu/PvuTop.scala:463:27
+  wire             _dotproduct_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:447:28
+  wire [7:0]       _dotproduct_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:447:28
+  wire [58:0]      _dotproduct_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:447:28
+  wire [3:0]       _div_inst_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:421:27
+  wire [3:0][7:0]  _div_inst_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:421:27
+  wire [3:0][55:0] _div_inst_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:421:27
+  wire [3:0]       _mul_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:407:22
+  wire [3:0][7:0]  _mul_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:407:22
+  wire [3:0][55:0] _mul_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:407:22
+  wire [3:0]       _sub_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:385:28
+  wire [3:0][7:0]  _sub_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:385:28
+  wire [3:0][29:0] _sub_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:385:28
+  wire [3:0][29:0] _fracalign_1_io_pir_frac1_align;	// src/main/scala/pvu/PvuTop.scala:384:28
+  wire [3:0][29:0] _fracalign_1_io_pir_frac2_align;	// src/main/scala/pvu/PvuTop.scala:384:28
+  wire [3:0][7:0]  _fracalign_1_io_pir_max_exp;	// src/main/scala/pvu/PvuTop.scala:384:28
+  wire [3:0]       _add_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:349:28
+  wire [3:0][7:0]  _add_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:349:28
+  wire [3:0][29:0] _add_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:349:28
+  wire [3:0][29:0] _fracalign_io_pir_frac1_align;	// src/main/scala/pvu/PvuTop.scala:348:28
+  wire [3:0][29:0] _fracalign_io_pir_frac2_align;	// src/main/scala/pvu/PvuTop.scala:348:28
+  wire [3:0][7:0]  _fracalign_io_pir_max_exp;	// src/main/scala/pvu/PvuTop.scala:348:28
+  wire [3:0]       _floatDecode2_io_Sign;	// src/main/scala/pvu/PvuTop.scala:119:28
+  wire [3:0][8:0]  _floatDecode2_io_Exp;	// src/main/scala/pvu/PvuTop.scala:119:28
+  wire [3:0][23:0] _floatDecode2_io_Frac;	// src/main/scala/pvu/PvuTop.scala:119:28
+  wire [3:0]       _floatDecode2_io_isNaN;	// src/main/scala/pvu/PvuTop.scala:119:28
+  wire [3:0]       _floatDecode2_io_isInf;	// src/main/scala/pvu/PvuTop.scala:119:28
+  wire [3:0]       _floatDecode2_io_isZero;	// src/main/scala/pvu/PvuTop.scala:119:28
+  wire [3:0]       _floatDecode1_io_Sign;	// src/main/scala/pvu/PvuTop.scala:118:28
+  wire [3:0][8:0]  _floatDecode1_io_Exp;	// src/main/scala/pvu/PvuTop.scala:118:28
+  wire [3:0][23:0] _floatDecode1_io_Frac;	// src/main/scala/pvu/PvuTop.scala:118:28
+  wire [3:0]       _floatDecode1_io_isNaN;	// src/main/scala/pvu/PvuTop.scala:118:28
+  wire [3:0]       _floatDecode1_io_isInf;	// src/main/scala/pvu/PvuTop.scala:118:28
+  wire [3:0]       _floatDecode1_io_isZero;	// src/main/scala/pvu/PvuTop.scala:118:28
+  wire [3:0]       _decode2_io_Sign;	// src/main/scala/pvu/PvuTop.scala:115:23
+  wire [3:0][7:0]  _decode2_io_Exp;	// src/main/scala/pvu/PvuTop.scala:115:23
+  wire [3:0][27:0] _decode2_io_Frac;	// src/main/scala/pvu/PvuTop.scala:115:23
+  wire [3:0]       _decode1_io_Sign;	// src/main/scala/pvu/PvuTop.scala:114:23
+  wire [3:0][7:0]  _decode1_io_Exp;	// src/main/scala/pvu/PvuTop.scala:114:23
+  wire [3:0][27:0] _decode1_io_Frac;	// src/main/scala/pvu/PvuTop.scala:114:23
+  wire [3:0][67:0] _GEN = '{68'h0, 68'h0, 68'h0, 68'h0};	// src/main/scala/pvu/PvuTop.scala:325:26, :337:23, :374:29, :406:29
+  wire [3:0][29:0] _GEN_0 = '{30'h0, 30'h0, 30'h0, 30'h0};	// src/main/scala/pvu/PvuTop.scala:324:26, :337:23, :374:29
+  wire [3:0][31:0] _GEN_1 = '{32'h0, 32'h0, 32'h0, 32'h0};	// src/main/scala/pvu/PvuTop.scala:250:21, :251:28, :267:28
   wire [3:0][31:0] _GEN_2 =
-    {{io_posit_i1_3}, {io_posit_i1_2}, {io_posit_i1_1}, {io_posit_i1_0}};	// src/main/scala/pvu/PvuTop.scala:28:8
+    {{io_posit_i1_3}, {io_posit_i1_2}, {io_posit_i1_1}, {io_posit_i1_0}};	// src/main/scala/pvu/PvuTop.scala:29:8
   wire [3:0][31:0] _GEN_3 =
-    {{io_posit_i2_3}, {io_posit_i2_2}, {io_posit_i2_1}, {io_posit_i2_0}};	// src/main/scala/pvu/PvuTop.scala:28:8
-  wire [2:0]       ACTUAL_VECTOR_SIZE = io_vector_size == 3'h0 ? 3'h4 : io_vector_size;	// src/main/scala/pvu/PvuTop.scala:226:{36,52}
+    {{io_posit_i2_3}, {io_posit_i2_2}, {io_posit_i2_1}, {io_posit_i2_0}};	// src/main/scala/pvu/PvuTop.scala:29:8
+  wire [2:0]       ACTUAL_VECTOR_SIZE = io_vector_size == 3'h0 ? 3'h4 : io_vector_size;	// src/main/scala/pvu/PvuTop.scala:230:{36,52}
   wire [5:0]       ACTUAL_DST_POSIT_WIDTH =
     io_dst_posit_width == 6'h0
       ? (io_src_posit_width == 6'h0 ? 6'h20 : io_src_posit_width)
-      : io_dst_posit_width;	// src/main/scala/pvu/PvuTop.scala:225:{36,56}, :230:{36,56}
-  wire             _valid_range_2_T = ACTUAL_VECTOR_SIZE > 3'h2;	// src/main/scala/pvu/PvuTop.scala:226:36, :242:29
-  wire             _GEN_4 = (|ACTUAL_VECTOR_SIZE) & _decode1_io_Sign[2'h0];	// src/main/scala/pvu/PvuTop.scala:28:8, :110:23, :182:18, :226:36, :242:29, :253:29, :254:23
-  wire [7:0]       _GEN_5 = (|ACTUAL_VECTOR_SIZE) ? _decode1_io_Exp[2'h0] : 8'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :110:23, :183:18, :226:36, :242:29, :253:29, :255:23, :933:{29,39}
-  wire             _GEN_6 = (|(ACTUAL_VECTOR_SIZE[2:1])) & _decode1_io_Sign[2'h1];	// src/main/scala/pvu/PvuTop.scala:28:8, :110:23, :182:18, :226:36, :242:29, :253:29, :254:23
-  wire [7:0]       _GEN_7 = (|(ACTUAL_VECTOR_SIZE[2:1])) ? _decode1_io_Exp[2'h1] : 8'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :110:23, :183:18, :226:36, :242:29, :253:29, :255:23, :933:{29,39}
-  wire             _GEN_8 = _valid_range_2_T & _decode1_io_Sign[2'h2];	// src/main/scala/pvu/PvuTop.scala:110:23, :182:18, :234:34, :242:29, :253:29, :254:23
-  wire [7:0]       _GEN_9 = _valid_range_2_T ? _decode1_io_Exp[2'h2] : 8'h0;	// src/main/scala/pvu/PvuTop.scala:110:23, :183:18, :234:34, :242:29, :253:29, :255:23, :933:{29,39}
-  wire             _GEN_10 = ACTUAL_VECTOR_SIZE[2] & _decode1_io_Sign[2'h3];	// src/main/scala/pvu/PvuTop.scala:110:23, :182:18, :226:36, :235:55, :242:29, :253:29, :254:23
-  wire [7:0]       _GEN_11 = ACTUAL_VECTOR_SIZE[2] ? _decode1_io_Exp[2'h3] : 8'h0;	// src/main/scala/pvu/PvuTop.scala:110:23, :183:18, :226:36, :235:55, :242:29, :253:29, :255:23, :933:{29,39}
-  wire             _GEN_12 = io_Isposit | ~(|ACTUAL_VECTOR_SIZE);	// src/main/scala/pvu/PvuTop.scala:190:26, :191:26, :226:36, :242:29, :246:21, :270:29
+      : io_dst_posit_width;	// src/main/scala/pvu/PvuTop.scala:229:{36,56}, :234:{36,56}
+  wire             _valid_range_2_T = ACTUAL_VECTOR_SIZE > 3'h2;	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29
+  wire             _GEN_4 = (|ACTUAL_VECTOR_SIZE) & _decode1_io_Sign[2'h0];	// src/main/scala/pvu/PvuTop.scala:29:8, :114:23, :186:18, :230:36, :246:29, :257:29, :258:23
+  wire [7:0]       _GEN_5 = (|ACTUAL_VECTOR_SIZE) ? _decode1_io_Exp[2'h0] : 8'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :114:23, :187:18, :230:36, :246:29, :257:29, :259:23, :1193:{29,39}
+  wire             _GEN_6 = (|(ACTUAL_VECTOR_SIZE[2:1])) & _decode1_io_Sign[2'h1];	// src/main/scala/pvu/PvuTop.scala:29:8, :114:23, :186:18, :230:36, :246:29, :257:29, :258:23
+  wire [7:0]       _GEN_7 = (|(ACTUAL_VECTOR_SIZE[2:1])) ? _decode1_io_Exp[2'h1] : 8'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :114:23, :187:18, :230:36, :246:29, :257:29, :259:23, :1193:{29,39}
+  wire             _GEN_8 = _valid_range_2_T & _decode1_io_Sign[2'h2];	// src/main/scala/pvu/PvuTop.scala:114:23, :186:18, :238:34, :246:29, :257:29, :258:23
+  wire [7:0]       _GEN_9 = _valid_range_2_T ? _decode1_io_Exp[2'h2] : 8'h0;	// src/main/scala/pvu/PvuTop.scala:114:23, :187:18, :238:34, :246:29, :257:29, :259:23, :1193:{29,39}
+  wire             _GEN_10 = ACTUAL_VECTOR_SIZE[2] & _decode1_io_Sign[2'h3];	// src/main/scala/pvu/PvuTop.scala:114:23, :186:18, :230:36, :239:55, :246:29, :257:29, :258:23
+  wire [7:0]       _GEN_11 = ACTUAL_VECTOR_SIZE[2] ? _decode1_io_Exp[2'h3] : 8'h0;	// src/main/scala/pvu/PvuTop.scala:114:23, :187:18, :230:36, :239:55, :246:29, :257:29, :259:23, :1193:{29,39}
+  wire             _GEN_12 = io_Isposit | ~(|ACTUAL_VECTOR_SIZE);	// src/main/scala/pvu/PvuTop.scala:194:26, :195:26, :230:36, :246:29, :250:21, :274:29
   wire             _GEN_13 =
-    ~io_Isposit & (|ACTUAL_VECTOR_SIZE) & _floatDecode1_io_isInf[2'h0];	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :189:26, :193:26, :226:36, :242:29, :246:21, :270:29, :275:31
+    ~io_Isposit & (|ACTUAL_VECTOR_SIZE) & _floatDecode1_io_isInf[2'h0];	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :193:26, :197:26, :230:36, :246:29, :250:21, :274:29, :279:31
   wire             _GEN_14 =
-    ~io_Isposit & (|ACTUAL_VECTOR_SIZE) & _floatDecode2_io_isInf[2'h0];	// src/main/scala/pvu/PvuTop.scala:28:8, :115:28, :189:26, :200:27, :226:36, :242:29, :246:21, :270:29, :282:32
+    ~io_Isposit & (|ACTUAL_VECTOR_SIZE) & _floatDecode2_io_isInf[2'h0];	// src/main/scala/pvu/PvuTop.scala:29:8, :119:28, :193:26, :204:27, :230:36, :246:29, :250:21, :274:29, :286:32
   wire             _GEN_15 =
-    (|ACTUAL_VECTOR_SIZE) & ~io_Isposit & _floatDecode1_io_Sign[2'h0];	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :182:18, :189:26, :226:36, :242:29, :246:21, :270:29, :271:31, :286:23
-  wire             _GEN_16 = ~(|ACTUAL_VECTOR_SIZE) | io_Isposit;	// src/main/scala/pvu/PvuTop.scala:183:18, :190:26, :226:36, :242:29, :246:21, :270:29, :287:23
-  wire [7:0]       _GEN_17 = _GEN_16 ? 8'h0 : _floatDecode1_io_Exp[2'h0][7:0];	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :183:18, :270:29, :272:31, :287:23, :933:{29,39}
+    (|ACTUAL_VECTOR_SIZE) & ~io_Isposit & _floatDecode1_io_Sign[2'h0];	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :186:18, :193:26, :230:36, :246:29, :250:21, :274:29, :275:31, :290:23
+  wire             _GEN_16 = ~(|ACTUAL_VECTOR_SIZE) | io_Isposit;	// src/main/scala/pvu/PvuTop.scala:187:18, :194:26, :230:36, :246:29, :250:21, :274:29, :291:23
+  wire [7:0]       _GEN_17 = _GEN_16 ? 8'h0 : _floatDecode1_io_Exp[2'h0][7:0];	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :187:18, :274:29, :276:31, :291:23, :1193:{29,39}
   wire [32:0]      _GEN_18 =
     (|ACTUAL_VECTOR_SIZE)
       ? (io_Isposit
            ? {5'h0, _decode1_io_Frac[2'h0]}
            : {10'h0, _GEN_12 ? 23'h0 : _floatDecode1_io_Frac[2'h0][22:0]})
-      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :110:23, :114:28, :184:18, :191:26, :226:36, :242:29, :246:21, :253:29, :256:23, :270:29, :273:31, :288:23
+      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :114:23, :118:28, :188:18, :195:26, :230:36, :246:29, :250:21, :257:29, :260:23, :274:29, :277:31, :292:23
   wire [32:0]      _GEN_19 =
     (|ACTUAL_VECTOR_SIZE)
       ? (io_Isposit
            ? {5'h0, _decode2_io_Frac[2'h0]}
            : {10'h0, _GEN_12 ? 23'h0 : _floatDecode2_io_Frac[2'h0][22:0]})
-      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :111:23, :115:28, :184:18, :187:18, :191:26, :198:27, :226:36, :242:29, :246:21, :253:29, :256:23, :259:23, :270:29, :280:32, :288:23, :291:23
-  wire             _GEN_20 = io_Isposit | ~(|(ACTUAL_VECTOR_SIZE[2:1]));	// src/main/scala/pvu/PvuTop.scala:190:26, :191:26, :226:36, :242:29, :246:21, :270:29
+      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :115:23, :119:28, :188:18, :191:18, :195:26, :202:27, :230:36, :246:29, :250:21, :257:29, :260:23, :263:23, :274:29, :284:32, :292:23, :295:23
+  wire             _GEN_20 = io_Isposit | ~(|(ACTUAL_VECTOR_SIZE[2:1]));	// src/main/scala/pvu/PvuTop.scala:194:26, :195:26, :230:36, :246:29, :250:21, :274:29
   wire             _GEN_21 =
-    ~io_Isposit & (|(ACTUAL_VECTOR_SIZE[2:1])) & _floatDecode1_io_isInf[2'h1];	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :189:26, :193:26, :226:36, :242:29, :246:21, :270:29, :275:31
+    ~io_Isposit & (|(ACTUAL_VECTOR_SIZE[2:1])) & _floatDecode1_io_isInf[2'h1];	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :193:26, :197:26, :230:36, :246:29, :250:21, :274:29, :279:31
   wire             _GEN_22 =
-    ~io_Isposit & (|(ACTUAL_VECTOR_SIZE[2:1])) & _floatDecode2_io_isInf[2'h1];	// src/main/scala/pvu/PvuTop.scala:28:8, :115:28, :189:26, :200:27, :226:36, :242:29, :246:21, :270:29, :282:32
+    ~io_Isposit & (|(ACTUAL_VECTOR_SIZE[2:1])) & _floatDecode2_io_isInf[2'h1];	// src/main/scala/pvu/PvuTop.scala:29:8, :119:28, :193:26, :204:27, :230:36, :246:29, :250:21, :274:29, :286:32
   wire             _GEN_23 =
-    (|(ACTUAL_VECTOR_SIZE[2:1])) & ~io_Isposit & _floatDecode1_io_Sign[2'h1];	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :182:18, :189:26, :226:36, :242:29, :246:21, :270:29, :271:31, :286:23
-  wire             _GEN_24 = ~(|(ACTUAL_VECTOR_SIZE[2:1])) | io_Isposit;	// src/main/scala/pvu/PvuTop.scala:183:18, :190:26, :226:36, :242:29, :246:21, :270:29, :287:23
-  wire [7:0]       _GEN_25 = _GEN_24 ? 8'h0 : _floatDecode1_io_Exp[2'h1][7:0];	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :183:18, :270:29, :272:31, :287:23, :933:{29,39}
+    (|(ACTUAL_VECTOR_SIZE[2:1])) & ~io_Isposit & _floatDecode1_io_Sign[2'h1];	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :186:18, :193:26, :230:36, :246:29, :250:21, :274:29, :275:31, :290:23
+  wire             _GEN_24 = ~(|(ACTUAL_VECTOR_SIZE[2:1])) | io_Isposit;	// src/main/scala/pvu/PvuTop.scala:187:18, :194:26, :230:36, :246:29, :250:21, :274:29, :291:23
+  wire [7:0]       _GEN_25 = _GEN_24 ? 8'h0 : _floatDecode1_io_Exp[2'h1][7:0];	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :187:18, :274:29, :276:31, :291:23, :1193:{29,39}
   wire [32:0]      _GEN_26 =
     (|(ACTUAL_VECTOR_SIZE[2:1]))
       ? (io_Isposit
            ? {5'h0, _decode1_io_Frac[2'h1]}
            : {10'h0, _GEN_20 ? 23'h0 : _floatDecode1_io_Frac[2'h1][22:0]})
-      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :110:23, :114:28, :184:18, :191:26, :226:36, :242:29, :246:21, :253:29, :256:23, :270:29, :273:31, :288:23
+      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :114:23, :118:28, :188:18, :195:26, :230:36, :246:29, :250:21, :257:29, :260:23, :274:29, :277:31, :292:23
   wire [32:0]      _GEN_27 =
     (|(ACTUAL_VECTOR_SIZE[2:1]))
       ? (io_Isposit
            ? {5'h0, _decode2_io_Frac[2'h1]}
            : {10'h0, _GEN_20 ? 23'h0 : _floatDecode2_io_Frac[2'h1][22:0]})
-      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :111:23, :115:28, :184:18, :187:18, :191:26, :198:27, :226:36, :242:29, :246:21, :253:29, :256:23, :259:23, :270:29, :280:32, :288:23, :291:23
-  wire             _GEN_28 = io_Isposit | ~_valid_range_2_T;	// src/main/scala/pvu/PvuTop.scala:190:26, :191:26, :242:29, :246:21, :270:29
+      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :115:23, :119:28, :188:18, :191:18, :195:26, :202:27, :230:36, :246:29, :250:21, :257:29, :260:23, :263:23, :274:29, :284:32, :292:23, :295:23
+  wire             _GEN_28 = io_Isposit | ~_valid_range_2_T;	// src/main/scala/pvu/PvuTop.scala:194:26, :195:26, :246:29, :250:21, :274:29
   wire             _GEN_29 =
-    ~io_Isposit & _valid_range_2_T & _floatDecode1_io_isInf[2'h2];	// src/main/scala/pvu/PvuTop.scala:114:28, :189:26, :193:26, :234:34, :242:29, :246:21, :270:29, :275:31
+    ~io_Isposit & _valid_range_2_T & _floatDecode1_io_isInf[2'h2];	// src/main/scala/pvu/PvuTop.scala:118:28, :193:26, :197:26, :238:34, :246:29, :250:21, :274:29, :279:31
   wire             _GEN_30 =
-    ~io_Isposit & _valid_range_2_T & _floatDecode2_io_isInf[2'h2];	// src/main/scala/pvu/PvuTop.scala:115:28, :189:26, :200:27, :234:34, :242:29, :246:21, :270:29, :282:32
-  wire             _GEN_31 = _valid_range_2_T & ~io_Isposit & _floatDecode1_io_Sign[2'h2];	// src/main/scala/pvu/PvuTop.scala:114:28, :182:18, :189:26, :234:34, :242:29, :246:21, :270:29, :271:31, :286:23
-  wire             _GEN_32 = ~_valid_range_2_T | io_Isposit;	// src/main/scala/pvu/PvuTop.scala:183:18, :190:26, :242:29, :246:21, :270:29, :287:23
-  wire [7:0]       _GEN_33 = _GEN_32 ? 8'h0 : _floatDecode1_io_Exp[2'h2][7:0];	// src/main/scala/pvu/PvuTop.scala:114:28, :183:18, :234:34, :270:29, :272:31, :287:23, :933:{29,39}
+    ~io_Isposit & _valid_range_2_T & _floatDecode2_io_isInf[2'h2];	// src/main/scala/pvu/PvuTop.scala:119:28, :193:26, :204:27, :238:34, :246:29, :250:21, :274:29, :286:32
+  wire             _GEN_31 = _valid_range_2_T & ~io_Isposit & _floatDecode1_io_Sign[2'h2];	// src/main/scala/pvu/PvuTop.scala:118:28, :186:18, :193:26, :238:34, :246:29, :250:21, :274:29, :275:31, :290:23
+  wire             _GEN_32 = ~_valid_range_2_T | io_Isposit;	// src/main/scala/pvu/PvuTop.scala:187:18, :194:26, :246:29, :250:21, :274:29, :291:23
+  wire [7:0]       _GEN_33 = _GEN_32 ? 8'h0 : _floatDecode1_io_Exp[2'h2][7:0];	// src/main/scala/pvu/PvuTop.scala:118:28, :187:18, :238:34, :274:29, :276:31, :291:23, :1193:{29,39}
   wire [32:0]      _GEN_34 =
     _valid_range_2_T
       ? (io_Isposit
            ? {5'h0, _decode1_io_Frac[2'h2]}
            : {10'h0, _GEN_28 ? 23'h0 : _floatDecode1_io_Frac[2'h2][22:0]})
-      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:110:23, :114:28, :184:18, :191:26, :234:34, :242:29, :246:21, :253:29, :256:23, :270:29, :273:31, :288:23
+      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:114:23, :118:28, :188:18, :195:26, :238:34, :246:29, :250:21, :257:29, :260:23, :274:29, :277:31, :292:23
   wire [32:0]      _GEN_35 =
     _valid_range_2_T
       ? (io_Isposit
            ? {5'h0, _decode2_io_Frac[2'h2]}
            : {10'h0, _GEN_28 ? 23'h0 : _floatDecode2_io_Frac[2'h2][22:0]})
-      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:111:23, :115:28, :184:18, :187:18, :191:26, :198:27, :234:34, :242:29, :246:21, :253:29, :256:23, :259:23, :270:29, :280:32, :288:23, :291:23
-  wire             _GEN_36 = io_Isposit | ~(ACTUAL_VECTOR_SIZE[2]);	// src/main/scala/pvu/PvuTop.scala:190:26, :191:26, :226:36, :242:29, :246:21, :270:29
+      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:115:23, :119:28, :188:18, :191:18, :195:26, :202:27, :238:34, :246:29, :250:21, :257:29, :260:23, :263:23, :274:29, :284:32, :292:23, :295:23
+  wire             _GEN_36 = io_Isposit | ~(ACTUAL_VECTOR_SIZE[2]);	// src/main/scala/pvu/PvuTop.scala:194:26, :195:26, :230:36, :246:29, :250:21, :274:29
   wire             _GEN_37 =
-    ~io_Isposit & ACTUAL_VECTOR_SIZE[2] & _floatDecode1_io_isInf[2'h3];	// src/main/scala/pvu/PvuTop.scala:114:28, :189:26, :193:26, :226:36, :235:55, :242:29, :246:21, :270:29, :275:31
+    ~io_Isposit & ACTUAL_VECTOR_SIZE[2] & _floatDecode1_io_isInf[2'h3];	// src/main/scala/pvu/PvuTop.scala:118:28, :193:26, :197:26, :230:36, :239:55, :246:29, :250:21, :274:29, :279:31
   wire             _GEN_38 =
-    ~io_Isposit & ACTUAL_VECTOR_SIZE[2] & _floatDecode2_io_isInf[2'h3];	// src/main/scala/pvu/PvuTop.scala:115:28, :189:26, :200:27, :226:36, :235:55, :242:29, :246:21, :270:29, :282:32
+    ~io_Isposit & ACTUAL_VECTOR_SIZE[2] & _floatDecode2_io_isInf[2'h3];	// src/main/scala/pvu/PvuTop.scala:119:28, :193:26, :204:27, :230:36, :239:55, :246:29, :250:21, :274:29, :286:32
   wire             _GEN_39 =
-    ACTUAL_VECTOR_SIZE[2] & ~io_Isposit & _floatDecode1_io_Sign[2'h3];	// src/main/scala/pvu/PvuTop.scala:114:28, :182:18, :189:26, :226:36, :235:55, :242:29, :246:21, :270:29, :271:31, :286:23
+    ACTUAL_VECTOR_SIZE[2] & ~io_Isposit & _floatDecode1_io_Sign[2'h3];	// src/main/scala/pvu/PvuTop.scala:118:28, :186:18, :193:26, :230:36, :239:55, :246:29, :250:21, :274:29, :275:31, :290:23
   wire [3:0]       _GEN_40 =
     io_Isposit
       ? {{_GEN_10}, {_GEN_8}, {_GEN_6}, {_GEN_4}}
-      : {{_GEN_39}, {_GEN_31}, {_GEN_23}, {_GEN_15}};	// src/main/scala/pvu/PvuTop.scala:182:18, :246:21, :253:29, :254:23, :270:29, :286:23
-  wire             _GEN_41 = ~(ACTUAL_VECTOR_SIZE[2]) | io_Isposit;	// src/main/scala/pvu/PvuTop.scala:183:18, :190:26, :226:36, :242:29, :246:21, :270:29, :287:23
-  wire [7:0]       _GEN_42 = _GEN_41 ? 8'h0 : _floatDecode1_io_Exp[2'h3][7:0];	// src/main/scala/pvu/PvuTop.scala:114:28, :183:18, :235:55, :270:29, :272:31, :287:23, :933:{29,39}
+      : {{_GEN_39}, {_GEN_31}, {_GEN_23}, {_GEN_15}};	// src/main/scala/pvu/PvuTop.scala:186:18, :250:21, :257:29, :258:23, :274:29, :290:23
+  wire             _GEN_41 = ~(ACTUAL_VECTOR_SIZE[2]) | io_Isposit;	// src/main/scala/pvu/PvuTop.scala:187:18, :194:26, :230:36, :246:29, :250:21, :274:29, :291:23
+  wire [7:0]       _GEN_42 = _GEN_41 ? 8'h0 : _floatDecode1_io_Exp[2'h3][7:0];	// src/main/scala/pvu/PvuTop.scala:118:28, :187:18, :239:55, :274:29, :276:31, :291:23, :1193:{29,39}
   wire [3:0][7:0]  _GEN_43 =
     io_Isposit
       ? {{_GEN_11}, {_GEN_9}, {_GEN_7}, {_GEN_5}}
-      : {{_GEN_42}, {_GEN_33}, {_GEN_25}, {_GEN_17}};	// src/main/scala/pvu/PvuTop.scala:183:18, :246:21, :253:29, :255:23, :270:29, :287:23
+      : {{_GEN_42}, {_GEN_33}, {_GEN_25}, {_GEN_17}};	// src/main/scala/pvu/PvuTop.scala:187:18, :250:21, :257:29, :259:23, :274:29, :291:23
   wire [32:0]      _GEN_44 =
     ACTUAL_VECTOR_SIZE[2]
       ? (io_Isposit
            ? {5'h0, _decode1_io_Frac[2'h3]}
            : {10'h0, _GEN_36 ? 23'h0 : _floatDecode1_io_Frac[2'h3][22:0]})
-      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:110:23, :114:28, :184:18, :191:26, :226:36, :235:55, :242:29, :246:21, :253:29, :256:23, :270:29, :273:31, :288:23
-  wire [3:0][32:0] pir_frac = {{_GEN_44}, {_GEN_34}, {_GEN_26}, {_GEN_18}};	// src/main/scala/pvu/PvuTop.scala:246:21, :253:29, :270:29
+      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:114:23, :118:28, :188:18, :195:26, :230:36, :239:55, :246:29, :250:21, :257:29, :260:23, :274:29, :277:31, :292:23
+  wire [3:0][32:0] pir_frac = {{_GEN_44}, {_GEN_34}, {_GEN_26}, {_GEN_18}};	// src/main/scala/pvu/PvuTop.scala:250:21, :257:29, :274:29
   wire [32:0]      _GEN_45 =
     ACTUAL_VECTOR_SIZE[2]
       ? (io_Isposit
            ? {5'h0, _decode2_io_Frac[2'h3]}
            : {10'h0, _GEN_36 ? 23'h0 : _floatDecode2_io_Frac[2'h3][22:0]})
-      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:111:23, :115:28, :184:18, :187:18, :191:26, :198:27, :226:36, :235:55, :242:29, :246:21, :253:29, :256:23, :259:23, :270:29, :280:32, :288:23, :291:23
-  wire [3:0][32:0] pir_frac2 = {{_GEN_45}, {_GEN_35}, {_GEN_27}, {_GEN_19}};	// src/main/scala/pvu/PvuTop.scala:246:21, :253:29, :270:29
-  wire             _GEN_46 = io_op == 4'h1;	// src/main/scala/pvu/PvuTop.scala:333:15
-  wire             _GEN_47 = io_op == 4'h2;	// src/main/scala/pvu/PvuTop.scala:370:21
-  wire             _GEN_48 = io_op == 4'h3;	// src/main/scala/pvu/PvuTop.scala:402:21
-  wire             _GEN_49 = io_op == 4'h4;	// src/main/scala/pvu/PvuTop.scala:416:21
-  wire             _GEN_50 = io_op == 4'h5;	// src/main/scala/pvu/PvuTop.scala:442:21
-  wire             _GEN_51 = _GEN_46 | _GEN_47 | _GEN_48 | _GEN_49;	// src/main/scala/pvu/PvuTop.scala:329:17, :333:{15,23}, :370:{21,29}, :402:{21,29}, :416:{21,29}, :442:29
-  wire             pir_sign_dot = ~_GEN_51 & _GEN_50 & _dotproduct_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:329:17, :333:23, :370:29, :402:29, :416:29, :442:{21,29}, :443:28
-  wire             _GEN_52 = _GEN_51 | ~_GEN_50;	// src/main/scala/pvu/PvuTop.scala:329:17, :330:17, :333:23, :370:29, :402:29, :416:29, :442:{21,29}
-  wire             _GEN_53 = io_op == 4'h6;	// src/main/scala/pvu/PvuTop.scala:456:21
-  wire             _GEN_54 = ACTUAL_DST_POSIT_WIDTH < 6'h9;	// src/main/scala/pvu/PvuTop.scala:230:36, :550:38
-  wire             _GEN_55 = ACTUAL_DST_POSIT_WIDTH < 6'h11;	// src/main/scala/pvu/PvuTop.scala:230:36, :553:44
-  wire             _GEN_56 = ACTUAL_DST_POSIT_WIDTH < 6'h19;	// src/main/scala/pvu/PvuTop.scala:230:36, :556:44
-  wire             _GEN_57 = ACTUAL_DST_POSIT_WIDTH < 6'h21;	// src/main/scala/pvu/PvuTop.scala:230:36, :559:44
-  wire             _GEN_58 = ACTUAL_DST_POSIT_WIDTH < 6'h29;	// src/main/scala/pvu/PvuTop.scala:230:36, :562:44
-  wire             _GEN_59 = ACTUAL_DST_POSIT_WIDTH < 6'h31;	// src/main/scala/pvu/PvuTop.scala:230:36, :565:44
-  wire             _GEN_60 = ACTUAL_DST_POSIT_WIDTH < 6'h39;	// src/main/scala/pvu/PvuTop.scala:230:36, :568:44
-  wire             _GEN_61 = io_op == 4'h7;	// src/main/scala/pvu/PvuTop.scala:580:21
-  wire [5:0]       _float2posit_out_0_T_4 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :611:91
+      : 33'h0;	// src/main/scala/pvu/PvuTop.scala:115:23, :119:28, :188:18, :191:18, :195:26, :202:27, :230:36, :239:55, :246:29, :250:21, :257:29, :260:23, :263:23, :274:29, :284:32, :292:23, :295:23
+  wire [3:0][32:0] pir_frac2 = {{_GEN_45}, {_GEN_35}, {_GEN_27}, {_GEN_19}};	// src/main/scala/pvu/PvuTop.scala:250:21, :257:29, :274:29
+  wire             _GEN_46 = io_op == 4'h1;	// src/main/scala/pvu/PvuTop.scala:337:15
+  wire             _GEN_47 = io_op == 4'h2;	// src/main/scala/pvu/PvuTop.scala:374:21
+  wire             _GEN_48 = io_op == 4'h3;	// src/main/scala/pvu/PvuTop.scala:406:21
+  wire             _GEN_49 = io_op == 4'h4;	// src/main/scala/pvu/PvuTop.scala:420:21
+  wire             _GEN_50 = io_op == 4'h5;	// src/main/scala/pvu/PvuTop.scala:446:21
+  wire             _GEN_51 = _GEN_46 | _GEN_47 | _GEN_48 | _GEN_49;	// src/main/scala/pvu/PvuTop.scala:333:17, :337:{15,23}, :374:{21,29}, :406:{21,29}, :420:{21,29}, :446:29
+  wire             pir_sign_dot = ~_GEN_51 & _GEN_50 & _dotproduct_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:333:17, :337:23, :374:29, :406:29, :420:29, :446:{21,29}, :447:28
+  wire             _GEN_52 = _GEN_51 | ~_GEN_50;	// src/main/scala/pvu/PvuTop.scala:333:17, :334:17, :337:23, :374:29, :406:29, :420:29, :446:{21,29}
+  wire             _GEN_53 = io_op == 4'h6;	// src/main/scala/pvu/PvuTop.scala:460:21
+  wire             _GEN_54 = ACTUAL_DST_POSIT_WIDTH < 6'h9;	// src/main/scala/pvu/PvuTop.scala:234:36, :554:38
+  wire             _GEN_55 = ACTUAL_DST_POSIT_WIDTH < 6'h11;	// src/main/scala/pvu/PvuTop.scala:234:36, :557:44
+  wire             _GEN_56 = ACTUAL_DST_POSIT_WIDTH < 6'h19;	// src/main/scala/pvu/PvuTop.scala:234:36, :560:44
+  wire             _GEN_57 = ACTUAL_DST_POSIT_WIDTH < 6'h21;	// src/main/scala/pvu/PvuTop.scala:234:36, :563:44
+  wire             _GEN_58 = ACTUAL_DST_POSIT_WIDTH < 6'h29;	// src/main/scala/pvu/PvuTop.scala:234:36, :566:44
+  wire             _GEN_59 = ACTUAL_DST_POSIT_WIDTH < 6'h31;	// src/main/scala/pvu/PvuTop.scala:234:36, :569:44
+  wire             _GEN_60 = ACTUAL_DST_POSIT_WIDTH < 6'h39;	// src/main/scala/pvu/PvuTop.scala:234:36, :572:44
+  wire             _GEN_61 = io_op == 4'h7;	// src/main/scala/pvu/PvuTop.scala:584:21
+  wire             _GEN_62 = io_float_mode == 3'h0;	// src/main/scala/pvu/PvuTop.scala:230:52, :594:28
+  wire [5:0]       _float2posit_out_0_T_4 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :615:91
   wire [94:0]      _float2posit_out_0_T_6 =
     {63'h0, _float2posit_fp4_io_posit_out[2'h0] >> _float2posit_out_0_T_4}
-    << _float2posit_out_0_T_4;	// src/main/scala/pvu/PvuTop.scala:28:8, :593:38, :606:67, :611:{69,91,118}
-  wire             _GEN_62 = ACTUAL_DST_POSIT_WIDTH > 6'h20 | ACTUAL_DST_POSIT_WIDTH[5];	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :604:{40,61}, :606:33, :607:{46,67}
-  wire [5:0]       _float2posit_out_1_T_4 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :611:91
+    << _float2posit_out_0_T_4;	// src/main/scala/pvu/PvuTop.scala:29:8, :597:38, :610:67, :615:{69,91,118}
+  wire             _GEN_63 = ACTUAL_DST_POSIT_WIDTH > 6'h20 | ACTUAL_DST_POSIT_WIDTH[5];	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :608:{40,61}, :610:33, :611:{46,67}
+  wire [5:0]       _float2posit_out_1_T_4 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :615:91
   wire [94:0]      _float2posit_out_1_T_6 =
     {63'h0, _float2posit_fp4_io_posit_out[2'h1] >> _float2posit_out_1_T_4}
-    << _float2posit_out_1_T_4;	// src/main/scala/pvu/PvuTop.scala:28:8, :593:38, :606:67, :611:{69,91,118}
-  wire [5:0]       _float2posit_out_2_T_4 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :611:91
+    << _float2posit_out_1_T_4;	// src/main/scala/pvu/PvuTop.scala:29:8, :597:38, :610:67, :615:{69,91,118}
+  wire [5:0]       _float2posit_out_2_T_4 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :615:91
   wire [94:0]      _float2posit_out_2_T_6 =
     {63'h0, _float2posit_fp4_io_posit_out[2'h2] >> _float2posit_out_2_T_4}
-    << _float2posit_out_2_T_4;	// src/main/scala/pvu/PvuTop.scala:234:34, :593:38, :606:67, :611:{69,91,118}
-  wire [5:0]       _float2posit_out_3_T_4 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :611:91
+    << _float2posit_out_2_T_4;	// src/main/scala/pvu/PvuTop.scala:238:34, :597:38, :610:67, :615:{69,91,118}
+  wire [5:0]       _float2posit_out_3_T_4 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :615:91
   wire [94:0]      _float2posit_out_3_T_6 =
     {63'h0, _float2posit_fp4_io_posit_out[2'h3] >> _float2posit_out_3_T_4}
-    << _float2posit_out_3_T_4;	// src/main/scala/pvu/PvuTop.scala:235:55, :593:38, :606:67, :611:{69,91,118}
-  wire [5:0]       _float2posit_out_0_T_11 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :649:91
+    << _float2posit_out_3_T_4;	// src/main/scala/pvu/PvuTop.scala:239:55, :597:38, :610:67, :615:{69,91,118}
+  wire             _GEN_64 = io_float_mode == 3'h1;	// src/main/scala/pvu/PvuTop.scala:246:29, :594:28
+  wire [5:0]       _float2posit_out_0_T_11 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :653:91
   wire [94:0]      _float2posit_out_0_T_13 =
     {63'h0, _float2posit_fp8_io_posit_out[2'h0] >> _float2posit_out_0_T_11}
-    << _float2posit_out_0_T_11;	// src/main/scala/pvu/PvuTop.scala:28:8, :611:118, :631:38, :644:67, :649:{69,91,118}
-  wire [5:0]       _float2posit_out_1_T_11 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :649:91
+    << _float2posit_out_0_T_11;	// src/main/scala/pvu/PvuTop.scala:29:8, :615:118, :635:38, :648:67, :653:{69,91,118}
+  wire [5:0]       _float2posit_out_1_T_11 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :653:91
   wire [94:0]      _float2posit_out_1_T_13 =
     {63'h0, _float2posit_fp8_io_posit_out[2'h1] >> _float2posit_out_1_T_11}
-    << _float2posit_out_1_T_11;	// src/main/scala/pvu/PvuTop.scala:28:8, :611:118, :631:38, :644:67, :649:{69,91,118}
-  wire [5:0]       _float2posit_out_2_T_11 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :649:91
+    << _float2posit_out_1_T_11;	// src/main/scala/pvu/PvuTop.scala:29:8, :615:118, :635:38, :648:67, :653:{69,91,118}
+  wire [5:0]       _float2posit_out_2_T_11 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :653:91
   wire [94:0]      _float2posit_out_2_T_13 =
     {63'h0, _float2posit_fp8_io_posit_out[2'h2] >> _float2posit_out_2_T_11}
-    << _float2posit_out_2_T_11;	// src/main/scala/pvu/PvuTop.scala:234:34, :611:118, :631:38, :644:67, :649:{69,91,118}
-  wire [5:0]       _float2posit_out_3_T_11 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :649:91
+    << _float2posit_out_2_T_11;	// src/main/scala/pvu/PvuTop.scala:238:34, :615:118, :635:38, :648:67, :653:{69,91,118}
+  wire [5:0]       _float2posit_out_3_T_11 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :653:91
   wire [94:0]      _float2posit_out_3_T_13 =
     {63'h0, _float2posit_fp8_io_posit_out[2'h3] >> _float2posit_out_3_T_11}
-    << _float2posit_out_3_T_11;	// src/main/scala/pvu/PvuTop.scala:235:55, :611:118, :631:38, :644:67, :649:{69,91,118}
-  wire [5:0]       _float2posit_out_0_T_18 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :687:92
+    << _float2posit_out_3_T_11;	// src/main/scala/pvu/PvuTop.scala:239:55, :615:118, :635:38, :648:67, :653:{69,91,118}
+  wire             _GEN_65 = io_float_mode == 3'h2;	// src/main/scala/pvu/PvuTop.scala:246:29, :594:28
+  wire [5:0]       _float2posit_out_0_T_18 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :691:92
   wire [94:0]      _float2posit_out_0_T_20 =
     {63'h0, _float2posit_fp16_io_posit_out[2'h0] >> _float2posit_out_0_T_18}
-    << _float2posit_out_0_T_18;	// src/main/scala/pvu/PvuTop.scala:28:8, :611:118, :669:39, :682:68, :687:{70,92,119}
-  wire [5:0]       _float2posit_out_1_T_18 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :687:92
+    << _float2posit_out_0_T_18;	// src/main/scala/pvu/PvuTop.scala:29:8, :615:118, :673:39, :686:68, :691:{70,92,119}
+  wire [5:0]       _float2posit_out_1_T_18 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :691:92
   wire [94:0]      _float2posit_out_1_T_20 =
     {63'h0, _float2posit_fp16_io_posit_out[2'h1] >> _float2posit_out_1_T_18}
-    << _float2posit_out_1_T_18;	// src/main/scala/pvu/PvuTop.scala:28:8, :611:118, :669:39, :682:68, :687:{70,92,119}
-  wire [5:0]       _float2posit_out_2_T_18 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :687:92
+    << _float2posit_out_1_T_18;	// src/main/scala/pvu/PvuTop.scala:29:8, :615:118, :673:39, :686:68, :691:{70,92,119}
+  wire [5:0]       _float2posit_out_2_T_18 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :691:92
   wire [94:0]      _float2posit_out_2_T_20 =
     {63'h0, _float2posit_fp16_io_posit_out[2'h2] >> _float2posit_out_2_T_18}
-    << _float2posit_out_2_T_18;	// src/main/scala/pvu/PvuTop.scala:234:34, :611:118, :669:39, :682:68, :687:{70,92,119}
-  wire [5:0]       _float2posit_out_3_T_18 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :687:92
+    << _float2posit_out_2_T_18;	// src/main/scala/pvu/PvuTop.scala:238:34, :615:118, :673:39, :686:68, :691:{70,92,119}
+  wire [5:0]       _float2posit_out_3_T_18 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :691:92
   wire [94:0]      _float2posit_out_3_T_20 =
     {63'h0, _float2posit_fp16_io_posit_out[2'h3] >> _float2posit_out_3_T_18}
-    << _float2posit_out_3_T_18;	// src/main/scala/pvu/PvuTop.scala:235:55, :611:118, :669:39, :682:68, :687:{70,92,119}
-  wire [5:0]       _float2posit_out_0_T_25 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :725:92
+    << _float2posit_out_3_T_18;	// src/main/scala/pvu/PvuTop.scala:239:55, :615:118, :673:39, :686:68, :691:{70,92,119}
+  wire             _GEN_66 = io_float_mode == 3'h3;	// src/main/scala/pvu/PvuTop.scala:246:29, :594:28
+  wire [5:0]       _float2posit_out_0_T_25 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :729:92
   wire [94:0]      _float2posit_out_0_T_27 =
     {63'h0, _float2posit_fp32_io_posit_out[2'h0] >> _float2posit_out_0_T_25}
-    << _float2posit_out_0_T_25;	// src/main/scala/pvu/PvuTop.scala:28:8, :611:118, :707:39, :720:68, :725:{70,92,119}
-  wire [5:0]       _float2posit_out_1_T_25 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :725:92
+    << _float2posit_out_0_T_25;	// src/main/scala/pvu/PvuTop.scala:29:8, :615:118, :711:39, :724:68, :729:{70,92,119}
+  wire [5:0]       _float2posit_out_1_T_25 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :729:92
   wire [94:0]      _float2posit_out_1_T_27 =
     {63'h0, _float2posit_fp32_io_posit_out[2'h1] >> _float2posit_out_1_T_25}
-    << _float2posit_out_1_T_25;	// src/main/scala/pvu/PvuTop.scala:28:8, :611:118, :707:39, :720:68, :725:{70,92,119}
-  wire [5:0]       _float2posit_out_2_T_25 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :725:92
+    << _float2posit_out_1_T_25;	// src/main/scala/pvu/PvuTop.scala:29:8, :615:118, :711:39, :724:68, :729:{70,92,119}
+  wire [5:0]       _float2posit_out_2_T_25 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :729:92
   wire [94:0]      _float2posit_out_2_T_27 =
     {63'h0, _float2posit_fp32_io_posit_out[2'h2] >> _float2posit_out_2_T_25}
-    << _float2posit_out_2_T_25;	// src/main/scala/pvu/PvuTop.scala:234:34, :611:118, :707:39, :720:68, :725:{70,92,119}
-  wire [5:0]       _float2posit_out_3_T_25 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :725:92
+    << _float2posit_out_2_T_25;	// src/main/scala/pvu/PvuTop.scala:238:34, :615:118, :711:39, :724:68, :729:{70,92,119}
+  wire [5:0]       _float2posit_out_3_T_25 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :729:92
   wire [94:0]      _float2posit_out_3_T_27 =
     {63'h0, _float2posit_fp32_io_posit_out[2'h3] >> _float2posit_out_3_T_25}
-    << _float2posit_out_3_T_25;	// src/main/scala/pvu/PvuTop.scala:235:55, :611:118, :707:39, :720:68, :725:{70,92,119}
-  wire [5:0]       _float2posit_out_0_T_32 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :763:92
+    << _float2posit_out_3_T_25;	// src/main/scala/pvu/PvuTop.scala:239:55, :615:118, :711:39, :724:68, :729:{70,92,119}
+  wire             _GEN_67 = io_float_mode == 3'h4;	// src/main/scala/pvu/PvuTop.scala:230:36, :594:28
+  wire [5:0]       _float2posit_out_0_T_32 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :767:92
   wire [94:0]      _float2posit_out_0_T_34 =
     {63'h0, _float2posit_fp64_io_posit_out[2'h0] >> _float2posit_out_0_T_32}
-    << _float2posit_out_0_T_32;	// src/main/scala/pvu/PvuTop.scala:28:8, :611:118, :745:39, :758:68, :763:{70,92,119}
-  wire [7:0][31:0] _GEN_63 =
+    << _float2posit_out_0_T_32;	// src/main/scala/pvu/PvuTop.scala:29:8, :615:118, :749:39, :762:68, :767:{70,92,119}
+  wire [7:0][31:0] _GEN_68 =
     {{32'h0},
      {32'h0},
      {32'h0},
-     {_GEN_62 ? _float2posit_fp64_io_posit_out[2'h0] : _float2posit_out_0_T_34[31:0]},
-     {_GEN_62 ? _float2posit_fp32_io_posit_out[2'h0] : _float2posit_out_0_T_27[31:0]},
-     {_GEN_62 ? _float2posit_fp16_io_posit_out[2'h0] : _float2posit_out_0_T_20[31:0]},
-     {_GEN_62 ? _float2posit_fp8_io_posit_out[2'h0] : _float2posit_out_0_T_13[31:0]},
-     {_GEN_62 ? _float2posit_fp4_io_posit_out[2'h0] : _float2posit_out_0_T_6[31:0]}};	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :590:28, :593:38, :604:61, :606:{33,67}, :607:67, :611:{33,118}, :631:38, :642:61, :644:{33,67}, :645:67, :649:{33,118}, :669:39, :680:61, :682:{33,68}, :683:67, :687:{33,119}, :707:39, :718:61, :720:{33,68}, :721:67, :725:{33,119}, :745:39, :756:61, :758:{33,68}, :759:67, :763:{33,119}, :792:{19,29}
-  wire [5:0]       _float2posit_out_1_T_32 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :763:92
+     {_GEN_63 ? _float2posit_fp64_io_posit_out[2'h0] : _float2posit_out_0_T_34[31:0]},
+     {_GEN_63 ? _float2posit_fp32_io_posit_out[2'h0] : _float2posit_out_0_T_27[31:0]},
+     {_GEN_63 ? _float2posit_fp16_io_posit_out[2'h0] : _float2posit_out_0_T_20[31:0]},
+     {_GEN_63 ? _float2posit_fp8_io_posit_out[2'h0] : _float2posit_out_0_T_13[31:0]},
+     {_GEN_63 ? _float2posit_fp4_io_posit_out[2'h0] : _float2posit_out_0_T_6[31:0]}};	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :594:28, :597:38, :608:61, :610:{33,67}, :611:67, :615:{33,118}, :635:38, :646:61, :648:{33,67}, :649:67, :653:{33,118}, :673:39, :684:61, :686:{33,68}, :687:67, :691:{33,119}, :711:39, :722:61, :724:{33,68}, :725:67, :729:{33,119}, :749:39, :760:61, :762:{33,68}, :763:67, :767:{33,119}, :796:{19,29}
+  wire [5:0]       _float2posit_out_1_T_32 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :767:92
   wire [94:0]      _float2posit_out_1_T_34 =
     {63'h0, _float2posit_fp64_io_posit_out[2'h1] >> _float2posit_out_1_T_32}
-    << _float2posit_out_1_T_32;	// src/main/scala/pvu/PvuTop.scala:28:8, :611:118, :745:39, :758:68, :763:{70,92,119}
-  wire [7:0][31:0] _GEN_64 =
+    << _float2posit_out_1_T_32;	// src/main/scala/pvu/PvuTop.scala:29:8, :615:118, :749:39, :762:68, :767:{70,92,119}
+  wire [7:0][31:0] _GEN_69 =
     {{32'h0},
      {32'h0},
      {32'h0},
-     {_GEN_62 ? _float2posit_fp64_io_posit_out[2'h1] : _float2posit_out_1_T_34[31:0]},
-     {_GEN_62 ? _float2posit_fp32_io_posit_out[2'h1] : _float2posit_out_1_T_27[31:0]},
-     {_GEN_62 ? _float2posit_fp16_io_posit_out[2'h1] : _float2posit_out_1_T_20[31:0]},
-     {_GEN_62 ? _float2posit_fp8_io_posit_out[2'h1] : _float2posit_out_1_T_13[31:0]},
-     {_GEN_62 ? _float2posit_fp4_io_posit_out[2'h1] : _float2posit_out_1_T_6[31:0]}};	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :590:28, :593:38, :604:61, :606:{33,67}, :607:67, :611:{33,118}, :631:38, :642:61, :644:{33,67}, :645:67, :649:{33,118}, :669:39, :680:61, :682:{33,68}, :683:67, :687:{33,119}, :707:39, :718:61, :720:{33,68}, :721:67, :725:{33,119}, :745:39, :756:61, :758:{33,68}, :759:67, :763:{33,119}, :792:{19,29}
-  wire [5:0]       _float2posit_out_2_T_32 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :763:92
+     {_GEN_63 ? _float2posit_fp64_io_posit_out[2'h1] : _float2posit_out_1_T_34[31:0]},
+     {_GEN_63 ? _float2posit_fp32_io_posit_out[2'h1] : _float2posit_out_1_T_27[31:0]},
+     {_GEN_63 ? _float2posit_fp16_io_posit_out[2'h1] : _float2posit_out_1_T_20[31:0]},
+     {_GEN_63 ? _float2posit_fp8_io_posit_out[2'h1] : _float2posit_out_1_T_13[31:0]},
+     {_GEN_63 ? _float2posit_fp4_io_posit_out[2'h1] : _float2posit_out_1_T_6[31:0]}};	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :594:28, :597:38, :608:61, :610:{33,67}, :611:67, :615:{33,118}, :635:38, :646:61, :648:{33,67}, :649:67, :653:{33,118}, :673:39, :684:61, :686:{33,68}, :687:67, :691:{33,119}, :711:39, :722:61, :724:{33,68}, :725:67, :729:{33,119}, :749:39, :760:61, :762:{33,68}, :763:67, :767:{33,119}, :796:{19,29}
+  wire [5:0]       _float2posit_out_2_T_32 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :767:92
   wire [94:0]      _float2posit_out_2_T_34 =
     {63'h0, _float2posit_fp64_io_posit_out[2'h2] >> _float2posit_out_2_T_32}
-    << _float2posit_out_2_T_32;	// src/main/scala/pvu/PvuTop.scala:234:34, :611:118, :745:39, :758:68, :763:{70,92,119}
-  wire [7:0][31:0] _GEN_65 =
+    << _float2posit_out_2_T_32;	// src/main/scala/pvu/PvuTop.scala:238:34, :615:118, :749:39, :762:68, :767:{70,92,119}
+  wire [7:0][31:0] _GEN_70 =
     {{32'h0},
      {32'h0},
      {32'h0},
-     {_GEN_62 ? _float2posit_fp64_io_posit_out[2'h2] : _float2posit_out_2_T_34[31:0]},
-     {_GEN_62 ? _float2posit_fp32_io_posit_out[2'h2] : _float2posit_out_2_T_27[31:0]},
-     {_GEN_62 ? _float2posit_fp16_io_posit_out[2'h2] : _float2posit_out_2_T_20[31:0]},
-     {_GEN_62 ? _float2posit_fp8_io_posit_out[2'h2] : _float2posit_out_2_T_13[31:0]},
-     {_GEN_62 ? _float2posit_fp4_io_posit_out[2'h2] : _float2posit_out_2_T_6[31:0]}};	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :234:34, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :590:28, :593:38, :604:61, :606:{33,67}, :607:67, :611:{33,118}, :631:38, :642:61, :644:{33,67}, :645:67, :649:{33,118}, :669:39, :680:61, :682:{33,68}, :683:67, :687:{33,119}, :707:39, :718:61, :720:{33,68}, :721:67, :725:{33,119}, :745:39, :756:61, :758:{33,68}, :759:67, :763:{33,119}, :792:{19,29}
-  wire [5:0]       _float2posit_out_3_T_32 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :763:92
+     {_GEN_63 ? _float2posit_fp64_io_posit_out[2'h2] : _float2posit_out_2_T_34[31:0]},
+     {_GEN_63 ? _float2posit_fp32_io_posit_out[2'h2] : _float2posit_out_2_T_27[31:0]},
+     {_GEN_63 ? _float2posit_fp16_io_posit_out[2'h2] : _float2posit_out_2_T_20[31:0]},
+     {_GEN_63 ? _float2posit_fp8_io_posit_out[2'h2] : _float2posit_out_2_T_13[31:0]},
+     {_GEN_63 ? _float2posit_fp4_io_posit_out[2'h2] : _float2posit_out_2_T_6[31:0]}};	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :238:34, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :594:28, :597:38, :608:61, :610:{33,67}, :611:67, :615:{33,118}, :635:38, :646:61, :648:{33,67}, :649:67, :653:{33,118}, :673:39, :684:61, :686:{33,68}, :687:67, :691:{33,119}, :711:39, :722:61, :724:{33,68}, :725:67, :729:{33,119}, :749:39, :760:61, :762:{33,68}, :763:67, :767:{33,119}, :796:{19,29}
+  wire [5:0]       _float2posit_out_3_T_32 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :767:92
   wire [94:0]      _float2posit_out_3_T_34 =
     {63'h0, _float2posit_fp64_io_posit_out[2'h3] >> _float2posit_out_3_T_32}
-    << _float2posit_out_3_T_32;	// src/main/scala/pvu/PvuTop.scala:235:55, :611:118, :745:39, :758:68, :763:{70,92,119}
-  wire [7:0][31:0] _GEN_66 =
+    << _float2posit_out_3_T_32;	// src/main/scala/pvu/PvuTop.scala:239:55, :615:118, :749:39, :762:68, :767:{70,92,119}
+  wire [7:0][31:0] _GEN_71 =
     {{32'h0},
      {32'h0},
      {32'h0},
-     {_GEN_62 ? _float2posit_fp64_io_posit_out[2'h3] : _float2posit_out_3_T_34[31:0]},
-     {_GEN_62 ? _float2posit_fp32_io_posit_out[2'h3] : _float2posit_out_3_T_27[31:0]},
-     {_GEN_62 ? _float2posit_fp16_io_posit_out[2'h3] : _float2posit_out_3_T_20[31:0]},
-     {_GEN_62 ? _float2posit_fp8_io_posit_out[2'h3] : _float2posit_out_3_T_13[31:0]},
-     {_GEN_62 ? _float2posit_fp4_io_posit_out[2'h3] : _float2posit_out_3_T_6[31:0]}};	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :235:55, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :590:28, :593:38, :604:61, :606:{33,67}, :607:67, :611:{33,118}, :631:38, :642:61, :644:{33,67}, :645:67, :649:{33,118}, :669:39, :680:61, :682:{33,68}, :683:67, :687:{33,119}, :707:39, :718:61, :720:{33,68}, :721:67, :725:{33,119}, :745:39, :756:61, :758:{33,68}, :759:67, :763:{33,119}, :792:{19,29}
-  wire [7:0][63:0] _GEN_67 =
+     {_GEN_63 ? _float2posit_fp64_io_posit_out[2'h3] : _float2posit_out_3_T_34[31:0]},
+     {_GEN_63 ? _float2posit_fp32_io_posit_out[2'h3] : _float2posit_out_3_T_27[31:0]},
+     {_GEN_63 ? _float2posit_fp16_io_posit_out[2'h3] : _float2posit_out_3_T_20[31:0]},
+     {_GEN_63 ? _float2posit_fp8_io_posit_out[2'h3] : _float2posit_out_3_T_13[31:0]},
+     {_GEN_63 ? _float2posit_fp4_io_posit_out[2'h3] : _float2posit_out_3_T_6[31:0]}};	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :239:55, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :594:28, :597:38, :608:61, :610:{33,67}, :611:67, :615:{33,118}, :635:38, :646:61, :648:{33,67}, :649:67, :653:{33,118}, :673:39, :684:61, :686:{33,68}, :687:67, :691:{33,119}, :711:39, :722:61, :724:{33,68}, :725:67, :729:{33,119}, :749:39, :760:61, :762:{33,68}, :763:67, :767:{33,119}, :796:{19,29}
+  wire [7:0][63:0] _GEN_72 =
     {{64'h0},
      {64'h0},
      {64'h0},
@@ -9742,8 +16882,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
      {{32'h0, _posit2float_fp32_io_float_out[2'h0]}},
      {{48'h0, _posit2float_fp16_io_float_out[2'h0]}},
      {{56'h0, _posit2float_fp8_io_float_out[2'h0]}},
-     {{60'h0, _posit2float_fp4_io_float_out[2'h0]}}};	// src/main/scala/pvu/PvuTop.scala:28:8, :170:{18,28}, :172:{18,28}, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :586:{22,32}, :587:{22,32}, :590:28, :618:38, :626:38, :656:38, :664:39, :694:39, :702:39, :732:39, :740:39, :770:39, :778:39, :788:{19,29}, :792:{19,29}
-  wire [7:0][63:0] _GEN_68 =
+     {{60'h0, _posit2float_fp4_io_float_out[2'h0]}}};	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :176:{18,28}, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :622:38, :630:38, :660:38, :668:39, :698:39, :706:39, :736:39, :744:39, :774:39, :782:39, :792:{19,29}, :796:{19,29}
+  wire [7:0][63:0] _GEN_73 =
     {{64'h0},
      {64'h0},
      {64'h0},
@@ -9751,8 +16891,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
      {{32'h0, _posit2float_fp32_io_float_out[2'h1]}},
      {{48'h0, _posit2float_fp16_io_float_out[2'h1]}},
      {{56'h0, _posit2float_fp8_io_float_out[2'h1]}},
-     {{60'h0, _posit2float_fp4_io_float_out[2'h1]}}};	// src/main/scala/pvu/PvuTop.scala:28:8, :170:{18,28}, :172:{18,28}, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :586:{22,32}, :587:{22,32}, :590:28, :618:38, :626:38, :656:38, :664:39, :694:39, :702:39, :732:39, :740:39, :770:39, :778:39, :788:{19,29}, :792:{19,29}
-  wire [7:0][63:0] _GEN_69 =
+     {{60'h0, _posit2float_fp4_io_float_out[2'h1]}}};	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :176:{18,28}, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :622:38, :630:38, :660:38, :668:39, :698:39, :706:39, :736:39, :744:39, :774:39, :782:39, :792:{19,29}, :796:{19,29}
+  wire [7:0][63:0] _GEN_74 =
     {{64'h0},
      {64'h0},
      {64'h0},
@@ -9760,8 +16900,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
      {{32'h0, _posit2float_fp32_io_float_out[2'h2]}},
      {{48'h0, _posit2float_fp16_io_float_out[2'h2]}},
      {{56'h0, _posit2float_fp8_io_float_out[2'h2]}},
-     {{60'h0, _posit2float_fp4_io_float_out[2'h2]}}};	// src/main/scala/pvu/PvuTop.scala:170:{18,28}, :172:{18,28}, :234:34, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :586:{22,32}, :587:{22,32}, :590:28, :618:38, :626:38, :656:38, :664:39, :694:39, :702:39, :732:39, :740:39, :770:39, :778:39, :788:{19,29}, :792:{19,29}
-  wire [7:0][63:0] _GEN_70 =
+     {{60'h0, _posit2float_fp4_io_float_out[2'h2]}}};	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :176:{18,28}, :238:34, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :622:38, :630:38, :660:38, :668:39, :698:39, :706:39, :736:39, :744:39, :774:39, :782:39, :792:{19,29}, :796:{19,29}
+  wire [7:0][63:0] _GEN_75 =
     {{64'h0},
      {64'h0},
      {64'h0},
@@ -9769,22 +16909,15 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
      {{32'h0, _posit2float_fp32_io_float_out[2'h3]}},
      {{48'h0, _posit2float_fp16_io_float_out[2'h3]}},
      {{56'h0, _posit2float_fp8_io_float_out[2'h3]}},
-     {{60'h0, _posit2float_fp4_io_float_out[2'h3]}}};	// src/main/scala/pvu/PvuTop.scala:170:{18,28}, :172:{18,28}, :235:55, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :586:{22,32}, :587:{22,32}, :590:28, :618:38, :626:38, :656:38, :664:39, :694:39, :702:39, :732:39, :740:39, :770:39, :778:39, :788:{19,29}, :792:{19,29}
-  wire             _GEN_71 = ~_GEN_61 | io_float_posit;	// src/main/scala/pvu/PvuTop.scala:170:18, :580:{21,29}, :785:27
-  wire             _GEN_72 = _GEN_46 | _GEN_47 | _GEN_48 | _GEN_49 | _GEN_50 | _GEN_53;	// src/main/scala/pvu/PvuTop.scala:170:18, :333:{15,23}, :370:{21,29}, :402:{21,29}, :416:{21,29}, :442:{21,29}, :456:{21,29}, :580:29
-  wire             _GEN_73 = _GEN_72 | _GEN_71;	// src/main/scala/pvu/PvuTop.scala:170:18, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :785:27
-  wire [63:0]      _GEN_74 = _GEN_73 ? 64'h0 : _GEN_67[io_float_mode];	// src/main/scala/pvu/PvuTop.scala:170:{18,28}, :249:38, :250:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :587:{22,32}, :590:28, :626:38, :664:39, :702:39, :740:39, :778:39, :788:{19,29}
-  wire [63:0]      _GEN_75 = _GEN_73 ? 64'h0 : _GEN_68[io_float_mode];	// src/main/scala/pvu/PvuTop.scala:170:{18,28}, :249:38, :250:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :587:{22,32}, :590:28, :626:38, :664:39, :702:39, :740:39, :778:39, :788:{19,29}
-  wire [63:0]      _GEN_76 = _GEN_73 ? 64'h0 : _GEN_69[io_float_mode];	// src/main/scala/pvu/PvuTop.scala:170:{18,28}, :249:38, :250:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :587:{22,32}, :590:28, :626:38, :664:39, :702:39, :740:39, :778:39, :788:{19,29}
-  wire [63:0]      _GEN_77 = _GEN_73 ? 64'h0 : _GEN_70[io_float_mode];	// src/main/scala/pvu/PvuTop.scala:170:{18,28}, :249:38, :250:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :587:{22,32}, :590:28, :626:38, :664:39, :702:39, :740:39, :778:39, :788:{19,29}
-  wire [31:0]      _GEN_78 = io_float_posit ? _GEN_63[io_float_mode] : 32'h0;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :590:28, :604:61, :642:61, :680:61, :718:61, :756:61, :785:27, :787:19, :792:{19,29}
-  wire [31:0]      _GEN_79 = io_float_posit ? _GEN_64[io_float_mode] : 32'h0;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :590:28, :604:61, :642:61, :680:61, :718:61, :756:61, :785:27, :787:19, :792:{19,29}
-  wire [31:0]      _GEN_80 = io_float_posit ? _GEN_65[io_float_mode] : 32'h0;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :590:28, :604:61, :642:61, :680:61, :718:61, :756:61, :785:27, :787:19, :792:{19,29}
-  wire [31:0]      _GEN_81 = io_float_posit ? _GEN_66[io_float_mode] : 32'h0;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :590:28, :604:61, :642:61, :680:61, :718:61, :756:61, :785:27, :787:19, :792:{19,29}
-  wire             _GEN_82 = io_op == 4'h8;	// src/main/scala/pvu/PvuTop.scala:550:38, :794:21
-  wire             _GEN_83 = io_op == 4'h9;	// src/main/scala/pvu/PvuTop.scala:819:21
-  wire             _GEN_84 = _GEN_50 | _GEN_53 | _GEN_61;	// src/main/scala/pvu/PvuTop.scala:317:26, :442:{21,29}, :456:{21,29}, :580:{21,29}, :794:30
-  wire             _GEN_85 =
+     {{60'h0, _posit2float_fp4_io_float_out[2'h3]}}};	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :176:{18,28}, :239:55, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :622:38, :630:38, :660:38, :668:39, :698:39, :706:39, :736:39, :744:39, :774:39, :782:39, :792:{19,29}, :796:{19,29}
+  wire [31:0]      _GEN_76 = io_float_posit ? _GEN_68[io_float_mode] : 32'h0;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :594:28, :608:61, :646:61, :684:61, :722:61, :760:61, :789:27, :791:19, :796:{19,29}
+  wire [31:0]      _GEN_77 = io_float_posit ? _GEN_69[io_float_mode] : 32'h0;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :594:28, :608:61, :646:61, :684:61, :722:61, :760:61, :789:27, :791:19, :796:{19,29}
+  wire [31:0]      _GEN_78 = io_float_posit ? _GEN_70[io_float_mode] : 32'h0;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :594:28, :608:61, :646:61, :684:61, :722:61, :760:61, :789:27, :791:19, :796:{19,29}
+  wire [31:0]      _GEN_79 = io_float_posit ? _GEN_71[io_float_mode] : 32'h0;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :594:28, :608:61, :646:61, :684:61, :722:61, :760:61, :789:27, :791:19, :796:{19,29}
+  wire             _GEN_80 = io_op == 4'h8;	// src/main/scala/pvu/PvuTop.scala:554:38, :798:21
+  wire             _GEN_81 = io_op == 4'h9;	// src/main/scala/pvu/PvuTop.scala:823:21
+  wire             _GEN_82 = _GEN_50 | _GEN_53 | _GEN_61;	// src/main/scala/pvu/PvuTop.scala:321:26, :446:{21,29}, :460:{21,29}, :584:{21,29}, :798:30
+  wire             _GEN_83 =
     _GEN_46
       ? (|ACTUAL_VECTOR_SIZE) & _add_io_pir_sign_o[2'h0]
       : _GEN_47
@@ -9793,11 +16926,11 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
               ? _mul_io_pir_sign_o[2'h0]
               : _GEN_49
                   ? _div_inst_io_pir_sign_o[2'h0]
-                  : ~_GEN_84
-                    & (_GEN_82
+                  : ~_GEN_82
+                    & (_GEN_80
                          ? _greater_io_pir_sign_o[2'h0]
-                         : _GEN_83 & _less_io_pir_sign_o[2'h0]);	// src/main/scala/pvu/PvuTop.scala:28:8, :226:36, :242:29, :317:26, :333:{15,23}, :345:28, :361:29, :362:30, :370:{21,29}, :381:28, :395:23, :402:{21,29}, :403:22, :412:23, :416:{21,29}, :417:27, :426:23, :442:29, :456:29, :580:29, :794:{21,30}, :795:26, :809:19, :819:{21,30}, :820:23, :834:19
-  wire             _GEN_86 =
+                         : _GEN_81 & _less_io_pir_sign_o[2'h0]);	// src/main/scala/pvu/PvuTop.scala:29:8, :230:36, :246:29, :321:26, :337:{15,23}, :349:28, :365:29, :366:30, :374:{21,29}, :385:28, :399:23, :406:{21,29}, :407:22, :416:23, :420:{21,29}, :421:27, :430:23, :446:29, :460:29, :584:29, :798:{21,30}, :799:26, :813:19, :823:{21,30}, :824:23, :838:19
+  wire             _GEN_84 =
     _GEN_46
       ? (|(ACTUAL_VECTOR_SIZE[2:1])) & _add_io_pir_sign_o[2'h1]
       : _GEN_47
@@ -9806,11 +16939,11 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
               ? _mul_io_pir_sign_o[2'h1]
               : _GEN_49
                   ? _div_inst_io_pir_sign_o[2'h1]
-                  : ~_GEN_84
-                    & (_GEN_82
+                  : ~_GEN_82
+                    & (_GEN_80
                          ? _greater_io_pir_sign_o[2'h1]
-                         : _GEN_83 & _less_io_pir_sign_o[2'h1]);	// src/main/scala/pvu/PvuTop.scala:28:8, :226:36, :242:29, :317:26, :333:{15,23}, :345:28, :361:29, :362:30, :370:{21,29}, :381:28, :395:23, :402:{21,29}, :403:22, :412:23, :416:{21,29}, :417:27, :426:23, :442:29, :456:29, :580:29, :794:{21,30}, :795:26, :809:19, :819:{21,30}, :820:23, :834:19
-  wire             _GEN_87 =
+                         : _GEN_81 & _less_io_pir_sign_o[2'h1]);	// src/main/scala/pvu/PvuTop.scala:29:8, :230:36, :246:29, :321:26, :337:{15,23}, :349:28, :365:29, :366:30, :374:{21,29}, :385:28, :399:23, :406:{21,29}, :407:22, :416:23, :420:{21,29}, :421:27, :430:23, :446:29, :460:29, :584:29, :798:{21,30}, :799:26, :813:19, :823:{21,30}, :824:23, :838:19
+  wire             _GEN_85 =
     _GEN_46
       ? _valid_range_2_T & _add_io_pir_sign_o[2'h2]
       : _GEN_47
@@ -9819,11 +16952,11 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
               ? _mul_io_pir_sign_o[2'h2]
               : _GEN_49
                   ? _div_inst_io_pir_sign_o[2'h2]
-                  : ~_GEN_84
-                    & (_GEN_82
+                  : ~_GEN_82
+                    & (_GEN_80
                          ? _greater_io_pir_sign_o[2'h2]
-                         : _GEN_83 & _less_io_pir_sign_o[2'h2]);	// src/main/scala/pvu/PvuTop.scala:234:34, :242:29, :317:26, :333:{15,23}, :345:28, :361:29, :362:30, :370:{21,29}, :381:28, :395:23, :402:{21,29}, :403:22, :412:23, :416:{21,29}, :417:27, :426:23, :442:29, :456:29, :580:29, :794:{21,30}, :795:26, :809:19, :819:{21,30}, :820:23, :834:19
-  wire             _GEN_88 =
+                         : _GEN_81 & _less_io_pir_sign_o[2'h2]);	// src/main/scala/pvu/PvuTop.scala:238:34, :246:29, :321:26, :337:{15,23}, :349:28, :365:29, :366:30, :374:{21,29}, :385:28, :399:23, :406:{21,29}, :407:22, :416:23, :420:{21,29}, :421:27, :430:23, :446:29, :460:29, :584:29, :798:{21,30}, :799:26, :813:19, :823:{21,30}, :824:23, :838:19
+  wire             _GEN_86 =
     _GEN_46
       ? ACTUAL_VECTOR_SIZE[2] & _add_io_pir_sign_o[2'h3]
       : _GEN_47
@@ -9832,30 +16965,308 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
               ? _mul_io_pir_sign_o[2'h3]
               : _GEN_49
                   ? _div_inst_io_pir_sign_o[2'h3]
-                  : ~_GEN_84
-                    & (_GEN_82
+                  : ~_GEN_82
+                    & (_GEN_80
                          ? _greater_io_pir_sign_o[2'h3]
-                         : _GEN_83 & _less_io_pir_sign_o[2'h3]);	// src/main/scala/pvu/PvuTop.scala:226:36, :235:55, :242:29, :317:26, :333:{15,23}, :345:28, :361:29, :362:30, :370:{21,29}, :381:28, :395:23, :402:{21,29}, :403:22, :412:23, :416:{21,29}, :417:27, :426:23, :442:29, :456:29, :580:29, :794:{21,30}, :795:26, :809:19, :819:{21,30}, :820:23, :834:19
-  wire             _GEN_89 = _GEN_83 & (|ACTUAL_VECTOR_SIZE);	// src/main/scala/pvu/PvuTop.scala:172:18, :226:36, :242:29, :819:{21,30}, :840:29, :841:24
-  wire [31:0]      _GEN_90 =
-    _GEN_61 ? _GEN_78 : _GEN_82 | ~_GEN_89 ? 32'h0 : _less_io_posit_o[2'h0];	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :249:28, :250:28, :263:38, :264:38, :580:{21,29}, :586:{22,32}, :785:27, :787:19, :792:{19,29}, :794:{21,30}, :815:29, :819:30, :820:23, :840:29, :841:24
-  wire             _GEN_91 = _GEN_46 | _GEN_47 | _GEN_48 | _GEN_49 | _GEN_50;	// src/main/scala/pvu/PvuTop.scala:172:18, :333:{15,23}, :370:{21,29}, :402:{21,29}, :416:{21,29}, :442:{21,29}, :456:29
-  wire             _GEN_92 = _GEN_91 | _GEN_53;	// src/main/scala/pvu/PvuTop.scala:172:18, :333:23, :370:29, :402:29, :416:29, :442:29, :456:{21,29}, :549:29, :580:29
-  wire             _GEN_93 = _GEN_83 & (|(ACTUAL_VECTOR_SIZE[2:1]));	// src/main/scala/pvu/PvuTop.scala:172:18, :226:36, :242:29, :819:{21,30}, :840:29, :841:24
+                         : _GEN_81 & _less_io_pir_sign_o[2'h3]);	// src/main/scala/pvu/PvuTop.scala:230:36, :239:55, :246:29, :321:26, :337:{15,23}, :349:28, :365:29, :366:30, :374:{21,29}, :385:28, :399:23, :406:{21,29}, :407:22, :416:23, :420:{21,29}, :421:27, :430:23, :446:29, :460:29, :584:29, :798:{21,30}, :799:26, :813:19, :823:{21,30}, :824:23, :838:19
+  wire             _GEN_87 = _GEN_81 & (|ACTUAL_VECTOR_SIZE);	// src/main/scala/pvu/PvuTop.scala:176:18, :230:36, :246:29, :823:{21,30}, :844:29, :845:24
+  wire [31:0]      _GEN_88 =
+    _GEN_61 ? _GEN_76 : _GEN_80 | ~_GEN_87 ? 32'h0 : _less_io_posit_o[2'h0];	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :253:28, :254:28, :267:38, :268:38, :584:{21,29}, :590:{22,32}, :789:27, :791:19, :796:{19,29}, :798:{21,30}, :819:29, :823:30, :824:23, :844:29, :845:24
+  wire             _GEN_89 = _GEN_46 | _GEN_47 | _GEN_48 | _GEN_49 | _GEN_50;	// src/main/scala/pvu/PvuTop.scala:176:18, :337:{15,23}, :374:{21,29}, :406:{21,29}, :420:{21,29}, :446:{21,29}, :460:29
+  wire             _GEN_90 = _GEN_89 | _GEN_53;	// src/main/scala/pvu/PvuTop.scala:176:18, :337:23, :374:29, :406:29, :420:29, :446:29, :460:{21,29}, :553:29, :584:29
+  wire             _GEN_91 = _GEN_81 & (|(ACTUAL_VECTOR_SIZE[2:1]));	// src/main/scala/pvu/PvuTop.scala:176:18, :230:36, :246:29, :823:{21,30}, :844:29, :845:24
+  wire [31:0]      _GEN_92 =
+    _GEN_61 ? _GEN_77 : _GEN_80 | ~_GEN_91 ? 32'h0 : _less_io_posit_o[2'h1];	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :253:28, :254:28, :267:38, :268:38, :584:{21,29}, :590:{22,32}, :789:27, :791:19, :796:{19,29}, :798:{21,30}, :819:29, :823:30, :824:23, :844:29, :845:24
+  wire             _GEN_93 = _GEN_81 & _valid_range_2_T;	// src/main/scala/pvu/PvuTop.scala:176:18, :246:29, :823:{21,30}, :844:29, :845:24
   wire [31:0]      _GEN_94 =
-    _GEN_61 ? _GEN_79 : _GEN_82 | ~_GEN_93 ? 32'h0 : _less_io_posit_o[2'h1];	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :249:28, :250:28, :263:38, :264:38, :580:{21,29}, :586:{22,32}, :785:27, :787:19, :792:{19,29}, :794:{21,30}, :815:29, :819:30, :820:23, :840:29, :841:24
-  wire             _GEN_95 = _GEN_83 & _valid_range_2_T;	// src/main/scala/pvu/PvuTop.scala:172:18, :242:29, :819:{21,30}, :840:29, :841:24
+    _GEN_61 ? _GEN_78 : _GEN_80 | ~_GEN_93 ? 32'h0 : _less_io_posit_o[2'h2];	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :238:34, :253:28, :254:28, :267:38, :268:38, :584:{21,29}, :590:{22,32}, :789:27, :791:19, :796:{19,29}, :798:{21,30}, :819:29, :823:30, :824:23, :844:29, :845:24
+  wire             _GEN_95 = _GEN_81 & ACTUAL_VECTOR_SIZE[2];	// src/main/scala/pvu/PvuTop.scala:176:18, :230:36, :246:29, :823:{21,30}, :844:29, :845:24
   wire [31:0]      _GEN_96 =
-    _GEN_61 ? _GEN_80 : _GEN_82 | ~_GEN_95 ? 32'h0 : _less_io_posit_o[2'h2];	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :234:34, :249:28, :250:28, :263:38, :264:38, :580:{21,29}, :586:{22,32}, :785:27, :787:19, :792:{19,29}, :794:{21,30}, :815:29, :819:30, :820:23, :840:29, :841:24
-  wire             _GEN_97 = _GEN_83 & ACTUAL_VECTOR_SIZE[2];	// src/main/scala/pvu/PvuTop.scala:172:18, :226:36, :242:29, :819:{21,30}, :840:29, :841:24
-  wire [31:0]      _GEN_98 =
-    _GEN_61 ? _GEN_81 : _GEN_82 | ~_GEN_97 ? 32'h0 : _less_io_posit_o[2'h3];	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :235:55, :249:28, :250:28, :263:38, :264:38, :580:{21,29}, :586:{22,32}, :785:27, :787:19, :792:{19,29}, :794:{21,30}, :815:29, :819:30, :820:23, :840:29, :841:24
-  wire             _GEN_99 = io_op == 4'hA;	// src/main/scala/pvu/PvuTop.scala:844:21
-  wire             _GEN_100 =
-    _GEN_46 | _GEN_47 | _GEN_48 | _GEN_49 | _GEN_50 | _GEN_53 | _GEN_61 | _GEN_82
-    | _GEN_83;	// src/main/scala/pvu/PvuTop.scala:174:18, :333:{15,23}, :370:{21,29}, :402:{21,29}, :416:{21,29}, :442:{21,29}, :456:{21,29}, :580:{21,29}, :794:{21,30}, :819:{21,30}, :844:31
-  wire [27:0]      pir_frac_normed_dot = _GEN_50 ? _frac_norm_dot_io_pir_frac_o : 28'h0;	// src/main/scala/pvu/PvuTop.scala:442:21, :476:35, :881:24, :883:23, :889:30, :891:36
-  wire [67:0]      _GEN_101 =
+    _GEN_61 ? _GEN_79 : _GEN_80 | ~_GEN_95 ? 32'h0 : _less_io_posit_o[2'h3];	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :239:55, :253:28, :254:28, :267:38, :268:38, :584:{21,29}, :590:{22,32}, :789:27, :791:19, :796:{19,29}, :798:{21,30}, :819:29, :823:30, :824:23, :844:29, :845:24
+  wire             _GEN_97 = io_op == 4'hA;	// src/main/scala/pvu/PvuTop.scala:848:21
+  wire             _GEN_98 =
+    _GEN_46 | _GEN_47 | _GEN_48 | _GEN_49 | _GEN_50 | _GEN_53 | _GEN_61 | _GEN_80
+    | _GEN_81;	// src/main/scala/pvu/PvuTop.scala:178:18, :337:{15,23}, :374:{21,29}, :406:{21,29}, :420:{21,29}, :446:{21,29}, :460:{21,29}, :584:{21,29}, :798:{21,30}, :823:{21,30}, :848:31
+  wire             _GEN_99 = io_op == 4'hB;	// src/main/scala/pvu/PvuTop.scala:869:21
+  wire [7:0][63:0] _GEN_100 =
+    {{64'h0},
+     {64'h0},
+     {64'h0},
+     {io_float_i_0},
+     {{32'h0, io_float_i_0[31:0]}},
+     {{48'h0, io_float_i_0[15:0]}},
+     {{56'h0, io_float_i_0[7:0]}},
+     {{60'h0, io_float_i_0[3:0]}}};	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :176:{18,28}, :181:25, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :604:38, :630:38, :642:38, :668:39, :680:39, :706:39, :792:{19,29}, :796:{19,29}, :942:21, :944:32, :946:{25,42}, :949:{25,42}, :952:{25,42}, :955:{25,42}, :958:25
+  wire             _GEN_101 = io_dst_float_mode == 4'h0;	// src/main/scala/pvu/PvuTop.scala:965:34
+  wire             _GEN_102 = _GEN_62 & _GEN_101;	// src/main/scala/pvu/PvuTop.scala:594:28, :904:36, :963:32, :965:34, :966:52
+  wire             _GEN_103 = io_dst_float_mode == 4'h1;	// src/main/scala/pvu/PvuTop.scala:337:15, :965:34
+  wire             _GEN_104 = _GEN_101 | ~_GEN_103;	// src/main/scala/pvu/PvuTop.scala:905:36, :965:34
+  wire             _GEN_105 = (|ACTUAL_VECTOR_SIZE) & _GEN_62;	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29, :594:28, :905:36, :937:29, :963:32, :965:34
+  wire             _GEN_106 = io_dst_float_mode == 4'h2;	// src/main/scala/pvu/PvuTop.scala:374:21, :965:34
+  wire             _GEN_107 = _GEN_101 | _GEN_103 | ~_GEN_106;	// src/main/scala/pvu/PvuTop.scala:906:36, :965:34
+  wire             _GEN_108 = io_dst_float_mode == 4'h3;	// src/main/scala/pvu/PvuTop.scala:406:21, :965:34
+  wire             _GEN_109 = _GEN_101 | _GEN_103 | _GEN_106 | ~_GEN_108;	// src/main/scala/pvu/PvuTop.scala:907:36, :965:34
+  wire             _GEN_110 = io_dst_float_mode == 4'h4;	// src/main/scala/pvu/PvuTop.scala:420:21, :965:34
+  wire             _GEN_111 = _GEN_101 | _GEN_103 | _GEN_106 | _GEN_108 | ~_GEN_110;	// src/main/scala/pvu/PvuTop.scala:908:36, :965:34
+  wire             _GEN_112 = _GEN_64 & _GEN_101;	// src/main/scala/pvu/PvuTop.scala:594:28, :910:36, :963:32, :965:34, :975:34, :976:52
+  wire             _GEN_113 = _GEN_65 & _GEN_101;	// src/main/scala/pvu/PvuTop.scala:594:28, :916:36, :963:32, :965:34, :985:34, :986:53
+  wire             _GEN_114 = _GEN_62 | _GEN_64;	// src/main/scala/pvu/PvuTop.scala:594:28, :916:36, :963:32
+  wire             _GEN_115 = _GEN_66 & _GEN_101;	// src/main/scala/pvu/PvuTop.scala:594:28, :922:36, :963:32, :965:34, :995:34, :996:53
+  wire             _GEN_116 = _GEN_62 | _GEN_64 | _GEN_65;	// src/main/scala/pvu/PvuTop.scala:594:28, :922:36, :963:32
+  wire             _GEN_117 = _GEN_67 & _GEN_101;	// src/main/scala/pvu/PvuTop.scala:594:28, :928:36, :963:32, :965:34, :1005:34, :1006:53
+  wire             _GEN_118 = _GEN_62 | _GEN_64 | _GEN_65 | _GEN_66;	// src/main/scala/pvu/PvuTop.scala:594:28, :928:36, :963:32
+  wire [7:0][63:0] _GEN_119 =
+    {{64'h0},
+     {64'h0},
+     {64'h0},
+     {io_float_i_1},
+     {{32'h0, io_float_i_1[31:0]}},
+     {{48'h0, io_float_i_1[15:0]}},
+     {{56'h0, io_float_i_1[7:0]}},
+     {{60'h0, io_float_i_1[3:0]}}};	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :176:{18,28}, :181:25, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :604:38, :630:38, :642:38, :668:39, :680:39, :706:39, :792:{19,29}, :796:{19,29}, :942:21, :944:32, :946:{25,42}, :949:{25,42}, :952:{25,42}, :955:{25,42}, :958:25
+  wire             _GEN_120 = (|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_62;	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29, :594:28, :905:36, :937:29, :963:32, :965:34
+  wire [7:0][63:0] _GEN_121 =
+    {{64'h0},
+     {64'h0},
+     {64'h0},
+     {io_float_i_2},
+     {{32'h0, io_float_i_2[31:0]}},
+     {{48'h0, io_float_i_2[15:0]}},
+     {{56'h0, io_float_i_2[7:0]}},
+     {{60'h0, io_float_i_2[3:0]}}};	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :176:{18,28}, :181:25, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :604:38, :630:38, :642:38, :668:39, :680:39, :706:39, :792:{19,29}, :796:{19,29}, :942:21, :944:32, :946:{25,42}, :949:{25,42}, :952:{25,42}, :955:{25,42}, :958:25
+  wire             _GEN_122 = _valid_range_2_T & _GEN_62;	// src/main/scala/pvu/PvuTop.scala:246:29, :594:28, :905:36, :937:29, :963:32, :965:34
+  wire [7:0][63:0] _GEN_123 =
+    {{64'h0},
+     {64'h0},
+     {64'h0},
+     {io_float_i_3},
+     {{32'h0, io_float_i_3[31:0]}},
+     {{48'h0, io_float_i_3[15:0]}},
+     {{56'h0, io_float_i_3[7:0]}},
+     {{60'h0, io_float_i_3[3:0]}}};	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :176:{18,28}, :181:25, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :604:38, :630:38, :642:38, :668:39, :680:39, :706:39, :792:{19,29}, :796:{19,29}, :942:21, :944:32, :946:{25,42}, :949:{25,42}, :952:{25,42}, :955:{25,42}, :958:25
+  wire             _GEN_124 = ACTUAL_VECTOR_SIZE[2] & _GEN_62;	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29, :594:28, :905:36, :937:29, :963:32, :965:34
+  wire [7:0][63:0] _GEN_125 =
+    {{64'h0},
+     {64'h0},
+     {64'h0},
+     {_GEN_101
+        ? {60'h0, _fp64_to_fp4_io_float_out[2'h0][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp64_to_fp8_io_float_out[2'h0][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp64_to_fp16_io_float_out[2'h0][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp64_to_fp32_io_float_out[2'h0][31:0]}
+                    : _GEN_110 ? _fp64_to_fp64_io_float_out[2'h0] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp32_to_fp4_io_float_out[2'h0][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp32_to_fp8_io_float_out[2'h0][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp32_to_fp16_io_float_out[2'h0][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp32_to_fp32_io_float_out[2'h0][31:0]}
+                    : _GEN_110 ? _fp32_to_fp64_io_float_out[2'h0] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp16_to_fp4_io_float_out[2'h0][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp16_to_fp8_io_float_out[2'h0][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp16_to_fp16_io_float_out[2'h0][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp16_to_fp32_io_float_out[2'h0][31:0]}
+                    : _GEN_110 ? _fp16_to_fp64_io_float_out[2'h0] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp8_to_fp4_io_float_out[2'h0][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp8_to_fp8_io_float_out[2'h0][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp8_to_fp16_io_float_out[2'h0][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp8_to_fp32_io_float_out[2'h0][31:0]}
+                    : _GEN_110 ? _fp8_to_fp64_io_float_out[2'h0] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp4_to_fp4_io_float_out[2'h0][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp4_to_fp8_io_float_out[2'h0][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp4_to_fp16_io_float_out[2'h0][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp4_to_fp32_io_float_out[2'h0][31:0]}
+                    : _GEN_110 ? _fp4_to_fp64_io_float_out[2'h0] : 64'h0}};	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :176:{18,28}, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :630:38, :668:39, :706:39, :792:{19,29}, :796:{19,29}, :871:31, :872:31, :873:31, :874:31, :875:31, :877:31, :878:31, :879:31, :880:31, :881:31, :883:31, :884:31, :885:31, :886:31, :887:31, :889:31, :890:31, :891:31, :892:31, :893:31, :895:31, :896:31, :897:31, :898:31, :899:31, :965:34, :1022:32, :1024:34, :1026:{32,62}, :1029:{32,62}, :1032:{32,63}, :1035:{32,63}, :1038:32, :1044:34, :1046:{32,62}, :1049:{32,62}, :1052:{32,63}, :1055:{32,63}, :1058:32, :1064:34, :1066:{32,63}, :1069:{32,63}, :1072:{32,64}, :1075:{32,64}, :1078:32, :1084:34, :1086:{32,63}, :1089:{32,63}, :1092:{32,64}, :1095:{32,64}, :1098:32, :1104:34, :1106:{32,63}, :1109:{32,63}, :1112:{32,64}, :1115:{32,64}, :1118:32
+  wire             _GEN_126 = _GEN_80 | _GEN_81 | _GEN_97;	// src/main/scala/pvu/PvuTop.scala:174:18, :798:{21,30}, :823:{21,30}, :848:{21,31}, :869:31
+  wire [63:0]      _GEN_127 =
+    _GEN_61
+      ? (io_float_posit ? 64'h0 : _GEN_72[io_float_mode])
+      : _GEN_126 | ~(_GEN_99 & (|ACTUAL_VECTOR_SIZE)) ? 64'h0 : _GEN_125[io_float_mode];	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :230:36, :246:29, :253:38, :254:38, :584:{21,29}, :591:{22,32}, :594:28, :630:38, :668:39, :706:39, :744:39, :782:39, :789:27, :792:{19,29}, :795:19, :798:30, :823:30, :848:31, :869:{21,31}, :1019:29, :1022:32, :1024:34, :1044:34, :1064:34, :1084:34, :1104:34
+  wire             _GEN_128 = _GEN_46 | _GEN_47 | _GEN_48 | _GEN_49 | _GEN_50 | _GEN_53;	// src/main/scala/pvu/PvuTop.scala:174:18, :337:{15,23}, :374:{21,29}, :406:{21,29}, :420:{21,29}, :446:{21,29}, :460:{21,29}, :584:29
+  wire [63:0]      _GEN_129 = _GEN_128 ? 64'h0 : _GEN_127;	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :253:38, :254:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :591:{22,32}, :789:27, :792:{19,29}, :798:30
+  wire [7:0][63:0] _GEN_130 =
+    {{64'h0},
+     {64'h0},
+     {64'h0},
+     {_GEN_101
+        ? {60'h0, _fp64_to_fp4_io_float_out[2'h1][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp64_to_fp8_io_float_out[2'h1][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp64_to_fp16_io_float_out[2'h1][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp64_to_fp32_io_float_out[2'h1][31:0]}
+                    : _GEN_110 ? _fp64_to_fp64_io_float_out[2'h1] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp32_to_fp4_io_float_out[2'h1][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp32_to_fp8_io_float_out[2'h1][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp32_to_fp16_io_float_out[2'h1][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp32_to_fp32_io_float_out[2'h1][31:0]}
+                    : _GEN_110 ? _fp32_to_fp64_io_float_out[2'h1] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp16_to_fp4_io_float_out[2'h1][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp16_to_fp8_io_float_out[2'h1][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp16_to_fp16_io_float_out[2'h1][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp16_to_fp32_io_float_out[2'h1][31:0]}
+                    : _GEN_110 ? _fp16_to_fp64_io_float_out[2'h1] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp8_to_fp4_io_float_out[2'h1][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp8_to_fp8_io_float_out[2'h1][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp8_to_fp16_io_float_out[2'h1][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp8_to_fp32_io_float_out[2'h1][31:0]}
+                    : _GEN_110 ? _fp8_to_fp64_io_float_out[2'h1] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp4_to_fp4_io_float_out[2'h1][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp4_to_fp8_io_float_out[2'h1][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp4_to_fp16_io_float_out[2'h1][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp4_to_fp32_io_float_out[2'h1][31:0]}
+                    : _GEN_110 ? _fp4_to_fp64_io_float_out[2'h1] : 64'h0}};	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :176:{18,28}, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :630:38, :668:39, :706:39, :792:{19,29}, :796:{19,29}, :871:31, :872:31, :873:31, :874:31, :875:31, :877:31, :878:31, :879:31, :880:31, :881:31, :883:31, :884:31, :885:31, :886:31, :887:31, :889:31, :890:31, :891:31, :892:31, :893:31, :895:31, :896:31, :897:31, :898:31, :899:31, :965:34, :1022:32, :1024:34, :1026:{32,62}, :1029:{32,62}, :1032:{32,63}, :1035:{32,63}, :1038:32, :1044:34, :1046:{32,62}, :1049:{32,62}, :1052:{32,63}, :1055:{32,63}, :1058:32, :1064:34, :1066:{32,63}, :1069:{32,63}, :1072:{32,64}, :1075:{32,64}, :1078:32, :1084:34, :1086:{32,63}, :1089:{32,63}, :1092:{32,64}, :1095:{32,64}, :1098:32, :1104:34, :1106:{32,63}, :1109:{32,63}, :1112:{32,64}, :1115:{32,64}, :1118:32
+  wire [63:0]      _GEN_131 =
+    _GEN_61
+      ? (io_float_posit ? 64'h0 : _GEN_73[io_float_mode])
+      : _GEN_126 | ~(_GEN_99 & (|(ACTUAL_VECTOR_SIZE[2:1])))
+          ? 64'h0
+          : _GEN_130[io_float_mode];	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :230:36, :246:29, :253:38, :254:38, :584:{21,29}, :591:{22,32}, :594:28, :630:38, :668:39, :706:39, :744:39, :782:39, :789:27, :792:{19,29}, :795:19, :798:30, :823:30, :848:31, :869:{21,31}, :1019:29, :1022:32, :1024:34, :1044:34, :1064:34, :1084:34, :1104:34
+  wire [63:0]      _GEN_132 = _GEN_128 ? 64'h0 : _GEN_131;	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :253:38, :254:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :591:{22,32}, :789:27, :792:{19,29}, :798:30
+  wire [7:0][63:0] _GEN_133 =
+    {{64'h0},
+     {64'h0},
+     {64'h0},
+     {_GEN_101
+        ? {60'h0, _fp64_to_fp4_io_float_out[2'h2][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp64_to_fp8_io_float_out[2'h2][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp64_to_fp16_io_float_out[2'h2][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp64_to_fp32_io_float_out[2'h2][31:0]}
+                    : _GEN_110 ? _fp64_to_fp64_io_float_out[2'h2] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp32_to_fp4_io_float_out[2'h2][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp32_to_fp8_io_float_out[2'h2][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp32_to_fp16_io_float_out[2'h2][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp32_to_fp32_io_float_out[2'h2][31:0]}
+                    : _GEN_110 ? _fp32_to_fp64_io_float_out[2'h2] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp16_to_fp4_io_float_out[2'h2][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp16_to_fp8_io_float_out[2'h2][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp16_to_fp16_io_float_out[2'h2][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp16_to_fp32_io_float_out[2'h2][31:0]}
+                    : _GEN_110 ? _fp16_to_fp64_io_float_out[2'h2] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp8_to_fp4_io_float_out[2'h2][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp8_to_fp8_io_float_out[2'h2][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp8_to_fp16_io_float_out[2'h2][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp8_to_fp32_io_float_out[2'h2][31:0]}
+                    : _GEN_110 ? _fp8_to_fp64_io_float_out[2'h2] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp4_to_fp4_io_float_out[2'h2][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp4_to_fp8_io_float_out[2'h2][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp4_to_fp16_io_float_out[2'h2][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp4_to_fp32_io_float_out[2'h2][31:0]}
+                    : _GEN_110 ? _fp4_to_fp64_io_float_out[2'h2] : 64'h0}};	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :176:{18,28}, :238:34, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :630:38, :668:39, :706:39, :792:{19,29}, :796:{19,29}, :871:31, :872:31, :873:31, :874:31, :875:31, :877:31, :878:31, :879:31, :880:31, :881:31, :883:31, :884:31, :885:31, :886:31, :887:31, :889:31, :890:31, :891:31, :892:31, :893:31, :895:31, :896:31, :897:31, :898:31, :899:31, :965:34, :1022:32, :1024:34, :1026:{32,62}, :1029:{32,62}, :1032:{32,63}, :1035:{32,63}, :1038:32, :1044:34, :1046:{32,62}, :1049:{32,62}, :1052:{32,63}, :1055:{32,63}, :1058:32, :1064:34, :1066:{32,63}, :1069:{32,63}, :1072:{32,64}, :1075:{32,64}, :1078:32, :1084:34, :1086:{32,63}, :1089:{32,63}, :1092:{32,64}, :1095:{32,64}, :1098:32, :1104:34, :1106:{32,63}, :1109:{32,63}, :1112:{32,64}, :1115:{32,64}, :1118:32
+  wire [63:0]      _GEN_134 =
+    _GEN_61
+      ? (io_float_posit ? 64'h0 : _GEN_74[io_float_mode])
+      : _GEN_126 | ~(_GEN_99 & _valid_range_2_T) ? 64'h0 : _GEN_133[io_float_mode];	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :246:29, :253:38, :254:38, :584:{21,29}, :591:{22,32}, :594:28, :630:38, :668:39, :706:39, :744:39, :782:39, :789:27, :792:{19,29}, :795:19, :798:30, :823:30, :848:31, :869:{21,31}, :1019:29, :1022:32, :1024:34, :1044:34, :1064:34, :1084:34, :1104:34
+  wire [63:0]      _GEN_135 = _GEN_128 ? 64'h0 : _GEN_134;	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :253:38, :254:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :591:{22,32}, :789:27, :792:{19,29}, :798:30
+  wire [7:0][63:0] _GEN_136 =
+    {{64'h0},
+     {64'h0},
+     {64'h0},
+     {_GEN_101
+        ? {60'h0, _fp64_to_fp4_io_float_out[2'h3][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp64_to_fp8_io_float_out[2'h3][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp64_to_fp16_io_float_out[2'h3][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp64_to_fp32_io_float_out[2'h3][31:0]}
+                    : _GEN_110 ? _fp64_to_fp64_io_float_out[2'h3] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp32_to_fp4_io_float_out[2'h3][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp32_to_fp8_io_float_out[2'h3][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp32_to_fp16_io_float_out[2'h3][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp32_to_fp32_io_float_out[2'h3][31:0]}
+                    : _GEN_110 ? _fp32_to_fp64_io_float_out[2'h3] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp16_to_fp4_io_float_out[2'h3][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp16_to_fp8_io_float_out[2'h3][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp16_to_fp16_io_float_out[2'h3][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp16_to_fp32_io_float_out[2'h3][31:0]}
+                    : _GEN_110 ? _fp16_to_fp64_io_float_out[2'h3] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp8_to_fp4_io_float_out[2'h3][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp8_to_fp8_io_float_out[2'h3][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp8_to_fp16_io_float_out[2'h3][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp8_to_fp32_io_float_out[2'h3][31:0]}
+                    : _GEN_110 ? _fp8_to_fp64_io_float_out[2'h3] : 64'h0},
+     {_GEN_101
+        ? {60'h0, _fp4_to_fp4_io_float_out[2'h3][3:0]}
+        : _GEN_103
+            ? {56'h0, _fp4_to_fp8_io_float_out[2'h3][7:0]}
+            : _GEN_106
+                ? {48'h0, _fp4_to_fp16_io_float_out[2'h3][15:0]}
+                : _GEN_108
+                    ? {32'h0, _fp4_to_fp32_io_float_out[2'h3][31:0]}
+                    : _GEN_110 ? _fp4_to_fp64_io_float_out[2'h3] : 64'h0}};	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :176:{18,28}, :239:55, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :590:{22,32}, :591:{22,32}, :594:28, :630:38, :668:39, :706:39, :792:{19,29}, :796:{19,29}, :871:31, :872:31, :873:31, :874:31, :875:31, :877:31, :878:31, :879:31, :880:31, :881:31, :883:31, :884:31, :885:31, :886:31, :887:31, :889:31, :890:31, :891:31, :892:31, :893:31, :895:31, :896:31, :897:31, :898:31, :899:31, :965:34, :1022:32, :1024:34, :1026:{32,62}, :1029:{32,62}, :1032:{32,63}, :1035:{32,63}, :1038:32, :1044:34, :1046:{32,62}, :1049:{32,62}, :1052:{32,63}, :1055:{32,63}, :1058:32, :1064:34, :1066:{32,63}, :1069:{32,63}, :1072:{32,64}, :1075:{32,64}, :1078:32, :1084:34, :1086:{32,63}, :1089:{32,63}, :1092:{32,64}, :1095:{32,64}, :1098:32, :1104:34, :1106:{32,63}, :1109:{32,63}, :1112:{32,64}, :1115:{32,64}, :1118:32
+  wire [63:0]      _GEN_137 =
+    _GEN_61
+      ? (io_float_posit ? 64'h0 : _GEN_75[io_float_mode])
+      : _GEN_126 | ~(_GEN_99 & ACTUAL_VECTOR_SIZE[2]) ? 64'h0 : _GEN_136[io_float_mode];	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :230:36, :246:29, :253:38, :254:38, :584:{21,29}, :591:{22,32}, :594:28, :630:38, :668:39, :706:39, :744:39, :782:39, :789:27, :792:{19,29}, :795:19, :798:30, :823:30, :848:31, :869:{21,31}, :1019:29, :1022:32, :1024:34, :1044:34, :1064:34, :1084:34, :1104:34
+  wire [63:0]      _GEN_138 = _GEN_128 ? 64'h0 : _GEN_137;	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :253:38, :254:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :591:{22,32}, :789:27, :792:{19,29}, :798:30
+  wire [27:0]      pir_frac_normed_dot = _GEN_50 ? _frac_norm_dot_io_pir_frac_o : 28'h0;	// src/main/scala/pvu/PvuTop.scala:446:21, :480:35, :1141:24, :1143:23, :1149:30, :1151:36
+  wire [67:0]      _GEN_139 =
     _GEN_50
       ? 68'h0
       : _GEN_46
@@ -9864,8 +17275,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
               ? {40'h0, _frac_norm_sub_io_pir_frac_o[2'h0]}
               : _GEN_48
                   ? {40'h0, _frac_norm_mul_io_pir_frac_o[2'h0]}
-                  : _GEN_49 ? {40'h0, _frac_norm_div_io_pir_frac_o[2'h0]} : 68'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :210:21, :226:36, :242:29, :333:15, :370:21, :402:21, :416:21, :442:21, :878:25, :883:23, :891:36, :893:29, :894:32, :901:29, :903:41, :907:29, :908:47, :910:38, :912:29, :913:47, :915:38, :917:29, :918:47, :920:38
-  wire [67:0]      _GEN_102 =
+                  : _GEN_49 ? {40'h0, _frac_norm_div_io_pir_frac_o[2'h0]} : 68'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :214:21, :230:36, :246:29, :337:15, :374:21, :406:21, :420:21, :446:21, :1138:25, :1143:23, :1151:36, :1153:29, :1154:32, :1161:29, :1163:41, :1167:29, :1168:47, :1170:38, :1172:29, :1173:47, :1175:38, :1177:29, :1178:47, :1180:38
+  wire [67:0]      _GEN_140 =
     _GEN_50
       ? 68'h0
       : _GEN_46
@@ -9876,8 +17287,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
               ? {40'h0, _frac_norm_sub_io_pir_frac_o[2'h1]}
               : _GEN_48
                   ? {40'h0, _frac_norm_mul_io_pir_frac_o[2'h1]}
-                  : _GEN_49 ? {40'h0, _frac_norm_div_io_pir_frac_o[2'h1]} : 68'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :210:21, :226:36, :242:29, :333:15, :370:21, :402:21, :416:21, :442:21, :878:25, :883:23, :891:36, :893:29, :894:32, :901:29, :903:41, :907:29, :908:47, :910:38, :912:29, :913:47, :915:38, :917:29, :918:47, :920:38
-  wire [67:0]      _GEN_103 =
+                  : _GEN_49 ? {40'h0, _frac_norm_div_io_pir_frac_o[2'h1]} : 68'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :214:21, :230:36, :246:29, :337:15, :374:21, :406:21, :420:21, :446:21, :1138:25, :1143:23, :1151:36, :1153:29, :1154:32, :1161:29, :1163:41, :1167:29, :1168:47, :1170:38, :1172:29, :1173:47, :1175:38, :1177:29, :1178:47, :1180:38
+  wire [67:0]      _GEN_141 =
     _GEN_50
       ? 68'h0
       : _GEN_46
@@ -9886,8 +17297,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
               ? {40'h0, _frac_norm_sub_io_pir_frac_o[2'h2]}
               : _GEN_48
                   ? {40'h0, _frac_norm_mul_io_pir_frac_o[2'h2]}
-                  : _GEN_49 ? {40'h0, _frac_norm_div_io_pir_frac_o[2'h2]} : 68'h0;	// src/main/scala/pvu/PvuTop.scala:210:21, :234:34, :242:29, :333:15, :370:21, :402:21, :416:21, :442:21, :878:25, :883:23, :891:36, :893:29, :894:32, :901:29, :903:41, :907:29, :908:47, :910:38, :912:29, :913:47, :915:38, :917:29, :918:47, :920:38
-  wire [67:0]      _GEN_104 =
+                  : _GEN_49 ? {40'h0, _frac_norm_div_io_pir_frac_o[2'h2]} : 68'h0;	// src/main/scala/pvu/PvuTop.scala:214:21, :238:34, :246:29, :337:15, :374:21, :406:21, :420:21, :446:21, :1138:25, :1143:23, :1151:36, :1153:29, :1154:32, :1161:29, :1163:41, :1167:29, :1168:47, :1170:38, :1172:29, :1173:47, :1175:38, :1177:29, :1178:47, :1180:38
+  wire [67:0]      _GEN_142 =
     _GEN_50
       ? 68'h0
       : _GEN_46
@@ -9896,10 +17307,10 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
               ? {40'h0, _frac_norm_sub_io_pir_frac_o[2'h3]}
               : _GEN_48
                   ? {40'h0, _frac_norm_mul_io_pir_frac_o[2'h3]}
-                  : _GEN_49 ? {40'h0, _frac_norm_div_io_pir_frac_o[2'h3]} : 68'h0;	// src/main/scala/pvu/PvuTop.scala:210:21, :226:36, :235:55, :242:29, :333:15, :370:21, :402:21, :416:21, :442:21, :878:25, :883:23, :891:36, :893:29, :894:32, :901:29, :903:41, :907:29, :908:47, :910:38, :912:29, :913:47, :915:38, :917:29, :918:47, :920:38
+                  : _GEN_49 ? {40'h0, _frac_norm_div_io_pir_frac_o[2'h3]} : 68'h0;	// src/main/scala/pvu/PvuTop.scala:214:21, :230:36, :239:55, :246:29, :337:15, :374:21, :406:21, :420:21, :446:21, :1138:25, :1143:23, :1151:36, :1153:29, :1154:32, :1161:29, :1163:41, :1167:29, :1168:47, :1170:38, :1172:29, :1173:47, :1175:38, :1177:29, :1178:47, :1180:38
   wire [7:0]       _pir_exp_rst_adjusied_dot_T =
     (_GEN_50 ? _frac_norm_dot_io_exp_adjust[7:0] : 8'h0)
-    + (_GEN_52 ? 8'h0 : _dotproduct_io_pir_exp_o);	// src/main/scala/pvu/PvuTop.scala:330:17, :333:23, :370:29, :402:29, :416:29, :442:{21,29}, :443:28, :880:24, :883:23, :889:30, :892:36, :933:{29,39}, :938:53
+    + (_GEN_52 ? 8'h0 : _dotproduct_io_pir_exp_o);	// src/main/scala/pvu/PvuTop.scala:334:17, :337:23, :374:29, :406:29, :420:29, :446:{21,29}, :447:28, :1140:24, :1143:23, :1149:30, :1152:36, :1193:{29,39}, :1198:53
   wire [7:0]       _pir_exp_rst_adjusied_0_T =
     (_GEN_46
        ? ((|ACTUAL_VECTOR_SIZE) ? _add_io_pir_exp_o[2'h0] : 8'h0)
@@ -9909,11 +17320,11 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                ? _mul_io_pir_exp_o[2'h0]
                : _GEN_49
                    ? _div_inst_io_pir_exp_o[2'h0]
-                   : _GEN_84
+                   : _GEN_82
                        ? 8'h0
-                       : _GEN_82
+                       : _GEN_80
                            ? _greater_io_pir_exp_o[2'h0]
-                           : _GEN_83 ? _less_io_pir_exp_o[2'h0] : 8'h0)
+                           : _GEN_81 ? _less_io_pir_exp_o[2'h0] : 8'h0)
     + (_GEN_50
          ? 8'h0
          : _GEN_46
@@ -9922,7 +17333,7 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                  ? _frac_norm_sub_io_exp_adjust[2'h0]
                  : _GEN_48
                      ? _frac_norm_mul_io_exp_adjust[2'h0][7:0]
-                     : _GEN_49 ? _frac_norm_div_io_exp_adjust[2'h0][7:0] : 8'h0);	// src/main/scala/pvu/PvuTop.scala:28:8, :226:36, :242:29, :317:26, :318:26, :333:{15,23}, :345:28, :361:29, :363:30, :370:{21,29}, :381:28, :396:23, :402:{21,29}, :403:22, :413:23, :416:{21,29}, :417:27, :427:23, :442:{21,29}, :456:29, :580:29, :794:{21,30}, :795:26, :810:19, :819:{21,30}, :820:23, :835:19, :877:25, :883:23, :893:29, :894:32, :901:29, :904:41, :907:29, :908:47, :911:38, :912:29, :913:47, :916:38, :917:29, :918:47, :921:38, :933:{29,39}, :941:50
+                     : _GEN_49 ? _frac_norm_div_io_exp_adjust[2'h0][7:0] : 8'h0);	// src/main/scala/pvu/PvuTop.scala:29:8, :230:36, :246:29, :321:26, :322:26, :337:{15,23}, :349:28, :365:29, :367:30, :374:{21,29}, :385:28, :400:23, :406:{21,29}, :407:22, :417:23, :420:{21,29}, :421:27, :431:23, :446:{21,29}, :460:29, :584:29, :798:{21,30}, :799:26, :814:19, :823:{21,30}, :824:23, :839:19, :1137:25, :1143:23, :1153:29, :1154:32, :1161:29, :1164:41, :1167:29, :1168:47, :1171:38, :1172:29, :1173:47, :1176:38, :1177:29, :1178:47, :1181:38, :1193:{29,39}, :1201:50
   wire [7:0]       _pir_exp_rst_adjusied_1_T =
     (_GEN_46
        ? ((|(ACTUAL_VECTOR_SIZE[2:1])) ? _add_io_pir_exp_o[2'h1] : 8'h0)
@@ -9932,11 +17343,11 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                ? _mul_io_pir_exp_o[2'h1]
                : _GEN_49
                    ? _div_inst_io_pir_exp_o[2'h1]
-                   : _GEN_84
+                   : _GEN_82
                        ? 8'h0
-                       : _GEN_82
+                       : _GEN_80
                            ? _greater_io_pir_exp_o[2'h1]
-                           : _GEN_83 ? _less_io_pir_exp_o[2'h1] : 8'h0)
+                           : _GEN_81 ? _less_io_pir_exp_o[2'h1] : 8'h0)
     + (_GEN_50
          ? 8'h0
          : _GEN_46
@@ -9945,7 +17356,7 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                  ? _frac_norm_sub_io_exp_adjust[2'h1]
                  : _GEN_48
                      ? _frac_norm_mul_io_exp_adjust[2'h1][7:0]
-                     : _GEN_49 ? _frac_norm_div_io_exp_adjust[2'h1][7:0] : 8'h0);	// src/main/scala/pvu/PvuTop.scala:28:8, :226:36, :242:29, :317:26, :318:26, :333:{15,23}, :345:28, :361:29, :363:30, :370:{21,29}, :381:28, :396:23, :402:{21,29}, :403:22, :413:23, :416:{21,29}, :417:27, :427:23, :442:{21,29}, :456:29, :580:29, :794:{21,30}, :795:26, :810:19, :819:{21,30}, :820:23, :835:19, :877:25, :883:23, :893:29, :894:32, :901:29, :904:41, :907:29, :908:47, :911:38, :912:29, :913:47, :916:38, :917:29, :918:47, :921:38, :933:{29,39}, :941:50
+                     : _GEN_49 ? _frac_norm_div_io_exp_adjust[2'h1][7:0] : 8'h0);	// src/main/scala/pvu/PvuTop.scala:29:8, :230:36, :246:29, :321:26, :322:26, :337:{15,23}, :349:28, :365:29, :367:30, :374:{21,29}, :385:28, :400:23, :406:{21,29}, :407:22, :417:23, :420:{21,29}, :421:27, :431:23, :446:{21,29}, :460:29, :584:29, :798:{21,30}, :799:26, :814:19, :823:{21,30}, :824:23, :839:19, :1137:25, :1143:23, :1153:29, :1154:32, :1161:29, :1164:41, :1167:29, :1168:47, :1171:38, :1172:29, :1173:47, :1176:38, :1177:29, :1178:47, :1181:38, :1193:{29,39}, :1201:50
   wire [7:0]       _pir_exp_rst_adjusied_2_T =
     (_GEN_46
        ? (_valid_range_2_T ? _add_io_pir_exp_o[2'h2] : 8'h0)
@@ -9955,11 +17366,11 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                ? _mul_io_pir_exp_o[2'h2]
                : _GEN_49
                    ? _div_inst_io_pir_exp_o[2'h2]
-                   : _GEN_84
+                   : _GEN_82
                        ? 8'h0
-                       : _GEN_82
+                       : _GEN_80
                            ? _greater_io_pir_exp_o[2'h2]
-                           : _GEN_83 ? _less_io_pir_exp_o[2'h2] : 8'h0)
+                           : _GEN_81 ? _less_io_pir_exp_o[2'h2] : 8'h0)
     + (_GEN_50
          ? 8'h0
          : _GEN_46
@@ -9968,7 +17379,7 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                  ? _frac_norm_sub_io_exp_adjust[2'h2]
                  : _GEN_48
                      ? _frac_norm_mul_io_exp_adjust[2'h2][7:0]
-                     : _GEN_49 ? _frac_norm_div_io_exp_adjust[2'h2][7:0] : 8'h0);	// src/main/scala/pvu/PvuTop.scala:234:34, :242:29, :317:26, :318:26, :333:{15,23}, :345:28, :361:29, :363:30, :370:{21,29}, :381:28, :396:23, :402:{21,29}, :403:22, :413:23, :416:{21,29}, :417:27, :427:23, :442:{21,29}, :456:29, :580:29, :794:{21,30}, :795:26, :810:19, :819:{21,30}, :820:23, :835:19, :877:25, :883:23, :893:29, :894:32, :901:29, :904:41, :907:29, :908:47, :911:38, :912:29, :913:47, :916:38, :917:29, :918:47, :921:38, :933:{29,39}, :941:50
+                     : _GEN_49 ? _frac_norm_div_io_exp_adjust[2'h2][7:0] : 8'h0);	// src/main/scala/pvu/PvuTop.scala:238:34, :246:29, :321:26, :322:26, :337:{15,23}, :349:28, :365:29, :367:30, :374:{21,29}, :385:28, :400:23, :406:{21,29}, :407:22, :417:23, :420:{21,29}, :421:27, :431:23, :446:{21,29}, :460:29, :584:29, :798:{21,30}, :799:26, :814:19, :823:{21,30}, :824:23, :839:19, :1137:25, :1143:23, :1153:29, :1154:32, :1161:29, :1164:41, :1167:29, :1168:47, :1171:38, :1172:29, :1173:47, :1176:38, :1177:29, :1178:47, :1181:38, :1193:{29,39}, :1201:50
   wire [7:0]       _pir_exp_rst_adjusied_3_T =
     (_GEN_46
        ? (ACTUAL_VECTOR_SIZE[2] ? _add_io_pir_exp_o[2'h3] : 8'h0)
@@ -9978,11 +17389,11 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                ? _mul_io_pir_exp_o[2'h3]
                : _GEN_49
                    ? _div_inst_io_pir_exp_o[2'h3]
-                   : _GEN_84
+                   : _GEN_82
                        ? 8'h0
-                       : _GEN_82
+                       : _GEN_80
                            ? _greater_io_pir_exp_o[2'h3]
-                           : _GEN_83 ? _less_io_pir_exp_o[2'h3] : 8'h0)
+                           : _GEN_81 ? _less_io_pir_exp_o[2'h3] : 8'h0)
     + (_GEN_50
          ? 8'h0
          : _GEN_46
@@ -9991,102 +17402,103 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                  ? _frac_norm_sub_io_exp_adjust[2'h3]
                  : _GEN_48
                      ? _frac_norm_mul_io_exp_adjust[2'h3][7:0]
-                     : _GEN_49 ? _frac_norm_div_io_exp_adjust[2'h3][7:0] : 8'h0);	// src/main/scala/pvu/PvuTop.scala:226:36, :235:55, :242:29, :317:26, :318:26, :333:{15,23}, :345:28, :361:29, :363:30, :370:{21,29}, :381:28, :396:23, :402:{21,29}, :403:22, :413:23, :416:{21,29}, :417:27, :427:23, :442:{21,29}, :456:29, :580:29, :794:{21,30}, :795:26, :810:19, :819:{21,30}, :820:23, :835:19, :877:25, :883:23, :893:29, :894:32, :901:29, :904:41, :907:29, :908:47, :911:38, :912:29, :913:47, :916:38, :917:29, :918:47, :921:38, :933:{29,39}, :941:50
-  wire             _GEN_105 = io_op < 4'h6;	// src/main/scala/pvu/PvuTop.scala:456:21, :947:15
-  wire             _GEN_106 = _GEN_105 & _GEN_50;	// src/main/scala/pvu/PvuTop.scala:215:25, :442:21, :947:{15,22}, :949:26, :951:30
-  wire [7:0]       _GEN_107 = _GEN_106 & _GEN_50 ? _pir_exp_rst_adjusied_dot_T : 8'h0;	// src/main/scala/pvu/PvuTop.scala:215:25, :216:25, :442:21, :933:{29,39}, :938:53, :947:22, :949:26, :951:30, :952:30
-  wire             _GEN_108 =
+                     : _GEN_49 ? _frac_norm_div_io_exp_adjust[2'h3][7:0] : 8'h0);	// src/main/scala/pvu/PvuTop.scala:230:36, :239:55, :246:29, :321:26, :322:26, :337:{15,23}, :349:28, :365:29, :367:30, :374:{21,29}, :385:28, :400:23, :406:{21,29}, :407:22, :417:23, :420:{21,29}, :421:27, :431:23, :446:{21,29}, :460:29, :584:29, :798:{21,30}, :799:26, :814:19, :823:{21,30}, :824:23, :839:19, :1137:25, :1143:23, :1153:29, :1154:32, :1161:29, :1164:41, :1167:29, :1168:47, :1171:38, :1172:29, :1173:47, :1176:38, :1177:29, :1178:47, :1181:38, :1193:{29,39}, :1201:50
+  wire             _GEN_143 = io_op < 4'h6;	// src/main/scala/pvu/PvuTop.scala:460:21, :1207:15
+  wire             _GEN_144 = _GEN_143 & _GEN_50;	// src/main/scala/pvu/PvuTop.scala:219:25, :446:21, :1207:{15,22}, :1209:26, :1211:30
+  wire [7:0]       _GEN_145 = _GEN_144 & _GEN_50 ? _pir_exp_rst_adjusied_dot_T : 8'h0;	// src/main/scala/pvu/PvuTop.scala:219:25, :220:25, :446:21, :1193:{29,39}, :1198:53, :1207:22, :1209:26, :1211:30, :1212:30
+  wire             _GEN_146 =
     ~io_Isposit & (|ACTUAL_VECTOR_SIZE) & _floatDecode1_io_isNaN[2'h0] | ~io_Isposit
-    & (|ACTUAL_VECTOR_SIZE) & _floatDecode2_io_isNaN[2'h0];	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :115:28, :189:26, :192:26, :199:27, :226:36, :242:29, :246:21, :270:29, :274:31, :281:32, :966:56
-  wire             _GEN_109 =
+    & (|ACTUAL_VECTOR_SIZE) & _floatDecode2_io_isNaN[2'h0];	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :119:28, :193:26, :196:26, :203:27, :230:36, :246:29, :250:21, :274:29, :278:31, :285:32, :1226:56
+  wire             _GEN_147 =
     ~io_Isposit & (|(ACTUAL_VECTOR_SIZE[2:1])) & _floatDecode1_io_isNaN[2'h1]
-    | ~io_Isposit & (|(ACTUAL_VECTOR_SIZE[2:1])) & _floatDecode2_io_isNaN[2'h1];	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :115:28, :189:26, :192:26, :199:27, :226:36, :242:29, :246:21, :270:29, :274:31, :281:32, :966:56
-  wire             _GEN_110 =
+    | ~io_Isposit & (|(ACTUAL_VECTOR_SIZE[2:1])) & _floatDecode2_io_isNaN[2'h1];	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :119:28, :193:26, :196:26, :203:27, :230:36, :246:29, :250:21, :274:29, :278:31, :285:32, :1226:56
+  wire             _GEN_148 =
     ~io_Isposit & _valid_range_2_T & _floatDecode1_io_isNaN[2'h2] | ~io_Isposit
-    & _valid_range_2_T & _floatDecode2_io_isNaN[2'h2];	// src/main/scala/pvu/PvuTop.scala:114:28, :115:28, :189:26, :192:26, :199:27, :234:34, :242:29, :246:21, :270:29, :274:31, :281:32, :966:56
-  wire             _GEN_111 =
+    & _valid_range_2_T & _floatDecode2_io_isNaN[2'h2];	// src/main/scala/pvu/PvuTop.scala:118:28, :119:28, :193:26, :196:26, :203:27, :238:34, :246:29, :250:21, :274:29, :278:31, :285:32, :1226:56
+  wire             _GEN_149 =
     ~io_Isposit & ACTUAL_VECTOR_SIZE[2] & _floatDecode1_io_isNaN[2'h3] | ~io_Isposit
-    & ACTUAL_VECTOR_SIZE[2] & _floatDecode2_io_isNaN[2'h3];	// src/main/scala/pvu/PvuTop.scala:114:28, :115:28, :189:26, :192:26, :199:27, :226:36, :235:55, :242:29, :246:21, :270:29, :274:31, :281:32, :966:56
-  wire             _GEN_112 = _GEN_105 & _GEN_50 & ~io_Isposit;	// src/main/scala/pvu/PvuTop.scala:218:25, :442:21, :947:{15,22}, :949:26, :954:30, :964:{13,26}, :966:82
-  wire             _GEN_113 = ~_GEN_105 | _GEN_50;	// src/main/scala/pvu/PvuTop.scala:204:30, :442:21, :947:{15,22}, :949:26
-  wire [7:0]       _GEN_114 = _GEN_113 ? 8'h0 : _pir_exp_rst_adjusied_0_T;	// src/main/scala/pvu/PvuTop.scala:204:30, :933:{29,39}, :941:50, :947:22, :949:26
-  wire             _GEN_115 =
-    ~_GEN_105 | _GEN_50 | ~(_GEN_46 | _GEN_47 | _GEN_48 | _GEN_49);	// src/main/scala/pvu/PvuTop.scala:204:30, :205:30, :333:15, :370:21, :402:21, :416:21, :442:21, :947:{15,22}, :949:26, :982:30, :983:35, :984:36
-  wire [7:0]       _GEN_116 = _GEN_113 ? 8'h0 : _pir_exp_rst_adjusied_1_T;	// src/main/scala/pvu/PvuTop.scala:204:30, :933:{29,39}, :941:50, :947:22, :949:26
-  wire [7:0]       _GEN_117 = _GEN_113 ? 8'h0 : _pir_exp_rst_adjusied_2_T;	// src/main/scala/pvu/PvuTop.scala:204:30, :933:{29,39}, :941:50, :947:22, :949:26
-  wire [7:0]       _GEN_118 = _GEN_113 ? 8'h0 : _pir_exp_rst_adjusied_3_T;	// src/main/scala/pvu/PvuTop.scala:204:30, :933:{29,39}, :941:50, :947:22, :949:26
-  wire [5:0]       _posit_result_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :1065:45
-  wire [63:0]      _mask_T = 64'h1 << _posit_result_T_1;	// src/main/scala/pvu/PvuTop.scala:1065:45, :1068:25
-  wire [31:0]      _GEN_119 = _mask_T[31:0] - 32'h1 & _dot_encoder_io_posit[1'h0];	// src/main/scala/pvu/PvuTop.scala:182:18, :1049:30, :1057:47, :1068:{25,42}, :1070:44
-  wire [63:0]      _GEN_120 = {58'h0, _posit_result_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1065:45, :1068:25, :1071:{40,57}
-  wire [63:0]      _round_bit_T_2 = {32'h0, _GEN_119} >> _GEN_120;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :792:{19,29}, :1070:44, :1071:40
-  wire [63:0]      _sticky_mask_T_2 = 64'h1 << _GEN_120;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1071:40, :1074:31
-  wire [31:0]      shifted = _dot_encoder_io_posit[1'h0] >> _posit_result_T_1;	// src/main/scala/pvu/PvuTop.scala:182:18, :1049:30, :1057:47, :1065:45, :1079:39
+    & ACTUAL_VECTOR_SIZE[2] & _floatDecode2_io_isNaN[2'h3];	// src/main/scala/pvu/PvuTop.scala:118:28, :119:28, :193:26, :196:26, :203:27, :230:36, :239:55, :246:29, :250:21, :274:29, :278:31, :285:32, :1226:56
+  wire             _GEN_150 = _GEN_143 & _GEN_50 & ~io_Isposit;	// src/main/scala/pvu/PvuTop.scala:222:25, :446:21, :1207:{15,22}, :1209:26, :1214:30, :1224:{13,26}, :1226:82
+  wire             _GEN_151 = ~_GEN_143 | _GEN_50;	// src/main/scala/pvu/PvuTop.scala:208:30, :446:21, :1207:{15,22}, :1209:26
+  wire [7:0]       _GEN_152 = _GEN_151 ? 8'h0 : _pir_exp_rst_adjusied_0_T;	// src/main/scala/pvu/PvuTop.scala:208:30, :1193:{29,39}, :1201:50, :1207:22, :1209:26
+  wire             _GEN_153 =
+    ~_GEN_143 | _GEN_50 | ~(_GEN_46 | _GEN_47 | _GEN_48 | _GEN_49);	// src/main/scala/pvu/PvuTop.scala:208:30, :209:30, :337:15, :374:21, :406:21, :420:21, :446:21, :1207:{15,22}, :1209:26, :1242:30, :1243:35, :1244:36
+  wire [7:0]       _GEN_154 = _GEN_151 ? 8'h0 : _pir_exp_rst_adjusied_1_T;	// src/main/scala/pvu/PvuTop.scala:208:30, :1193:{29,39}, :1201:50, :1207:22, :1209:26
+  wire [7:0]       _GEN_155 = _GEN_151 ? 8'h0 : _pir_exp_rst_adjusied_2_T;	// src/main/scala/pvu/PvuTop.scala:208:30, :1193:{29,39}, :1201:50, :1207:22, :1209:26
+  wire [7:0]       _GEN_156 = _GEN_151 ? 8'h0 : _pir_exp_rst_adjusied_3_T;	// src/main/scala/pvu/PvuTop.scala:208:30, :1193:{29,39}, :1201:50, :1207:22, :1209:26
+  wire [5:0]       _posit_result_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :1325:45
+  wire [63:0]      _mask_T = 64'h1 << _posit_result_T_1;	// src/main/scala/pvu/PvuTop.scala:1325:45, :1328:25
+  wire [31:0]      _GEN_157 = _mask_T[31:0] - 32'h1 & _dot_encoder_io_posit[1'h0];	// src/main/scala/pvu/PvuTop.scala:186:18, :1309:30, :1317:47, :1328:{25,42}, :1330:44
+  wire [63:0]      _GEN_158 = {58'h0, _posit_result_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1325:45, :1328:25, :1331:{40,57}
+  wire [63:0]      _round_bit_T_2 = {32'h0, _GEN_157} >> _GEN_158;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :796:{19,29}, :1330:44, :1331:40
+  wire [63:0]      _sticky_mask_T_2 = 64'h1 << _GEN_158;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1331:40, :1334:31
+  wire [31:0]      shifted = _dot_encoder_io_posit[1'h0] >> _posit_result_T_1;	// src/main/scala/pvu/PvuTop.scala:186:18, :1309:30, :1317:47, :1325:45, :1339:39
   wire [94:0]      _posit_result_T_3 =
     {63'h0,
-     _round_bit_T_2[0] & ((|(_sticky_mask_T_2[31:0] - 32'h1 & _GEN_119)) | shifted[0])
+     _round_bit_T_2[0] & ((|(_sticky_mask_T_2[31:0] - 32'h1 & _GEN_157)) | shifted[0])
        ? shifted + 32'h1
-       : shifted} << _posit_result_T_1;	// src/main/scala/pvu/PvuTop.scala:611:118, :1065:45, :1070:44, :1071:{40,64}, :1074:{31,56}, :1075:{41,56}, :1079:{39,56,63}, :1082:{33,59}, :1086:{25,44}, :1089:32
-  wire             _GEN_121 = ACTUAL_DST_POSIT_WIDTH == 6'h20;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :1139:35
-  wire [5:0]       _posit_results_0_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :1231:51
-  wire [63:0]      _mask_T_2 = 64'h1 << _posit_results_0_T_1;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1231:51, :1234:31
-  wire [31:0]      _GEN_122 = _mask_T_2[31:0] - 32'h1 & _result_encoder_io_posit[2'h0];	// src/main/scala/pvu/PvuTop.scala:28:8, :1197:35, :1224:60, :1234:{31,48}, :1236:50
-  wire [63:0]      _GEN_123 = {58'h0, _posit_results_0_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1068:25, :1231:51, :1237:{46,63}
-  wire [63:0]      _round_bit_T_5 = {32'h0, _GEN_122} >> _GEN_123;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :792:{19,29}, :1236:50, :1237:46
-  wire [63:0]      _sticky_mask_T_6 = 64'h1 << _GEN_123;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1237:46, :1240:37
-  wire [31:0]      shifted_1 = _result_encoder_io_posit[2'h0] >> _posit_results_0_T_1;	// src/main/scala/pvu/PvuTop.scala:28:8, :1197:35, :1224:60, :1231:51, :1245:45
+       : shifted} << _posit_result_T_1;	// src/main/scala/pvu/PvuTop.scala:615:118, :1325:45, :1330:44, :1331:{40,64}, :1334:{31,56}, :1335:{41,56}, :1339:{39,56,63}, :1342:{33,59}, :1346:{25,44}, :1349:32
+  wire             _GEN_159 = ACTUAL_DST_POSIT_WIDTH == 6'h20;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :1401:35
+  wire [5:0]       _posit_results_0_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :1493:51
+  wire [63:0]      _mask_T_2 = 64'h1 << _posit_results_0_T_1;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1493:51, :1496:31
+  wire [31:0]      _GEN_160 = _mask_T_2[31:0] - 32'h1 & _result_encoder_io_posit[2'h0];	// src/main/scala/pvu/PvuTop.scala:29:8, :1459:35, :1486:60, :1496:{31,48}, :1498:50
+  wire [63:0]      _GEN_161 = {58'h0, _posit_results_0_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1328:25, :1493:51, :1499:{46,63}
+  wire [63:0]      _round_bit_T_5 = {32'h0, _GEN_160} >> _GEN_161;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :796:{19,29}, :1498:50, :1499:46
+  wire [63:0]      _sticky_mask_T_6 = 64'h1 << _GEN_161;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1499:46, :1502:37
+  wire [31:0]      shifted_1 = _result_encoder_io_posit[2'h0] >> _posit_results_0_T_1;	// src/main/scala/pvu/PvuTop.scala:29:8, :1459:35, :1486:60, :1493:51, :1507:45
   wire [94:0]      _posit_results_0_T_3 =
     {63'h0,
-     _round_bit_T_5[0] & ((|(_sticky_mask_T_6[31:0] - 32'h1 & _GEN_122)) | shifted_1[0])
+     _round_bit_T_5[0] & ((|(_sticky_mask_T_6[31:0] - 32'h1 & _GEN_160)) | shifted_1[0])
        ? shifted_1 + 32'h1
-       : shifted_1} << _posit_results_0_T_1;	// src/main/scala/pvu/PvuTop.scala:611:118, :1079:63, :1231:51, :1236:50, :1237:{46,70}, :1240:{37,62}, :1241:{47,62}, :1245:{45,62}, :1248:{39,65}, :1252:{31,50}, :1255:42
-  wire [5:0]       _posit_results_1_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :1231:51
-  wire [63:0]      _mask_T_4 = 64'h1 << _posit_results_1_T_1;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1231:51, :1234:31
-  wire [31:0]      _GEN_124 = _mask_T_4[31:0] - 32'h1 & _result_encoder_io_posit[2'h1];	// src/main/scala/pvu/PvuTop.scala:28:8, :1197:35, :1224:60, :1234:{31,48}, :1236:50
-  wire [63:0]      _GEN_125 = {58'h0, _posit_results_1_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1068:25, :1231:51, :1237:{46,63}
-  wire [63:0]      _round_bit_T_8 = {32'h0, _GEN_124} >> _GEN_125;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :792:{19,29}, :1236:50, :1237:46
-  wire [63:0]      _sticky_mask_T_10 = 64'h1 << _GEN_125;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1237:46, :1240:37
-  wire [31:0]      shifted_2 = _result_encoder_io_posit[2'h1] >> _posit_results_1_T_1;	// src/main/scala/pvu/PvuTop.scala:28:8, :1197:35, :1224:60, :1231:51, :1245:45
+       : shifted_1} << _posit_results_0_T_1;	// src/main/scala/pvu/PvuTop.scala:615:118, :1339:63, :1493:51, :1498:50, :1499:{46,70}, :1502:{37,62}, :1503:{47,62}, :1507:{45,62}, :1510:{39,65}, :1514:{31,50}, :1517:42
+  wire [5:0]       _posit_results_1_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :1493:51
+  wire [63:0]      _mask_T_4 = 64'h1 << _posit_results_1_T_1;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1493:51, :1496:31
+  wire [31:0]      _GEN_162 = _mask_T_4[31:0] - 32'h1 & _result_encoder_io_posit[2'h1];	// src/main/scala/pvu/PvuTop.scala:29:8, :1459:35, :1486:60, :1496:{31,48}, :1498:50
+  wire [63:0]      _GEN_163 = {58'h0, _posit_results_1_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1328:25, :1493:51, :1499:{46,63}
+  wire [63:0]      _round_bit_T_8 = {32'h0, _GEN_162} >> _GEN_163;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :796:{19,29}, :1498:50, :1499:46
+  wire [63:0]      _sticky_mask_T_10 = 64'h1 << _GEN_163;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1499:46, :1502:37
+  wire [31:0]      shifted_2 = _result_encoder_io_posit[2'h1] >> _posit_results_1_T_1;	// src/main/scala/pvu/PvuTop.scala:29:8, :1459:35, :1486:60, :1493:51, :1507:45
   wire [94:0]      _posit_results_1_T_3 =
     {63'h0,
-     _round_bit_T_8[0] & ((|(_sticky_mask_T_10[31:0] - 32'h1 & _GEN_124)) | shifted_2[0])
+     _round_bit_T_8[0] & ((|(_sticky_mask_T_10[31:0] - 32'h1 & _GEN_162)) | shifted_2[0])
        ? shifted_2 + 32'h1
-       : shifted_2} << _posit_results_1_T_1;	// src/main/scala/pvu/PvuTop.scala:611:118, :1079:63, :1231:51, :1236:50, :1237:{46,70}, :1240:{37,62}, :1241:{47,62}, :1245:{45,62}, :1248:{39,65}, :1252:{31,50}, :1255:42
-  wire [5:0]       _posit_results_2_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :1231:51
-  wire [63:0]      _mask_T_6 = 64'h1 << _posit_results_2_T_1;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1231:51, :1234:31
-  wire [31:0]      _GEN_126 = _mask_T_6[31:0] - 32'h1 & _result_encoder_io_posit[2'h2];	// src/main/scala/pvu/PvuTop.scala:234:34, :1197:35, :1224:60, :1234:{31,48}, :1236:50
-  wire [63:0]      _GEN_127 = {58'h0, _posit_results_2_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1068:25, :1231:51, :1237:{46,63}
-  wire [63:0]      _round_bit_T_11 = {32'h0, _GEN_126} >> _GEN_127;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :792:{19,29}, :1236:50, :1237:46
-  wire [63:0]      _sticky_mask_T_14 = 64'h1 << _GEN_127;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1237:46, :1240:37
-  wire [31:0]      shifted_3 = _result_encoder_io_posit[2'h2] >> _posit_results_2_T_1;	// src/main/scala/pvu/PvuTop.scala:234:34, :1197:35, :1224:60, :1231:51, :1245:45
+       : shifted_2} << _posit_results_1_T_1;	// src/main/scala/pvu/PvuTop.scala:615:118, :1339:63, :1493:51, :1498:50, :1499:{46,70}, :1502:{37,62}, :1503:{47,62}, :1507:{45,62}, :1510:{39,65}, :1514:{31,50}, :1517:42
+  wire [5:0]       _posit_results_2_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :1493:51
+  wire [63:0]      _mask_T_6 = 64'h1 << _posit_results_2_T_1;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1493:51, :1496:31
+  wire [31:0]      _GEN_164 = _mask_T_6[31:0] - 32'h1 & _result_encoder_io_posit[2'h2];	// src/main/scala/pvu/PvuTop.scala:238:34, :1459:35, :1486:60, :1496:{31,48}, :1498:50
+  wire [63:0]      _GEN_165 = {58'h0, _posit_results_2_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1328:25, :1493:51, :1499:{46,63}
+  wire [63:0]      _round_bit_T_11 = {32'h0, _GEN_164} >> _GEN_165;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :796:{19,29}, :1498:50, :1499:46
+  wire [63:0]      _sticky_mask_T_14 = 64'h1 << _GEN_165;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1499:46, :1502:37
+  wire [31:0]      shifted_3 = _result_encoder_io_posit[2'h2] >> _posit_results_2_T_1;	// src/main/scala/pvu/PvuTop.scala:238:34, :1459:35, :1486:60, :1493:51, :1507:45
   wire [94:0]      _posit_results_2_T_3 =
     {63'h0,
-     _round_bit_T_11[0] & ((|(_sticky_mask_T_14[31:0] - 32'h1 & _GEN_126)) | shifted_3[0])
+     _round_bit_T_11[0] & ((|(_sticky_mask_T_14[31:0] - 32'h1 & _GEN_164)) | shifted_3[0])
        ? shifted_3 + 32'h1
-       : shifted_3} << _posit_results_2_T_1;	// src/main/scala/pvu/PvuTop.scala:611:118, :1079:63, :1231:51, :1236:50, :1237:{46,70}, :1240:{37,62}, :1241:{47,62}, :1245:{45,62}, :1248:{39,65}, :1252:{31,50}, :1255:42
-  wire [5:0]       _posit_results_3_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:225:36, :230:36, :1231:51
-  wire [63:0]      _mask_T_8 = 64'h1 << _posit_results_3_T_1;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1231:51, :1234:31
-  wire [31:0]      _GEN_128 = _mask_T_8[31:0] - 32'h1 & _result_encoder_io_posit[2'h3];	// src/main/scala/pvu/PvuTop.scala:235:55, :1197:35, :1224:60, :1234:{31,48}, :1236:50
-  wire [63:0]      _GEN_129 = {58'h0, _posit_results_3_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1068:25, :1231:51, :1237:{46,63}
-  wire [63:0]      _round_bit_T_14 = {32'h0, _GEN_128} >> _GEN_129;	// src/main/scala/pvu/PvuTop.scala:172:{18,28}, :249:28, :250:28, :263:38, :264:38, :586:{22,32}, :792:{19,29}, :1236:50, :1237:46
-  wire [63:0]      _sticky_mask_T_18 = 64'h1 << _GEN_129;	// src/main/scala/pvu/PvuTop.scala:1068:25, :1237:46, :1240:37
-  wire [31:0]      shifted_4 = _result_encoder_io_posit[2'h3] >> _posit_results_3_T_1;	// src/main/scala/pvu/PvuTop.scala:235:55, :1197:35, :1224:60, :1231:51, :1245:45
+       : shifted_3} << _posit_results_2_T_1;	// src/main/scala/pvu/PvuTop.scala:615:118, :1339:63, :1493:51, :1498:50, :1499:{46,70}, :1502:{37,62}, :1503:{47,62}, :1507:{45,62}, :1510:{39,65}, :1514:{31,50}, :1517:42
+  wire [5:0]       _posit_results_3_T_1 = 6'h20 - ACTUAL_DST_POSIT_WIDTH;	// src/main/scala/pvu/PvuTop.scala:229:36, :234:36, :1493:51
+  wire [63:0]      _mask_T_8 = 64'h1 << _posit_results_3_T_1;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1493:51, :1496:31
+  wire [31:0]      _GEN_166 = _mask_T_8[31:0] - 32'h1 & _result_encoder_io_posit[2'h3];	// src/main/scala/pvu/PvuTop.scala:239:55, :1459:35, :1486:60, :1496:{31,48}, :1498:50
+  wire [63:0]      _GEN_167 = {58'h0, _posit_results_3_T_1 - 6'h1};	// src/main/scala/pvu/PvuTop.scala:1328:25, :1493:51, :1499:{46,63}
+  wire [63:0]      _round_bit_T_14 = {32'h0, _GEN_166} >> _GEN_167;	// src/main/scala/pvu/PvuTop.scala:176:{18,28}, :253:28, :254:28, :267:38, :268:38, :590:{22,32}, :796:{19,29}, :1498:50, :1499:46
+  wire [63:0]      _sticky_mask_T_18 = 64'h1 << _GEN_167;	// src/main/scala/pvu/PvuTop.scala:1328:25, :1499:46, :1502:37
+  wire [31:0]      shifted_4 = _result_encoder_io_posit[2'h3] >> _posit_results_3_T_1;	// src/main/scala/pvu/PvuTop.scala:239:55, :1459:35, :1486:60, :1493:51, :1507:45
   wire [94:0]      _posit_results_3_T_3 =
     {63'h0,
-     _round_bit_T_14[0] & ((|(_sticky_mask_T_18[31:0] - 32'h1 & _GEN_128)) | shifted_4[0])
+     _round_bit_T_14[0] & ((|(_sticky_mask_T_18[31:0] - 32'h1 & _GEN_166)) | shifted_4[0])
        ? shifted_4 + 32'h1
-       : shifted_4} << _posit_results_3_T_1;	// src/main/scala/pvu/PvuTop.scala:611:118, :1079:63, :1231:51, :1236:50, :1237:{46,70}, :1240:{37,62}, :1241:{47,62}, :1245:{45,62}, :1248:{39,65}, :1252:{31,50}, :1255:42
-  wire             _GEN_130 = _GEN_50 | _GEN_53 | _GEN_61 | _GEN_82 | _GEN_83 | _GEN_99;	// src/main/scala/pvu/PvuTop.scala:333:23, :442:21, :456:21, :580:21, :794:21, :819:21, :844:21, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1296:24
-  wire [3:0][27:0] _GEN_131 =
-    {{_GEN_44[27:0]}, {_GEN_34[27:0]}, {_GEN_26[27:0]}, {_GEN_18[27:0]}};	// src/main/scala/pvu/PvuTop.scala:246:21, :253:29, :270:29, :344:28, :348:31
-  wire [3:0][27:0] _GEN_132 =
-    {{_GEN_45[27:0]}, {_GEN_35[27:0]}, {_GEN_27[27:0]}, {_GEN_19[27:0]}};	// src/main/scala/pvu/PvuTop.scala:246:21, :253:29, :270:29, :344:28, :350:31
-  wire [3:0][31:0] _GEN_133 =
+       : shifted_4} << _posit_results_3_T_1;	// src/main/scala/pvu/PvuTop.scala:615:118, :1339:63, :1493:51, :1498:50, :1499:{46,70}, :1502:{37,62}, :1503:{47,62}, :1507:{45,62}, :1510:{39,65}, :1514:{31,50}, :1517:42
+  wire             _GEN_168 =
+    _GEN_50 | _GEN_53 | _GEN_61 | _GEN_80 | _GEN_81 | _GEN_97 | _GEN_99;	// src/main/scala/pvu/PvuTop.scala:337:23, :446:21, :460:21, :584:21, :798:21, :823:21, :848:21, :869:21, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1558:24
+  wire [3:0][27:0] _GEN_169 =
+    {{_GEN_44[27:0]}, {_GEN_34[27:0]}, {_GEN_26[27:0]}, {_GEN_18[27:0]}};	// src/main/scala/pvu/PvuTop.scala:250:21, :257:29, :274:29, :348:28, :352:31
+  wire [3:0][27:0] _GEN_170 =
+    {{_GEN_45[27:0]}, {_GEN_35[27:0]}, {_GEN_27[27:0]}, {_GEN_19[27:0]}};	// src/main/scala/pvu/PvuTop.scala:250:21, :257:29, :274:29, :348:28, :354:31
+  wire [3:0][31:0] _GEN_171 =
     {{io_float_i_3[31:0]},
      {io_float_i_2[31:0]},
      {io_float_i_1[31:0]},
-     {io_float_i_0[31:0]}};	// src/main/scala/pvu/PvuTop.scala:177:25, :707:39
-  wire [3:0]       _GEN_134 =
+     {io_float_i_0[31:0]}};	// src/main/scala/pvu/PvuTop.scala:181:25, :711:39
+  wire [3:0]       _GEN_172 =
     io_Isposit
       ? {{ACTUAL_VECTOR_SIZE[2] & _decode2_io_Sign[2'h3]},
          {_valid_range_2_T & _decode2_io_Sign[2'h2]},
@@ -10095,8 +17507,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
       : {{ACTUAL_VECTOR_SIZE[2] & ~io_Isposit & _floatDecode2_io_Sign[2'h3]},
          {_valid_range_2_T & ~io_Isposit & _floatDecode2_io_Sign[2'h2]},
          {(|(ACTUAL_VECTOR_SIZE[2:1])) & ~io_Isposit & _floatDecode2_io_Sign[2'h1]},
-         {(|ACTUAL_VECTOR_SIZE) & ~io_Isposit & _floatDecode2_io_Sign[2'h0]}};	// src/main/scala/pvu/PvuTop.scala:28:8, :111:23, :115:28, :121:23, :185:18, :189:26, :226:36, :234:34, :235:55, :242:29, :246:21, :253:29, :257:23, :270:29, :278:32, :289:23
-  wire [3:0][7:0]  _GEN_135 =
+         {(|ACTUAL_VECTOR_SIZE) & ~io_Isposit & _floatDecode2_io_Sign[2'h0]}};	// src/main/scala/pvu/PvuTop.scala:29:8, :115:23, :119:28, :125:23, :189:18, :193:26, :230:36, :238:34, :239:55, :246:29, :250:21, :257:29, :261:23, :274:29, :282:32, :293:23
+  wire [3:0][7:0]  _GEN_173 =
     io_Isposit
       ? {{ACTUAL_VECTOR_SIZE[2] ? _decode2_io_Exp[2'h3] : 8'h0},
          {_valid_range_2_T ? _decode2_io_Exp[2'h2] : 8'h0},
@@ -10105,51 +17517,51 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
       : {{_GEN_41 ? 8'h0 : _floatDecode2_io_Exp[2'h3][7:0]},
          {_GEN_32 ? 8'h0 : _floatDecode2_io_Exp[2'h2][7:0]},
          {_GEN_24 ? 8'h0 : _floatDecode2_io_Exp[2'h1][7:0]},
-         {_GEN_16 ? 8'h0 : _floatDecode2_io_Exp[2'h0][7:0]}};	// src/main/scala/pvu/PvuTop.scala:28:8, :111:23, :115:28, :122:23, :183:18, :186:18, :226:36, :234:34, :235:55, :242:29, :246:21, :253:29, :258:23, :270:29, :279:32, :287:23, :290:23, :933:{29,39}
-  wire [3:0]       _GEN_136 =
+         {_GEN_16 ? 8'h0 : _floatDecode2_io_Exp[2'h0][7:0]}};	// src/main/scala/pvu/PvuTop.scala:29:8, :115:23, :119:28, :126:23, :187:18, :190:18, :230:36, :238:34, :239:55, :246:29, :250:21, :257:29, :262:23, :274:29, :283:32, :291:23, :294:23, :1193:{29,39}
+  wire [3:0]       _GEN_174 =
     {{ACTUAL_VECTOR_SIZE[2] & (io_Isposit ? _GEN_10 : _GEN_39)},
      {_valid_range_2_T & (io_Isposit ? _GEN_8 : _GEN_31)},
      {(|(ACTUAL_VECTOR_SIZE[2:1])) & (io_Isposit ? _GEN_6 : _GEN_23)},
-     {(|ACTUAL_VECTOR_SIZE) & (io_Isposit ? _GEN_4 : _GEN_15)}};	// src/main/scala/pvu/PvuTop.scala:182:18, :226:36, :242:29, :246:21, :253:29, :254:23, :270:29, :286:23, :459:27, :474:35, :507:29, :509:37
-  wire [3:0][7:0]  _GEN_137 =
+     {(|ACTUAL_VECTOR_SIZE) & (io_Isposit ? _GEN_4 : _GEN_15)}};	// src/main/scala/pvu/PvuTop.scala:186:18, :230:36, :246:29, :250:21, :257:29, :258:23, :274:29, :290:23, :463:27, :478:35, :511:29, :513:37
+  wire [3:0][7:0]  _GEN_175 =
     {{ACTUAL_VECTOR_SIZE[2] ? (io_Isposit ? _GEN_11 : _GEN_42) : 8'h0},
      {_valid_range_2_T ? (io_Isposit ? _GEN_9 : _GEN_33) : 8'h0},
      {(|(ACTUAL_VECTOR_SIZE[2:1])) ? (io_Isposit ? _GEN_7 : _GEN_25) : 8'h0},
-     {(|ACTUAL_VECTOR_SIZE) ? (io_Isposit ? _GEN_5 : _GEN_17) : 8'h0}};	// src/main/scala/pvu/PvuTop.scala:183:18, :226:36, :242:29, :246:21, :253:29, :255:23, :270:29, :287:23, :459:27, :475:34, :507:29, :510:36, :933:{29,39}
-  wire [3:0][27:0] _GEN_138 =
+     {(|ACTUAL_VECTOR_SIZE) ? (io_Isposit ? _GEN_5 : _GEN_17) : 8'h0}};	// src/main/scala/pvu/PvuTop.scala:187:18, :230:36, :246:29, :250:21, :257:29, :259:23, :274:29, :291:23, :463:27, :479:34, :511:29, :514:36, :1193:{29,39}
+  wire [3:0][27:0] _GEN_176 =
     {{ACTUAL_VECTOR_SIZE[2] ? _GEN_44[27:0] : 28'h0},
      {_valid_range_2_T ? _GEN_34[27:0] : 28'h0},
      {(|(ACTUAL_VECTOR_SIZE[2:1])) ? _GEN_26[27:0] : 28'h0},
-     {(|ACTUAL_VECTOR_SIZE) ? _GEN_18[27:0] : 28'h0}};	// src/main/scala/pvu/PvuTop.scala:226:36, :242:29, :246:21, :253:29, :270:29, :348:31, :459:27, :476:35, :507:29, :511:37
-  wire [3:0]       _GEN_139 =
-    {{ACTUAL_VECTOR_SIZE[2] & _GEN_88},
-     {_valid_range_2_T & _GEN_87},
-     {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_86},
-     {(|ACTUAL_VECTOR_SIZE) & _GEN_85}};	// src/main/scala/pvu/PvuTop.scala:226:36, :242:29, :333:23, :361:29, :370:29, :1140:27, :1143:32, :1149:31, :1150:34
-  wire [3:0][7:0]  _GEN_140 =
+     {(|ACTUAL_VECTOR_SIZE) ? _GEN_18[27:0] : 28'h0}};	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29, :250:21, :257:29, :274:29, :352:31, :463:27, :480:35, :511:29, :515:37
+  wire [3:0]       _GEN_177 =
+    {{ACTUAL_VECTOR_SIZE[2] & _GEN_86},
+     {_valid_range_2_T & _GEN_85},
+     {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_84},
+     {(|ACTUAL_VECTOR_SIZE) & _GEN_83}};	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29, :337:23, :365:29, :374:29, :1402:27, :1405:32, :1411:31, :1412:34
+  wire [3:0][7:0]  _GEN_178 =
     {{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_50 ? 8'h0 : _pir_exp_rst_adjusied_3_T},
      {~_valid_range_2_T | _GEN_50 ? 8'h0 : _pir_exp_rst_adjusied_2_T},
      {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_50 ? 8'h0 : _pir_exp_rst_adjusied_1_T},
-     {~(|ACTUAL_VECTOR_SIZE) | _GEN_50 ? 8'h0 : _pir_exp_rst_adjusied_0_T}};	// src/main/scala/pvu/PvuTop.scala:190:26, :226:36, :242:29, :246:21, :270:29, :442:21, :933:{29,39}, :941:50, :1140:27, :1144:32, :1149:31, :1151:34
-  wire [3:0][27:0] _GEN_141 =
-    {{ACTUAL_VECTOR_SIZE[2] ? _GEN_104[27:0] : 28'h0},
-     {_valid_range_2_T ? _GEN_103[27:0] : 28'h0},
-     {(|(ACTUAL_VECTOR_SIZE[2:1])) ? _GEN_102[27:0] : 28'h0},
-     {(|ACTUAL_VECTOR_SIZE) ? _GEN_101[27:0] : 28'h0}};	// src/main/scala/pvu/PvuTop.scala:226:36, :242:29, :476:35, :878:25, :883:23, :893:29, :1140:27, :1145:32, :1149:31, :1152:34
-  PositDecode decode1 (	// src/main/scala/pvu/PvuTop.scala:110:23
-    .io_posit (io_Isposit ? _GEN_2 : _GEN_1),	// src/main/scala/pvu/PvuTop.scala:28:8, :110:23, :246:21, :247:28, :263:28
+     {~(|ACTUAL_VECTOR_SIZE) | _GEN_50 ? 8'h0 : _pir_exp_rst_adjusied_0_T}};	// src/main/scala/pvu/PvuTop.scala:194:26, :230:36, :246:29, :250:21, :274:29, :446:21, :1193:{29,39}, :1201:50, :1402:27, :1406:32, :1411:31, :1413:34
+  wire [3:0][27:0] _GEN_179 =
+    {{ACTUAL_VECTOR_SIZE[2] ? _GEN_142[27:0] : 28'h0},
+     {_valid_range_2_T ? _GEN_141[27:0] : 28'h0},
+     {(|(ACTUAL_VECTOR_SIZE[2:1])) ? _GEN_140[27:0] : 28'h0},
+     {(|ACTUAL_VECTOR_SIZE) ? _GEN_139[27:0] : 28'h0}};	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29, :480:35, :1138:25, :1143:23, :1153:29, :1402:27, :1407:32, :1411:31, :1414:34
+  PositDecode decode1 (	// src/main/scala/pvu/PvuTop.scala:114:23
+    .io_posit (io_Isposit ? _GEN_2 : _GEN_1),	// src/main/scala/pvu/PvuTop.scala:29:8, :114:23, :250:21, :251:28, :267:28
     .io_Sign  (_decode1_io_Sign),
     .io_Exp   (_decode1_io_Exp),
     .io_Frac  (_decode1_io_Frac)
   );
-  PositDecode decode2 (	// src/main/scala/pvu/PvuTop.scala:111:23
-    .io_posit (io_Isposit ? _GEN_3 : _GEN_1),	// src/main/scala/pvu/PvuTop.scala:28:8, :111:23, :246:21, :247:28, :263:28
+  PositDecode decode2 (	// src/main/scala/pvu/PvuTop.scala:115:23
+    .io_posit (io_Isposit ? _GEN_3 : _GEN_1),	// src/main/scala/pvu/PvuTop.scala:29:8, :115:23, :250:21, :251:28, :267:28
     .io_Sign  (_decode2_io_Sign),
     .io_Exp   (_decode2_io_Exp),
     .io_Frac  (_decode2_io_Frac)
   );
-  FloatDecode floatDecode1 (	// src/main/scala/pvu/PvuTop.scala:114:28
-    .io_float  (io_Isposit ? _GEN_1 : _GEN_133),	// src/main/scala/pvu/PvuTop.scala:114:28, :246:21, :247:28, :263:28, :707:39
+  FloatDecode floatDecode1 (	// src/main/scala/pvu/PvuTop.scala:118:28
+    .io_float  (io_Isposit ? _GEN_1 : _GEN_171),	// src/main/scala/pvu/PvuTop.scala:118:28, :250:21, :251:28, :267:28, :711:39
     .io_Sign   (_floatDecode1_io_Sign),
     .io_Exp    (_floatDecode1_io_Exp),
     .io_Frac   (_floatDecode1_io_Frac),
@@ -10157,14 +17569,14 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
     .io_isInf  (_floatDecode1_io_isInf),
     .io_isZero (_floatDecode1_io_isZero)
   );
-  FloatDecode floatDecode2 (	// src/main/scala/pvu/PvuTop.scala:115:28
+  FloatDecode floatDecode2 (	// src/main/scala/pvu/PvuTop.scala:119:28
     .io_float
       (io_Isposit
          ? _GEN_1
          : {{io_float_i2_3[31:0]},
             {io_float_i2_2[31:0]},
             {io_float_i2_1[31:0]},
-            {io_float_i2_0[31:0]}}),	// src/main/scala/pvu/PvuTop.scala:115:28, :178:25, :246:21, :247:28, :250:28, :263:28, :266:28
+            {io_float_i2_0[31:0]}}),	// src/main/scala/pvu/PvuTop.scala:119:28, :182:25, :250:21, :251:28, :254:28, :267:28, :270:28
     .io_Sign   (_floatDecode2_io_Sign),
     .io_Exp    (_floatDecode2_io_Exp),
     .io_Frac   (_floatDecode2_io_Frac),
@@ -10172,303 +17584,655 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
     .io_isInf  (_floatDecode2_io_isInf),
     .io_isZero (_floatDecode2_io_isZero)
   );
-  FractionAlignment_AddSub fracalign (	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_frac1_i     (_GEN_131),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_frac2_i     (_GEN_132),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_exp1_i      (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_exp2_i      (_GEN_135),	// src/main/scala/pvu/PvuTop.scala:122:23
+  FractionAlignment_AddSub fracalign (	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_frac1_i     (_GEN_169),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_frac2_i     (_GEN_170),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_exp1_i      (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_exp2_i      (_GEN_173),	// src/main/scala/pvu/PvuTop.scala:126:23
     .io_pir_frac1_align (_fracalign_io_pir_frac1_align),
     .io_pir_frac2_align (_fracalign_io_pir_frac2_align),
     .io_pir_max_exp     (_fracalign_io_pir_max_exp)
   );
-  Add add (	// src/main/scala/pvu/PvuTop.scala:345:28
-    .io_pir_sign1_i       (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_sign2_i       (_GEN_134),	// src/main/scala/pvu/PvuTop.scala:121:23
-    .io_pir_exp1_i        (_fracalign_io_pir_max_exp),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_exp2_i        (_fracalign_io_pir_max_exp),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_frac1_aligned (_fracalign_io_pir_frac1_align),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_frac2_aligned (_fracalign_io_pir_frac2_align),	// src/main/scala/pvu/PvuTop.scala:344:28
+  Add add (	// src/main/scala/pvu/PvuTop.scala:349:28
+    .io_pir_sign1_i       (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_sign2_i       (_GEN_172),	// src/main/scala/pvu/PvuTop.scala:125:23
+    .io_pir_exp1_i        (_fracalign_io_pir_max_exp),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_exp2_i        (_fracalign_io_pir_max_exp),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_frac1_aligned (_fracalign_io_pir_frac1_align),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_frac2_aligned (_fracalign_io_pir_frac2_align),	// src/main/scala/pvu/PvuTop.scala:348:28
     .io_pir_sign_o        (_add_io_pir_sign_o),
     .io_pir_exp_o         (_add_io_pir_exp_o),
     .io_pir_frac_o        (_add_io_pir_frac_o),
     .io_overflow          (/* unused */),
     .io_frac_truncate     (/* unused */)
   );
-  FractionAlignment_AddSub fracalign_1 (	// src/main/scala/pvu/PvuTop.scala:380:28
-    .io_pir_frac1_i     (_GEN_131),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_frac2_i     (_GEN_132),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_exp1_i      (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_exp2_i      (_GEN_135),	// src/main/scala/pvu/PvuTop.scala:122:23
+  FractionAlignment_AddSub fracalign_1 (	// src/main/scala/pvu/PvuTop.scala:384:28
+    .io_pir_frac1_i     (_GEN_169),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_frac2_i     (_GEN_170),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_exp1_i      (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_exp2_i      (_GEN_173),	// src/main/scala/pvu/PvuTop.scala:126:23
     .io_pir_frac1_align (_fracalign_1_io_pir_frac1_align),
     .io_pir_frac2_align (_fracalign_1_io_pir_frac2_align),
     .io_pir_max_exp     (_fracalign_1_io_pir_max_exp)
   );
-  Sub sub (	// src/main/scala/pvu/PvuTop.scala:381:28
-    .io_pir_sign1_i       (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_sign2_i       (_GEN_134),	// src/main/scala/pvu/PvuTop.scala:121:23
-    .io_pir_exp1_i        (_fracalign_1_io_pir_max_exp),	// src/main/scala/pvu/PvuTop.scala:380:28
-    .io_pir_exp2_i        (_fracalign_1_io_pir_max_exp),	// src/main/scala/pvu/PvuTop.scala:380:28
-    .io_pir_frac1_aligned (_fracalign_1_io_pir_frac1_align),	// src/main/scala/pvu/PvuTop.scala:380:28
-    .io_pir_frac2_aligned (_fracalign_1_io_pir_frac2_align),	// src/main/scala/pvu/PvuTop.scala:380:28
+  Sub sub (	// src/main/scala/pvu/PvuTop.scala:385:28
+    .io_pir_sign1_i       (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_sign2_i       (_GEN_172),	// src/main/scala/pvu/PvuTop.scala:125:23
+    .io_pir_exp1_i        (_fracalign_1_io_pir_max_exp),	// src/main/scala/pvu/PvuTop.scala:384:28
+    .io_pir_exp2_i        (_fracalign_1_io_pir_max_exp),	// src/main/scala/pvu/PvuTop.scala:384:28
+    .io_pir_frac1_aligned (_fracalign_1_io_pir_frac1_align),	// src/main/scala/pvu/PvuTop.scala:384:28
+    .io_pir_frac2_aligned (_fracalign_1_io_pir_frac2_align),	// src/main/scala/pvu/PvuTop.scala:384:28
     .io_pir_sign_o        (_sub_io_pir_sign_o),
     .io_pir_exp_o         (_sub_io_pir_exp_o),
     .io_pir_frac_o        (_sub_io_pir_frac_o),
     .io_overflow          (/* unused */),
     .io_frac_truncate     (/* unused */)
   );
-  Mul mul (	// src/main/scala/pvu/PvuTop.scala:403:22
-    .io_pir_sign1_i (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_sign2_i (_GEN_134),	// src/main/scala/pvu/PvuTop.scala:121:23
-    .io_pir_exp1_i  (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_exp2_i  (_GEN_135),	// src/main/scala/pvu/PvuTop.scala:122:23
-    .io_pir_frac1_i (_GEN_131),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_frac2_i (_GEN_132),	// src/main/scala/pvu/PvuTop.scala:344:28
+  Mul mul (	// src/main/scala/pvu/PvuTop.scala:407:22
+    .io_pir_sign1_i (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_sign2_i (_GEN_172),	// src/main/scala/pvu/PvuTop.scala:125:23
+    .io_pir_exp1_i  (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_exp2_i  (_GEN_173),	// src/main/scala/pvu/PvuTop.scala:126:23
+    .io_pir_frac1_i (_GEN_169),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_frac2_i (_GEN_170),	// src/main/scala/pvu/PvuTop.scala:348:28
     .io_pir_sign_o  (_mul_io_pir_sign_o),
     .io_pir_exp_o   (_mul_io_pir_exp_o),
     .io_pir_frac_o  (_mul_io_pir_frac_o)
   );
-  Div div_inst (	// src/main/scala/pvu/PvuTop.scala:417:27
-    .io_pir_sign1_i (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_sign2_i (_GEN_134),	// src/main/scala/pvu/PvuTop.scala:121:23
-    .io_pir_exp1_i  (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_exp2_i  (_GEN_135),	// src/main/scala/pvu/PvuTop.scala:122:23
-    .io_pir_frac1_i (_GEN_131),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_frac2_i (_GEN_132),	// src/main/scala/pvu/PvuTop.scala:344:28
+  Div div_inst (	// src/main/scala/pvu/PvuTop.scala:421:27
+    .io_pir_sign1_i (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_sign2_i (_GEN_172),	// src/main/scala/pvu/PvuTop.scala:125:23
+    .io_pir_exp1_i  (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_exp2_i  (_GEN_173),	// src/main/scala/pvu/PvuTop.scala:126:23
+    .io_pir_frac1_i (_GEN_169),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_frac2_i (_GEN_170),	// src/main/scala/pvu/PvuTop.scala:348:28
     .io_pir_sign_o  (_div_inst_io_pir_sign_o),
     .io_pir_exp_o   (_div_inst_io_pir_exp_o),
     .io_pir_frac_o  (_div_inst_io_pir_frac_o)
   );
-  DotProduct dotproduct (	// src/main/scala/pvu/PvuTop.scala:443:28
-    .io_pir_sign1_i (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_sign2_i (_GEN_134),	// src/main/scala/pvu/PvuTop.scala:121:23
-    .io_pir_exp1_i  (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_exp2_i  (_GEN_135),	// src/main/scala/pvu/PvuTop.scala:122:23
-    .io_pir_frac1_i (_GEN_131),	// src/main/scala/pvu/PvuTop.scala:344:28
-    .io_pir_frac2_i (_GEN_132),	// src/main/scala/pvu/PvuTop.scala:344:28
+  DotProduct dotproduct (	// src/main/scala/pvu/PvuTop.scala:447:28
+    .io_pir_sign1_i (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_sign2_i (_GEN_172),	// src/main/scala/pvu/PvuTop.scala:125:23
+    .io_pir_exp1_i  (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_exp2_i  (_GEN_173),	// src/main/scala/pvu/PvuTop.scala:126:23
+    .io_pir_frac1_i (_GEN_169),	// src/main/scala/pvu/PvuTop.scala:348:28
+    .io_pir_frac2_i (_GEN_170),	// src/main/scala/pvu/PvuTop.scala:348:28
     .io_pir_sign_o  (_dotproduct_io_pir_sign_o),
     .io_pir_exp_o   (_dotproduct_io_pir_exp_o),
     .io_pir_frac_o  (_dotproduct_io_pir_frac_o)
   );
-  PositConvert convert8 (	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_sign1_i (_GEN_136),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_exp1_i  (_GEN_137),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_frac1_i (_GEN_138),	// src/main/scala/pvu/PvuTop.scala:459:27
+  PositConvert convert8 (	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_sign1_i (_GEN_174),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_exp1_i  (_GEN_175),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_frac1_i (_GEN_176),	// src/main/scala/pvu/PvuTop.scala:463:27
     .io_posit_o     (_convert8_io_posit_o)
   );
-  PositConvert_1 convert16 (	// src/main/scala/pvu/PvuTop.scala:460:28
-    .io_pir_sign1_i (_GEN_136),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_exp1_i  (_GEN_137),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_frac1_i (_GEN_138),	// src/main/scala/pvu/PvuTop.scala:459:27
+  PositConvert_1 convert16 (	// src/main/scala/pvu/PvuTop.scala:464:28
+    .io_pir_sign1_i (_GEN_174),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_exp1_i  (_GEN_175),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_frac1_i (_GEN_176),	// src/main/scala/pvu/PvuTop.scala:463:27
     .io_posit_o     (_convert16_io_posit_o)
   );
-  PositConvert_2 convert24 (	// src/main/scala/pvu/PvuTop.scala:461:28
-    .io_pir_sign1_i (_GEN_136),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_exp1_i  (_GEN_137),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_frac1_i (_GEN_138),	// src/main/scala/pvu/PvuTop.scala:459:27
+  PositConvert_2 convert24 (	// src/main/scala/pvu/PvuTop.scala:465:28
+    .io_pir_sign1_i (_GEN_174),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_exp1_i  (_GEN_175),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_frac1_i (_GEN_176),	// src/main/scala/pvu/PvuTop.scala:463:27
     .io_posit_o     (_convert24_io_posit_o)
   );
-  PositConvert_3 convert32 (	// src/main/scala/pvu/PvuTop.scala:462:28
-    .io_pir_sign1_i (_GEN_136),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_exp1_i  (_GEN_137),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_frac1_i (_GEN_138),	// src/main/scala/pvu/PvuTop.scala:459:27
+  PositConvert_3 convert32 (	// src/main/scala/pvu/PvuTop.scala:466:28
+    .io_pir_sign1_i (_GEN_174),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_exp1_i  (_GEN_175),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_frac1_i (_GEN_176),	// src/main/scala/pvu/PvuTop.scala:463:27
     .io_posit_o     (_convert32_io_posit_o)
   );
-  PositConvert_4 convert40 (	// src/main/scala/pvu/PvuTop.scala:463:28
-    .io_pir_sign1_i (_GEN_136),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_exp1_i  (_GEN_137),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_frac1_i (_GEN_138),	// src/main/scala/pvu/PvuTop.scala:459:27
+  PositConvert_4 convert40 (	// src/main/scala/pvu/PvuTop.scala:467:28
+    .io_pir_sign1_i (_GEN_174),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_exp1_i  (_GEN_175),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_frac1_i (_GEN_176),	// src/main/scala/pvu/PvuTop.scala:463:27
     .io_posit_o     (_convert40_io_posit_o)
   );
-  PositConvert_5 convert48 (	// src/main/scala/pvu/PvuTop.scala:464:28
-    .io_pir_sign1_i (_GEN_136),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_exp1_i  (_GEN_137),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_frac1_i (_GEN_138),	// src/main/scala/pvu/PvuTop.scala:459:27
+  PositConvert_5 convert48 (	// src/main/scala/pvu/PvuTop.scala:468:28
+    .io_pir_sign1_i (_GEN_174),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_exp1_i  (_GEN_175),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_frac1_i (_GEN_176),	// src/main/scala/pvu/PvuTop.scala:463:27
     .io_posit_o     (_convert48_io_posit_o)
   );
-  PositConvert_6 convert56 (	// src/main/scala/pvu/PvuTop.scala:465:28
-    .io_pir_sign1_i (_GEN_136),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_exp1_i  (_GEN_137),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_frac1_i (_GEN_138),	// src/main/scala/pvu/PvuTop.scala:459:27
+  PositConvert_6 convert56 (	// src/main/scala/pvu/PvuTop.scala:469:28
+    .io_pir_sign1_i (_GEN_174),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_exp1_i  (_GEN_175),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_frac1_i (_GEN_176),	// src/main/scala/pvu/PvuTop.scala:463:27
     .io_posit_o     (_convert56_io_posit_o)
   );
-  PositConvert_7 convert64 (	// src/main/scala/pvu/PvuTop.scala:466:28
-    .io_pir_sign1_i (_GEN_136),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_exp1_i  (_GEN_137),	// src/main/scala/pvu/PvuTop.scala:459:27
-    .io_pir_frac1_i (_GEN_138),	// src/main/scala/pvu/PvuTop.scala:459:27
+  PositConvert_7 convert64 (	// src/main/scala/pvu/PvuTop.scala:470:28
+    .io_pir_sign1_i (_GEN_174),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_exp1_i  (_GEN_175),	// src/main/scala/pvu/PvuTop.scala:463:27
+    .io_pir_frac1_i (_GEN_176),	// src/main/scala/pvu/PvuTop.scala:463:27
     .io_posit_o     (_convert64_io_posit_o)
   );
-  FloatToPosit float2posit_fp4 (	// src/main/scala/pvu/PvuTop.scala:593:38
+  FloatToPosit float2posit_fp4 (	// src/main/scala/pvu/PvuTop.scala:597:38
     .io_float_in
       ({{io_float_i_3[3:0]},
         {io_float_i_2[3:0]},
         {io_float_i_1[3:0]},
-        {io_float_i_0[3:0]}}),	// src/main/scala/pvu/PvuTop.scala:593:38, :600:38
+        {io_float_i_0[3:0]}}),	// src/main/scala/pvu/PvuTop.scala:597:38, :604:38
     .io_posit_out (_float2posit_fp4_io_posit_out)
   );
-  PositToFloat posit2float_fp4 (	// src/main/scala/pvu/PvuTop.scala:618:38
-    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:28:8
+  PositToFloat posit2float_fp4 (	// src/main/scala/pvu/PvuTop.scala:622:38
+    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:29:8
     .io_float_out (_posit2float_fp4_io_float_out)
   );
-  FloatToPosit_1 float2posit_fp8 (	// src/main/scala/pvu/PvuTop.scala:631:38
+  FloatToPosit_1 float2posit_fp8 (	// src/main/scala/pvu/PvuTop.scala:635:38
     .io_float_in
       ({{io_float_i_3[7:0]},
         {io_float_i_2[7:0]},
         {io_float_i_1[7:0]},
-        {io_float_i_0[7:0]}}),	// src/main/scala/pvu/PvuTop.scala:631:38, :638:38
+        {io_float_i_0[7:0]}}),	// src/main/scala/pvu/PvuTop.scala:635:38, :642:38
     .io_posit_out (_float2posit_fp8_io_posit_out)
   );
-  PositToFloat_1 posit2float_fp8 (	// src/main/scala/pvu/PvuTop.scala:656:38
-    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:28:8
+  PositToFloat_1 posit2float_fp8 (	// src/main/scala/pvu/PvuTop.scala:660:38
+    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:29:8
     .io_float_out (_posit2float_fp8_io_float_out)
   );
-  FloatToPosit_2 float2posit_fp16 (	// src/main/scala/pvu/PvuTop.scala:669:39
+  FloatToPosit_2 float2posit_fp16 (	// src/main/scala/pvu/PvuTop.scala:673:39
     .io_float_in
       ({{io_float_i_3[15:0]},
         {io_float_i_2[15:0]},
         {io_float_i_1[15:0]},
-        {io_float_i_0[15:0]}}),	// src/main/scala/pvu/PvuTop.scala:669:39, :676:39
+        {io_float_i_0[15:0]}}),	// src/main/scala/pvu/PvuTop.scala:673:39, :680:39
     .io_posit_out (_float2posit_fp16_io_posit_out)
   );
-  PositToFloat_2 posit2float_fp16 (	// src/main/scala/pvu/PvuTop.scala:694:39
-    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:28:8
+  PositToFloat_2 posit2float_fp16 (	// src/main/scala/pvu/PvuTop.scala:698:39
+    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:29:8
     .io_float_out (_posit2float_fp16_io_float_out)
   );
-  FloatToPosit_3 float2posit_fp32 (	// src/main/scala/pvu/PvuTop.scala:707:39
-    .io_float_in  (_GEN_133),	// src/main/scala/pvu/PvuTop.scala:707:39
+  FloatToPosit_3 float2posit_fp32 (	// src/main/scala/pvu/PvuTop.scala:711:39
+    .io_float_in  (_GEN_171),	// src/main/scala/pvu/PvuTop.scala:711:39
     .io_posit_out (_float2posit_fp32_io_posit_out)
   );
-  PositToFloat_3 posit2float_fp32 (	// src/main/scala/pvu/PvuTop.scala:732:39
-    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:28:8
+  PositToFloat_3 posit2float_fp32 (	// src/main/scala/pvu/PvuTop.scala:736:39
+    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:29:8
     .io_float_out (_posit2float_fp32_io_float_out)
   );
-  FloatToPosit_4 float2posit_fp64 (	// src/main/scala/pvu/PvuTop.scala:745:39
-    .io_float_in  ({{io_float_i_3}, {io_float_i_2}, {io_float_i_1}, {io_float_i_0}}),	// src/main/scala/pvu/PvuTop.scala:28:8
+  FloatToPosit_4 float2posit_fp64 (	// src/main/scala/pvu/PvuTop.scala:749:39
+    .io_float_in  ({{io_float_i_3}, {io_float_i_2}, {io_float_i_1}, {io_float_i_0}}),	// src/main/scala/pvu/PvuTop.scala:29:8
     .io_posit_out (_float2posit_fp64_io_posit_out)
   );
-  PositToFloat_4 posit2float_fp64 (	// src/main/scala/pvu/PvuTop.scala:770:39
-    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:28:8
+  PositToFloat_4 posit2float_fp64 (	// src/main/scala/pvu/PvuTop.scala:774:39
+    .io_posit_in  (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:29:8
     .io_float_out (_posit2float_fp64_io_float_out)
   );
-  PositGreater greater (	// src/main/scala/pvu/PvuTop.scala:795:26
-    .io_pir_sign1_i     (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_sign2_i     (_GEN_134),	// src/main/scala/pvu/PvuTop.scala:121:23
-    .io_pir_exp1_i      (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_exp2_i      (_GEN_135),	// src/main/scala/pvu/PvuTop.scala:122:23
-    .io_pir_frac1_i     (pir_frac),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_frac2_i     (pir_frac2),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_posit_i1        (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:28:8
-    .io_posit_i2        (_GEN_3),	// src/main/scala/pvu/PvuTop.scala:28:8
+  PositGreater greater (	// src/main/scala/pvu/PvuTop.scala:799:26
+    .io_pir_sign1_i     (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_sign2_i     (_GEN_172),	// src/main/scala/pvu/PvuTop.scala:125:23
+    .io_pir_exp1_i      (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_exp2_i      (_GEN_173),	// src/main/scala/pvu/PvuTop.scala:126:23
+    .io_pir_frac1_i     (pir_frac),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_frac2_i     (pir_frac2),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_posit_i1        (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:29:8
+    .io_posit_i2        (_GEN_3),	// src/main/scala/pvu/PvuTop.scala:29:8
     .io_posit_o         (_greater_io_posit_o),
     .io_pir_sign_o      (_greater_io_pir_sign_o),
     .io_pir_exp_o       (_greater_io_pir_exp_o),
     .io_pir_frac_o      (/* unused */),
     .io_dst_posit_width (io_dst_posit_width)
   );
-  PositLess less (	// src/main/scala/pvu/PvuTop.scala:820:23
-    .io_pir_sign1_i     (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_sign2_i     (_GEN_134),	// src/main/scala/pvu/PvuTop.scala:121:23
-    .io_pir_exp1_i      (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_exp2_i      (_GEN_135),	// src/main/scala/pvu/PvuTop.scala:122:23
-    .io_pir_frac1_i     (pir_frac),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_frac2_i     (pir_frac2),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_posit_i1        (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:28:8
-    .io_posit_i2        (_GEN_3),	// src/main/scala/pvu/PvuTop.scala:28:8
+  PositLess less (	// src/main/scala/pvu/PvuTop.scala:824:23
+    .io_pir_sign1_i     (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_sign2_i     (_GEN_172),	// src/main/scala/pvu/PvuTop.scala:125:23
+    .io_pir_exp1_i      (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_exp2_i      (_GEN_173),	// src/main/scala/pvu/PvuTop.scala:126:23
+    .io_pir_frac1_i     (pir_frac),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_frac2_i     (pir_frac2),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_posit_i1        (_GEN_2),	// src/main/scala/pvu/PvuTop.scala:29:8
+    .io_posit_i2        (_GEN_3),	// src/main/scala/pvu/PvuTop.scala:29:8
     .io_posit_o         (_less_io_posit_o),
     .io_pir_sign_o      (_less_io_pir_sign_o),
     .io_pir_exp_o       (_less_io_pir_exp_o),
     .io_pir_frac_o      (/* unused */),
     .io_dst_posit_width (io_dst_posit_width)
   );
-  PositQuantizeToInt8 quantizeInt8 (	// src/main/scala/pvu/PvuTop.scala:845:31
+  PositQuantizeToInt8 quantizeInt8 (	// src/main/scala/pvu/PvuTop.scala:849:31
     .clock         (clock),
     .reset         (reset),
-    .io_pir_sign_i (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_exp_i  (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:246:21
-    .io_pir_frac_i (pir_frac),	// src/main/scala/pvu/PvuTop.scala:246:21
+    .io_pir_sign_i (_GEN_40),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_exp_i  (_GEN_43),	// src/main/scala/pvu/PvuTop.scala:250:21
+    .io_pir_frac_i (pir_frac),	// src/main/scala/pvu/PvuTop.scala:250:21
     .io_int8_o     (_quantizeInt8_io_int8_o)
   );
-  FracNorm_DotProduct frac_norm_dot (	// src/main/scala/pvu/PvuTop.scala:889:30
-    .io_pir_frac_i (_GEN_52 ? 59'h0 : _dotproduct_io_pir_frac_o),	// src/main/scala/pvu/PvuTop.scala:330:17, :331:17, :333:23, :370:29, :402:29, :416:29, :442:29, :443:28
+  FloatConvert fp4_to_fp4 (	// src/main/scala/pvu/PvuTop.scala:871:31
+    .io_float_in
+      ({{ACTUAL_VECTOR_SIZE[2] & _GEN_102 ? _GEN_123[io_float_mode] : 64'h0},
+        {_valid_range_2_T & _GEN_102 ? _GEN_121[io_float_mode] : 64'h0},
+        {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_102 ? _GEN_119[io_float_mode] : 64'h0},
+        {(|ACTUAL_VECTOR_SIZE) & _GEN_102 ? _GEN_100[io_float_mode] : 64'h0}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :230:36, :246:29, :253:38, :254:38, :591:{22,32}, :594:28, :792:{19,29}, :871:31, :904:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :966:52
+    .io_float_out (_fp4_to_fp4_io_float_out)
+  );
+  FloatConvert_1 fp4_to_fp8 (	// src/main/scala/pvu/PvuTop.scala:872:31
+    .io_float_in
+      ({{~_GEN_124 | _GEN_104 ? 64'h0 : _GEN_123[io_float_mode]},
+        {~_GEN_122 | _GEN_104 ? 64'h0 : _GEN_121[io_float_mode]},
+        {~_GEN_120 | _GEN_104 ? 64'h0 : _GEN_119[io_float_mode]},
+        {~_GEN_105 | _GEN_104 ? 64'h0 : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :253:38, :254:38, :591:{22,32}, :594:28, :792:{19,29}, :872:31, :905:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34
+    .io_float_out (_fp4_to_fp8_io_float_out)
+  );
+  FloatConvert_2 fp4_to_fp16 (	// src/main/scala/pvu/PvuTop.scala:873:31
+    .io_float_in
+      ({{~_GEN_124 | _GEN_107 ? 64'h0 : _GEN_123[io_float_mode]},
+        {~_GEN_122 | _GEN_107 ? 64'h0 : _GEN_121[io_float_mode]},
+        {~_GEN_120 | _GEN_107 ? 64'h0 : _GEN_119[io_float_mode]},
+        {~_GEN_105 | _GEN_107 ? 64'h0 : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :253:38, :254:38, :591:{22,32}, :594:28, :792:{19,29}, :873:31, :905:36, :906:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34
+    .io_float_out (_fp4_to_fp16_io_float_out)
+  );
+  FloatConvert_3 fp4_to_fp32 (	// src/main/scala/pvu/PvuTop.scala:874:31
+    .io_float_in
+      ({{~_GEN_124 | _GEN_109 ? 64'h0 : _GEN_123[io_float_mode]},
+        {~_GEN_122 | _GEN_109 ? 64'h0 : _GEN_121[io_float_mode]},
+        {~_GEN_120 | _GEN_109 ? 64'h0 : _GEN_119[io_float_mode]},
+        {~_GEN_105 | _GEN_109 ? 64'h0 : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :253:38, :254:38, :591:{22,32}, :594:28, :792:{19,29}, :874:31, :905:36, :907:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34
+    .io_float_out (_fp4_to_fp32_io_float_out)
+  );
+  FloatConvert_4 fp4_to_fp64 (	// src/main/scala/pvu/PvuTop.scala:875:31
+    .io_float_in
+      ({{~_GEN_124 | _GEN_111 ? 64'h0 : _GEN_123[io_float_mode]},
+        {~_GEN_122 | _GEN_111 ? 64'h0 : _GEN_121[io_float_mode]},
+        {~_GEN_120 | _GEN_111 ? 64'h0 : _GEN_119[io_float_mode]},
+        {~_GEN_105 | _GEN_111 ? 64'h0 : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :253:38, :254:38, :591:{22,32}, :594:28, :792:{19,29}, :875:31, :905:36, :908:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34
+    .io_float_out (_fp4_to_fp64_io_float_out)
+  );
+  FloatConvert_5 fp8_to_fp4 (	// src/main/scala/pvu/PvuTop.scala:877:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_62 | ~_GEN_112
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_62 | ~_GEN_112 ? 64'h0 : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_62 | ~_GEN_112
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_62 | ~_GEN_112
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :877:31, :910:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :975:34, :976:52
+    .io_float_out (_fp8_to_fp4_io_float_out)
+  );
+  FloatConvert_6 fp8_to_fp8 (	// src/main/scala/pvu/PvuTop.scala:878:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_62 | ~_GEN_64 | _GEN_104
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_62 | ~_GEN_64 | _GEN_104
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_62 | ~_GEN_64 | _GEN_104
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_62 | ~_GEN_64 | _GEN_104
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :878:31, :905:36, :911:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :975:34
+    .io_float_out (_fp8_to_fp8_io_float_out)
+  );
+  FloatConvert_7 fp8_to_fp16 (	// src/main/scala/pvu/PvuTop.scala:879:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_62 | ~_GEN_64 | _GEN_107
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_62 | ~_GEN_64 | _GEN_107
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_62 | ~_GEN_64 | _GEN_107
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_62 | ~_GEN_64 | _GEN_107
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :879:31, :906:36, :911:36, :912:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :975:34
+    .io_float_out (_fp8_to_fp16_io_float_out)
+  );
+  FloatConvert_8 fp8_to_fp32 (	// src/main/scala/pvu/PvuTop.scala:880:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_62 | ~_GEN_64 | _GEN_109
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_62 | ~_GEN_64 | _GEN_109
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_62 | ~_GEN_64 | _GEN_109
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_62 | ~_GEN_64 | _GEN_109
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :880:31, :907:36, :911:36, :913:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :975:34
+    .io_float_out (_fp8_to_fp32_io_float_out)
+  );
+  FloatConvert_9 fp8_to_fp64 (	// src/main/scala/pvu/PvuTop.scala:881:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_62 | ~_GEN_64 | _GEN_111
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_62 | ~_GEN_64 | _GEN_111
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_62 | ~_GEN_64 | _GEN_111
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_62 | ~_GEN_64 | _GEN_111
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :881:31, :908:36, :911:36, :914:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :975:34
+    .io_float_out (_fp8_to_fp64_io_float_out)
+  );
+  FloatConvert_10 fp16_to_fp4 (	// src/main/scala/pvu/PvuTop.scala:883:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_114 | ~_GEN_113
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_114 | ~_GEN_113 ? 64'h0 : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_114 | ~_GEN_113
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_114 | ~_GEN_113
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :883:31, :916:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :985:34, :986:53
+    .io_float_out (_fp16_to_fp4_io_float_out)
+  );
+  FloatConvert_11 fp16_to_fp8 (	// src/main/scala/pvu/PvuTop.scala:884:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_114 | ~_GEN_65 | _GEN_104
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_114 | ~_GEN_65 | _GEN_104
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_114 | ~_GEN_65 | _GEN_104
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_114 | ~_GEN_65 | _GEN_104
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :884:31, :905:36, :916:36, :917:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :985:34
+    .io_float_out (_fp16_to_fp8_io_float_out)
+  );
+  FloatConvert_12 fp16_to_fp16 (	// src/main/scala/pvu/PvuTop.scala:885:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_114 | ~_GEN_65 | _GEN_107
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_114 | ~_GEN_65 | _GEN_107
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_114 | ~_GEN_65 | _GEN_107
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_114 | ~_GEN_65 | _GEN_107
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :885:31, :906:36, :916:36, :917:36, :918:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :985:34
+    .io_float_out (_fp16_to_fp16_io_float_out)
+  );
+  FloatConvert_13 fp16_to_fp32 (	// src/main/scala/pvu/PvuTop.scala:886:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_114 | ~_GEN_65 | _GEN_109
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_114 | ~_GEN_65 | _GEN_109
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_114 | ~_GEN_65 | _GEN_109
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_114 | ~_GEN_65 | _GEN_109
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :886:31, :907:36, :916:36, :917:36, :919:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :985:34
+    .io_float_out (_fp16_to_fp32_io_float_out)
+  );
+  FloatConvert_14 fp16_to_fp64 (	// src/main/scala/pvu/PvuTop.scala:887:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_114 | ~_GEN_65 | _GEN_111
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_114 | ~_GEN_65 | _GEN_111
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_114 | ~_GEN_65 | _GEN_111
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_114 | ~_GEN_65 | _GEN_111
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :887:31, :908:36, :916:36, :917:36, :920:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :985:34
+    .io_float_out (_fp16_to_fp64_io_float_out)
+  );
+  FloatConvert_15 fp32_to_fp4 (	// src/main/scala/pvu/PvuTop.scala:889:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_116 | ~_GEN_115
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_116 | ~_GEN_115 ? 64'h0 : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_116 | ~_GEN_115
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_116 | ~_GEN_115
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :889:31, :922:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :995:34, :996:53
+    .io_float_out (_fp32_to_fp4_io_float_out)
+  );
+  FloatConvert_16 fp32_to_fp8 (	// src/main/scala/pvu/PvuTop.scala:890:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_116 | ~_GEN_66 | _GEN_104
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_116 | ~_GEN_66 | _GEN_104
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_116 | ~_GEN_66 | _GEN_104
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_116 | ~_GEN_66 | _GEN_104
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :890:31, :905:36, :922:36, :923:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :995:34
+    .io_float_out (_fp32_to_fp8_io_float_out)
+  );
+  FloatConvert_17 fp32_to_fp16 (	// src/main/scala/pvu/PvuTop.scala:891:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_116 | ~_GEN_66 | _GEN_107
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_116 | ~_GEN_66 | _GEN_107
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_116 | ~_GEN_66 | _GEN_107
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_116 | ~_GEN_66 | _GEN_107
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :891:31, :906:36, :922:36, :923:36, :924:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :995:34
+    .io_float_out (_fp32_to_fp16_io_float_out)
+  );
+  FloatConvert_18 fp32_to_fp32 (	// src/main/scala/pvu/PvuTop.scala:892:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_116 | ~_GEN_66 | _GEN_109
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_116 | ~_GEN_66 | _GEN_109
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_116 | ~_GEN_66 | _GEN_109
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_116 | ~_GEN_66 | _GEN_109
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :892:31, :907:36, :922:36, :923:36, :925:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :995:34
+    .io_float_out (_fp32_to_fp32_io_float_out)
+  );
+  FloatConvert_19 fp32_to_fp64 (	// src/main/scala/pvu/PvuTop.scala:893:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_116 | ~_GEN_66 | _GEN_111
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_116 | ~_GEN_66 | _GEN_111
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_116 | ~_GEN_66 | _GEN_111
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_116 | ~_GEN_66 | _GEN_111
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :893:31, :908:36, :922:36, :923:36, :926:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :995:34
+    .io_float_out (_fp32_to_fp64_io_float_out)
+  );
+  FloatConvert_20 fp64_to_fp4 (	// src/main/scala/pvu/PvuTop.scala:895:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_118 | ~_GEN_117
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_118 | ~_GEN_117 ? 64'h0 : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_118 | ~_GEN_117
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_118 | ~_GEN_117
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :895:31, :928:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :1005:34, :1006:53
+    .io_float_out (_fp64_to_fp4_io_float_out)
+  );
+  FloatConvert_21 fp64_to_fp8 (	// src/main/scala/pvu/PvuTop.scala:896:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_118 | ~_GEN_67 | _GEN_104
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_118 | ~_GEN_67 | _GEN_104
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_118 | ~_GEN_67 | _GEN_104
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_118 | ~_GEN_67 | _GEN_104
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :896:31, :905:36, :928:36, :929:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :1005:34
+    .io_float_out (_fp64_to_fp8_io_float_out)
+  );
+  FloatConvert_22 fp64_to_fp16 (	// src/main/scala/pvu/PvuTop.scala:897:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_118 | ~_GEN_67 | _GEN_107
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_118 | ~_GEN_67 | _GEN_107
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_118 | ~_GEN_67 | _GEN_107
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_118 | ~_GEN_67 | _GEN_107
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :897:31, :906:36, :928:36, :929:36, :930:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :1005:34
+    .io_float_out (_fp64_to_fp16_io_float_out)
+  );
+  FloatConvert_23 fp64_to_fp32 (	// src/main/scala/pvu/PvuTop.scala:898:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_118 | ~_GEN_67 | _GEN_109
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_118 | ~_GEN_67 | _GEN_109
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_118 | ~_GEN_67 | _GEN_109
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_118 | ~_GEN_67 | _GEN_109
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :898:31, :907:36, :928:36, :929:36, :931:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :1005:34
+    .io_float_out (_fp64_to_fp32_io_float_out)
+  );
+  FloatConvert_24 fp64_to_fp64 (	// src/main/scala/pvu/PvuTop.scala:899:31
+    .io_float_in
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | _GEN_118 | ~_GEN_67 | _GEN_111
+           ? 64'h0
+           : _GEN_123[io_float_mode]},
+        {~_valid_range_2_T | _GEN_118 | ~_GEN_67 | _GEN_111
+           ? 64'h0
+           : _GEN_121[io_float_mode]},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_118 | ~_GEN_67 | _GEN_111
+           ? 64'h0
+           : _GEN_119[io_float_mode]},
+        {~(|ACTUAL_VECTOR_SIZE) | _GEN_118 | ~_GEN_67 | _GEN_111
+           ? 64'h0
+           : _GEN_100[io_float_mode]}}),	// src/main/scala/pvu/PvuTop.scala:174:{18,28}, :194:26, :230:36, :246:29, :250:21, :253:38, :254:38, :274:29, :591:{22,32}, :594:28, :792:{19,29}, :899:31, :908:36, :928:36, :929:36, :932:36, :937:29, :942:21, :944:32, :946:25, :949:25, :952:25, :955:25, :958:25, :963:32, :965:34, :1005:34
+    .io_float_out (_fp64_to_fp64_io_float_out)
+  );
+  FracNorm_DotProduct frac_norm_dot (	// src/main/scala/pvu/PvuTop.scala:1149:30
+    .io_pir_frac_i (_GEN_52 ? 59'h0 : _dotproduct_io_pir_frac_o),	// src/main/scala/pvu/PvuTop.scala:334:17, :335:17, :337:23, :374:29, :406:29, :420:29, :446:29, :447:28
     .io_exp_adjust (_frac_norm_dot_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_dot_io_pir_frac_o)
   );
-  FracNorm frac_norm_add (	// src/main/scala/pvu/PvuTop.scala:894:32
+  FracNorm frac_norm_add (	// src/main/scala/pvu/PvuTop.scala:1154:32
     .io_pir_frac_i
       ({{ACTUAL_VECTOR_SIZE[2] & _GEN_46 ? _add_io_pir_frac_o[2'h3] : 30'h0},
         {_valid_range_2_T & _GEN_46 ? _add_io_pir_frac_o[2'h2] : 30'h0},
         {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_46 ? _add_io_pir_frac_o[2'h1] : 30'h0},
-        {(|ACTUAL_VECTOR_SIZE) & _GEN_46 ? _add_io_pir_frac_o[2'h0] : 30'h0}}),	// src/main/scala/pvu/PvuTop.scala:28:8, :226:36, :234:34, :235:55, :242:29, :319:26, :333:15, :345:28, :364:30, :894:32, :897:39, :901:29, :902:41
+        {(|ACTUAL_VECTOR_SIZE) & _GEN_46 ? _add_io_pir_frac_o[2'h0] : 30'h0}}),	// src/main/scala/pvu/PvuTop.scala:29:8, :230:36, :238:34, :239:55, :246:29, :323:26, :337:15, :349:28, :368:30, :1154:32, :1157:39, :1161:29, :1162:41
     .io_exp_adjust (_frac_norm_add_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_add_io_pir_frac_o)
   );
-  FracNorm frac_norm_sub (	// src/main/scala/pvu/PvuTop.scala:908:47
-    .io_pir_frac_i (_GEN_46 | ~_GEN_47 ? _GEN_0 : _sub_io_pir_frac_o),	// src/main/scala/pvu/PvuTop.scala:300:31, :320:26, :333:{15,23}, :370:{21,29}, :381:28
+  FracNorm frac_norm_sub (	// src/main/scala/pvu/PvuTop.scala:1168:47
+    .io_pir_frac_i (_GEN_46 | ~_GEN_47 ? _GEN_0 : _sub_io_pir_frac_o),	// src/main/scala/pvu/PvuTop.scala:304:31, :324:26, :337:{15,23}, :374:{21,29}, :385:28
     .io_exp_adjust (_frac_norm_sub_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_sub_io_pir_frac_o)
   );
-  FracNorm_2 frac_norm_mul (	// src/main/scala/pvu/PvuTop.scala:913:47
+  FracNorm_2 frac_norm_mul (	// src/main/scala/pvu/PvuTop.scala:1173:47
     .io_pir_frac_i
       (_GEN_46 | _GEN_47 | ~_GEN_48
          ? _GEN
          : {{{12'h0, _mul_io_pir_frac_o[2'h3]}},
             {{12'h0, _mul_io_pir_frac_o[2'h2]}},
             {{12'h0, _mul_io_pir_frac_o[2'h1]}},
-            {{12'h0, _mul_io_pir_frac_o[2'h0]}}}),	// src/main/scala/pvu/PvuTop.scala:28:8, :234:34, :235:55, :301:31, :321:26, :333:{15,23}, :370:{21,29}, :402:{21,29}, :403:22, :414:23
+            {{12'h0, _mul_io_pir_frac_o[2'h0]}}}),	// src/main/scala/pvu/PvuTop.scala:29:8, :238:34, :239:55, :305:31, :325:26, :337:{15,23}, :374:{21,29}, :406:{21,29}, :407:22, :418:23
     .io_exp_adjust (_frac_norm_mul_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_mul_io_pir_frac_o)
   );
-  FracNorm_3 frac_norm_div (	// src/main/scala/pvu/PvuTop.scala:918:47
+  FracNorm_3 frac_norm_div (	// src/main/scala/pvu/PvuTop.scala:1178:47
     .io_pir_frac_i
       (_GEN_46 | _GEN_47 | _GEN_48 | ~_GEN_49
          ? _GEN
          : {{{12'h0, _div_inst_io_pir_frac_o[2'h3]}},
             {{12'h0, _div_inst_io_pir_frac_o[2'h2]}},
             {{12'h0, _div_inst_io_pir_frac_o[2'h1]}},
-            {{12'h0, _div_inst_io_pir_frac_o[2'h0]}}}),	// src/main/scala/pvu/PvuTop.scala:28:8, :234:34, :235:55, :302:31, :321:26, :322:26, :333:{15,23}, :370:{21,29}, :402:{21,29}, :414:23, :416:{21,29}, :417:27, :428:23
+            {{12'h0, _div_inst_io_pir_frac_o[2'h0]}}}),	// src/main/scala/pvu/PvuTop.scala:29:8, :238:34, :239:55, :306:31, :325:26, :326:26, :337:{15,23}, :374:{21,29}, :406:{21,29}, :418:23, :420:{21,29}, :421:27, :432:23
     .io_exp_adjust (_frac_norm_div_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_div_io_pir_frac_o)
   );
-  PositEncode_DotProduct encode_dot (	// src/main/scala/pvu/PvuTop.scala:1018:29
-    .io_pir_sign (pir_sign_dot),	// src/main/scala/pvu/PvuTop.scala:329:17, :333:23, :370:29, :402:29, :416:29, :442:29
-    .io_pir_exp  (_GEN_50 ? _pir_exp_rst_adjusied_dot_T : 8'h0),	// src/main/scala/pvu/PvuTop.scala:442:21, :933:{29,39}, :934:29, :937:23, :938:{31,53}
-    .io_pir_frac (pir_frac_normed_dot),	// src/main/scala/pvu/PvuTop.scala:881:24, :883:23, :891:36
+  PositEncode_DotProduct encode_dot (	// src/main/scala/pvu/PvuTop.scala:1278:29
+    .io_pir_sign (pir_sign_dot),	// src/main/scala/pvu/PvuTop.scala:333:17, :337:23, :374:29, :406:29, :420:29, :446:29
+    .io_pir_exp  (_GEN_50 ? _pir_exp_rst_adjusied_dot_T : 8'h0),	// src/main/scala/pvu/PvuTop.scala:446:21, :1193:{29,39}, :1194:29, :1197:23, :1198:{31,53}
+    .io_pir_frac (pir_frac_normed_dot),	// src/main/scala/pvu/PvuTop.scala:1141:24, :1143:23, :1151:36
     .io_posit    (_encode_dot_io_posit)
   );
-  PositDecode_7 dot_decoder (	// src/main/scala/pvu/PvuTop.scala:1027:30
-    .io_posit ({1{_encode_dot_io_posit}}),	// src/main/scala/pvu/PvuTop.scala:1018:29, :1027:30
+  PositDecode_7 dot_decoder (	// src/main/scala/pvu/PvuTop.scala:1287:30
+    .io_posit ({1{_encode_dot_io_posit}}),	// src/main/scala/pvu/PvuTop.scala:1278:29, :1287:30
     .io_Sign  (_dot_decoder_io_Sign),
     .io_Exp   (_dot_decoder_io_Exp),
     .io_Frac  (_dot_decoder_io_Frac)
   );
-  PositConvert_8 dot_converter (	// src/main/scala/pvu/PvuTop.scala:1031:32
-    .io_pir_sign1_i (_dot_decoder_io_Sign),	// src/main/scala/pvu/PvuTop.scala:1027:30
-    .io_pir_exp1_i  (_dot_decoder_io_Exp),	// src/main/scala/pvu/PvuTop.scala:1027:30
-    .io_pir_frac1_i (_dot_decoder_io_Frac),	// src/main/scala/pvu/PvuTop.scala:1027:30
+  PositConvert_8 dot_converter (	// src/main/scala/pvu/PvuTop.scala:1291:32
+    .io_pir_sign1_i (_dot_decoder_io_Sign),	// src/main/scala/pvu/PvuTop.scala:1287:30
+    .io_pir_exp1_i  (_dot_decoder_io_Exp),	// src/main/scala/pvu/PvuTop.scala:1287:30
+    .io_pir_frac1_i (_dot_decoder_io_Frac),	// src/main/scala/pvu/PvuTop.scala:1287:30
     .io_posit_o     (_dot_converter_io_posit_o)
   );
-  PositDecode_7 dot_converted_decoder (	// src/main/scala/pvu/PvuTop.scala:1045:40
-    .io_posit (_dot_converter_io_posit_o),	// src/main/scala/pvu/PvuTop.scala:1031:32
+  PositDecode_7 dot_converted_decoder (	// src/main/scala/pvu/PvuTop.scala:1305:40
+    .io_posit (_dot_converter_io_posit_o),	// src/main/scala/pvu/PvuTop.scala:1291:32
     .io_Sign  (_dot_converted_decoder_io_Sign),
     .io_Exp   (_dot_converted_decoder_io_Exp),
     .io_Frac  (_dot_converted_decoder_io_Frac)
   );
-  PositEncode_15 dot_encoder (	// src/main/scala/pvu/PvuTop.scala:1049:30
-    .io_pir_sign (_dot_converted_decoder_io_Sign),	// src/main/scala/pvu/PvuTop.scala:1045:40
-    .io_pir_exp  (_dot_converted_decoder_io_Exp),	// src/main/scala/pvu/PvuTop.scala:1045:40
-    .io_pir_frac (_dot_converted_decoder_io_Frac),	// src/main/scala/pvu/PvuTop.scala:1045:40
+  PositEncode_15 dot_encoder (	// src/main/scala/pvu/PvuTop.scala:1309:30
+    .io_pir_sign (_dot_converted_decoder_io_Sign),	// src/main/scala/pvu/PvuTop.scala:1305:40
+    .io_pir_exp  (_dot_converted_decoder_io_Exp),	// src/main/scala/pvu/PvuTop.scala:1305:40
+    .io_pir_frac (_dot_converted_decoder_io_Frac),	// src/main/scala/pvu/PvuTop.scala:1305:40
     .io_posit    (_dot_encoder_io_posit)
   );
-  FloatEncode_5 floatDotEncoder (	// src/main/scala/pvu/PvuTop.scala:1096:34
-    .io_Sign   ({1{_GEN_106 & pir_sign_dot}}),	// src/main/scala/pvu/PvuTop.scala:215:25, :329:17, :333:23, :370:29, :402:29, :416:29, :442:29, :947:22, :949:26, :951:30, :1096:34
-    .io_Exp    ({1{{_GEN_107[7], _GEN_107}}}),	// src/main/scala/pvu/PvuTop.scala:216:25, :947:22, :949:26, :952:30, :1096:34, :1103:35
-    .io_Frac   ({1{{1'h0, _GEN_106 ? pir_frac_normed_dot[22:0] : 23'h0}}}),	// src/main/scala/pvu/PvuTop.scala:182:18, :191:26, :215:25, :217:25, :881:24, :883:23, :891:36, :947:22, :949:26, :951:30, :953:{30,52}, :1096:34, :1104:35
+  FloatEncode_5 floatDotEncoder (	// src/main/scala/pvu/PvuTop.scala:1356:34
+    .io_Sign   ({1{_GEN_144 & pir_sign_dot}}),	// src/main/scala/pvu/PvuTop.scala:219:25, :333:17, :337:23, :374:29, :406:29, :420:29, :446:29, :1207:22, :1209:26, :1211:30, :1356:34
+    .io_Exp    ({1{{_GEN_145[7], _GEN_145}}}),	// src/main/scala/pvu/PvuTop.scala:220:25, :1207:22, :1209:26, :1212:30, :1356:34, :1363:35
+    .io_Frac   ({1{{1'h0, _GEN_144 ? pir_frac_normed_dot[22:0] : 23'h0}}}),	// src/main/scala/pvu/PvuTop.scala:186:18, :195:26, :219:25, :221:25, :1141:24, :1143:23, :1151:36, :1207:22, :1209:26, :1211:30, :1213:{30,52}, :1356:34, :1364:35
     .io_isNaN
-      ({1{_GEN_112
-       & (ACTUAL_VECTOR_SIZE[2] & _GEN_111 | _valid_range_2_T & _GEN_110
-          | (|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_109 | (|ACTUAL_VECTOR_SIZE)
-          & _GEN_108)}}),	// src/main/scala/pvu/PvuTop.scala:218:25, :226:36, :242:29, :947:22, :949:26, :954:30, :964:26, :966:{32,56,82}, :967:35, :1096:34
+      ({1{_GEN_150
+       & (ACTUAL_VECTOR_SIZE[2] & _GEN_149 | _valid_range_2_T & _GEN_148
+          | (|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_147 | (|ACTUAL_VECTOR_SIZE)
+          & _GEN_146)}}),	// src/main/scala/pvu/PvuTop.scala:222:25, :230:36, :246:29, :1207:22, :1209:26, :1214:30, :1224:26, :1226:{32,56,82}, :1227:35, :1356:34
     .io_isInf
-      ({1{_GEN_112
+      ({1{_GEN_150
        & (ACTUAL_VECTOR_SIZE[2]
           & (_GEN_37
              & ~(io_Isposit | ~(ACTUAL_VECTOR_SIZE[2]) | _floatDecode2_io_isZero[2'h3])
@@ -10488,116 +18252,114 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
              & ~(io_Isposit | ~(|ACTUAL_VECTOR_SIZE) | _floatDecode2_io_isZero[2'h0])
              | _GEN_14
              & ~(io_Isposit | ~(|ACTUAL_VECTOR_SIZE)
-                 | _floatDecode1_io_isZero[2'h0])))}}),	// src/main/scala/pvu/PvuTop.scala:28:8, :114:28, :115:28, :190:26, :193:26, :194:26, :200:27, :201:27, :218:25, :219:25, :226:36, :234:34, :235:55, :242:29, :246:21, :270:29, :276:31, :283:32, :947:22, :949:26, :954:30, :955:30, :964:26, :966:82, :970:{32,57,60,84,109,112,137}, :971:35, :1096:34
-    .io_isZero ({1{~_GEN_106 | pir_frac_normed_dot == 28'h0}}),	// src/main/scala/pvu/PvuTop.scala:215:25, :220:25, :476:35, :881:24, :883:23, :891:36, :947:22, :949:26, :951:30, :959:{33,42}, :1096:34
+                 | _floatDecode1_io_isZero[2'h0])))}}),	// src/main/scala/pvu/PvuTop.scala:29:8, :118:28, :119:28, :194:26, :197:26, :198:26, :204:27, :205:27, :222:25, :223:25, :230:36, :238:34, :239:55, :246:29, :250:21, :274:29, :280:31, :287:32, :1207:22, :1209:26, :1214:30, :1215:30, :1224:26, :1226:82, :1230:{32,57,60,84,109,112,137}, :1231:35, :1356:34
+    .io_isZero ({1{~_GEN_144 | pir_frac_normed_dot == 28'h0}}),	// src/main/scala/pvu/PvuTop.scala:219:25, :224:25, :480:35, :1141:24, :1143:23, :1151:36, :1207:22, :1209:26, :1211:30, :1219:{33,42}, :1356:34
     .io_float  (_floatDotEncoder_io_float)
   );
-  PositEncode_3 encode (	// src/main/scala/pvu/PvuTop.scala:1140:27
-    .io_pir_sign (_GEN_139),	// src/main/scala/pvu/PvuTop.scala:1140:27
-    .io_pir_exp  (_GEN_140),	// src/main/scala/pvu/PvuTop.scala:1140:27
-    .io_pir_frac (_GEN_141),	// src/main/scala/pvu/PvuTop.scala:1140:27
+  PositEncode_3 encode (	// src/main/scala/pvu/PvuTop.scala:1402:27
+    .io_pir_sign (_GEN_177),	// src/main/scala/pvu/PvuTop.scala:1402:27
+    .io_pir_exp  (_GEN_178),	// src/main/scala/pvu/PvuTop.scala:1402:27
+    .io_pir_frac (_GEN_179),	// src/main/scala/pvu/PvuTop.scala:1402:27
     .io_posit    (_encode_io_posit)
   );
-  PositConvert_3 result_converter (	// src/main/scala/pvu/PvuTop.scala:1167:37
-    .io_pir_sign1_i (_GEN_139),	// src/main/scala/pvu/PvuTop.scala:1140:27
-    .io_pir_exp1_i  (_GEN_140),	// src/main/scala/pvu/PvuTop.scala:1140:27
-    .io_pir_frac1_i (_GEN_141),	// src/main/scala/pvu/PvuTop.scala:1140:27
+  PositConvert_3 result_converter (	// src/main/scala/pvu/PvuTop.scala:1429:37
+    .io_pir_sign1_i (_GEN_177),	// src/main/scala/pvu/PvuTop.scala:1402:27
+    .io_pir_exp1_i  (_GEN_178),	// src/main/scala/pvu/PvuTop.scala:1402:27
+    .io_pir_frac1_i (_GEN_179),	// src/main/scala/pvu/PvuTop.scala:1402:27
     .io_posit_o     (_result_converter_io_posit_o)
   );
-  PositDecode result_converted_decoder (	// src/main/scala/pvu/PvuTop.scala:1193:45
-    .io_posit (_result_converter_io_posit_o),	// src/main/scala/pvu/PvuTop.scala:1167:37
+  PositDecode result_converted_decoder (	// src/main/scala/pvu/PvuTop.scala:1455:45
+    .io_posit (_result_converter_io_posit_o),	// src/main/scala/pvu/PvuTop.scala:1429:37
     .io_Sign  (_result_converted_decoder_io_Sign),
     .io_Exp   (_result_converted_decoder_io_Exp),
     .io_Frac  (_result_converted_decoder_io_Frac)
   );
-  PositEncode_3 result_encoder (	// src/main/scala/pvu/PvuTop.scala:1197:35
+  PositEncode_3 result_encoder (	// src/main/scala/pvu/PvuTop.scala:1459:35
     .io_pir_sign
       ({{ACTUAL_VECTOR_SIZE[2] & _result_converted_decoder_io_Sign[2'h3]},
         {_valid_range_2_T & _result_converted_decoder_io_Sign[2'h2]},
         {(|(ACTUAL_VECTOR_SIZE[2:1])) & _result_converted_decoder_io_Sign[2'h1]},
-        {(|ACTUAL_VECTOR_SIZE) & _result_converted_decoder_io_Sign[2'h0]}}),	// src/main/scala/pvu/PvuTop.scala:28:8, :226:36, :234:34, :235:55, :242:29, :1193:45, :1197:35, :1205:40, :1212:31, :1213:42
+        {(|ACTUAL_VECTOR_SIZE) & _result_converted_decoder_io_Sign[2'h0]}}),	// src/main/scala/pvu/PvuTop.scala:29:8, :230:36, :238:34, :239:55, :246:29, :1455:45, :1459:35, :1467:40, :1474:31, :1475:42
     .io_pir_exp
       ({{ACTUAL_VECTOR_SIZE[2] ? _result_converted_decoder_io_Exp[2'h3] : 8'h0},
         {_valid_range_2_T ? _result_converted_decoder_io_Exp[2'h2] : 8'h0},
         {(|(ACTUAL_VECTOR_SIZE[2:1])) ? _result_converted_decoder_io_Exp[2'h1] : 8'h0},
-        {(|ACTUAL_VECTOR_SIZE) ? _result_converted_decoder_io_Exp[2'h0] : 8'h0}}),	// src/main/scala/pvu/PvuTop.scala:28:8, :226:36, :234:34, :235:55, :242:29, :933:{29,39}, :1193:45, :1197:35, :1206:40, :1212:31, :1214:42
+        {(|ACTUAL_VECTOR_SIZE) ? _result_converted_decoder_io_Exp[2'h0] : 8'h0}}),	// src/main/scala/pvu/PvuTop.scala:29:8, :230:36, :238:34, :239:55, :246:29, :1193:{29,39}, :1455:45, :1459:35, :1468:40, :1474:31, :1476:42
     .io_pir_frac
       ({{ACTUAL_VECTOR_SIZE[2] ? _result_converted_decoder_io_Frac[2'h3] : 28'h0},
         {_valid_range_2_T ? _result_converted_decoder_io_Frac[2'h2] : 28'h0},
         {(|(ACTUAL_VECTOR_SIZE[2:1])) ? _result_converted_decoder_io_Frac[2'h1] : 28'h0},
-        {(|ACTUAL_VECTOR_SIZE) ? _result_converted_decoder_io_Frac[2'h0] : 28'h0}}),	// src/main/scala/pvu/PvuTop.scala:28:8, :226:36, :234:34, :235:55, :242:29, :476:35, :1193:45, :1197:35, :1207:40, :1212:31, :1215:42
+        {(|ACTUAL_VECTOR_SIZE) ? _result_converted_decoder_io_Frac[2'h0] : 28'h0}}),	// src/main/scala/pvu/PvuTop.scala:29:8, :230:36, :238:34, :239:55, :246:29, :480:35, :1455:45, :1459:35, :1469:40, :1474:31, :1477:42
     .io_posit    (_result_encoder_io_posit)
   );
-  FloatEncode_3 floatEncoder (	// src/main/scala/pvu/PvuTop.scala:1265:31
+  FloatEncode_3 floatEncoder (	// src/main/scala/pvu/PvuTop.scala:1527:31
     .io_Sign
-      ({{ACTUAL_VECTOR_SIZE[2] & _GEN_105 & ~_GEN_50 & _GEN_88},
-        {_valid_range_2_T & _GEN_105 & ~_GEN_50 & _GEN_87},
-        {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_105 & ~_GEN_50 & _GEN_86},
-        {(|ACTUAL_VECTOR_SIZE) & _GEN_105 & ~_GEN_50 & _GEN_85}}),	// src/main/scala/pvu/PvuTop.scala:226:36, :242:29, :330:17, :333:23, :361:29, :370:29, :402:29, :416:29, :442:{21,29}, :947:15, :1265:31, :1273:34, :1283:29, :1284:36
+      ({{ACTUAL_VECTOR_SIZE[2] & _GEN_143 & ~_GEN_50 & _GEN_86},
+        {_valid_range_2_T & _GEN_143 & ~_GEN_50 & _GEN_85},
+        {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_143 & ~_GEN_50 & _GEN_84},
+        {(|ACTUAL_VECTOR_SIZE) & _GEN_143 & ~_GEN_50 & _GEN_83}}),	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29, :334:17, :337:23, :365:29, :374:29, :406:29, :420:29, :446:{21,29}, :1207:15, :1527:31, :1535:34, :1545:29, :1546:36
     .io_Exp
-      ({{ACTUAL_VECTOR_SIZE[2] ? {_GEN_118[7], _GEN_118} : 9'h0},
-        {_valid_range_2_T ? {_GEN_117[7], _GEN_117} : 9'h0},
-        {(|(ACTUAL_VECTOR_SIZE[2:1])) ? {_GEN_116[7], _GEN_116} : 9'h0},
-        {(|ACTUAL_VECTOR_SIZE) ? {_GEN_114[7], _GEN_114} : 9'h0}}),	// src/main/scala/pvu/PvuTop.scala:204:30, :226:36, :242:29, :947:22, :949:26, :1265:31, :1274:34, :1283:29, :1285:36
+      ({{ACTUAL_VECTOR_SIZE[2] ? {_GEN_156[7], _GEN_156} : 9'h0},
+        {_valid_range_2_T ? {_GEN_155[7], _GEN_155} : 9'h0},
+        {(|(ACTUAL_VECTOR_SIZE[2:1])) ? {_GEN_154[7], _GEN_154} : 9'h0},
+        {(|ACTUAL_VECTOR_SIZE) ? {_GEN_152[7], _GEN_152} : 9'h0}}),	// src/main/scala/pvu/PvuTop.scala:208:30, :230:36, :246:29, :1207:22, :1209:26, :1527:31, :1536:34, :1545:29, :1547:36
     .io_Frac
-      ({{ACTUAL_VECTOR_SIZE[2] ? {1'h0, _GEN_115 ? 23'h0 : _GEN_104[22:0]} : 24'h0},
-        {_valid_range_2_T ? {1'h0, _GEN_115 ? 23'h0 : _GEN_103[22:0]} : 24'h0},
+      ({{ACTUAL_VECTOR_SIZE[2] ? {1'h0, _GEN_153 ? 23'h0 : _GEN_142[22:0]} : 24'h0},
+        {_valid_range_2_T ? {1'h0, _GEN_153 ? 23'h0 : _GEN_141[22:0]} : 24'h0},
         {(|(ACTUAL_VECTOR_SIZE[2:1]))
-           ? {1'h0, _GEN_115 ? 23'h0 : _GEN_102[22:0]}
+           ? {1'h0, _GEN_153 ? 23'h0 : _GEN_140[22:0]}
            : 24'h0},
-        {(|ACTUAL_VECTOR_SIZE) ? {1'h0, _GEN_115 ? 23'h0 : _GEN_101[22:0]} : 24'h0}}),	// src/main/scala/pvu/PvuTop.scala:182:18, :191:26, :205:30, :226:36, :242:29, :878:25, :883:23, :893:29, :947:22, :949:26, :983:{35,56}, :1265:31, :1275:34, :1283:29, :1286:36
+        {(|ACTUAL_VECTOR_SIZE) ? {1'h0, _GEN_153 ? 23'h0 : _GEN_139[22:0]} : 24'h0}}),	// src/main/scala/pvu/PvuTop.scala:186:18, :195:26, :209:30, :230:36, :246:29, :1138:25, :1143:23, :1153:29, :1207:22, :1209:26, :1243:{35,56}, :1527:31, :1537:34, :1545:29, :1548:36
     .io_isNaN
-      ({{ACTUAL_VECTOR_SIZE[2] & _GEN_105 & ~_GEN_50 & ~io_Isposit & _GEN_111},
-        {_valid_range_2_T & _GEN_105 & ~_GEN_50 & ~io_Isposit & _GEN_110},
-        {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_105 & ~_GEN_50 & ~io_Isposit & _GEN_109},
-        {(|ACTUAL_VECTOR_SIZE) & _GEN_105 & ~_GEN_50 & ~io_Isposit & _GEN_108}}),	// src/main/scala/pvu/PvuTop.scala:226:36, :242:29, :330:17, :333:23, :370:29, :402:29, :416:29, :442:{21,29}, :947:15, :964:13, :966:56, :1265:31, :1276:34, :1283:29, :1287:36
+      ({{ACTUAL_VECTOR_SIZE[2] & _GEN_143 & ~_GEN_50 & ~io_Isposit & _GEN_149},
+        {_valid_range_2_T & _GEN_143 & ~_GEN_50 & ~io_Isposit & _GEN_148},
+        {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_143 & ~_GEN_50 & ~io_Isposit & _GEN_147},
+        {(|ACTUAL_VECTOR_SIZE) & _GEN_143 & ~_GEN_50 & ~io_Isposit & _GEN_146}}),	// src/main/scala/pvu/PvuTop.scala:230:36, :246:29, :334:17, :337:23, :374:29, :406:29, :420:29, :446:{21,29}, :1207:15, :1224:13, :1226:56, :1527:31, :1538:34, :1545:29, :1549:36
     .io_isInf
-      ({{ACTUAL_VECTOR_SIZE[2] & _GEN_105 & ~_GEN_50 & ~io_Isposit & (_GEN_37 | _GEN_38)},
-        {_valid_range_2_T & _GEN_105 & ~_GEN_50 & ~io_Isposit & (_GEN_29 | _GEN_30)},
-        {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_105 & ~_GEN_50 & ~io_Isposit
+      ({{ACTUAL_VECTOR_SIZE[2] & _GEN_143 & ~_GEN_50 & ~io_Isposit & (_GEN_37 | _GEN_38)},
+        {_valid_range_2_T & _GEN_143 & ~_GEN_50 & ~io_Isposit & (_GEN_29 | _GEN_30)},
+        {(|(ACTUAL_VECTOR_SIZE[2:1])) & _GEN_143 & ~_GEN_50 & ~io_Isposit
            & (_GEN_21 | _GEN_22)},
-        {(|ACTUAL_VECTOR_SIZE) & _GEN_105 & ~_GEN_50 & ~io_Isposit
-           & (_GEN_13 | _GEN_14)}}),	// src/main/scala/pvu/PvuTop.scala:193:26, :200:27, :226:36, :242:29, :246:21, :270:29, :330:17, :333:23, :370:29, :402:29, :416:29, :442:{21,29}, :947:15, :964:13, :1007:37, :1265:31, :1277:34, :1283:29, :1288:36
+        {(|ACTUAL_VECTOR_SIZE) & _GEN_143 & ~_GEN_50 & ~io_Isposit
+           & (_GEN_13 | _GEN_14)}}),	// src/main/scala/pvu/PvuTop.scala:197:26, :204:27, :230:36, :246:29, :250:21, :274:29, :334:17, :337:23, :374:29, :406:29, :420:29, :446:{21,29}, :1207:15, :1224:13, :1267:37, :1527:31, :1539:34, :1545:29, :1550:36
     .io_isZero
-      ({{~(ACTUAL_VECTOR_SIZE[2]) | ~_GEN_105 | _GEN_50 | _GEN_104 == 68'h0},
-        {~_valid_range_2_T | ~_GEN_105 | _GEN_50 | _GEN_103 == 68'h0},
-        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | ~_GEN_105 | _GEN_50 | _GEN_102 == 68'h0},
-        {~(|ACTUAL_VECTOR_SIZE) | ~_GEN_105 | _GEN_50 | _GEN_101 == 68'h0}}),	// src/main/scala/pvu/PvuTop.scala:190:26, :204:30, :210:21, :226:36, :242:29, :246:21, :270:29, :442:21, :878:25, :883:23, :893:29, :947:{15,22}, :949:26, :997:34, :1265:31, :1278:34, :1283:29, :1289:36
+      ({{~(ACTUAL_VECTOR_SIZE[2]) | ~_GEN_143 | _GEN_50 | _GEN_142 == 68'h0},
+        {~_valid_range_2_T | ~_GEN_143 | _GEN_50 | _GEN_141 == 68'h0},
+        {~(|(ACTUAL_VECTOR_SIZE[2:1])) | ~_GEN_143 | _GEN_50 | _GEN_140 == 68'h0},
+        {~(|ACTUAL_VECTOR_SIZE) | ~_GEN_143 | _GEN_50 | _GEN_139 == 68'h0}}),	// src/main/scala/pvu/PvuTop.scala:194:26, :208:30, :214:21, :230:36, :246:29, :250:21, :274:29, :446:21, :1138:25, :1143:23, :1153:29, :1207:{15,22}, :1209:26, :1257:34, :1527:31, :1540:34, :1545:29, :1551:36
     .io_float  (_floatEncoder_io_float)
   );
   assign io_float_o_0 =
-    _GEN_130
-      ? _GEN_74
+    _GEN_168
+      ? _GEN_129
       : io_Outposit
-          ? ((|ACTUAL_VECTOR_SIZE) | _GEN_72 | _GEN_71 ? 64'h0 : _GEN_67[io_float_mode])
-          : (|ACTUAL_VECTOR_SIZE) ? {32'h0, _floatEncoder_io_float[2'h0]} : _GEN_74;	// src/main/scala/pvu/PvuTop.scala:28:8, :170:{18,28}, :172:{18,28}, :226:36, :242:29, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :586:{22,32}, :587:{22,32}, :590:28, :626:38, :664:39, :702:39, :740:39, :778:39, :785:27, :788:{19,29}, :792:{19,29}, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1265:31, :1296:24, :1299:31, :1301:26, :1307:31, :1309:26
+          ? ((|ACTUAL_VECTOR_SIZE) | _GEN_128 ? 64'h0 : _GEN_127)
+          : (|ACTUAL_VECTOR_SIZE) ? {32'h0, _floatEncoder_io_float[2'h0]} : _GEN_129;	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :176:{18,28}, :230:36, :246:29, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :590:{22,32}, :591:{22,32}, :789:27, :792:{19,29}, :796:{19,29}, :798:30, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1527:31, :1558:24, :1561:31, :1563:26, :1569:31, :1571:26
   assign io_float_o_1 =
-    _GEN_130
-      ? _GEN_75
+    _GEN_168
+      ? _GEN_132
       : io_Outposit
-          ? ((|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_72 | _GEN_71
-               ? 64'h0
-               : _GEN_68[io_float_mode])
+          ? ((|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_128 ? 64'h0 : _GEN_131)
           : (|(ACTUAL_VECTOR_SIZE[2:1]))
               ? {32'h0, _floatEncoder_io_float[2'h1]}
-              : _GEN_75;	// src/main/scala/pvu/PvuTop.scala:28:8, :170:{18,28}, :172:{18,28}, :226:36, :242:29, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :586:{22,32}, :587:{22,32}, :590:28, :626:38, :664:39, :702:39, :740:39, :778:39, :785:27, :788:{19,29}, :792:{19,29}, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1265:31, :1296:24, :1299:31, :1301:26, :1307:31, :1309:26
+              : _GEN_132;	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :176:{18,28}, :230:36, :246:29, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :590:{22,32}, :591:{22,32}, :789:27, :792:{19,29}, :796:{19,29}, :798:30, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1527:31, :1558:24, :1561:31, :1563:26, :1569:31, :1571:26
   assign io_float_o_2 =
-    _GEN_130
-      ? _GEN_76
+    _GEN_168
+      ? _GEN_135
       : io_Outposit
-          ? (_valid_range_2_T | _GEN_72 | _GEN_71 ? 64'h0 : _GEN_69[io_float_mode])
-          : _valid_range_2_T ? {32'h0, _floatEncoder_io_float[2'h2]} : _GEN_76;	// src/main/scala/pvu/PvuTop.scala:28:8, :170:{18,28}, :172:{18,28}, :234:34, :242:29, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :586:{22,32}, :587:{22,32}, :590:28, :626:38, :664:39, :702:39, :740:39, :778:39, :785:27, :788:{19,29}, :792:{19,29}, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1265:31, :1296:24, :1299:31, :1301:26, :1307:31, :1309:26
+          ? (_valid_range_2_T | _GEN_128 ? 64'h0 : _GEN_134)
+          : _valid_range_2_T ? {32'h0, _floatEncoder_io_float[2'h2]} : _GEN_135;	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :176:{18,28}, :238:34, :246:29, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :590:{22,32}, :591:{22,32}, :789:27, :792:{19,29}, :796:{19,29}, :798:30, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1527:31, :1558:24, :1561:31, :1563:26, :1569:31, :1571:26
   assign io_float_o_3 =
-    _GEN_130
-      ? _GEN_77
+    _GEN_168
+      ? _GEN_138
       : io_Outposit
-          ? (ACTUAL_VECTOR_SIZE[2] | _GEN_72 | _GEN_71 ? 64'h0 : _GEN_70[io_float_mode])
-          : ACTUAL_VECTOR_SIZE[2] ? {32'h0, _floatEncoder_io_float[2'h3]} : _GEN_77;	// src/main/scala/pvu/PvuTop.scala:28:8, :170:{18,28}, :172:{18,28}, :226:36, :235:55, :242:29, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :586:{22,32}, :587:{22,32}, :590:28, :626:38, :664:39, :702:39, :740:39, :778:39, :785:27, :788:{19,29}, :792:{19,29}, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1265:31, :1296:24, :1299:31, :1301:26, :1307:31, :1309:26
+          ? (ACTUAL_VECTOR_SIZE[2] | _GEN_128 ? 64'h0 : _GEN_137)
+          : ACTUAL_VECTOR_SIZE[2] ? {32'h0, _floatEncoder_io_float[2'h3]} : _GEN_138;	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :176:{18,28}, :230:36, :239:55, :246:29, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :590:{22,32}, :591:{22,32}, :789:27, :792:{19,29}, :796:{19,29}, :798:30, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1527:31, :1558:24, :1561:31, :1563:26, :1569:31, :1571:26
   assign io_float_dot_o =
-    ~_GEN_50 | io_Outposit ? 64'h0 : {32'h0, _floatDotEncoder_io_float[1'h0]};	// src/main/scala/pvu/PvuTop.scala:28:8, :170:{18,28}, :171:18, :172:{18,28}, :182:18, :249:{28,38}, :250:{28,38}, :263:38, :264:38, :330:17, :333:23, :370:29, :402:29, :416:29, :442:{21,29}, :586:{22,32}, :587:{22,32}, :788:{19,29}, :792:{19,29}, :1015:23, :1096:34, :1112:24, :1117:23
+    ~_GEN_50 | io_Outposit ? 64'h0 : {32'h0, _floatDotEncoder_io_float[1'h0]};	// src/main/scala/pvu/PvuTop.scala:29:8, :174:{18,28}, :175:18, :176:{18,28}, :186:18, :253:{28,38}, :254:{28,38}, :267:38, :268:38, :334:17, :337:23, :374:29, :406:29, :420:29, :446:{21,29}, :590:{22,32}, :591:{22,32}, :792:{19,29}, :796:{19,29}, :1275:23, :1356:34, :1372:24, :1377:23
   assign io_posit_o_0 =
-    _GEN_130
-      ? (_GEN_91
+    _GEN_168
+      ? (_GEN_89
            ? 32'h0
            : _GEN_53
                ? ((|ACTUAL_VECTOR_SIZE)
@@ -10618,24 +18380,24 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                                                  : _convert64_io_posit_o[2'h0][31:0])
                     : 32'h0)
                : _GEN_61
-                   ? _GEN_78
-                   : _GEN_82
+                   ? _GEN_76
+                   : _GEN_80
                        ? ((|ACTUAL_VECTOR_SIZE) ? _greater_io_posit_o[2'h0] : 32'h0)
-                       : _GEN_89 ? _less_io_posit_o[2'h0] : 32'h0)
+                       : _GEN_87 ? _less_io_posit_o[2'h0] : 32'h0)
       : io_Outposit
           ? ((|ACTUAL_VECTOR_SIZE)
                ? (_GEN_49 & io_posit_i1_0 == 32'h40000000 & io_posit_i2_0 == 32'h40000000
                     ? 32'h40000000
-                    : _GEN_121
+                    : _GEN_159
                         ? _encode_io_posit[2'h0]
-                        : _GEN_62
+                        : _GEN_63
                             ? _result_encoder_io_posit[2'h0]
                             : _posit_results_0_T_3[31:0])
-               : _GEN_92 ? 32'h0 : _GEN_90)
-          : (|ACTUAL_VECTOR_SIZE) | _GEN_92 ? 32'h0 : _GEN_90;	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :226:36, :242:29, :249:28, :250:28, :263:38, :264:38, :333:23, :370:29, :402:29, :416:{21,29}, :442:29, :456:{21,29}, :459:27, :460:28, :461:28, :462:28, :463:28, :464:28, :465:28, :466:28, :549:29, :550:{38,46}, :552:26, :553:{44,53}, :555:26, :556:{44,53}, :558:26, :559:{44,53}, :561:26, :562:{44,53}, :564:26, :565:{44,53}, :567:26, :568:{44,53}, :570:26, :573:26, :580:{21,29}, :586:{22,32}, :604:61, :606:33, :607:67, :785:27, :787:19, :792:{19,29}, :794:{21,30}, :795:26, :815:29, :816:24, :819:30, :820:23, :840:29, :841:24, :933:{29,39}, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1135:25, :1139:35, :1140:27, :1149:31, :1156:{33,79}, :1157:{33,80}, :1158:31, :1160:31, :1197:35, :1212:31, :1220:80, :1221:31, :1222:67, :1224:{31,60}, :1225:67, :1255:{31,42}, :1275:34, :1296:24, :1299:31, :1300:26, :1307:31, :1308:26
+               : _GEN_90 ? 32'h0 : _GEN_88)
+          : (|ACTUAL_VECTOR_SIZE) | _GEN_90 ? 32'h0 : _GEN_88;	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :230:36, :246:29, :253:28, :254:28, :267:38, :268:38, :337:23, :374:29, :406:29, :420:{21,29}, :446:29, :460:{21,29}, :463:27, :464:28, :465:28, :466:28, :467:28, :468:28, :469:28, :470:28, :553:29, :554:{38,46}, :556:26, :557:{44,53}, :559:26, :560:{44,53}, :562:26, :563:{44,53}, :565:26, :566:{44,53}, :568:26, :569:{44,53}, :571:26, :572:{44,53}, :574:26, :577:26, :584:{21,29}, :590:{22,32}, :608:61, :610:33, :611:67, :789:27, :791:19, :796:{19,29}, :798:{21,30}, :799:26, :819:29, :820:24, :823:30, :824:23, :844:29, :845:24, :1193:{29,39}, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1397:25, :1401:35, :1402:27, :1411:31, :1418:{33,79}, :1419:{33,80}, :1420:31, :1422:31, :1459:35, :1474:31, :1482:80, :1483:31, :1484:67, :1486:{31,60}, :1487:67, :1517:{31,42}, :1537:34, :1558:24, :1561:31, :1562:26, :1569:31, :1570:26
   assign io_posit_o_1 =
-    _GEN_130
-      ? (_GEN_91
+    _GEN_168
+      ? (_GEN_89
            ? 32'h0
            : _GEN_53
                ? ((|(ACTUAL_VECTOR_SIZE[2:1]))
@@ -10656,26 +18418,26 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                                                  : _convert64_io_posit_o[2'h1][31:0])
                     : 32'h0)
                : _GEN_61
-                   ? _GEN_79
-                   : _GEN_82
+                   ? _GEN_77
+                   : _GEN_80
                        ? ((|(ACTUAL_VECTOR_SIZE[2:1]))
                             ? _greater_io_posit_o[2'h1]
                             : 32'h0)
-                       : _GEN_93 ? _less_io_posit_o[2'h1] : 32'h0)
+                       : _GEN_91 ? _less_io_posit_o[2'h1] : 32'h0)
       : io_Outposit
           ? ((|(ACTUAL_VECTOR_SIZE[2:1]))
                ? (_GEN_49 & io_posit_i1_1 == 32'h40000000 & io_posit_i2_1 == 32'h40000000
                     ? 32'h40000000
-                    : _GEN_121
+                    : _GEN_159
                         ? _encode_io_posit[2'h1]
-                        : _GEN_62
+                        : _GEN_63
                             ? _result_encoder_io_posit[2'h1]
                             : _posit_results_1_T_3[31:0])
-               : _GEN_92 ? 32'h0 : _GEN_94)
-          : (|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_92 ? 32'h0 : _GEN_94;	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :226:36, :242:29, :249:28, :250:28, :263:38, :264:38, :333:23, :370:29, :402:29, :416:{21,29}, :442:29, :456:{21,29}, :459:27, :460:28, :461:28, :462:28, :463:28, :464:28, :465:28, :466:28, :549:29, :550:{38,46}, :552:26, :553:{44,53}, :555:26, :556:{44,53}, :558:26, :559:{44,53}, :561:26, :562:{44,53}, :564:26, :565:{44,53}, :567:26, :568:{44,53}, :570:26, :573:26, :580:{21,29}, :586:{22,32}, :604:61, :606:33, :607:67, :785:27, :787:19, :792:{19,29}, :794:{21,30}, :795:26, :815:29, :816:24, :819:30, :820:23, :840:29, :841:24, :933:{29,39}, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1135:25, :1139:35, :1140:27, :1149:31, :1156:{33,79}, :1157:{33,80}, :1158:31, :1160:31, :1197:35, :1212:31, :1220:80, :1221:31, :1222:67, :1224:{31,60}, :1225:67, :1255:{31,42}, :1275:34, :1296:24, :1299:31, :1300:26, :1307:31, :1308:26
+               : _GEN_90 ? 32'h0 : _GEN_92)
+          : (|(ACTUAL_VECTOR_SIZE[2:1])) | _GEN_90 ? 32'h0 : _GEN_92;	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :230:36, :246:29, :253:28, :254:28, :267:38, :268:38, :337:23, :374:29, :406:29, :420:{21,29}, :446:29, :460:{21,29}, :463:27, :464:28, :465:28, :466:28, :467:28, :468:28, :469:28, :470:28, :553:29, :554:{38,46}, :556:26, :557:{44,53}, :559:26, :560:{44,53}, :562:26, :563:{44,53}, :565:26, :566:{44,53}, :568:26, :569:{44,53}, :571:26, :572:{44,53}, :574:26, :577:26, :584:{21,29}, :590:{22,32}, :608:61, :610:33, :611:67, :789:27, :791:19, :796:{19,29}, :798:{21,30}, :799:26, :819:29, :820:24, :823:30, :824:23, :844:29, :845:24, :1193:{29,39}, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1397:25, :1401:35, :1402:27, :1411:31, :1418:{33,79}, :1419:{33,80}, :1420:31, :1422:31, :1459:35, :1474:31, :1482:80, :1483:31, :1484:67, :1486:{31,60}, :1487:67, :1517:{31,42}, :1537:34, :1558:24, :1561:31, :1562:26, :1569:31, :1570:26
   assign io_posit_o_2 =
-    _GEN_130
-      ? (_GEN_91
+    _GEN_168
+      ? (_GEN_89
            ? 32'h0
            : _GEN_53
                ? (_valid_range_2_T
@@ -10696,24 +18458,24 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                                                  : _convert64_io_posit_o[2'h2][31:0])
                     : 32'h0)
                : _GEN_61
-                   ? _GEN_80
-                   : _GEN_82
+                   ? _GEN_78
+                   : _GEN_80
                        ? (_valid_range_2_T ? _greater_io_posit_o[2'h2] : 32'h0)
-                       : _GEN_95 ? _less_io_posit_o[2'h2] : 32'h0)
+                       : _GEN_93 ? _less_io_posit_o[2'h2] : 32'h0)
       : io_Outposit
           ? (_valid_range_2_T
                ? (_GEN_49 & io_posit_i1_2 == 32'h40000000 & io_posit_i2_2 == 32'h40000000
                     ? 32'h40000000
-                    : _GEN_121
+                    : _GEN_159
                         ? _encode_io_posit[2'h2]
-                        : _GEN_62
+                        : _GEN_63
                             ? _result_encoder_io_posit[2'h2]
                             : _posit_results_2_T_3[31:0])
-               : _GEN_92 ? 32'h0 : _GEN_96)
-          : _valid_range_2_T | _GEN_92 ? 32'h0 : _GEN_96;	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :234:34, :242:29, :249:28, :250:28, :263:38, :264:38, :333:23, :370:29, :402:29, :416:{21,29}, :442:29, :456:{21,29}, :459:27, :460:28, :461:28, :462:28, :463:28, :464:28, :465:28, :466:28, :549:29, :550:{38,46}, :552:26, :553:{44,53}, :555:26, :556:{44,53}, :558:26, :559:{44,53}, :561:26, :562:{44,53}, :564:26, :565:{44,53}, :567:26, :568:{44,53}, :570:26, :573:26, :580:{21,29}, :586:{22,32}, :604:61, :606:33, :607:67, :785:27, :787:19, :792:{19,29}, :794:{21,30}, :795:26, :815:29, :816:24, :819:30, :820:23, :840:29, :841:24, :933:{29,39}, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1135:25, :1139:35, :1140:27, :1149:31, :1156:{33,79}, :1157:{33,80}, :1158:31, :1160:31, :1197:35, :1212:31, :1220:80, :1221:31, :1222:67, :1224:{31,60}, :1225:67, :1255:{31,42}, :1275:34, :1296:24, :1299:31, :1300:26, :1307:31, :1308:26
+               : _GEN_90 ? 32'h0 : _GEN_94)
+          : _valid_range_2_T | _GEN_90 ? 32'h0 : _GEN_94;	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :238:34, :246:29, :253:28, :254:28, :267:38, :268:38, :337:23, :374:29, :406:29, :420:{21,29}, :446:29, :460:{21,29}, :463:27, :464:28, :465:28, :466:28, :467:28, :468:28, :469:28, :470:28, :553:29, :554:{38,46}, :556:26, :557:{44,53}, :559:26, :560:{44,53}, :562:26, :563:{44,53}, :565:26, :566:{44,53}, :568:26, :569:{44,53}, :571:26, :572:{44,53}, :574:26, :577:26, :584:{21,29}, :590:{22,32}, :608:61, :610:33, :611:67, :789:27, :791:19, :796:{19,29}, :798:{21,30}, :799:26, :819:29, :820:24, :823:30, :824:23, :844:29, :845:24, :1193:{29,39}, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1397:25, :1401:35, :1402:27, :1411:31, :1418:{33,79}, :1419:{33,80}, :1420:31, :1422:31, :1459:35, :1474:31, :1482:80, :1483:31, :1484:67, :1486:{31,60}, :1487:67, :1517:{31,42}, :1537:34, :1558:24, :1561:31, :1562:26, :1569:31, :1570:26
   assign io_posit_o_3 =
-    _GEN_130
-      ? (_GEN_91
+    _GEN_168
+      ? (_GEN_89
            ? 32'h0
            : _GEN_53
                ? (ACTUAL_VECTOR_SIZE[2]
@@ -10734,41 +18496,41 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:28:8
                                                  : _convert64_io_posit_o[2'h3][31:0])
                     : 32'h0)
                : _GEN_61
-                   ? _GEN_81
-                   : _GEN_82
+                   ? _GEN_79
+                   : _GEN_80
                        ? (ACTUAL_VECTOR_SIZE[2] ? _greater_io_posit_o[2'h3] : 32'h0)
-                       : _GEN_97 ? _less_io_posit_o[2'h3] : 32'h0)
+                       : _GEN_95 ? _less_io_posit_o[2'h3] : 32'h0)
       : io_Outposit
           ? (ACTUAL_VECTOR_SIZE[2]
                ? (_GEN_49 & io_posit_i1_3 == 32'h40000000 & io_posit_i2_3 == 32'h40000000
                     ? 32'h40000000
-                    : _GEN_121
+                    : _GEN_159
                         ? _encode_io_posit[2'h3]
-                        : _GEN_62
+                        : _GEN_63
                             ? _result_encoder_io_posit[2'h3]
                             : _posit_results_3_T_3[31:0])
-               : _GEN_92 ? 32'h0 : _GEN_98)
-          : ACTUAL_VECTOR_SIZE[2] | _GEN_92 ? 32'h0 : _GEN_98;	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :226:36, :235:55, :242:29, :249:28, :250:28, :263:38, :264:38, :333:23, :370:29, :402:29, :416:{21,29}, :442:29, :456:{21,29}, :459:27, :460:28, :461:28, :462:28, :463:28, :464:28, :465:28, :466:28, :549:29, :550:{38,46}, :552:26, :553:{44,53}, :555:26, :556:{44,53}, :558:26, :559:{44,53}, :561:26, :562:{44,53}, :564:26, :565:{44,53}, :567:26, :568:{44,53}, :570:26, :573:26, :580:{21,29}, :586:{22,32}, :604:61, :606:33, :607:67, :785:27, :787:19, :792:{19,29}, :794:{21,30}, :795:26, :815:29, :816:24, :819:30, :820:23, :840:29, :841:24, :933:{29,39}, :1015:23, :1119:29, :1121:30, :1123:30, :1125:30, :1127:31, :1135:25, :1139:35, :1140:27, :1149:31, :1156:{33,79}, :1157:{33,80}, :1158:31, :1160:31, :1197:35, :1212:31, :1220:80, :1221:31, :1222:67, :1224:{31,60}, :1225:67, :1255:{31,42}, :1275:34, :1296:24, :1299:31, :1300:26, :1307:31, :1308:26
+               : _GEN_90 ? 32'h0 : _GEN_96)
+          : ACTUAL_VECTOR_SIZE[2] | _GEN_90 ? 32'h0 : _GEN_96;	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :230:36, :239:55, :246:29, :253:28, :254:28, :267:38, :268:38, :337:23, :374:29, :406:29, :420:{21,29}, :446:29, :460:{21,29}, :463:27, :464:28, :465:28, :466:28, :467:28, :468:28, :469:28, :470:28, :553:29, :554:{38,46}, :556:26, :557:{44,53}, :559:26, :560:{44,53}, :562:26, :563:{44,53}, :565:26, :566:{44,53}, :568:26, :569:{44,53}, :571:26, :572:{44,53}, :574:26, :577:26, :584:{21,29}, :590:{22,32}, :608:61, :610:33, :611:67, :789:27, :791:19, :796:{19,29}, :798:{21,30}, :799:26, :819:29, :820:24, :823:30, :824:23, :844:29, :845:24, :1193:{29,39}, :1275:23, :1379:29, :1381:30, :1383:30, :1385:30, :1387:31, :1389:31, :1397:25, :1401:35, :1402:27, :1411:31, :1418:{33,79}, :1419:{33,80}, :1420:31, :1422:31, :1459:35, :1474:31, :1482:80, :1483:31, :1484:67, :1486:{31,60}, :1487:67, :1517:{31,42}, :1537:34, :1558:24, :1561:31, :1562:26, :1569:31, :1570:26
   assign io_posit_dot_o =
     _GEN_50 & io_Outposit
-      ? (_GEN_62 ? _dot_encoder_io_posit[1'h0] : _posit_result_T_3[31:0])
-      : 32'h0;	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :173:18, :182:18, :249:28, :250:28, :263:38, :264:38, :442:21, :586:{22,32}, :604:61, :606:33, :607:67, :792:{19,29}, :1015:23, :1049:30, :1055:55, :1057:{21,47}, :1058:61, :1089:{21,32}, :1112:24, :1113:23, :1116:23
+      ? (_GEN_63 ? _dot_encoder_io_posit[1'h0] : _posit_result_T_3[31:0])
+      : 32'h0;	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :177:18, :186:18, :253:28, :254:28, :267:38, :268:38, :446:21, :590:{22,32}, :608:61, :610:33, :611:67, :796:{19,29}, :1275:23, :1309:30, :1315:55, :1317:{21,47}, :1318:61, :1349:{21,32}, :1372:24, :1373:23, :1376:23
   assign io_int_o_0 =
-    _GEN_100 | ~(_GEN_99 & (|ACTUAL_VECTOR_SIZE))
+    _GEN_98 | ~(_GEN_97 & (|ACTUAL_VECTOR_SIZE))
       ? 32'h0
-      : {{24{_quantizeInt8_io_int8_o[2'h0][7]}}, _quantizeInt8_io_int8_o[2'h0]};	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :174:18, :226:36, :242:29, :249:28, :250:28, :263:38, :264:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :586:{22,32}, :792:{19,29}, :794:30, :819:30, :844:{21,31}, :845:31, :860:29, :862:{22,54}
+      : {{24{_quantizeInt8_io_int8_o[2'h0][7]}}, _quantizeInt8_io_int8_o[2'h0]};	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :178:18, :230:36, :246:29, :253:28, :254:28, :267:38, :268:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :590:{22,32}, :796:{19,29}, :798:30, :823:30, :848:{21,31}, :849:31, :864:29, :866:{22,54}
   assign io_int_o_1 =
-    _GEN_100 | ~(_GEN_99 & (|(ACTUAL_VECTOR_SIZE[2:1])))
+    _GEN_98 | ~(_GEN_97 & (|(ACTUAL_VECTOR_SIZE[2:1])))
       ? 32'h0
-      : {{24{_quantizeInt8_io_int8_o[2'h1][7]}}, _quantizeInt8_io_int8_o[2'h1]};	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :174:18, :226:36, :242:29, :249:28, :250:28, :263:38, :264:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :586:{22,32}, :792:{19,29}, :794:30, :819:30, :844:{21,31}, :845:31, :860:29, :862:{22,54}
+      : {{24{_quantizeInt8_io_int8_o[2'h1][7]}}, _quantizeInt8_io_int8_o[2'h1]};	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :178:18, :230:36, :246:29, :253:28, :254:28, :267:38, :268:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :590:{22,32}, :796:{19,29}, :798:30, :823:30, :848:{21,31}, :849:31, :864:29, :866:{22,54}
   assign io_int_o_2 =
-    _GEN_100 | ~(_GEN_99 & _valid_range_2_T)
+    _GEN_98 | ~(_GEN_97 & _valid_range_2_T)
       ? 32'h0
-      : {{24{_quantizeInt8_io_int8_o[2'h2][7]}}, _quantizeInt8_io_int8_o[2'h2]};	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :174:18, :234:34, :242:29, :249:28, :250:28, :263:38, :264:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :586:{22,32}, :792:{19,29}, :794:30, :819:30, :844:{21,31}, :845:31, :860:29, :862:{22,54}
+      : {{24{_quantizeInt8_io_int8_o[2'h2][7]}}, _quantizeInt8_io_int8_o[2'h2]};	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :178:18, :238:34, :246:29, :253:28, :254:28, :267:38, :268:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :590:{22,32}, :796:{19,29}, :798:30, :823:30, :848:{21,31}, :849:31, :864:29, :866:{22,54}
   assign io_int_o_3 =
-    _GEN_100 | ~(_GEN_99 & ACTUAL_VECTOR_SIZE[2])
+    _GEN_98 | ~(_GEN_97 & ACTUAL_VECTOR_SIZE[2])
       ? 32'h0
-      : {{24{_quantizeInt8_io_int8_o[2'h3][7]}}, _quantizeInt8_io_int8_o[2'h3]};	// src/main/scala/pvu/PvuTop.scala:28:8, :172:{18,28}, :174:18, :226:36, :235:55, :242:29, :249:28, :250:28, :263:38, :264:38, :333:23, :370:29, :402:29, :416:29, :442:29, :456:29, :580:29, :586:{22,32}, :792:{19,29}, :794:30, :819:30, :844:{21,31}, :845:31, :860:29, :862:{22,54}
+      : {{24{_quantizeInt8_io_int8_o[2'h3][7]}}, _quantizeInt8_io_int8_o[2'h3]};	// src/main/scala/pvu/PvuTop.scala:29:8, :176:{18,28}, :178:18, :230:36, :239:55, :246:29, :253:28, :254:28, :267:38, :268:38, :337:23, :374:29, :406:29, :420:29, :446:29, :460:29, :584:29, :590:{22,32}, :796:{19,29}, :798:30, :823:30, :848:{21,31}, :849:31, :864:29, :866:{22,54}
 endmodule
 
 

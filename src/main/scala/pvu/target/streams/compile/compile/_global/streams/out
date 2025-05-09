@@ -1,0 +1,301 @@
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:4:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:5:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3.util._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:7:98: illegal inheritance from final class Module[0m
+[0m[[0m[31merror[0m] [0m[0mclass Add(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int, val ES :Int) extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:8:25: not found: value log2Ceil[0m
+[0m[[0m[31merror[0m] [0m[0m  var nd: Int         = log2Ceil(POSIT_WIDTH - 1)[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:11:12: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:11:19: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:12:29: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign1_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:12:35: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign1_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:12:52: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign1_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:12:59: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign1_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:13:29: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign2_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:13:35: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign2_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:13:52: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign2_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:13:59: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign2_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:14:29: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp1_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:14:35: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp1_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:14:52: not found: value SInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp1_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:14:67: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp1_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:15:29: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp2_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:15:35: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp2_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:15:52: not found: value SInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp2_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:15:67: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp2_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:16:29: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac1_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:16:35: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac1_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:16:52: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac1_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:16:69: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac1_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:17:29: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac2_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:17:35: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac2_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:17:52: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac2_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:17:69: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac2_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:19:25: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign_o    = Output(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:19:32: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign_o    = Output(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:19:49: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign_o    = Output(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:19:56: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_sign_o    = Output(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:20:25: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp_o     = Output(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:20:32: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp_o     = Output(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:20:49: not found: value SInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp_o     = Output(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:20:64: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_exp_o     = Output(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:21:25: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac_o    = Output(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:21:32: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac_o    = Output(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:21:49: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac_o    = Output(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:21:66: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val pir_frac_o    = Output(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:22:25: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val overflow      = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Overflow flag[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:22:32: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val overflow      = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Overflow flag[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:22:49: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val overflow      = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Overflow flag[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:22:56: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val overflow      = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Overflow flag[0m
+[0m[[0m[31merror[0m] [0m[0m                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:23:25: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val frac_truncate = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Fraction_Truncate flag[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:23:32: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m    val frac_truncate = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Fraction_Truncate flag[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:23:49: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val frac_truncate = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Fraction_Truncate flag[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:23:56: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val frac_truncate = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Fraction_Truncate flag[0m
+[0m[[0m[31merror[0m] [0m[0m                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:27:19: not found: value Wire[0m
+[0m[[0m[31merror[0m] [0m[0m  val diff_sign = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:27:24: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m  val diff_sign = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:27:41: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val diff_sign = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:27:48: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val diff_sign = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:34:3: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m  when (diff_sign(i) === 0.U) { // The same sign, perform addition[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:40:20: not found: value Mux[0m
+[0m[[0m[31merror[0m] [0m[0m    val new_frac = Mux(carry, sum >> 1, sum(ALIGN_WIDTH - 1, 0))[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:41:20: not found: value Mux[0m
+[0m[[0m[31merror[0m] [0m[0m    val new_exp  = Mux(carry, io.pir_exp1_i(i) + 1.S, io.pir_exp1_i(i))[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:60:21: not found: value Mux[0m
+[0m[[0m[31merror[0m] [0m[0m    val mant_diff = Mux(mant1_greater, mant1 - mant2, mant2 - mant1)[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/Add.scala:64:20: not found: value Mux[0m
+[0m[[0m[31merror[0m] [0m[0m    val res_sign = Mux(mant1_greater, io.pir_sign1_i(i), io.pir_sign2_i(i))[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:3:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:4:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3.util._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:13:86: illegal inheritance from final class Module[0m
+[0m[[0m[31merror[0m] [0m[0mclass BarrelShifter(val WIDTH: Int, val SHIFT_WIDTH: Int, val MODE: Boolean) extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:14:12: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:14:19: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:15:24: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val operand_i    = Input(UInt(WIDTH.W))         // 输入操作数[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:15:30: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val operand_i    = Input(UInt(WIDTH.W))         // 输入操作数[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:15:41: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val operand_i    = Input(UInt(WIDTH.W))         // 输入操作数[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:16:24: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val shift_amount = Input(UInt(SHIFT_WIDTH.W))   // 移位量[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:16:30: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val shift_amount = Input(UInt(SHIFT_WIDTH.W))   // 移位量[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:16:47: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val shift_amount = Input(UInt(SHIFT_WIDTH.W))   // 移位量[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:18:20: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val result_o = Output(UInt(WIDTH.W))  // 移位结果[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:18:27: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val result_o = Output(UInt(WIDTH.W))  // 移位结果[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:18:38: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val result_o = Output(UInt(WIDTH.W))  // 移位结果[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:22:22: not found: value Wire[0m
+[0m[[0m[31merror[0m] [0m[0m  val temp_results = Wire(Vec(SHIFT_WIDTH, UInt(WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:22:27: not found: value Vec[0m
+[0m[[0m[31merror[0m] [0m[0m  val temp_results = Wire(Vec(SHIFT_WIDTH, UInt(WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:22:44: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val temp_results = Wire(Vec(SHIFT_WIDTH, UInt(WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BarrelShift.scala:22:55: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val temp_results = Wire(Vec(SHIFT_WIDTH, UInt(WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:15:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:16:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3.util._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:30:28: illegal inheritance from final class Module[0m
+[0m[[0m[31merror[0m] [0m[0mclass BoothEncoder extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:31:12: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:31:19: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:32:16: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val code = Input(UInt(3.W))  // 3 位操作码[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:32:22: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val code = Input(UInt(3.W))  // 3 位操作码[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:32:29: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val code = Input(UInt(3.W))  // 3 位操作码[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:33:16: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val neg  = Output(Bool())    // 负操作指示[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:33:23: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val neg  = Output(Bool())    // 负操作指示[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:34:16: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val zero = Output(Bool())    // 零操作指示[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:34:23: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val zero = Output(Bool())    // 零操作指示[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:35:16: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val one  = Output(Bool())    // +1*A 或 -1*A 指示[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:35:23: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val one  = Output(Bool())    // +1*A 或 -1*A 指示[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:36:16: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val two  = Output(Bool())    // +2*A 或 -2*A 指示 左移一位表示乘2[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:36:23: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val two  = Output(Bool())    // +2*A 或 -2*A 指示 左移一位表示乘2[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:45:3: not found: value switch[0m
+[0m[[0m[31merror[0m] [0m[0m  switch (io.code) {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:46:5: not found: value is[0m
+[0m[[0m[31merror[0m] [0m[0m    is("b000".U) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:46:15: value U is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    is("b000".U) {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:49:5: not found: value is[0m
+[0m[[0m[31merror[0m] [0m[0m    is("b001".U) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:49:15: value U is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    is("b001".U) {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:52:5: not found: value is[0m
+[0m[[0m[31merror[0m] [0m[0m    is("b010".U) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/BPVU/src/main/scala/pvu/BoothEncoder.scala:52:15: value U is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    is("b010".U) {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m100 errors found[0m

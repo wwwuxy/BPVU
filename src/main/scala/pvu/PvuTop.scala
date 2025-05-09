@@ -10,6 +10,7 @@
     8 --> 大小比较（Greater），输出较大值
     9 --> 大小比较（Less），输出较小值
     10 --> Posit量化至Int8（QuantizeInt8），将PIR量化为Int8整数
+    11 --> Float精度转换，支持五类Float相互转换
 
    Float格式由float_mode控制:
    0 --> FP4  (1位符号, 1位指数, 2位尾数)
@@ -91,6 +92,9 @@
      val float_i2    = Input(Vec(MAX_VECTOR_SIZE, UInt(FLOAT_WIDTH.W)))  // 添加第二个Float输入向量
      val float_mode  = Input(UInt(3.W))  // 浮点数格式选择: 0=FP4, 1=FP8, 2=FP16, 3=FP32, 4=FP64
      val float_posit = Input(Bool())     // 浮点数互转信号：1表示Float转Posit，0表示Posit转Float
+     
+     // Float精度转换目标格式接口
+     val dst_float_mode = Input(UInt(4.W))  // 目标浮点数格式: 0=FP4, 1=FP8, 2=FP16, 3=FP32, 4=FP64
      
      // 运行时配置参数
      val src_posit_width = Input(UInt(6.W))  // 源Posit位宽，值为0表示使用最大值
@@ -399,7 +403,7 @@
      overflow         := sub.io.overflow
      frac_truncate    := sub.io.frac_truncate
    
-   }.elsewhen(io.op === 3.U){  //Mul
+   }.elsewhen(io.op === 3.U){  //Mul           
      val mul = Module(new Mul(MAX_POSIT_WIDTH, MAX_VECTOR_SIZE, MAX_ALIGN_WIDTH, ES))
    
      mul.io.pir_sign1_i := pir_sign
@@ -413,7 +417,7 @@
      pir_exp_rst      := mul.io.pir_exp_o
      pir_frac_rst_mul := mul.io.pir_frac_o
    
-   }.elsewhen(io.op === 4.U){  //Div
+   }.elsewhen(io.op === 4.U){  //Div    
      val div_inst = Module(new Div(LIMITED_POSIT_WIDTH, LIMITED_VECTOR_SIZE, LIMITED_ALIGN_WIDTH, ES))
      
      div_inst.io.pir_sign1_i := pir_sign
@@ -862,6 +866,262 @@
          io.int_o(i) := quantizeInt8.io.int8_o(i).pad(INT_WIDTH)
        }
      }
+   }.elsewhen(io.op === 11.U) {  // Float精度转换
+     // 为五种Float精度类型添加精度转换
+     val fp4_to_fp4   = Module(new FloatConvert(1, 2, 1, 2, MAX_VECTOR_SIZE))
+     val fp4_to_fp8   = Module(new FloatConvert(1, 2, 4, 3, MAX_VECTOR_SIZE))
+     val fp4_to_fp16  = Module(new FloatConvert(1, 2, 5, 10, MAX_VECTOR_SIZE))
+     val fp4_to_fp32  = Module(new FloatConvert(1, 2, 8, 23, MAX_VECTOR_SIZE))
+     val fp4_to_fp64  = Module(new FloatConvert(1, 2, 11, 52, MAX_VECTOR_SIZE))
+     
+     val fp8_to_fp4   = Module(new FloatConvert(4, 3, 1, 2, MAX_VECTOR_SIZE))
+     val fp8_to_fp8   = Module(new FloatConvert(4, 3, 4, 3, MAX_VECTOR_SIZE))
+     val fp8_to_fp16  = Module(new FloatConvert(4, 3, 5, 10, MAX_VECTOR_SIZE))
+     val fp8_to_fp32  = Module(new FloatConvert(4, 3, 8, 23, MAX_VECTOR_SIZE))
+     val fp8_to_fp64  = Module(new FloatConvert(4, 3, 11, 52, MAX_VECTOR_SIZE))
+     
+     val fp16_to_fp4  = Module(new FloatConvert(5, 10, 1, 2, MAX_VECTOR_SIZE))
+     val fp16_to_fp8  = Module(new FloatConvert(5, 10, 4, 3, MAX_VECTOR_SIZE))
+     val fp16_to_fp16 = Module(new FloatConvert(5, 10, 5, 10, MAX_VECTOR_SIZE))
+     val fp16_to_fp32 = Module(new FloatConvert(5, 10, 8, 23, MAX_VECTOR_SIZE))
+     val fp16_to_fp64 = Module(new FloatConvert(5, 10, 11, 52, MAX_VECTOR_SIZE))
+     
+     val fp32_to_fp4  = Module(new FloatConvert(8, 23, 1, 2, MAX_VECTOR_SIZE))
+     val fp32_to_fp8  = Module(new FloatConvert(8, 23, 4, 3, MAX_VECTOR_SIZE))
+     val fp32_to_fp16 = Module(new FloatConvert(8, 23, 5, 10, MAX_VECTOR_SIZE))
+     val fp32_to_fp32 = Module(new FloatConvert(8, 23, 8, 23, MAX_VECTOR_SIZE))
+     val fp32_to_fp64 = Module(new FloatConvert(8, 23, 11, 52, MAX_VECTOR_SIZE))
+     
+     val fp64_to_fp4  = Module(new FloatConvert(11, 52, 1, 2, MAX_VECTOR_SIZE))
+     val fp64_to_fp8  = Module(new FloatConvert(11, 52, 4, 3, MAX_VECTOR_SIZE))
+     val fp64_to_fp16 = Module(new FloatConvert(11, 52, 5, 10, MAX_VECTOR_SIZE))
+     val fp64_to_fp32 = Module(new FloatConvert(11, 52, 8, 23, MAX_VECTOR_SIZE))
+     val fp64_to_fp64 = Module(new FloatConvert(11, 52, 11, 52, MAX_VECTOR_SIZE))
+     
+     
+     // 将默认值设置为全0
+     for (i <- 0 until MAX_VECTOR_SIZE) {
+       fp4_to_fp4.io.float_in(i)   := 0.U(FLOAT_WIDTH.W)
+       fp4_to_fp8.io.float_in(i)   := 0.U(FLOAT_WIDTH.W)
+       fp4_to_fp16.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp4_to_fp32.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp4_to_fp64.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       
+       fp8_to_fp4.io.float_in(i)   := 0.U(FLOAT_WIDTH.W)
+       fp8_to_fp8.io.float_in(i)   := 0.U(FLOAT_WIDTH.W)
+       fp8_to_fp16.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp8_to_fp32.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp8_to_fp64.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       
+       fp16_to_fp4.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp16_to_fp8.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp16_to_fp16.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+       fp16_to_fp32.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+       fp16_to_fp64.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+       
+       fp32_to_fp4.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp32_to_fp8.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp32_to_fp16.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+       fp32_to_fp32.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+       fp32_to_fp64.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+       
+       fp64_to_fp4.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp64_to_fp8.io.float_in(i)  := 0.U(FLOAT_WIDTH.W)
+       fp64_to_fp16.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+       fp64_to_fp32.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+       fp64_to_fp64.io.float_in(i) := 0.U(FLOAT_WIDTH.W)
+     }
+     
+     // 第一步：根据源格式和目标格式进行输入连接
+     for (i <- 0 until MAX_VECTOR_SIZE) {
+       when(valid_range(i)) {
+         val target_mode = io.dst_float_mode & 0xF.U
+         
+         // 准备输入数据 - 不使用Cat函数，直接保留低位有效数据
+         val input_data = Wire(UInt(FLOAT_WIDTH.W))
+         input_data := 0.U // 默认初始化
+         
+         switch(io.float_mode) {
+           is(0.U) { // FP4源格式
+             input_data := io.float_i(i) & 0xF.U // 只保留低4位
+           }
+           is(1.U) { // FP8源格式
+             input_data := io.float_i(i) & 0xFF.U // 只保留低8位
+           }
+           is(2.U) { // FP16源格式
+             input_data := io.float_i(i) & 0xFFFF.U // 只保留低16位
+           } 
+           is(3.U) { // FP32源格式
+             input_data := io.float_i(i) & 0xFFFFFFFFL.U // 只保留低32位
+           }
+           is(4.U) { // FP64源格式
+             input_data := io.float_i(i) // 使用全部64位
+           }
+         }
+         
+         // 根据源格式和目标格式连接正确的FloatConvert模块
+         switch(io.float_mode) {
+           is(0.U) { // 源格式是FP4
+             switch(target_mode) {
+               is(0.U) { fp4_to_fp4.io.float_in(i) := input_data }
+               is(1.U) { fp4_to_fp8.io.float_in(i) := input_data }
+               is(2.U) { fp4_to_fp16.io.float_in(i) := input_data }
+               is(3.U) { fp4_to_fp32.io.float_in(i) := input_data }
+               is(4.U) { fp4_to_fp64.io.float_in(i) := input_data }
+             }
+           }
+           
+           is(1.U) { // 源格式是FP8
+             switch(target_mode) {
+               is(0.U) { fp8_to_fp4.io.float_in(i) := input_data }
+               is(1.U) { fp8_to_fp8.io.float_in(i) := input_data }
+               is(2.U) { fp8_to_fp16.io.float_in(i) := input_data }
+               is(3.U) { fp8_to_fp32.io.float_in(i) := input_data }
+               is(4.U) { fp8_to_fp64.io.float_in(i) := input_data }
+             }
+           }
+           
+           is(2.U) { // 源格式是FP16
+             switch(target_mode) {
+               is(0.U) { fp16_to_fp4.io.float_in(i) := input_data }
+               is(1.U) { fp16_to_fp8.io.float_in(i) := input_data }
+               is(2.U) { fp16_to_fp16.io.float_in(i) := input_data }
+               is(3.U) { fp16_to_fp32.io.float_in(i) := input_data }
+               is(4.U) { fp16_to_fp64.io.float_in(i) := input_data }
+             }
+           }
+           
+           is(3.U) { // 源格式是FP32
+             switch(target_mode) {
+               is(0.U) { fp32_to_fp4.io.float_in(i) := input_data }
+               is(1.U) { fp32_to_fp8.io.float_in(i) := input_data }
+               is(2.U) { fp32_to_fp16.io.float_in(i) := input_data }
+               is(3.U) { fp32_to_fp32.io.float_in(i) := input_data }
+               is(4.U) { fp32_to_fp64.io.float_in(i) := input_data }
+             }
+           }
+           
+           is(4.U) { // 源格式是FP64
+             switch(target_mode) {
+               is(0.U) { fp64_to_fp4.io.float_in(i) := input_data }
+               is(1.U) { fp64_to_fp8.io.float_in(i) := input_data }
+               is(2.U) { fp64_to_fp16.io.float_in(i) := input_data }
+               is(3.U) { fp64_to_fp32.io.float_in(i) := input_data }
+               is(4.U) { fp64_to_fp64.io.float_in(i) := input_data }
+             }
+           }
+         }
+       }
+     }
+     
+     // 第二步：处理输出数据
+     for (i <- 0 until MAX_VECTOR_SIZE) {
+       when(valid_range(i)) {
+         val target_mode = io.dst_float_mode & 0xF.U
+         
+         switch(io.float_mode) {
+           is(0.U) { // 源格式是FP4
+             switch(target_mode) {
+               is(0.U) { 
+                 io.float_o(i) := fp4_to_fp4.io.float_out(i) & 0xF.U
+               }
+               is(1.U) { 
+                 io.float_o(i) := fp4_to_fp8.io.float_out(i) & 0xFF.U
+               }
+               is(2.U) { 
+                 io.float_o(i) := fp4_to_fp16.io.float_out(i) & 0xFFFF.U
+               }
+               is(3.U) { 
+                 io.float_o(i) := fp4_to_fp32.io.float_out(i) & 0xFFFFFFFFL.U
+               }
+               is(4.U) { 
+                 io.float_o(i) := fp4_to_fp64.io.float_out(i)
+               }
+             }
+           }
+           
+           is(1.U) { // 源格式是FP8
+             switch(target_mode) {
+               is(0.U) { 
+                 io.float_o(i) := fp8_to_fp4.io.float_out(i) & 0xF.U
+               }
+               is(1.U) { 
+                 io.float_o(i) := fp8_to_fp8.io.float_out(i) & 0xFF.U
+               }
+               is(2.U) { 
+                 io.float_o(i) := fp8_to_fp16.io.float_out(i) & 0xFFFF.U
+               }
+               is(3.U) { 
+                 io.float_o(i) := fp8_to_fp32.io.float_out(i) & 0xFFFFFFFFL.U
+               }
+               is(4.U) { 
+                 io.float_o(i) := fp8_to_fp64.io.float_out(i)
+               }
+             }
+           }
+            
+           is(2.U) { // 源格式是FP16
+             switch(target_mode) {
+               is(0.U) { 
+                 io.float_o(i) := fp16_to_fp4.io.float_out(i) & 0xF.U
+               }
+               is(1.U) { 
+                 io.float_o(i) := fp16_to_fp8.io.float_out(i) & 0xFF.U
+               }
+               is(2.U) { 
+                 io.float_o(i) := fp16_to_fp16.io.float_out(i) & 0xFFFF.U
+               }
+               is(3.U) { 
+                 io.float_o(i) := fp16_to_fp32.io.float_out(i) & 0xFFFFFFFFL.U
+               }
+               is(4.U) { 
+                 io.float_o(i) := fp16_to_fp64.io.float_out(i)
+               }
+             }
+           }
+            
+           is(3.U) { // 源格式是FP32
+             switch(target_mode) {
+               is(0.U) { 
+                 io.float_o(i) := fp32_to_fp4.io.float_out(i) & 0xF.U
+               }
+               is(1.U) { 
+                 io.float_o(i) := fp32_to_fp8.io.float_out(i) & 0xFF.U
+               }
+               is(2.U) { 
+                 io.float_o(i) := fp32_to_fp16.io.float_out(i) & 0xFFFF.U
+               }
+               is(3.U) { 
+                 io.float_o(i) := fp32_to_fp32.io.float_out(i) & 0xFFFFFFFFL.U
+               }
+               is(4.U) { 
+                 io.float_o(i) := fp32_to_fp64.io.float_out(i)
+               }
+             }
+           }
+            
+           is(4.U) { // 源格式是FP64
+             switch(target_mode) {
+               is(0.U) { 
+                 io.float_o(i) := fp64_to_fp4.io.float_out(i) & 0xF.U
+               }
+               is(1.U) { 
+                 io.float_o(i) := fp64_to_fp8.io.float_out(i) & 0xFF.U
+               }
+               is(2.U) { 
+                 io.float_o(i) := fp64_to_fp16.io.float_out(i) & 0xFFFF.U
+               }
+               is(3.U) { 
+                 io.float_o(i) := fp64_to_fp32.io.float_out(i) & 0xFFFFFFFFL.U
+               }
+               is(4.U) { 
+                 io.float_o(i) := fp64_to_fp64.io.float_out(i)
+               }
+             }
+           }
+         }
+       }
+     }
    }
 
    //***********************//
@@ -1125,6 +1385,8 @@
    }.elsewhen(io.op === 9.U) {  // Less - 比较并输出较小值
      // 已在前面处理
    }.elsewhen(io.op === 10.U) {  // QuantizeInt8 - Posit量化至Int8
+     // 已在前面处理
+   }.elsewhen(io.op === 11.U) {  // Float精度转换
      // 已在前面处理
    }.otherwise{
      // 算术操作（加、减、乘、除）
